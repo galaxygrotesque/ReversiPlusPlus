@@ -15,6 +15,10 @@
  * 
  */
 
+
+
+
+
 /* ------ 00. COLOUR GUIDE ------ */
 /* variables GO
  * or not because ao3 doesn't allow them for some reason what the hell???
@@ -276,7 +280,7 @@ a.tag {
 	font-size: 0.9em;
 	margin: 1px 0;
 	overflow: hidden;
-    padding: 0.5px 6px;
+	padding: 0.5px 6px;
 	text-decoration: none;
 	text-overflow: ellipsis;
 }
@@ -392,7 +396,6 @@ dd.category a:visited {
 
 /* gives work blurb some cushion between bottom buttons */
 .blurb blockquote { margin: 0.5em auto 1em auto; }
-
 
 /* wrangles buttons/details directly below titles on subs/related works pages */
 dl.index dd { margin: 0.25em 0.25em 1.25em 0; }
