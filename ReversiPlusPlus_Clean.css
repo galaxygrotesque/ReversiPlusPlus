@@ -14,13 +14,15 @@
 		*	ibm plex sans	(https://fonts.google.com/specimen/IBM+Plex+Sans)
 		*	ibm plex serif	(https://fonts.google.com/specimen/IBM+Plex+Serif)
 		*	literata	(https://fonts.google.com/specimen/Literata)
+		* @ 	menlo		(https://github.com/hbin/top-programming-fonts/blob/master/Menlo-Regular.ttf)
 		*	noto sans	(https://fonts.google.com/specimen/Noto+Sans)
+		@ $	palatino	(https://www.myfonts.com/collections/palatino-font-linotype)
 		@ $	proxima nova	(https://fonts.adobe.com/fonts/proxima-nova)
 		*	source code pro	(https://fonts.google.com/specimen/Source+Code+Pro)
 		*	source sans 3	(https://fonts.google.com/specimen/Source+Sans+3)
 		*	source serif 4	(https://fonts.google.com/specimen/Source+Serif+4)
 		
-		* web font (free!)
+		* web font (or free!)
 		@ iOS system font
 		$ paid (not free ... unless system font)
 
@@ -33,6 +35,7 @@
   05. footer
   06. dashboard, sidebar, & search
   07. misc
+  
 */
 
 
@@ -272,7 +275,7 @@ hr {
 #chapters .userstuff ol,
 #chapters .userstuff ul {
 	font-family: "Charter", "IBM Plex Serif", "Palatino Linotype", "Palatino", "Literata", "Georgia", serif;
-	font-size: 1.3em;		/* mobile: 1.1em */
+	font-size: 1.3em;	/* mobile: 1.1em */
 }
 
 #chapters .userstuff ol {
