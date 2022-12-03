@@ -4,9 +4,10 @@
 
   ++ CREDITS & ACKNOWLEDGEMENTS ++
   - reversi base:	archiveofourown	(https://archiveofourown.org/skins/929)
+  - tag scroll box:	archiveofourown	(https://archiveofourown.org/skins/3756)
   - tag bubbles:	@nyxmidnight	(https://github.com/nyxmidnight) (https://github.com/nyxmidnight/ao3tagsfonts)
   - typography:		mb		(https://practicaltypography.com/index.html)	
-  - fonts (* @ $):
+  - fonts:
 		*	charter		(https://fontesk.com/charter-typeface/)
 		*	fira code	(https://fonts.google.com/specimen/Fira+Code)
 		@ $	helvetica neue	(https://www.myfonts.com/collections/neue-helvetica-font-linotype)
@@ -21,7 +22,7 @@
 		
 		* web font (free!)
 		@ iOS system font
-		$ paid (not free ... [unless system font])
+		$ paid (not free ... unless system font)
 
   ++ SECTIONS ++
   00. colour guide
@@ -945,10 +946,12 @@ th,
 
 /* ---+ 06. DASHBOARD, SIDEBAR, & SEARCH +--- */
 
-/* dark dashboard backdrop */
+/* dark dashboard backdrop, smaller font size, more padding */
 #dashboard.own {
 	background: #151319;
+	font-size: .9em;
 	margin-top: 1.15em;
+	padding: .5em;
 }
 
 #dashboard a:hover {
