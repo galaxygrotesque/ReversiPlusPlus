@@ -389,6 +389,7 @@ a.cloud8 {
 }
 
 /* lighter ao3 blue on link hover */
+/* lighter ao3 blue on link hover */
 a:hover,
 a:link:hover,
 a:link:visited,
@@ -704,6 +705,11 @@ input:active[type="submit"] {
 /* gets rid of commas after tags because bubbles */
 .commas li::after {
 	content: none;
+}
+
+/* trims padding off the last child (sorry kiddo) */
+.commas li.last {
+	padding: 0;
 }
 
 /* gives work blurb some cushion between bottom buttons */
