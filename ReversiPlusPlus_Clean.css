@@ -1,46 +1,46 @@
 /*	
-	---+ ReversiPlusPlus +---
-	this is horrendously messy i am so sorry
+  ---+ ReversiPlusPlus +---
+  this is horrendously messy i am so sorry
 
-	++ CREDITS & ACKNOWLEDGEMENTS ++
-	- reversi base:		archiveofourown	(https://archiveofourown.org/skins/929)
-	- tag bubbles:		@nyxmidnight	(https://github.com/nyxmidnight) (https://github.com/nyxmidnight/ao3tagsfonts)
-	- typography:		mb				(https://practicaltypography.com/index.html)	
-	- fonts (* @ $):
-			*	@		charter			(https://fontesk.com/charter-typeface/)
-			*			fira code		(https://fonts.google.com/specimen/Fira+Code)
-				@	$	helvetica neue	(https://www.myfonts.com/collections/neue-helvetica-font-linotype)
-			*			ibm plex sans	(https://fonts.google.com/specimen/IBM+Plex+Sans)
-			*			ibm plex serif	(https://fonts.google.com/specimen/IBM+Plex+Serif)
-			*			literata		(https://fonts.google.com/specimen/Literata)
-			*			noto sans		(https://fonts.google.com/specimen/Noto+Sans)
-				@	$	proxima nova	(https://fonts.adobe.com/fonts/proxima-nova)
-			*			source code pro	(https://fonts.google.com/specimen/Source+Code+Pro)
-			*			source sans 3	(https://fonts.google.com/specimen/Source+Sans+3)
-			*			source serif 4	(https://fonts.google.com/specimen/Source+Serif+4)
-			
+  ++ CREDITS & ACKNOWLEDGEMENTS ++
+  - reversi base:	archiveofourown	(https://archiveofourown.org/skins/929)
+  - tag bubbles:	@nyxmidnight	(https://github.com/nyxmidnight) (https://github.com/nyxmidnight/ao3tagsfonts)
+  - typography:		mb		(https://practicaltypography.com/index.html)	
+  - fonts (* @ $):
+		*	charter		(https://fontesk.com/charter-typeface/)
+		*	fira code	(https://fonts.google.com/specimen/Fira+Code)
+		@ $	helvetica neue	(https://www.myfonts.com/collections/neue-helvetica-font-linotype)
+		*	ibm plex sans	(https://fonts.google.com/specimen/IBM+Plex+Sans)
+		*	ibm plex serif	(https://fonts.google.com/specimen/IBM+Plex+Serif)
+		*	literata	(https://fonts.google.com/specimen/Literata)
+		*	noto sans	(https://fonts.google.com/specimen/Noto+Sans)
+		@ $	proxima nova	(https://fonts.adobe.com/fonts/proxima-nova)
+		*	source code pro	(https://fonts.google.com/specimen/Source+Code+Pro)
+		*	source sans 3	(https://fonts.google.com/specimen/Source+Sans+3)
+		*	source serif 4	(https://fonts.google.com/specimen/Source+Serif+4)
+		
 		* web font (free!)
 		@ iOS system font
 		$ paid (not free ... [unless system font])
 
-	++ SECTIONS ++
-	00. colour guide
-	01. base
-	02. work reading enhancements
-	03. tags, buttons, & (most) links
-	04. header & navigation
-	05. footer
-	06. dashboard, sidebar, & search
-	07. misc
- */
+  ++ SECTIONS ++
+  00. colour guide
+  01. base
+  02. work reading enhancements
+  03. tags, buttons, & (most) links
+  04. header & navigation
+  05. footer
+  06. dashboard, sidebar, & search
+  07. misc
+*/
 
 
 
 /* ---+ 00. COLOUR GUIDE +--- */
 
-/*	variables GO
-	or not because ao3 doesn't allow them for some reason what the hell???
-	whatever, using this as a colour guide anyway
+/* variables GO
+   or not because ao3 doesn't allow them for some reason what the hell???
+   whatever, using this as a colour guide anyway
 	
 :root {
 	--ao3-accent-color: #5998d6;
@@ -60,7 +60,7 @@
 
 /* ---+ 01. BASE +--- */
 
-/* banishes every box shadow, text shadow,	and outline like the demons they are */
+/* banishes every box shadow, text shadow, and outline like the demons they are */
 * {
 	box-shadow: none !important;
 	outline: none !important;
@@ -104,10 +104,10 @@ div.dynamic,
 	outline: none;
 }
 
-/*	less boring sans-serif fonts (that hopefully won't fuck up other shit)
-	grab whichever strikes your fancy and slap it down after font-family!
-		fonts:		"IBM Plex Sans", "Noto Sans", "Source Sans 3", "Proxima Nova", "Helvetica Neue",
-		defaults:	"Lucida Grande", "Lucida Sans Unicode", "GNU Unifont", Verdana, Helvetica, sans-serif;
+/* less boring sans-serif fonts (that hopefully won't fuck up other shit)
+   grab whichever strikes your fancy and slap it down after font-family!
+   fonts:	"IBM Plex Sans", "Noto Sans", "Source Sans 3", "Proxima Nova", "Helvetica Neue",
+   defaults:	"Lucida Grande", "Lucida Sans Unicode", "GNU Unifont", Verdana, Helvetica, sans-serif;
 */
 body,
 input,
@@ -120,9 +120,9 @@ blockquote.userstuff,
 	font-family: "IBM Plex Sans", "Proxima Nova", "Helvetica Neue", "Lucida Grande", "Lucida Sans Unicode", "GNU Unifont", Verdana, Helvetica, sans-serif;
 }
 
-/*	small site-wide header change because georgia and "serif" are SO boring please have some taste
-		fonts:		"Charter", "IBM Plex Serif", "Source Serif 4", "Palatino Linotype", "Palatino", "Literata",
-		defaults:	"Georgia", serif;
+/* small site-wide header change because georgia and "serif" are SO boring please have some taste
+   fonts:	"Charter", "IBM Plex Serif", "Source Serif 4", "Palatino Linotype", "Palatino", "Literata",
+   defaults:	"Georgia", serif;
 */
 h1, h2, h3, h4, h5, h6, .heading, .bookmark .user .meta {
 	font-family: "Charter", "IBM Plex Serif", "Palatino", "Georgia", serif;
@@ -247,9 +247,9 @@ a.work,
 
 /* ---+ 02. WORK READING ENHANCEMENTS +--- */
 
-/*	WARNING:
-	select default values in this section are NOT kind to mobile or small screens!
-	see values suggested in comments for <1000px res!
+/* WARNING:
+   select default values in this section are NOT kind to mobile or small screens!
+   see values suggested in comments for <1000px res!
 */
 
 /* give h3 its white space back */
@@ -263,8 +263,8 @@ hr {
 	margin: 1.5em auto;
 }
 
-/*	give me serif NOW (but only when in an actual work) 
-	note: this change can (and will) royally screw up writers' work skins until i figure out a better workaround
+/* give me serif NOW (but only when in an actual work) 
+   note: this change can (and will) royally screw up writers' work skins until i figure out a better workaround
 */
 #chapters .userstuff p,
 #chapters .userstuff a,
@@ -285,19 +285,19 @@ hr {
 
 /* embiggen fic margins! in this house we appreciate white space */
 #chapters .userstuff p {
-	margin-left: 2.5em;		/* mobile: 1.5em */
+	margin-left: 2.5em;	/* mobile: 1.5em */
 	margin-right: 2.5em;	/* mobile: 1.5em */
 }
 
 /* unfortunately blockquotes get weird with more white space so gotta fix that */
 #chapters .userstuff blockquote {
-	margin-left: 5em;		/* mobile: 2em */
-	margin-right: 5em;		/* mobile: 2em */
+	margin-left: 5em;	/* mobile: 2em */
+	margin-right: 5em;	/* mobile: 2em */
 }
 
 /* wrangle p margins within blockquotes */
 #chapters .userstuff blockquote p {
-	margin-left: 1em;		/* mobile: .5em */
+	margin-left: 1em;	/* mobile: .5em */
 	margin-right: 1em;	/* mobile: .5em */
 }
 
