@@ -369,7 +369,7 @@ li.comment {
 
 
 
-/* ------ 03. TAGS, BUTTONS, & (MOST) LINKS ------ */
+/* ---+ 03. TAGS, BUTTONS, & (MOST) LINKS +--- */
 
 /* base links */
 a, a:link {
@@ -775,7 +775,7 @@ textarea.LV_invalid_field:active,
 
 
 
-/* ------ 04. HEADER & NAVIGATION ------ */
+/* ---+ 04. HEADER & NAVIGATION +--- */
 
 /* de-bubble search heading */
 h2.heading a {
