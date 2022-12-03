@@ -51,6 +51,7 @@
 	--background-color: #1c1b22;
 	--background-color-dark: #151319;
 	--box-border-color: #78777d;
+	--box-border-color-alt: #c2d2df;
 	--container-color: #16151b;
 	--light-grey-color: #5b5b66;
 	--subtle-box-border-color: #454547;
@@ -136,6 +137,10 @@ h1, h2, h3, h4, h5, h6, .heading, .bookmark .user .meta {
 kbd, tt, code, var, pre, samp {
 	font-family: "Fira Code", "Source Code Pro", "Menlo", "Monaco", "Consolas", Courier, monospace;
 	font-size: .9em;
+}
+
+.picture .header {
+	border: 0;
 }
 
 /* stops blockquotes in work blurbs from inheriting margins */
@@ -238,6 +243,7 @@ a.work,
 	padding: .65em;
 }
 
+/* even entries get a cool different colour :D */
 .statistics .index li:nth-of-type(even) {
 	background: #1c1b22;
 }
@@ -245,6 +251,27 @@ a.work,
 /* adjusts stats spacing */
 .statistics .index dd {
 	margin: 1em 0 .5em 0 !important;
+}
+
+/* 'kay we're getting into categories now, need to figure out how to sort this out later */
+.parent.listbox.group {
+	border: 0;
+	background: transparent;
+}
+
+.tags.commas.index.group {
+	background: transparent;
+}
+
+/* ALL the listbox bgs transparent?? i guess */
+.listbox .index {
+	background: transparent !important;
+}
+
+.bookmark.listbox.group,
+.work.listbox.group {
+	background: transparent;
+	border: 0;
 }
 
 
@@ -259,6 +286,15 @@ a.work,
 /* give h3 its white space back */
 h3 {
 	line-height: inherit;
+}
+
+/* double underline is fucking stupid */
+.userstuff h3 {
+	border-bottom: 1px solid #78777d;
+}
+
+.preface h3 {
+	
 }
 
 /* makes HR dividers the same colour as text, extra margin space */
@@ -278,13 +314,29 @@ hr {
 	font-size: 1.3em;	/* mobile: 1.1em */
 }
 
+/* nix border at the top of work page */
+.chapter .preface {
+	border: 0;
+}
+
+/* links don't be big stop it */
+#chapters .userstuff a {
+	font-size: revert;	
+}
+
+/* line height is not a bad thing give it back */
 #chapters .userstuff ol {
 	line-height: inherit;
 }
 
 /* scrunches code in-work a little*/
 #chapters .userstuff code {
-	font-size: .8em;
+	font-size: .85em;
+}
+
+/* slightly bigger pre because otherwise it looks like it's for ants */
+#chapters .userstuff pre {
+	font-size: 1em;
 }
 
 /* embiggen fic margins! in this house we appreciate white space */
@@ -372,16 +424,21 @@ li.comment {
 /* ---+ 03. TAGS, BUTTONS, & (MOST) LINKS +--- */
 
 /* base links */
-a, a:link {
+a,
+a:link {
 	color: #fff;
-	text-decoration:
-	none;
+	text-decoration: none;
+}
+
+/* author name being weird in-work, so slapping a link whether it likes it or not */
+div.preface .byline a {
+	border-bottom: 1px solid;
 }
 
 /* makes lots of link things ao3 blue */
 .blurb h4 a:link,
-.delete a,
 .blurb h4 img,
+.delete a,
 .splash .browse li a:before,
 a.cloud7,
 a.cloud8 {
@@ -389,14 +446,14 @@ a.cloud8 {
 }
 
 /* lighter ao3 blue on link hover */
-/* lighter ao3 blue on link hover */
 a:hover,
 a:link:hover,
 a:link:visited,
 a:visited:hover,
 .blurb h4 a:hover,
 .blurb h4 a:link:hover,
-.blurb h4 a:visited:hover {
+.blurb h4 a:visited:hover,
+div.preface .byline a:hover {
 	color: #9ecfff;
 }
 
@@ -407,6 +464,7 @@ a:visited,
 .action a:visited,
 .listbox .heading a:visited,
 .blurb h4 a:visited,
+div.preface .byline a:visited,
 span.series .divider {
 	color: #999;
 }
@@ -666,6 +724,7 @@ input:hover[type="submit"] {
 
 /* active button behaviours (mostly) */
 #dashboard .current,
+#header #search input:focus,
 .actions a:active,
 label.action:active,
 #outer .current,
@@ -682,6 +741,7 @@ span.claimed,
 .unreviewed,
 .ui-sortable li:hover,
 input:active[type="submit"] {
+	color: #fff;
 	background: #000;
 	border-color: transparent;
 }
@@ -828,6 +888,11 @@ h2.heading a:visited {
 	text-align: right;
 }
 
+/* gives user greeting some breathing room */
+#greeting {
+	padding: .5em 0;
+}
+
 /* stay square, nav buttons */
 #header ul.primary,
 .dropdown-toggle {
@@ -908,8 +973,6 @@ th,
 #header .primary .dropdown a:focus,
 #header .user a:focus,
 #header .user .open a:focus,
-#header #search input:focus,
-#header #search input:hover,
 #dashboard a,
 #dashboard span,
 #dashboard .current,
@@ -918,6 +981,7 @@ th,
 .filters dt a:hover {
 	color: #fff;
 }
+
 
 
 
@@ -955,6 +1019,40 @@ th,
 
 /* ---+ 06. DASHBOARD, SIDEBAR, & SEARCH +--- */
 
+/* searchbar colours behave now */
+#header #search .text:active,
+#header #search .text:focus,
+#header #search .text:hover {
+	background: #23222b;
+}
+
+/* nix white in tooltip dropdown bg */
+.dropdown {
+	background: none;
+}
+
+/* search tooltip adjustments */
+.search [role="tooltip"] {
+	background: #1c1b22;
+	border: 1px solid #78777d;
+	border-radius: .25em;
+	color: #eee;
+	padding: .25em .375em;
+	margin: .643em auto;
+}
+
+
+/* fix search bars in work search because they're. A Lot */
+form.search input[type="text"] {
+	border-color: #78777d;
+	border-radius: .25em;
+}
+
+/* help buttons get weird in the sidebar so this is a shrink ray */
+.help.symbol.question.modal.modal-attached {
+	font-size: .75em;
+}
+
 /* dark dashboard backdrop, smaller font size, more padding */
 #dashboard.own {
 	background: #151319;
@@ -973,15 +1071,37 @@ th,
 }
 
 /* nix dash button lines */
-#dashboard ul {
+#dashboard ul,
+.filters .group dt.bookmarker {
 	border: 0;
 	/* display: inline-block; */
 	/*padding: 1.25em .5em;	ao3 CSS restrictions are why we can't have nice things*/
 }
 
-/* nix white in tooltip dropdown bg */
-.dropdown {
-	background: none;
+/* this is the part where the sort and filter arrows are taken out and replaced */
+.filters button.expander {
+	padding: 0;
+}
+
+/* expanded buttons are too far out so they're scooching in a skosh */
+.filters .tags li {
+	padding-left: .75em;
+}
+
+/* this is the part where the sort and filter arrow .gifs are taken out */
+.filters .expander,
+.filters .expanded .expander {
+	background: transparent;
+}
+
+/* and replaced! hi, meet right unicode arrow */
+.filters .expander::before {
+	content: "\23F5 ";
+}
+
+/* and left unicode arrow */
+.filters .expanded .expander::before {
+	content: " \23F7";
 }
 
 /* gets rid of extra lines in Sort and Filter sidebar */
@@ -1018,8 +1138,7 @@ fieldset fieldset.listbox {
 fieldset fieldset.listbox,
 .toggled form,
 form dl dt,
-form.single fieldset,
-.filters .group dt.bookmarker {
+form.single fieldset {
 	border-color: #78777d;
 }
 
