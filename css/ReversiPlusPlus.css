@@ -1,12 +1,13 @@
-/*	
-  ---+ ReversiPlusPlus +---
+/*
+  ---+ REVERSI PLUS PLUS +---
   this is horrendously messy i am so sorry
+  if it looks like i know what i'm doing, rest assured: i do not
 
   ++ CREDITS & ACKNOWLEDGEMENTS ++
   - reversi base:	archiveofourown	(https://archiveofourown.org/skins/929)
   - tag scroll box:	archiveofourown	(https://archiveofourown.org/skins/3756)
   - tag bubbles:	@nyxmidnight	(https://github.com/nyxmidnight) (https://github.com/nyxmidnight/ao3tagsfonts)
-  - typography:		mb		(https://practicaltypography.com/index.html)	
+  - typography:		mb		(https://practicaltypography.com/index.html)
   - fonts:
 		*	charter		(https://fontesk.com/charter-typeface/)
 		*	fira code	(https://fonts.google.com/specimen/Fira+Code)
@@ -21,7 +22,7 @@
 		*	source code pro	(https://fonts.google.com/specimen/Source+Code+Pro)
 		*	source sans 3	(https://fonts.google.com/specimen/Source+Sans+3)
 		*	source serif 4	(https://fonts.google.com/specimen/Source+Serif+4)
-		
+
 		* web font (or free!)
 		@ iOS system font
 		$ paid (not free ... unless system font)
@@ -30,21 +31,22 @@
   00. colour guide
   01. base
   02. fonts
-  03. work reading adjustments
+  03. work reading adjustments (reading fonts here!)
   04. comments
   05. tags
   06. work blurb cleanup
   07. messages & tooltips
   08. buttons
   09. dashboard
-  10. stats page
-  11. other pages
-  12. header
-  13. footer
+  10. header
+  11. footer
+  12. stats page
+  13. other pages
   14. sort & filter sidebar
   15. misc
   
 */
+
 
 
 
@@ -53,7 +55,8 @@
 /* variables GO
    or not because ao3 doesn't allow them for some reason what the hell???
    whatever, using this as a colour guide anyway
-	
+*/
+/*
 :root {
 	--ao3-accent-color: #5998d6;
 	--background-color: #1c1b22;
@@ -68,6 +71,7 @@
 	--visited-color: #999;
 }
 */
+
 
 
 
@@ -112,8 +116,8 @@ span.series .divider,
 .actions a:visited,
 .action a:link,
 .action a:visited,
-.listbox .heading a:visited,
-.blurb h4 a:visited {
+.blurb h4 a:visited,
+.listbox .heading a:visited {
 	color: #999;
 }
 
@@ -134,47 +138,12 @@ a.work,
 	color: #5998d6;
 }
 
-
-
-
-/* ---+ 02. FONTS +--- */
-/* less boring sans-serif fonts (that hopefully won't fuck up other shit)
-   grab whichever strikes your fancy and slap it down after font-family!
-   fonts:	"IBM Plex Sans", "Noto Sans", "Source Sans 3", "Proxima Nova", "Helvetica Neue",
-   defaults:	"Lucida Grande", "Lucida Sans Unicode", "GNU Unifont", Verdana, Helvetica, sans-serif;
-*/
-body,
-input,
-textarea,
-blockquote,
-blockquote.userstuff,
-.blurb blockquote,
-.dropdown,
-.expander {
-	font-family: "IBM Plex Sans", "Proxima Nova", "Helvetica Neue", "Lucida Grande", "Lucida Sans Unicode", "GNU Unifont", Verdana, Helvetica, sans-serif;
-}
-
-/* small site-wide header change because georgia and "serif" are SO boring please have some taste
-   fonts:	"Charter", "IBM Plex Serif", "Source Serif 4", "Palatino Linotype", "Palatino", "Literata",
-   defaults:	"Georgia", serif;
-*/
-h1, h2, h3, h4, h5, h6,
-.heading,
-.bookmark .user .meta {
-	font-family: "Charter", "IBM Plex Serif", "Palatino", "Georgia", serif;
-}
-
-/* better mono/code fonts pls */
-kbd, tt, code, var, pre, samp {
-	font-family: "Fira Code", "Source Code Pro", "Menlo", "Monaco", "Consolas", Courier, monospace;
-	font-size: .9em;
-}
-
 /* give h3 its white space back */
-h3 { line-height: inherit; }
+h3 {
+	line-height: inherit;
+	}
 
-
-/* makes HR dividers the same colour as text, extra margin space */
+/* makes HR dividers the same colour as text + extra margin space */
 hr {
 	color: #eee;
 	margin: 1.5em auto;
@@ -200,7 +169,7 @@ textarea:focus {
 /* white border on text box hover */
 input:hover {
 	background: #23222b;
-	border-color: #fff;	
+	border-color: #fff;
 }
 
 .heading,
@@ -211,13 +180,6 @@ input:hover {
 /* why was underline here, anyway? why are you applying double underlines?? */
 .preface a:hover {
 	text-decoration: none;
-}
-
-/* ao3 blue accent on help ? hover */
-.symbol .question,
-.qtip-content {
-	background: transparent;
-	color: #5998d6;
 }
 
 /* makes lots of things the ao3 blue accent */
@@ -281,6 +243,52 @@ div.dynamic,
 
 
 
+/* ---+ 02. FONTS +--- */
+
+/* less boring sans-serif fonts (that hopefully won't fuck up other shit)
+   grab whichever strikes your fancy and slap it down after font-family!
+   fonts:	"IBM Plex Sans", "Noto Sans", "Source Sans 3", "Proxima Nova", "Helvetica Neue",
+   defaults:	"Lucida Grande", "Lucida Sans Unicode", "GNU Unifont", Verdana, Helvetica, sans-serif;
+*/
+body,
+input,
+textarea,
+blockquote,
+blockquote.userstuff,
+.blurb blockquote,
+.dropdown,
+.expander {	/* font choices go here ↓ */
+	font-family: "IBM Plex Sans", "Proxima Nova", "Helvetica Neue", "Lucida Grande", "Lucida Sans Unicode", "GNU Unifont", Verdana, Helvetica, sans-serif;
+}
+
+/* small site-wide header change because georgia and "serif" are SO boring please have some taste
+   fonts:	"Charter", "IBM Plex Serif", "Source Serif 4", "Palatino Linotype", "Palatino", "Literata",
+   defaults:	"Georgia", serif;
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.heading,
+.bookmark .user .meta {	/* font choices go here ↓ */
+	font-family: "Charter", "IBM Plex Serif", "Palatino", "Georgia", serif;
+}
+
+/* better mono/code fonts pls */
+kbd,
+tt,
+code,
+var,
+pre,
+samp {		/* font choices go here ↓ */
+	font-family: "Fira Code", "Source Code Pro", "Menlo", "Monaco", "Consolas", Courier, monospace;
+	font-size: .9em;
+}
+
+
+
 
 /* ---+ 03. WORK READING ADJUSTMENTS +--- */
 
@@ -294,7 +302,7 @@ div.dynamic,
 #chapters .userstuff p,
 #chapters .userstuff a,
 #chapters .userstuff ol,
-#chapters .userstuff ul {
+#chapters .userstuff ul {	/* font choices go here ↓ */
 	font-family: "Charter", "IBM Plex Serif", "Palatino Linotype", "Palatino", "Literata", "Georgia", serif;
 	font-size: 1.25em;	/* mobile: 1.1em */
 }
@@ -349,15 +357,13 @@ div.preface .byline a {
 
 /*
 .preface h3 {
-	
+	i was going to do something here but i forgot what it was
 }*/
 
 /* double underline is fucking stupid */
 .userstuff h3 {
 	border-bottom: 1px solid #78777d;
 }
-
-
 
 
 
@@ -398,15 +404,13 @@ li.comment {
 
 
 
-
-
 /* ---+ 05. TAGS +--- */
 
 /* tag-specific link attributes — makes tag bubbles! */
 a.tag {
 	background: #2b2a33;
 	border: 1px solid transparent;
-	border-radius: .25em;	/* round! */
+	border-radius: .25em;	/* round! :D */
 	color: #eee;
 	display: inline-block;
 	font-size: .9em;
@@ -564,7 +568,7 @@ ul.required-tags,
 }
 
 /* forces work blurb buttons to not immediately enact camouflage upon approach */
-.actions a:visited:hover 
+.actions a:visited:hover,
 .index .actions li a:hover {
 	background: #111;
 }
@@ -628,6 +632,9 @@ dd.category a:visited {
 }
 
 /*
+padding problem between li classes i gotta fix
+(ref: dl.meta dd ul li:first-child) 
+
 li.warnings a:last-child,
 li.relationships a:last-child,
 li.characters a:last-child {
@@ -642,7 +649,7 @@ ul.commas
  
 */
 
-/* knock tag bubbles on work page back into alignment dl.meta dd ul li:first-child */
+/* knock tag bubbles on work page back into alignment */
 .meta dd ul li {
 	padding-left: 0;
 	padding-right: .5em;
@@ -770,6 +777,12 @@ form dd.required {
 	background: #151319;
 }
 
+/* ao3 blue accent on help (?) hover */
+.symbol .question,
+.qtip-content {
+	background: transparent;
+	color: #5998d6;
+}
 
 
 
@@ -843,7 +856,6 @@ dl.meta {
 
 
 
-
 /* ---+ 09. DASHBOARD +--- */
 
 #dashboard,
@@ -871,7 +883,7 @@ dl.meta {
 .filters .group dt.bookmarker {
 	border: 0;
 	/* display: inline-block; */
-	/* padding: 1.25em .5em;	ao3 CSS restrictions are why we can't have nice things */
+	/* padding: 1.25em .5em; */	/* ao3 CSS restrictions are why we can't have nice things */
 }
 
 /* dark dashboard backdrop, smaller font size, more padding */
@@ -896,7 +908,147 @@ dl.meta {
 
 
 
-/* ---+ 10. STATS PAGE +--- */
+/* ---+ 10. HEADER +--- */
+
+/* gives user greeting some breathing room */
+#greeting {
+	padding: .5em 0;
+}
+
+#header #greeting img,
+#header fieldset,
+#header form,
+#header p,
+#header .heading a,
+#header .heading a:visited,
+#tos_prompt .heading {
+	color: #5998d6;
+}
+
+/* searchbar colours behave now */
+#header #search .text:active,
+#header #search .text:focus,
+#header #search .text:hover {
+	background: #23222b;
+}
+
+#header #search input:focus {
+	color: #fff;
+	background: #000;
+	border-color: transparent;
+}
+
+#header a,
+#header a:visited,
+#header .primary .open a,
+#header .primary .dropdown:hover a,
+#header .primary .dropdown a:focus,
+#header .user a:focus,
+#header .user .open a:focus,
+.filters dt a:hover {
+	color: #fff;
+}
+
+#header .actions a {
+	background: transparent;
+	border-color: #2b2a33;
+	color: #eee;
+}
+
+#header .actions a:hover {
+	background: #23222b;
+	color: #eee;
+}
+
+#header .actions a:focus,
+#header .dropdown:hover a,
+#header .open a,
+#header .menu,
+#small_login,
+th,
+.secondary,
+.thread .even,
+.system .tweet_list li,
+.ui-datepicker tr:hover {
+	background: #23222b;
+}
+
+/* top nav with black bg */
+#header .dropdown .menu a:focus,
+#header .dropdown .menu a:hover {
+	background: #151319;
+}
+
+/* nix lines in header nav */
+#header .menu li {
+	border: 0;
+}
+
+#inner .module .heading {
+	border-color: #78777d;
+}
+
+#header .user a:hover {
+	color: #fff;
+	background: #151319;
+	border-color: transparent;
+}
+
+/* why are we still using weird noise jpgs as banners please stop */
+#header ul.primary {
+	background: #5998d6;
+}
+
+/* stay square, nav buttons */
+#header ul.primary {
+	border-radius: 0 !important;
+}
+
+#outer .group .heading,
+fieldset.listbox .heading,
+.userstuff .heading,
+.heading,
+.userstuff h2 {
+	color: #fff;
+	background: none;
+}
+
+
+
+
+/* ---+ 11. FOOTER +--- */
+
+/* no more noise.jpg */
+#outer #footer {
+	background: #5998d6;
+}
+
+#outer .region,
+#footer .group {
+	background: none;
+}
+
+/* nix the top border in the footer */
+#footer {
+	border: 0;
+}
+
+/* ao3 blue accent on hover */
+#footer a:hover,
+#footer a:focus {
+	background: transparent;
+	color: #5998d6;
+}
+
+/* give the footer nav text a readable pillow */
+#footer ul.actions {
+	background-color: #1c1b22;
+}
+
+
+
+
+/* ---+ 12. STATS PAGE +--- */
 
 /* smooth stats page borders, dark bg */
 .fandom.listbox.group {
@@ -912,7 +1064,7 @@ dl.meta {
 	padding: .15em .65em;
 }
 
-/* cushion for h5 on stats page*/
+/* cushion for h5 on stats page */
 .statistics .listbox h5.heading {
 	font-size: 1.1em;
 	margin: .75em 0 !important;
@@ -937,7 +1089,8 @@ dl.meta {
 
 
 
-/* ---+ 11. OTHER PAGES +--- */
+
+/* ---+ 13. OTHER PAGES +--- */
 
 /* banish noisy lines and background for: user fandoms, works, series, bookmarks */
 #user-fandoms,
@@ -1046,152 +1199,9 @@ dl.index dd {
 
 
 
-
-/* ---+ 12. HEADER +--- */
-
-/* gives user greeting some breathing room */
-#greeting {
-	padding: .5em 0;
-}
-
-#header #greeting img,
-#header fieldset,
-#header form,
-#header p,
-#header .heading a,
-#header .heading a:visited,
-#tos_prompt .heading {
-	color: #5998d6;
-}
-
-/* searchbar colours behave now */
-#header #search .text:active,
-#header #search .text:focus,
-#header #search .text:hover {
-	background: #23222b;
-}
-
-#header #search input:focus {
-	color: #fff;
-	background: #000;
-	border-color: transparent;
-}
-
-#header a,
-#header a:visited,
-#header .primary .open a,
-#header .primary .dropdown:hover a,
-#header .primary .dropdown a:focus,
-#header .user a:focus,
-#header .user .open a:focus,
-.filters dt a:hover {
-	color: #fff;
-}
-
-#header .actions a {
-	background: transparent;
-	border-color: #2b2a33;
-	color: #eee;
-}
-
-#header .actions a:hover {
-	background: #23222b;
-	color: #eee;
-}
-
-#header .actions a:focus,
-#header .dropdown:hover a,
-#header .open a,
-#header .menu,
-#small_login,
-th,
-.secondary,
-.thread .even,
-.system .tweet_list li,
-.ui-datepicker tr:hover {
-	background: #23222b;
-}
-
-/* top nav with black bg */
-#header .dropdown .menu a:focus,
-#header .dropdown .menu a:hover {
-	background: #151319;
-}
-
-/* nix lines in header nav */
-#header .menu li {
-	border: 0;
-}
-
-#inner .module .heading {
-	border-color: #78777d;
-}
-
-#header .user a:hover {
-	color: #fff;
-	background: #151319;
-	border-color: transparent; 
-}
-
-/* why are we still using weird noise jpgs as banners please stop */
-#header ul.primary {
-	background: #5998d6;
-}
-
-/* stay square, nav buttons */
-#header ul.primary {
-	border-radius: 0 !important;
-}
-
-#outer .group .heading,
-fieldset.listbox .heading,
-.userstuff .heading,
-.heading,
-.userstuff h2 {
-	color: #fff;
-	background: none;
-}
-
-
-
-
-
-/* ---+ 13. FOOTER +--- */
-
-/* why are we still using weird noise jpgs as banners please stop */
-#outer #footer {
-	background: #5998d6;
-}
-
-#outer .region,
-#footer .group {
-	background: none;
-}
-
-/* nix the top border in the footer */
-#footer {
-	border: 0;
-}
-
-/* ao3 blue accent on hover */
-#footer a:hover,
-#footer a:focus {
-	background: transparent;
-	color: #5998d6;
-}
-
-/* give the footer nav text a readable pillow */
-#footer ul.actions {
-	background-color: #1c1b22;
-}
-
-
-
-
-
 /* ---+ 14. SORT & FILTER SIDEBAR +--- */
 
-/* slightly broken; shortens Sort and Filter input boxes because otherwise they right end would run off the page */
+/* broken, need to fix; shortens S&F input boxes because otherwise the right end would run off the page */
 .autocomplete ul, 
 .filters .more dd.search {
 	width: 97%;
@@ -1245,12 +1255,12 @@ fieldset.listbox .heading,
 	margin: .643em auto;
 }
 
-/* why are we still using weird noise jpgs as banners please stop */
+/* nix noise.jpg */
 .toggled form {
 	background: #5998d6;
 }
 
-/* gets rid of extra lines in Sort and Filter sidebar */
+/* gets rid of extra lines in S&F sidebar */
 form dl dt, .filters dt {
 	border-bottom: none;
 }
@@ -1282,7 +1292,7 @@ form.single fieldset {
 }
 
 /* shrinks search bar */
-/*@media screen and (max-width: 415px) {
+/*@media screen and (max-width: 415px) {	GODDAMN IT AO3 LET ME DO RESPONSIVE WEB DESIGN ARARGH
 	li.search {
 		max-width: 35%;
 	}
