@@ -72,7 +72,161 @@
 	text-shadow: none !important;
 }
 
+body {
+	background: #1c1b22;
+	border-color: #78777d;
+	color: #eee;
+}
+
+/* base links */
+a,
+a:link {
+	color: #fff;
+	text-decoration: none;
+}
+
+/* makes lots of link things ao3 blue */
+a.cloud7,
+a.cloud8,
+a.work,
+.delete a,
+.blurb h4 a:link,
+.blurb h4 img,
+.splash .browse li a:before {
+	color: #5998d6;
+}
+
+/* lighter ao3 blue on link hover */
+a:hover,
+a:link:hover,
+a:link:visited,
+a:visited:hover,
+div.preface .byline a:hover,
+.blurb h4 a:hover,
+.blurb h4 a:link:hover,
+.blurb h4 a:visited:hover {
+	color: #9ecfff;
+}
+
+/* darker grey for visited links */
+a:visited,
+div.preface .byline a:visited,
+span.series .divider,
+.actions a:visited,
+.action a:link,
+.action a:visited,
+.listbox .heading a:visited,
+.blurb h4 a:visited {
+	color: #999;
+}
+
+/* (most) user icons are sharp no more */
+a img {
+	border: 0;
+	border-radius: .25em;
+}
+
+/* ---+ 00. FONTS +--- */
+/* less boring sans-serif fonts (that hopefully won't fuck up other shit)
+   grab whichever strikes your fancy and slap it down after font-family!
+   fonts:	"IBM Plex Sans", "Noto Sans", "Source Sans 3", "Proxima Nova", "Helvetica Neue",
+   defaults:	"Lucida Grande", "Lucida Sans Unicode", "GNU Unifont", Verdana, Helvetica, sans-serif;
+*/
 body,
+input,
+textarea,
+.blurb blockquote,
+.dropdown,
+.expander,
+blockquote,
+blockquote.userstuff {
+	font-family: "IBM Plex Sans", "Proxima Nova", "Helvetica Neue", "Lucida Grande", "Lucida Sans Unicode", "GNU Unifont", Verdana, Helvetica, sans-serif;
+}
+
+/* small site-wide header change because georgia and "serif" are SO boring please have some taste
+   fonts:	"Charter", "IBM Plex Serif", "Source Serif 4", "Palatino Linotype", "Palatino", "Literata",
+   defaults:	"Georgia", serif;
+*/
+h1, h2, h3, h4, h5, h6,
+.heading,
+.bookmark .user .meta {
+	font-family: "Charter", "IBM Plex Serif", "Palatino", "Georgia", serif;
+}
+
+/* better mono/code fonts pls */
+kbd, tt, code, var, pre, samp {
+	font-family: "Fira Code", "Source Code Pro", "Menlo", "Monaco", "Consolas", Courier, monospace;
+	font-size: .9em;
+}
+
+/* give h3 its white space back */
+h3 { line-height: inherit; }
+
+
+/* makes HR dividers the same colour as text, extra margin space */
+hr {
+	color: #eee;
+	margin: 1.5em auto;
+}
+
+/* rounds and pretties text boxes */
+input,
+textarea {
+	background: #1c1b22;
+	border-color: #78777d;
+	border-radius: .25em;
+	color: #eee; /* textarea didnt have this initially */
+}
+
+/* blue border now appears when you're focused a text box */
+form blockquote.userstuff,
+input:focus,
+textarea:focus {
+	background: #23222b;
+	border-color: #6ab5ff;
+}
+
+/* white border on text box hover */
+input:hover {
+	background: #23222b;
+	border-color: #fff;	
+}
+
+.heading,
+.group .heading {
+	color: #fff;
+}
+
+/* why was underline here, anyway? why are you applying double underlines?? */
+.preface a:hover {
+	text-decoration: none;
+}
+
+/* ao3 blue accent on help ? hover */
+.symbol .question,
+.qtip-content {
+	background: transparent;
+	color: #5998d6;
+}
+
+/* makes lots of things the ao3 blue accent */
+span.delete,
+span.unread,
+.replied,
+span.claimed,
+.draggable,
+.droppable,
+span.requested,
+.blurb h4 img,
+.splash .module h3,
+.required,
+.error,
+.comment_error,
+.kudos_error {
+	color: #5998d6;
+}
+
+/* sets base colours for oodles of elements */
 .group,
 .group .group,
 .region,
@@ -80,13 +234,10 @@ body,
 fieldset,
 fieldset fieldset ul,
 form dl,
-textarea,
 #main .verbose legend,
 .verbose fieldset,
 .notice,
 ul.notes,
-input,
-textarea,
 table,
 th,
 td:hover,
@@ -104,245 +255,44 @@ div.dynamic,
 #ui-datepicker-div,
 .ui-datepicker table {
 	background: #1c1b22;
-	color: #eee;
 	border-color: #78777d;
-	outline: none;
-}
-
-/* less boring sans-serif fonts (that hopefully won't fuck up other shit)
-   grab whichever strikes your fancy and slap it down after font-family!
-   fonts:	"IBM Plex Sans", "Noto Sans", "Source Sans 3", "Proxima Nova", "Helvetica Neue",
-   defaults:	"Lucida Grande", "Lucida Sans Unicode", "GNU Unifont", Verdana, Helvetica, sans-serif;
-*/
-body,
-input,
-textarea,
-.dropdown,
-.expander,
-blockquote,
-blockquote.userstuff,
-.blurb blockquote {
-	font-family: "IBM Plex Sans", "Proxima Nova", "Helvetica Neue", "Lucida Grande", "Lucida Sans Unicode", "GNU Unifont", Verdana, Helvetica, sans-serif;
-}
-
-/* small site-wide header change because georgia and "serif" are SO boring please have some taste
-   fonts:	"Charter", "IBM Plex Serif", "Source Serif 4", "Palatino Linotype", "Palatino", "Literata",
-   defaults:	"Georgia", serif;
-*/
-h1, h2, h3, h4, h5, h6, .heading, .bookmark .user .meta {
-	font-family: "Charter", "IBM Plex Serif", "Palatino", "Georgia", serif;
-}
-
-/* better mono/code fonts pls */
-kbd, tt, code, var, pre, samp {
-	font-family: "Fira Code", "Source Code Pro", "Menlo", "Monaco", "Consolas", Courier, monospace;
-	font-size: .9em;
+	color: #eee;
 }
 
 .picture .header {
 	border: 0;
 }
 
-/* stops blockquotes in work blurbs from inheriting margins */
-.summary.userstuff blockquote {
-	margin: 0 1.5em !important;
-	padding: .25em .75em;
-}
-
-/* rounds and pretties text boxes */
-input,
-textarea {
-	background: #1c1b22;
-	border-color: #78777d;
-	border-radius: .25em;
-}
-
-/* a cute blue border now appears when you're in a text box */
-form blockquote.userstuff,
-input:focus,
-textarea:focus {
-	background: #23222b;
-	border-color: #6ab5ff;
-}
-
-/* white border on text box hover */
-input:hover {
-	background: #23222b;
-	border-color: #fff;	
-}
-
-/* ao3 blue accent on ? hover */
-.symbol .question,
-.qtip-content {
-	background: transparent;
-	color: #5998d6;
-}
-
-/* banish noisy lines and background for: user fandoms, works, series, bookmarks */
-#user-fandoms,
-#user-fandoms ol,
-#user-works,
-#user-works ul,
-#user-series,
-#user-series ol,
-#user-bookmarks,
-#user-bookmarks ol {
-	border-color: transparent;
-	background: transparent;
-}
-
-/* makes lots of things the ao3 blue accent */
-span.delete,
-span.unread,
-.replied,
-span.claimed,
-.draggable,
-.droppable,
-span.requested,
-a.work,
-.blurb h4 img,
-.splash .module h3,
-.required,
-.error,
-.comment_error,
-.kudos_error {
-	color: #5998d6;
-}
-
-/* changed bookmark box colours; might tweak more */
-.bookmark div.user,
-.bookmark div.recent {
-	background-color: #151319;
-	border: 0;
-}
-
-/* cushion for h5 on stats page*/
-.statistics .listbox h5.heading {
-	font-size: 1.1em;
-	margin: .75em 0 !important;
-}
-
-/* smooth stats page borders, dark bg */
-.fandom.listbox.group {
-	background: transparent;
-	border: #151319;
-	border-radius: .25em;
-	margin: 1em 0;
-}
-
-.fandom ul.index.group {
-	background: #151319 !important;
-	border-radius: inherit;
-	padding: .15em .65em;
-}
-
-/* adjusts stats spacing */
-.statistics .index li {
-	border-radius: inherit;
-	margin: .5em 0;
-	padding: .65em;
-}
-
-/* even entries get a cool different colour :D */
-.statistics .index li:nth-of-type(even) {
-	background: #1c1b22;
-}
-
-/* adjusts stats spacing */
-.statistics .index dd {
-	margin: 1em 0 .5em 0 !important;
-}
-
-/* 'kay we're getting into categories now, need to figure out how to sort this out later */
-.parent.listbox.group {
-	border: 0;
-	background: transparent;
-}
-
-.tags.commas.index.group {
-	background: transparent;
-}
-
-/* ALL the listbox bgs transparent?? i guess */
-.listbox .index {
-	background: transparent !important;
-}
-
-.bookmark.listbox.group,
-.work.listbox.group {
-	background: transparent;
-	border: 0;
+.dropdown-toggle {
+	border-radius: 0 !important;
 }
 
 
 
-/* ---+ 02. WORK READING ENHANCEMENTS +--- */
+
+
+
+
+/* ---+ 00. WORK READING ADJUSTMENTS +--- */
 
 /* WARNING:
    select default values in this section are NOT kind to mobile or small screens!
    see values suggested in comments for <1000px res!
+   note: this change likely can (and will) royally screw up writers' work skins until i figure out a better workaround
 */
 
-/* give h3 its white space back */
-h3 {
-	line-height: inherit;
-}
-
-/* double underline is fucking stupid */
-.userstuff h3 {
-	border-bottom: 1px solid #78777d;
-}
-
-.preface h3 {
-	
-}
-
-/* makes HR dividers the same colour as text, extra margin space */
-hr {
-	color: #eee;
-	margin: 1.5em auto;
-}
-
-/* give me serif NOW (but only when in an actual work) 
-   note: this change can (and will) royally screw up writers' work skins until i figure out a better workaround
-*/
+/* give me serif NOW (but only when in an actual work) */
 #chapters .userstuff p,
 #chapters .userstuff a,
 #chapters .userstuff ol,
 #chapters .userstuff ul {
 	font-family: "Charter", "IBM Plex Serif", "Palatino Linotype", "Palatino", "Literata", "Georgia", serif;
-	font-size: 1.3em;	/* mobile: 1.1em */
-}
-
-/* nix border at the top of work page */
-.chapter .preface {
-	border: 0;
+	font-size: 1.25em;	/* mobile: 1.1em */
 }
 
 /* links don't be big stop it */
 #chapters .userstuff a {
 	font-size: revert;	
-}
-
-/* line height is not a bad thing give it back */
-#chapters .userstuff ol {
-	line-height: inherit;
-}
-
-/* scrunches code in-work a little*/
-#chapters .userstuff code {
-	font-size: .85em;
-}
-
-/* slightly bigger pre because otherwise it looks like it's for ants */
-#chapters .userstuff pre {
-	font-size: 1em;
-}
-
-/* embiggen fic margins! in this house we appreciate white space */
-#chapters .userstuff p {
-	margin-left: 2.5em;	/* mobile: 1.5em */
-	margin-right: 2.5em;	/* mobile: 1.5em */
 }
 
 /* unfortunately blockquotes get weird with more white space so gotta fix that */
@@ -357,34 +307,53 @@ hr {
 	margin-right: 1em;	/* mobile: .5em */
 }
 
-/* turn down the lights on work blurb bgs */
-#main li.blurb {
-	background: #151319;
-	border-color: transparent;
-	border-radius: .25em;
-	padding: .5em 1em;
-	margin-top: 1em;
-	margin-bottom: 1em;
+/* scrunches code in-work a little*/
+#chapters .userstuff code {
+	font-size: .85em;
 }
 
-/* cushion work blurb stats */
-.blurb dl.stats {
-	margin-top: .65em;
-	margin-bottom: .65em;
+/* line height is not a bad thing give it back */
+#chapters .userstuff ol {
+	line-height: inherit;
 }
 
-/* cleans up user history work blurbs */
-.user.module.group {
-	background: transparent;
-	margin-top: .75em;
+/* embiggen fic margins! in this house we appreciate white space */
+#chapters .userstuff p {
+	margin-left: 2.5em;	/* mobile: 1.5em */
+	margin-right: 2.5em;	/* mobile: 1.5em */
 }
 
-/* banishes giant black bar on subs/related works pages */
-dl.index dd,
-dl.index dt {
-	background: transparent;
-	border: transparent;
+/* slightly bigger pre because otherwise it looks like it's for ants */
+#chapters .userstuff pre {
+	font-size: 1em;
 }
+
+/* author name being weird in-work, so slapping a link whether it likes it or not */
+div.preface .byline a {
+	border-bottom: 1px solid;
+}
+
+/* nix border at the top of work page */
+.chapter .preface {
+	border: 0;
+}
+
+/*
+.preface h3 {
+	
+}*/
+
+/* double underline is fucking stupid */
+.userstuff h3 {
+	border-bottom: 1px solid #78777d;
+}
+
+
+
+
+
+
+/* ---+ 00. COMMENTS +--- */
 
 /* nix border outside the add comment box */
 #add_comnent,
@@ -392,12 +361,22 @@ dl.index dt {
 	border: 0;
 }
 
-/* from reversi | ?? hm */
 #add_comment div.comment,
-.post fieldset fieldset,
 fieldset fieldset,
-.comment fieldset {
+.comment fieldset,
+.post fieldset fieldset {
 	background: none;
+}
+
+/* something was misbehaving so this had to happen now it's the next day and i don't remember what it actually does */
+.actions li label {
+	display: revert;
+}
+
+/* scoots comment user icon over */
+.comment div.icon {
+	margin: -1.5em 1em .5em 0;
+	border: 0;
 }
 
 /* pretties up comments */
@@ -408,78 +387,10 @@ li.comment {
 	padding: 1em;
 }
 
-/* scoots comment user icon over */
-.comment div.icon {
-	margin: -1.5em 1em .5em 0;
-	border: 0;
-}
-
-/* something was misbehaving so this had to happen now it's the next day and i don't remember what it actually does */
-.actions li label {
-	display: revert;
-}
 
 
 
-/* ---+ 03. TAGS, BUTTONS, & (MOST) LINKS +--- */
-
-/* base links */
-a,
-a:link {
-	color: #fff;
-	text-decoration: none;
-}
-
-/* author name being weird in-work, so slapping a link whether it likes it or not */
-div.preface .byline a {
-	border-bottom: 1px solid;
-}
-
-/* makes lots of link things ao3 blue */
-.blurb h4 a:link,
-.blurb h4 img,
-.delete a,
-.splash .browse li a:before,
-a.cloud7,
-a.cloud8 {
-	color: #5998d6;
-}
-
-/* lighter ao3 blue on link hover */
-a:hover,
-a:link:hover,
-a:link:visited,
-a:visited:hover,
-.blurb h4 a:hover,
-.blurb h4 a:link:hover,
-.blurb h4 a:visited:hover,
-div.preface .byline a:hover {
-	color: #9ecfff;
-}
-
-/* darker grey for visited links */
-a:visited,
-.actions a:visited,
-.action a:link,
-.action a:visited,
-.listbox .heading a:visited,
-.blurb h4 a:visited,
-div.preface .byline a:visited,
-span.series .divider {
-	color: #999;
-}
-
-/* (most) user icons are sharp no more */
-a img {
-	border: 0;
-	border-radius: .25em;
-}
-
-/* makes tag scroll box for those 10000+ tag fics so you don't have to scroll for like ten minutes */
-li.blurb .tags {
-	max-height: 8em;
-	overflow-y: auto;
-}
+/* ---+ 00. TAGS +--- */
 
 /* tag-specific link attributes — makes tag bubbles! */
 a.tag {
@@ -517,6 +428,38 @@ a.tag:visited:hover {
 	background: #eee
 }
 
+/* characters tag colours */
+dd.character a,
+li.characters a {
+	color: #eee;
+	background: #337e00;
+	border-color: #337e00;
+}
+
+/* characters tag hover colours */
+dd.character a:hover,
+li.characters a:hover {
+	color: #337e00;
+	background: #eee;
+	border-color: #eee;
+}
+
+/* characters tag visited colours */
+dd.character a:visited,
+li.characters a:visited {
+	color: #eee;
+	background: #204d02;
+	border-color: #204d02;
+}
+
+/* character tag visited hover colours */
+dd.character a:visited:hover,
+li.characters a:visited:hover {
+	color: #204d02;
+	background: #eee;
+	border-color: #eee;
+}
+
 /* relationships tag colours */
 li.relationships a,
 dd.relationship a {
@@ -534,82 +477,78 @@ dd.relationship a:hover {
 }
 
 /* relationships tag visited colours */
-li.relationships a:visited,
-dd.relationship a:visited {
+dd.relationship a:visited,
+li.relationships a:visited {
 	color: #eee;
 	background: #124679;
 	border-color: #124679;
 }
 
 /* relationship tag visited hover colours */
-li.relationships a:visited:hover,
-dd.relationship a:visited:hover {
+dd.relationship a:visited:hover,
+li.relationships a:visited:hover {
 	color: #124679;
 	background: #eee;
 	border-color: #eee;
 }
 
-/* characters tag colours */
-li.characters a,
-dd.character a {
-	color: #eee;
-	background: #337e00;
-	border-color: #337e00;
-}
-
-/* characters tag hover colours */
-li.characters a:hover,
-dd.character a:hover {
-	color: #337e00;
-	background: #eee;
-	border-color: #eee;
-}
-
-/* characters tag visited colours */
-li.characters a:visited,
-dd.character a:visited {
-	color: #eee;
-	background: #204d02;
-	border-color: #204d02;
-}
-
-/* character tag visited hover colours */
-li.characters a:visited:hover,
-dd.character a:visited:hover {
-	color: #204d02;
-	background: #eee;
-	border-color: #eee;
-}
-
 /* warning tag colours */
-li.warnings a, dd.warning a {
+dd.warning a,
+li.warnings a {
 	color: #eee;
 	background: #8d0203;
 	border-color: #8d0203;
 }
 
 /* warning tag hover colours */
-li.warnings a:hover,
-dd.warning a:hover {
+dd.warning a:hover,
+li.warnings a:hover {
 	color: #8d0203;
 	background: #eee;
 	border-color: #eee;
 }
 
 /* warning tag visited colours */
-li.warnings a:visited,
-dd.warning a:visited {
+dd.warning a:visited,
+li.warnings a:visited {
 	color: #eee;
 	background: #5f0102;
 	border-color: #5f0102;
 }
 
 /* warning tag visited hover colours */
-li.warnings a:visited:hover,
-dd.warning a:visited:hover {
+dd.warning a:visited:hover,
+li.warnings a:visited:hover {
 	color: #5f0102;
 	background: #eee;
 	border-color: #eee;
+}
+
+
+
+
+/* ---+ 00. WORK BLURB CLEANUP +--- */
+
+/* turn down the lights on work blurb bgs */
+#main li.blurb {
+	background: #151319;
+	border-color: transparent;
+	border-radius: .25em;
+	padding: .5em 1em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+/* makes tag scroll box for those 10000+ tag fics so you don't have to scroll for like ten minutes */
+li.blurb .tags {
+	max-height: 8em;
+	overflow-y: auto;
+}
+
+/* cushion work blurb stats */
+.blurb dl.stats {
+	margin-top: .65em;
+	margin-bottom: .65em;
 }
 
 /* de-bubble fandom labels in work blurbs/work page */
@@ -635,22 +574,55 @@ dd.rating a:hover,
 dd.rating a:hover:visited,
 dd.category a:hover,
 dd.category a:hover:visited {
-	border-bottom: 1px dotted #9ecfff !important;
 	color: #9ecfff !important;
+	border-bottom: 1px dotted #9ecfff !important;
 }
 
 /* de-bubble fandom labels in work blurbs/work page */
-.blurb .fandoms a:visted,
-dd.fandom a:visted,
+.blurb .fandoms a:visited,
+dd.fandom a:visited,
 dd.rating a:visited,
-dd.warning a:visited,
 dd.category a:visited {
+	color: #999;
 	border-bottom: 1px dotted #999 !important;
 	border-radius: 0 !important;
-	color: #999;
 }
 
-/* knock tag bubbles on work page back into alignment */
+/* gives work blurb some cushion between bottom buttons */
+.blurb blockquote {
+	margin: .5em auto 1em auto;
+}
+
+/* gets rid of commas after tags because bubbles */
+.commas li::after {
+	content: none;
+}
+
+/* trims padding off the last child (sorry kiddo) */
+.commas li.last {
+	padding: 0;
+}
+
+/* forces work blurb buttons to not immediately enact camouflage upon approach */
+.actions a:visited:hover 
+.index .actions li a:hover {
+	background: #111;
+}
+
+/*
+li.warnings a:last-child,
+li.relationships a:last-child,
+li.characters a:last-child {
+}
+
+ul.commas 
+*/
+
+.commas.warnings li:last-child {
+	padding-right: .5em;
+}
+
+/* knock tag bubbles on work page back into alignment dl.meta dd ul li:first-child */
 .meta dd ul li {
 	padding-left: 0;
 	padding-right: .5em;
@@ -683,78 +655,10 @@ dd.category a:visited {
 	color: #999;
 }
 
-/* action buttons and some nav buttons */
-.actions a,
-.actions a:link,
-.action,
-.action:link,
-.actions input,
-input[type="submit"],
-button,
-.current,
-.actions label {
-	background: #2b2a33;
-	border-color: transparent; 	/* nix lines while keeping white space */
-	color: #eee;
-}
-
-/* colors for active action buttons */
-.actions a:active,
-.current,
-a.current,
-.current a:visited {
-	color: #fff;
-	background: #555;
-	border-color: #fff;
-}
-
-/* buttons please behave on hover */
-label.action:hover,
-.actions a:hover,
-.actions input:hover,
-input.button:hover,
-#header .user a:hover,
-.actions a:focus,
-.actions input:focus,
-input:hover[type="submit"] {
-	color: #fff;
-	background: #151319;
-	border-color: transparent; 
-}
-
-/* active button behaviours (mostly) */
-#dashboard .current,
-#header #search input:focus,
-.actions a:active,
-label.action:active,
-#outer .current,
-a.current,
-.current a:visited,
-span.unread,
-.replied,
-span.claimed,
-.own,
-.draft,
-.draft .unread,
-.child,
-.unwrangled,
-.unreviewed,
-.ui-sortable li:hover,
-input:active[type="submit"] {
-	color: #fff;
-	background: #000;
-	border-color: transparent;
-}
-
-/* forces work blurb buttons to not immediately enact camouflage upon approach */
-.index .actions li a:hover,
-.actions a:visited:hover {
-	background: #111;
-}
-
-/* why was underline here, anyway? why are you applying double underlines?? */
-.preface a:hover {
-	text-decoration: none;
+/* stops blockquotes in work blurbs from inheriting margins */
+.summary.userstuff blockquote {
+	margin: 0 1.5em !important;
+	padding: .25em .75em;
 }
 
 /* some white space between tag block and rest of the work blurb */
@@ -762,24 +666,75 @@ input:active[type="submit"] {
 	margin: .5em 0;
 }
 
-/* gets rid of commas after tags because bubbles */
-.commas li::after {
-	content: none;
+/* cleans up user history work blurbs */
+.user.module.group {
+	background: transparent;
+	margin-top: .75em;
 }
 
-/* trims padding off the last child (sorry kiddo) */
-.commas li.last {
-	padding: 0;
+
+
+
+/* ---+ 00. BUTTONS +--- */
+
+/* action buttons and some nav buttons */
+.action,
+.action:link,
+.actions a,
+.actions a:link,
+.actions input,
+.actions label,
+.current,
+input[type="submit"],
+button {
+	background: #2b2a33;
+	border-color: transparent;	/* nix lines while keeping white space */
+	color: #eee;
 }
 
-/* gives work blurb some cushion between bottom buttons */
-.blurb blockquote {
-	margin: .5em auto 1em auto;
+/* colors for active action buttons */
+.actions a:active,
+.current,
+.current a:visited,
+a.current {
+	color: #fff;
+	background: #555;
+	border-color: #fff;
 }
 
-/* wrangles buttons/details directly below titles on subs/related works pages */
-dl.index dd {
-	margin: .25em .25em 1.25em 0;
+/* buttons please behave on hover */
+label.action:hover,
+input.button:hover,
+input:hover[type="submit"],
+.actions a:focus,
+.actions a:hover,
+.actions input:hover,
+.actions input:focus {
+	color: #fff;
+	background: #151319;
+	border-color: transparent; 
+}
+
+/* active button behaviours (mostly) */
+.actions a:active,
+label.action:active,
+a.current,
+span.unread,
+span.claimed,
+.current a:visited,
+.replied,
+.own,
+.draft,
+.draft .unread,
+.child,
+.unwrangled,
+.unreviewed,
+.ui-sortable li:hover,
+input:active[type="submit"],
+#outer .current {
+	color: #fff;
+	background: #000;
+	border-color: transparent;
 }
 
 /* from reversi */
@@ -811,15 +766,12 @@ dl.meta {
 	border: 0;
 }
 
-form blockquote.userstuff,
 .bookmark .status span,
 .splash .news li {
 	border-color: #78777d;
 }
 
 #greeting .icon,
-#dashboard,
-#dashboard.own,
 .error,
 .comment_error,
 .kudos_error,
@@ -835,7 +787,163 @@ textarea.LV_invalid_field:active,
 
 
 
-/* ---+ 04. HEADER & NAVIGATION +--- */
+/* ---+ 00. DASHBOARD +--- */
+
+#dashboard,
+#dashboard.own {
+	border-color: #5998d6;
+}
+
+#dashboard a,
+#dashboard span,
+#dashboard .current {
+	color: #fff;
+}
+
+#dashboard a:focus {
+	/* need to put something here, don't forget */
+}
+
+#dashboard a:hover {
+	background: #2b2a33;
+	color: #fff;
+}
+
+/* nix dash button lines */
+#dashboard ul,
+.filters .group dt.bookmarker {
+	border: 0;
+	/* display: inline-block; */
+	/* padding: 1.25em .5em;	ao3 CSS restrictions are why we can't have nice things */
+}
+
+/* dark dashboard backdrop, smaller font size, more padding */
+#dashboard.own {
+	background: #151319;
+	font-size: .9em;
+	margin-top: 1.15em;
+	padding: .5em;
+}
+
+#dashboard .current {
+	color: #fff;
+	background: #000;
+	border-color: transparent;
+}
+
+#dashboard .secondary,
+.dashboard fieldset fieldset.listbox .index {
+	background: #23222b;
+}
+
+
+
+
+/* ---+ 00. STATS PAGE +--- */
+
+/* smooth stats page borders, dark bg */
+.fandom.listbox.group {
+	background: transparent;
+	border: #151319;
+	border-radius: .25em;
+	margin: 1em 0;
+}
+
+.fandom ul.index.group {
+	background: #151319 !important;
+	border-radius: inherit;
+	padding: .15em .65em;
+}
+
+/* cushion for h5 on stats page*/
+.statistics .listbox h5.heading {
+	font-size: 1.1em;
+	margin: .75em 0 !important;
+}
+
+/* adjusts stats spacing */
+.statistics .index dd {
+	margin: 1em 0 .5em 0 !important;
+}
+
+/* adjusts stats spacing */
+.statistics .index li {
+	border-radius: inherit;
+	margin: .5em 0;
+	padding: .65em;
+}
+
+/* even entries get a cool different colour :D */
+.statistics .index li:nth-of-type(even) {
+	background: #1c1b22;
+}
+
+
+
+/* ---+ 00. OTHER PAGES +--- */
+
+/* banish noisy lines and background for: user fandoms, works, series, bookmarks */
+#user-fandoms,
+#user-fandoms ol,
+#user-works,
+#user-works ul,
+#user-series,
+#user-series ol,
+#user-bookmarks,
+#user-bookmarks ol {
+	border-color: transparent;
+	background: transparent;
+}
+
+/* changed bookmark box colours; might tweak more */
+.bookmark div.user,
+.bookmark div.recent {
+	background-color: #151319;
+	border: 0;
+}
+
+.bookmark.listbox.group,
+.work.listbox.group {
+	background: transparent;
+	border: 0;
+}
+
+/* ao3 blue accent on hover */
+.listbox .heading a.tag:visited:hover {
+	background: transparent;
+	color: #5998d6;
+}
+
+/* ALL the listbox bgs transparent?? i guess */
+.listbox .index {
+	background: transparent !important;
+}
+
+/* nix line on user dashboard/profile */
+.home .header h2 {
+	border: 0;
+}
+
+/* for mobile: now the nav buttons on user screen no longer clip into user icon ✨ */
+.home .header ul.actions {
+	max-width: 70%;
+	text-align: right;
+}
+
+/* cleans up tag category pages */
+.parent.listbox.group {
+	border: 0;
+	background: transparent;
+}
+
+/* icon was misbehaving in header on dashboard/profile, now NO ONE floats */
+.profile .primary, .home .primary {
+	float: none;
+}
+
+.tags.commas.index.group {
+	background: transparent;
+}
 
 /* de-bubble search heading */
 h2.heading a {
@@ -866,46 +974,90 @@ h2.heading a:visited {
 	color: #999;
 }
 
-/* icon was misbehaving in header on dashboard/profile, now NO ONE floats */
-.profile .primary, .home .primary {
-	float: none;
-}
-
-/* nix line on user dashboard/profile */
-.home .header h2 {
-	border: 0;
-}
-
-/* ao3 blue accent on hover */
-.listbox .heading a.tag:visited:hover {
+/* banishes giant black bar on subs/related works pages */
+dl.index dd,
+dl.index dt {
 	background: transparent;
-	color: #5998d6;
+	border: transparent;
 }
 
-/* for mobile: now the nav buttons on user screen no longer clip into user icon ✨ */
-.home .header ul.actions {
-	max-width: 70%;
-	text-align: right;
+/* wrangles buttons/details directly below titles on subs/related works pages */
+dl.index dd {
+	margin: .25em .25em 1.25em 0;
 }
+
+
+
+
+
+/* ---+ 00. HEADER +--- */
 
 /* gives user greeting some breathing room */
 #greeting {
 	padding: .5em 0;
 }
 
-/* stay square, nav buttons */
-#header ul.primary,
-.dropdown-toggle {
-	border-radius: 0 !important;
+#header #greeting img,
+#header fieldset,
+#header form,
+#header p,
+#header .heading a,
+#header .heading a:visited,
+#tos_prompt .heading {
+	color: #5998d6;
 }
 
-#inner .module .heading {
-	border-color: #78777d;
+/* searchbar colours behave now */
+#header #search .text:active,
+#header #search .text:focus,
+#header #search .text:hover {
+	background: #23222b;
+}
+
+#header #search input:focus {
+	color: #fff;
+	background: #000;
+	border-color: transparent;
+}
+
+#header a,
+#header a:visited,
+#header .primary .open a,
+#header .primary .dropdown:hover a,
+#header .primary .dropdown a:focus,
+#header .user a:focus,
+#header .user .open a:focus,
+.filters dt a:hover {
+	color: #fff;
+}
+
+#header .actions a {
+	background: transparent;
+	border-color: #2b2a33;
+	color: #eee;
+}
+
+#header .actions a:hover {
+	background: #23222b;
+	color: #eee;
+}
+
+#header .actions a:focus,
+#header .dropdown:hover a,
+#header .open a,
+#header .menu,
+#small_login,
+th,
+.secondary,
+.thread .even,
+.system .tweet_list li,
+.ui-datepicker tr:hover {
+	background: #23222b;
 }
 
 /* top nav with black bg */
-#header .dropdown .menu a:hover,
-#header .dropdown .menu a:focus {
+#header .dropdown .menu a:focus,
+#header .dropdown .menu a:hover {
 	background: #151319;
 }
 
@@ -914,22 +1066,27 @@ h2.heading a:visited {
 	border: 0;
 }
 
+#inner .module .heading {
+	border-color: #78777d;
+}
+
+#header .user a:hover {
+	color: #fff;
+	background: #151319;
+	border-color: transparent; 
+}
+
 /* why are we still using weird noise jpgs as banners please stop */
-#header ul.primary,
-#outer #footer,
-.toggled form {
+#header ul.primary {
 	background: #5998d6;
 }
 
-#header #greeting img,
-#header .heading a,
-#header .heading a:visited,
-#header fieldset,
-#header form,
-#header p,
-#tos_prompt .heading {
-	color: #5998d6;
+/* stay square, nav buttons */
+#header ul.primary {
+	border-radius: 0 !important;
 }
+
+
 
 #outer .group .heading,
 fieldset.listbox .heading,
@@ -940,61 +1097,14 @@ fieldset.listbox .heading,
 	background: none;
 }
 
-#header .actions a {
-	background: transparent;
-	border-color: #2b2a33;
-	color: #eee;
-}
-
-#header .actions a:hover {
-	color: #eee;
-}
-
-#header .actions a:hover,
-#header .actions a:focus,
-#header .dropdown:hover a,
-#header .open a,
-#header .menu,
-#small_login,
-.dashboard fieldset fieldset.listbox .index,
-th,
-#dashboard .secondary,
-.secondary,
-.thread .even,
-.system .tweet_list li,
-.ui-datepicker tr:hover {
-	background: #23222b;
-}
-
-#header a,
-#header a:visited,
-#header .primary .open a,
-#header .primary .dropdown:hover a,
-#header .primary .dropdown a:focus,
-#header .user a:focus,
-#header .user .open a:focus,
-#dashboard a,
-#dashboard span,
-#dashboard .current,
-.heading,
-.group .heading,
-.filters dt a:hover {
-	color: #fff;
-}
 
 
 
 
 /* ---+ 05. FOOTER +--- */
 
-/* nix the top border in the footer */
-#footer {
-	border: 0;
-}
-
 /* why are we still using weird noise jpgs as banners please stop */
-#outer #footer,
-.toggled form {
+#outer #footer {
 	background: #5998d6;
 }
 
@@ -1003,9 +1113,9 @@ th,
 	background: none;
 }
 
-/* give the footer nav text a readable pillow */
-#footer ul.actions {
-	background-color: #1c1b22;
+/* nix the top border in the footer */
+#footer {
+	border: 0;
 }
 
 /* ao3 blue accent on hover */
@@ -1015,77 +1125,33 @@ th,
 	color: #5998d6;
 }
 
+/* give the footer nav text a readable pillow */
+#footer ul.actions {
+	background-color: #1c1b22;
+}
 
 
-/* ---+ 06. DASHBOARD, SIDEBAR, & SEARCH +--- */
 
-/* searchbar colours behave now */
-#header #search .text:active,
-#header #search .text:focus,
-#header #search .text:hover {
-	background: #23222b;
+
+
+/* ---+ 00. SORT & FILTER SIDEBAR +--- */
+
+/* slightly broken; shortens Sort and Filter input boxes because otherwise they right end would run off the page */
+.autocomplete ul, 
+.filters .more dd.search {
+	width: 97%;
+}
+
+/* ao3 blue accent on autocomplete hover */
+.autocomplete .dropdown ul li:hover,
+.autocomplete .dropdown li.selected {
+	background: transparent;
+	color: #5998d6;
 }
 
 /* nix white in tooltip dropdown bg */
 .dropdown {
 	background: none;
-}
-
-/* search tooltip adjustments */
-.search [role="tooltip"] {
-	background: #1c1b22;
-	border: 1px solid #78777d;
-	border-radius: .25em;
-	color: #eee;
-	padding: .25em .375em;
-	margin: .643em auto;
-}
-
-
-/* fix search bars in work search because they're. A Lot */
-form.search input[type="text"] {
-	border-color: #78777d;
-	border-radius: .25em;
-}
-
-/* help buttons get weird in the sidebar so this is a shrink ray */
-.help.symbol.question.modal.modal-attached {
-	font-size: .75em;
-}
-
-/* dark dashboard backdrop, smaller font size, more padding */
-#dashboard.own {
-	background: #151319;
-	font-size: .9em;
-	margin-top: 1.15em;
-	padding: .5em;
-}
-
-#dashboard a:hover {
-	background: #2b2a33;
-	color: #fff;
-}
-
-#dashboard a:focus {
-	/* need to put something here, don't forget */
-}
-
-/* nix dash button lines */
-#dashboard ul,
-.filters .group dt.bookmarker {
-	border: 0;
-	/* display: inline-block; */
-	/*padding: 1.25em .5em;	ao3 CSS restrictions are why we can't have nice things*/
-}
-
-/* this is the part where the sort and filter arrows are taken out and replaced */
-.filters button.expander {
-	padding: 0;
-}
-
-/* expanded buttons are too far out so they're scooching in a skosh */
-.filters .tags li {
-	padding-left: .75em;
 }
 
 /* this is the part where the sort and filter arrow .gifs are taken out */
@@ -1104,23 +1170,51 @@ form.search input[type="text"] {
 	content: " \23F7";
 }
 
+/* parent expander buttons are too far in, so they're scooching over a skosh */
+.filters button.expander {
+	padding: 0;
+}
+
+/* opposite with the kiddos */
+.filters .tags li {
+	padding-left: .75em;
+}
+
+/* help buttons get weird in the sidebar so this is a shrink ray */
+.help.symbol.question.modal.modal-attached {
+	font-size: .75em;
+}
+
+/* search tooltip adjustments */
+.search [role="tooltip"] {
+	background: #1c1b22;
+	border: 1px solid #78777d;
+	border-radius: .25em;
+	color: #eee;
+	padding: .25em .375em;
+	margin: .643em auto;
+}
+
+
+/* why are we still using weird noise jpgs as banners please stop */
+.toggled form {
+	background: #5998d6;
+}
+
 /* gets rid of extra lines in Sort and Filter sidebar */
 form dl dt, .filters dt {
 	border-bottom: none;
 }
 
-/* slightly broken; shortens Sort and Filter input boxes because otherwise they right end would run off the page */
-.autocomplete ul, 
-.filters .more dd.search {
-	width: 97%;
+/* fix search bars in work search because they're. A Lot */
+form.search input[type="text"] {
+	border-color: #78777d;
+	border-radius: .25em;
 }
 
-/* ao3 blue accent on autocomplete hover */
-.autocomplete .dropdown ul li:hover,
-.autocomplete .dropdown li.selected {
-	background: transparent;
-	color: #5998d6;
-}
+
+
+
 
 fieldset,
 form.verbose legend,
@@ -1142,6 +1236,7 @@ form.single fieldset {
 	border-color: #78777d;
 }
 
+
 /* shrinks search bar */
 /*@media screen and (max-width: 415px) {
 	li.search {
@@ -1154,7 +1249,7 @@ form.single fieldset {
 
 
 
-/* ---+ 07. MISC +--- */
+/* ---+ 00. MISC +--- */
 
 .mce-container input:focus {
 	background: #F3EFEC;
