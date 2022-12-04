@@ -795,6 +795,7 @@ label.action:hover,
 input.button:hover,
 .actions a:focus,
 .actions a:hover,
+.actions a:link:hover,
 .actions input:hover,
 .actions input:focus {
 	color: #fff;
