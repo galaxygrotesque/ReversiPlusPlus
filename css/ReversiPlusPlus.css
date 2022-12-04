@@ -240,7 +240,9 @@ div.dynamic,
 	border-radius: 0 !important;
 }
 
-
+.secondary {
+	border: 0;
+}
 
 
 /* ---+ 02. FONTS +--- */
@@ -430,119 +432,119 @@ a.tag {
 
 /* tag bubble hover colours */
 a.tag:hover {
-	color: #2b2a33;
-	border-color: #eee;
 	background: #eee;
+	border-color: #eee;
+	color: #2b2a33;
 }
 
 /* tag bubble visited colours */
 a.tag:visited {
-	color: #999;
-	border-color: #2b2a33;
 	background: #2b2a33;
+	border-color: #2b2a33;
+	color: #999;
 }
 
 /* tag bubble visited hover colours */
 a.tag:visited:hover {
-	color: #5b5b66;
+	background: #eee;
 	border-color: #eee;
-	background: #eee
+	color: #5b5b66;
 }
 
 /* characters tag colours */
 dd.character a,
 li.characters a {
-	color: #eee;
 	background: #337e00;
 	border-color: #337e00;
+	color: #eee;
 }
 
 /* characters tag hover colours */
 dd.character a:hover,
 li.characters a:hover {
-	color: #337e00;
 	background: #eee;
 	border-color: #eee;
+	color: #337e00;
 }
 
 /* characters tag visited colours */
 dd.character a:visited,
 li.characters a:visited {
-	color: #eee;
 	background: #204d02;
 	border-color: #204d02;
+	color: #eee;
 }
 
 /* character tag visited hover colours */
 dd.character a:visited:hover,
 li.characters a:visited:hover {
-	color: #204d02;
 	background: #eee;
 	border-color: #eee;
+	color: #204d02;
 }
 
 /* relationships tag colours */
 dd.relationship a,
 li.relationships a {
-	color: #eee;
 	background: #0e60b0;
 	border-color: #0e60b0;
+	color: #eee;
 }
 
 /* relationships tag hover colours */
 dd.relationship a:hover,
 li.relationships a:hover {
-	color: #0e60b0;
 	background: #eee;
 	border-color: #eee;
+	color: #0e60b0;
 }
 
 /* relationships tag visited colours */
 dd.relationship a:visited,
 li.relationships a:visited {
-	color: #eee;
 	background: #124679;
 	border-color: #124679;
+	color: #eee;
 }
 
 /* relationship tag visited hover colours */
 dd.relationship a:visited:hover,
 li.relationships a:visited:hover {
-	color: #124679;
 	background: #eee;
 	border-color: #eee;
+	color: #124679;
 }
 
 /* warning tag colours */
 dd.warning a,
 li.warnings a {
-	color: #eee;
 	background: #8d0203;
 	border-color: #8d0203;
+	color: #eee;
 }
 
 /* warning tag hover colours */
 dd.warning a:hover,
 li.warnings a:hover {
-	color: #8d0203;
 	background: #eee;
 	border-color: #eee;
+	color: #8d0203;
 }
 
 /* warning tag visited colours */
 dd.warning a:visited,
 li.warnings a:visited {
-	color: #eee;
 	background: #5f0102;
 	border-color: #5f0102;
+	color: #eee;
 }
 
 /* warning tag visited hover colours */
 dd.warning a:visited:hover,
 li.warnings a:visited:hover {
-	color: #5f0102;
 	background: #eee;
 	border-color: #eee;
+	color: #5f0102;
 }
 
 
@@ -570,8 +572,8 @@ li.blurb .tags {
 ul.required-tags,
 .blurb .icon,
 .bookmark .status span {
-	opacity: .9;
 	border: 0;
+	opacity: .9;
 }
 
 /* forces work blurb buttons to not immediately enact camouflage upon approach */
@@ -609,8 +611,8 @@ dd.rating a:hover,
 dd.rating a:hover:visited,
 dd.category a:hover,
 dd.category a:hover:visited {
-	color: #9ecfff !important;
 	border-bottom: 1px dotted #9ecfff !important;
+	color: #9ecfff !important;
 }
 
 /* de-bubble fandom labels in work blurbs/work page */
@@ -618,9 +620,9 @@ dd.category a:hover:visited {
 dd.fandom a:visited,
 dd.rating a:visited,
 dd.category a:visited {
-	color: #999;
 	border-bottom: 1px dotted #999 !important;
 	border-radius: 0 !important;
+	color: #999;
 }
 
 /* gives work blurb some cushion between bottom buttons */
@@ -658,8 +660,8 @@ ul.commas
 
 /* knock tag bubbles on work page back into alignment */
 .meta dd ul li {
-	padding-left: 0;
 	padding-right: .5em;
+	padding-left: 0;
 }
 
 /* de-bubble bookmark tags */
@@ -670,8 +672,8 @@ ul.commas
 	border-radius: 0 !important;
 	font-size: revert;
 	margin: revert;
-	padding: inherit;
 	overflow: revert;
+	padding: inherit;
 }
 
 /* de-bubble bookmark hover tags */
@@ -805,9 +807,9 @@ input.button:hover,
 .actions a:link:hover,
 .actions input:hover,
 .actions input:focus {
-	color: #fff;
 	background: #151319;
-	border-color: transparent; 
+	border-color: transparent;
+	color: #fff;
 }
 
 /* action buttons and some nav buttons */
@@ -830,9 +832,9 @@ a.current,
 .actions a:active,
 .current,
 .current a:visited {
-	color: #fff;
 	background: #555;
 	border-color: #fff;
+	color: #fff;
 }
 
 /* active button behaviours (mostly) */
@@ -852,9 +854,9 @@ span.claimed,
 .unwrangled,
 .unreviewed,
 .ui-sortable li:hover {
-	color: #fff;
 	background: #000;
 	border-color: transparent;
+	color: #fff;
 }
 
 dl.meta {
@@ -903,9 +905,9 @@ dl.meta {
 }
 
 #dashboard .current {
-	color: #fff;
 	background: #000;
 	border-color: transparent;
+	color: #fff;
 }
 
 #dashboard .secondary,
@@ -941,9 +943,9 @@ dl.meta {
 }
 
 #header #search input:focus {
-	color: #fff;
 	background: #000;
 	border-color: transparent;
+	color: #fff;
 }
 
 #header a,
@@ -997,9 +999,9 @@ th,
 }
 
 #header .user a:hover {
-	color: #fff;
 	background: #151319;
 	border-color: transparent;
+	color: #fff;
 }
 
 /* why are we still using weird noise jpgs as banners please stop */
@@ -1017,8 +1019,8 @@ fieldset.listbox .heading,
 .userstuff .heading,
 .heading,
 .userstuff h2 {
-	color: #fff;
 	background: none;
+	color: #fff;
 }
 
 
@@ -1109,8 +1111,8 @@ fieldset.listbox .heading,
 #user-series ol,
 #user-bookmarks,
 #user-bookmarks ol {
-	border-color: transparent;
 	background: transparent;
+	border-color: transparent;
 }
 
 /* changed bookmark box colours; might tweak more */
@@ -1150,8 +1152,9 @@ fieldset.listbox .heading,
 
 /* cleans up tag category pages */
 .parent.listbox.group {
-	border: 0;
 	background: transparent;
+	border: 0;
+
 }
 
 /* icon was misbehaving in header on dashboard/profile, now NO ONE floats */
@@ -1171,8 +1174,8 @@ h2.heading a {
 	border-radius: 0 !important;
 	display: inline;
 	font-size: revert;
-	padding: inherit;
 	line-height: revert;
+	padding: inherit;
 }
 
 /* de-bubble search heading hover */
@@ -1259,8 +1262,8 @@ dl.index dd {
 	border: 1px solid #78777d;
 	border-radius: .25em;
 	color: #eee;
-	padding: .25em .375em;
 	margin: .643em auto;
+	padding: .25em .375em;
 }
 
 /* nix noise.jpg */
