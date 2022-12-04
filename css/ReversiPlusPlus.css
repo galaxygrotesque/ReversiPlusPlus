@@ -152,7 +152,7 @@ hr {
 /* rounds and pretties text boxes */
 input,
 textarea {
-	background: #1c1b22;
+	background: #23222b;
 	border-color: #78777d;
 	border-radius: .25em;
 	color: #eee; /* textarea didnt have this initially */
@@ -372,7 +372,8 @@ div.preface .byline a {
 
 /* nix border outside the add comment box */
 #add_comnent,
-#add_comment div.comment {
+#add_comment div.comment,
+div.comment {
 	border: 0;
 }
 
