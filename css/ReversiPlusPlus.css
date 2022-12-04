@@ -28,13 +28,21 @@
 
   ++ SECTIONS ++
   00. colour guide
-  00. base
-  00. work reading enhancements
-  00. tags, buttons, & (most) links
-  00. header & navigation
-  00. footer
-  00. dashboard, sidebar, & search
-  00. misc
+  01. base
+  02. fonts
+  03. work reading adjustments
+  04. comments
+  05. tags
+  06. work blurb cleanup
+  07. messages & tooltips
+  08. buttons
+  09. dashboard
+  10. stats page
+  11. other pages
+  12. header
+  13. footer
+  14. sort & filter sidebar
+  15. misc
   
 */
 
@@ -78,22 +86,10 @@ body {
 	color: #eee;
 }
 
-/* base links */
 a,
 a:link {
 	color: #fff;
 	text-decoration: none;
-}
-
-/* makes lots of link things ao3 blue */
-a.cloud7,
-a.cloud8,
-a.work,
-.delete a,
-.blurb h4 a:link,
-.blurb h4 img,
-.splash .browse li a:before {
-	color: #5998d6;
 }
 
 /* lighter ao3 blue on link hover */
@@ -102,6 +98,7 @@ a:link:hover,
 a:link:visited,
 a:visited:hover,
 div.preface .byline a:hover,
+div.preface .byline a:visited:hover,
 .blurb h4 a:hover,
 .blurb h4 a:link:hover,
 .blurb h4 a:visited:hover {
@@ -126,9 +123,21 @@ a img {
 	border-radius: .25em;
 }
 
+/* makes lots of link things ao3 blue */
+a.cloud7,
+a.cloud8,
+a.work,
+.delete a,
+.blurb h4 a:link,
+.blurb h4 img,
+.splash .browse li a:before {
+	color: #5998d6;
+}
 
 
-/* ---+ 00. FONTS +--- */
+
+
+/* ---+ 02. FONTS +--- */
 /* less boring sans-serif fonts (that hopefully won't fuck up other shit)
    grab whichever strikes your fancy and slap it down after font-family!
    fonts:	"IBM Plex Sans", "Noto Sans", "Source Sans 3", "Proxima Nova", "Helvetica Neue",
@@ -273,9 +282,7 @@ div.dynamic,
 
 
 
-
-
-/* ---+ 00. WORK READING ADJUSTMENTS +--- */
+/* ---+ 03. WORK READING ADJUSTMENTS +--- */
 
 /* WARNING:
    select default values in this section are NOT kind to mobile or small screens!
@@ -355,7 +362,7 @@ div.preface .byline a {
 
 
 
-/* ---+ 00. COMMENTS +--- */
+/* ---+ 04. COMMENTS +--- */
 
 /* nix border outside the add comment box */
 #add_comnent,
@@ -393,7 +400,7 @@ li.comment {
 
 
 
-/* ---+ 00. TAGS +--- */
+/* ---+ 05. TAGS +--- */
 
 /* tag-specific link attributes — makes tag bubbles! */
 a.tag {
@@ -530,7 +537,7 @@ li.warnings a:visited:hover {
 
 
 
-/* ---+ 00. WORK BLURB CLEANUP +--- */
+/* ---+ 06. WORK BLURB CLEANUP +--- */
 
 /* turn down the lights on work blurb bgs */
 #main li.blurb {
@@ -687,7 +694,8 @@ ul.commas
 
 
 
-/* ---+ 00. MESSAGES & TOOLTIPS +--- */
+
+/* ---+ 07. MESSAGES & TOOLTIPS +--- */
 
 #greeting .icon,
 .error,
@@ -766,7 +774,7 @@ form dd.required {
 
 
 
-/* ---+ 00. BUTTONS +--- */
+/* ---+ 08. BUTTONS +--- */
 
 /* buttons please behave on hover */
 input:hover[type="submit"],
@@ -836,7 +844,7 @@ dl.meta {
 
 
 
-/* ---+ 00. DASHBOARD +--- */
+/* ---+ 09. DASHBOARD +--- */
 
 #dashboard,
 #dashboard.own {
@@ -888,7 +896,7 @@ dl.meta {
 
 
 
-/* ---+ 00. STATS PAGE +--- */
+/* ---+ 10. STATS PAGE +--- */
 
 /* smooth stats page borders, dark bg */
 .fandom.listbox.group {
@@ -929,7 +937,7 @@ dl.meta {
 
 
 
-/* ---+ 00. OTHER PAGES +--- */
+/* ---+ 11. OTHER PAGES +--- */
 
 /* banish noisy lines and background for: user fandoms, works, series, bookmarks */
 #user-fandoms,
@@ -1039,7 +1047,7 @@ dl.index dd {
 
 
 
-/* ---+ 00. HEADER +--- */
+/* ---+ 12. HEADER +--- */
 
 /* gives user greeting some breathing room */
 #greeting {
@@ -1148,7 +1156,7 @@ fieldset.listbox .heading,
 
 
 
-/* ---+ 00. FOOTER +--- */
+/* ---+ 13. FOOTER +--- */
 
 /* why are we still using weird noise jpgs as banners please stop */
 #outer #footer {
@@ -1181,7 +1189,7 @@ fieldset.listbox .heading,
 
 
 
-/* ---+ 00. SORT & FILTER SIDEBAR +--- */
+/* ---+ 14. SORT & FILTER SIDEBAR +--- */
 
 /* slightly broken; shortens Sort and Filter input boxes because otherwise they right end would run off the page */
 .autocomplete ul, 
@@ -1286,4 +1294,4 @@ form.single fieldset {
 
 
 
-/* ---+ 00. MISC +--- */
+/* ---+ 15. MISC +--- */
