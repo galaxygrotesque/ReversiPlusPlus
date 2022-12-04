@@ -28,13 +28,13 @@
 
   ++ SECTIONS ++
   00. colour guide
-  01. base
-  02. work reading enhancements
-  03. tags, buttons, & (most) links
-  04. header & navigation
-  05. footer
-  06. dashboard, sidebar, & search
-  07. misc
+  00. base
+  00. work reading enhancements
+  00. tags, buttons, & (most) links
+  00. header & navigation
+  00. footer
+  00. dashboard, sidebar, & search
+  00. misc
   
 */
 
@@ -126,6 +126,8 @@ a img {
 	border-radius: .25em;
 }
 
+
+
 /* ---+ 00. FONTS +--- */
 /* less boring sans-serif fonts (that hopefully won't fuck up other shit)
    grab whichever strikes your fancy and slap it down after font-family!
@@ -135,11 +137,11 @@ a img {
 body,
 input,
 textarea,
+blockquote,
+blockquote.userstuff,
 .blurb blockquote,
 .dropdown,
-.expander,
-blockquote,
-blockquote.userstuff {
+.expander {
 	font-family: "IBM Plex Sans", "Proxima Nova", "Helvetica Neue", "Lucida Grande", "Lucida Sans Unicode", "GNU Unifont", Verdana, Helvetica, sans-serif;
 }
 
@@ -368,6 +370,13 @@ fieldset fieldset,
 	background: none;
 }
 
+/* pretties up comments */
+li.comment {
+	background: #151319 !important;
+	border: transparent;
+	border-radius: .25em;
+	padding: 1em;
+}
 /* something was misbehaving so this had to happen now it's the next day and i don't remember what it actually does */
 .actions li label {
 	display: revert;
@@ -379,13 +388,7 @@ fieldset fieldset,
 	border: 0;
 }
 
-/* pretties up comments */
-li.comment {
-	background: #151319 !important;
-	border: transparent;
-	border-radius: .25em;
-	padding: 1em;
-}
+
 
 
 
@@ -461,16 +464,16 @@ li.characters a:visited:hover {
 }
 
 /* relationships tag colours */
-li.relationships a,
-dd.relationship a {
+dd.relationship a,
+li.relationships a {
 	color: #eee;
 	background: #0e60b0;
 	border-color: #0e60b0;
 }
 
 /* relationships tag hover colours */
-li.relationships a:hover,
-dd.relationship a:hover {
+dd.relationship a:hover,
+li.relationships a:hover {
 	color: #0e60b0;
 	background: #eee;
 	border-color: #eee;
@@ -545,6 +548,20 @@ li.blurb .tags {
 	overflow-y: auto;
 }
 
+/* pretty sure these are the blurb image blocks */
+ul.required-tags,
+.blurb .icon,
+.bookmark .status span {
+	opacity: .9;
+	border: 0;
+}
+
+/* forces work blurb buttons to not immediately enact camouflage upon approach */
+.actions a:visited:hover 
+.index .actions li a:hover {
+	background: #111;
+}
+
 /* cushion work blurb stats */
 .blurb dl.stats {
 	margin-top: .65em;
@@ -603,24 +620,20 @@ dd.category a:visited {
 	padding: 0;
 }
 
-/* forces work blurb buttons to not immediately enact camouflage upon approach */
-.actions a:visited:hover 
-.index .actions li a:hover {
-	background: #111;
-}
-
 /*
 li.warnings a:last-child,
 li.relationships a:last-child,
 li.characters a:last-child {
 }
 
-ul.commas 
-*/
+ul.commas
 
 .commas.warnings li:last-child {
 	padding-right: .5em;
+	
 }
+ 
+*/
 
 /* knock tag bubbles on work page back into alignment dl.meta dd ul li:first-child */
 .meta dd ul li {
@@ -674,102 +687,7 @@ ul.commas
 
 
 
-
-/* ---+ 00. BUTTONS +--- */
-
-/* action buttons and some nav buttons */
-.action,
-.action:link,
-.actions a,
-.actions a:link,
-.actions input,
-.actions label,
-.current,
-input[type="submit"],
-button {
-	background: #2b2a33;
-	border-color: transparent;	/* nix lines while keeping white space */
-	color: #eee;
-}
-
-/* colors for active action buttons */
-.actions a:active,
-.current,
-.current a:visited,
-a.current {
-	color: #fff;
-	background: #555;
-	border-color: #fff;
-}
-
-/* buttons please behave on hover */
-label.action:hover,
-input.button:hover,
-input:hover[type="submit"],
-.actions a:focus,
-.actions a:hover,
-.actions input:hover,
-.actions input:focus {
-	color: #fff;
-	background: #151319;
-	border-color: transparent; 
-}
-
-/* active button behaviours (mostly) */
-.actions a:active,
-label.action:active,
-a.current,
-span.unread,
-span.claimed,
-.current a:visited,
-.replied,
-.own,
-.draft,
-.draft .unread,
-.child,
-.unwrangled,
-.unreviewed,
-.ui-sortable li:hover,
-input:active[type="submit"],
-#outer .current {
-	color: #fff;
-	background: #000;
-	border-color: transparent;
-}
-
-/* from reversi */
-.splash .favorite li:nth-of-type(odd) a,
-.ui-datepicker td:hover,
-#tos_prompt .heading,
-#tos_prompt [disabled] {
-	background: #151319;
-}
-
-.splash .favorite li:nth-of-type(odd) a:hover,
-.splash .favorite li:nth-of-type(odd) a:focus {
-	background: #5998d6;
-	color: #151319;
-}
-
-ul.required-tags,
-.bookmark .status span,
-.blurb .icon {
-	opacity: .9;
-	border: 0;
-}
-
-form dd.required {
-	color: #eee;
-}
-
-dl.meta {
-	border: 0;
-}
-
-.bookmark .status span,
-.splash .news li {
-	border-color: #78777d;
-}
+/* ---+ 00. MESSAGES & TOOLTIPS +--- */
 
 #greeting .icon,
 .error,
@@ -784,6 +702,137 @@ textarea.LV_invalid_field:active,
 .qtip-content {
 	border-color: #5998d6;
 }
+
+#outer,
+.javascript,
+#tos_prompt,
+.announcement input[type="submit"] {
+	background: #1c1b22;
+}
+
+form dd.required {
+	color: #eee;
+}
+
+.announcement .userstuff a,
+.announcement .userstuff a:link,
+.announcement .userstuff a:visited:hover {
+	color: #5998d6;
+}
+
+.announcement .userstuff a:visited {
+	color: #999;
+}
+
+.announcement .userstuff a:hover,
+.announcement .userstuff a:focus {
+	color: #5897d4;
+}
+
+/* nix white in tooltip dropdown bg */
+.dropdown {
+	background: none;
+}
+
+.event.announcement .userstuff a,
+.filters .expander {
+	color: #eee;
+}
+
+.mce-container input:focus {
+	background: #F3EFEC;
+}
+
+.bookmark .status span,
+.splash .news li {
+	border-color: #78777d;
+}
+
+.splash .favorite li:nth-of-type(odd) a:hover,
+.splash .favorite li:nth-of-type(odd) a:focus {
+	background: #5998d6;
+	color: #151319;
+}
+
+/* from reversi */
+.splash .favorite li:nth-of-type(odd) a,
+.ui-datepicker td:hover,
+#tos_prompt .heading,
+#tos_prompt [disabled] {
+	background: #151319;
+}
+
+
+
+
+
+/* ---+ 00. BUTTONS +--- */
+
+/* buttons please behave on hover */
+input:hover[type="submit"],
+label.action:hover,
+input.button:hover,
+.actions a:focus,
+.actions a:hover,
+.actions input:hover,
+.actions input:focus {
+	color: #fff;
+	background: #151319;
+	border-color: transparent; 
+}
+
+/* action buttons and some nav buttons */
+button,
+input[type="submit"],
+.action,
+.action:link,
+.actions a,
+.actions a:link,
+.actions input,
+.actions label,
+.current {
+	background: #2b2a33;
+	border-color: transparent;	/* nix lines while keeping white space */
+	color: #eee;
+}
+
+/* colors for active action buttons */
+a.current,
+.actions a:active,
+.current,
+.current a:visited {
+	color: #fff;
+	background: #555;
+	border-color: #fff;
+}
+
+/* active button behaviours (mostly) */
+#outer .current,
+input:active[type="submit"],
+a.current,
+label.action:active,
+span.unread,
+span.claimed,
+.actions a:active,
+.current a:visited,
+.replied,
+.own,
+.draft,
+.draft .unread,
+.child,
+.unwrangled,
+.unreviewed,
+.ui-sortable li:hover {
+	color: #fff;
+	background: #000;
+	border-color: transparent;
+}
+
+dl.meta {
+	border: 0;
+}
+
+
 
 
 
@@ -1086,8 +1135,6 @@ th,
 	border-radius: 0 !important;
 }
 
-
-
 #outer .group .heading,
 fieldset.listbox .heading,
 .userstuff .heading,
@@ -1101,7 +1148,7 @@ fieldset.listbox .heading,
 
 
 
-/* ---+ 05. FOOTER +--- */
+/* ---+ 00. FOOTER +--- */
 
 /* why are we still using weird noise jpgs as banners please stop */
 #outer #footer {
@@ -1149,11 +1196,6 @@ fieldset.listbox .heading,
 	color: #5998d6;
 }
 
-/* nix white in tooltip dropdown bg */
-.dropdown {
-	background: none;
-}
-
 /* this is the part where the sort and filter arrow .gifs are taken out */
 .filters .expander,
 .filters .expanded .expander {
@@ -1195,7 +1237,6 @@ fieldset.listbox .heading,
 	margin: .643em auto;
 }
 
-
 /* why are we still using weird noise jpgs as banners please stop */
 .toggled form {
 	background: #5998d6;
@@ -1211,10 +1252,6 @@ form.search input[type="text"] {
 	border-color: #78777d;
 	border-radius: .25em;
 }
-
-
-
-
 
 fieldset,
 form.verbose legend,
@@ -1236,7 +1273,6 @@ form.single fieldset {
 	border-color: #78777d;
 }
 
-
 /* shrinks search bar */
 /*@media screen and (max-width: 415px) {
 	li.search {
@@ -1249,35 +1285,5 @@ form.single fieldset {
 
 
 
+
 /* ---+ 00. MISC +--- */
-
-.mce-container input:focus {
-	background: #F3EFEC;
-}
-
-.announcement .userstuff a,
-.announcement .userstuff a:link,
-.announcement .userstuff a:visited:hover {
-	color: #5998d6;
-}
-
-.announcement .userstuff a:visited {
-	color: #999;
-}
-
-.announcement .userstuff a:hover,
-.announcement .userstuff a:focus {
-	color: #5897d4;
-}
-
-.event.announcement .userstuff a,
-.filters .expander {
-	color: #eee;
-}
-
-#outer,
-.javascript,
-#tos_prompt,
-.announcement input[type="submit"] {
-	background: #1c1b22;
-}
