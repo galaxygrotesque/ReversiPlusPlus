@@ -175,6 +175,7 @@ input:hover {
 
 .heading,
 .group .heading {
+	background: none;
 	color: #fff;
 }
 
@@ -256,6 +257,7 @@ ul.expandable.secondary {
 	background: #1c1b22;
 	border: 0;
 }
+
 
 
 
@@ -480,7 +482,6 @@ th,
 #outer .group .heading,
 fieldset.listbox .heading,
 .userstuff .heading,
-.heading,
 .userstuff h2 {
 	background: none;
 	color: #fff;
@@ -797,18 +798,12 @@ li.blurb .tags {
 	overflow-y: auto;
 }
 
-/* pretty sure these are the blurb image blocks */
+/* pretty sure these are the blurb key symbol blocks */
 ul.required-tags,
 .blurb .icon,
 .bookmark .status span {
 	border: 0;
 	opacity: .9;
-}
-
-/* forces work blurb buttons to not immediately enact camouflage upon approach */
-.actions a:visited:hover,
-.index .actions li a:hover {
-	background: #111;
 }
 
 /* cushion work blurb stats */
@@ -869,6 +864,12 @@ dd.category a:visited {
 	padding: 0;
 }
 
+/* forces work blurb buttons to not immediately enact camouflage upon approach */
+.work.index.group .actions li a:hover,
+.work.index.group .actions li a:visited:hover {
+	background: #111;
+}
+
 /*
 padding problem between li classes i gotta fix
 (ref: dl.meta dd ul li:first-child) 
@@ -883,6 +884,10 @@ ul.commas
 .commas.warnings li:last-child {
 	padding-right: .5em;
 	
+}
+
+ul.tags.commas li.characters:first-child {
+	padding-left: .25em;
 }
  
 */
@@ -982,6 +987,11 @@ form dd.required {
 	color: #5897d4;
 }
 
+.bookmark .status span,
+.splash .news li {
+	border-color: #78777d;
+}
+
 /* nix white in tooltip dropdown bg */
 .dropdown {
 	background: none;
@@ -996,9 +1006,19 @@ form dd.required {
 	background: #F3EFEC;
 }
 
-.bookmark .status span,
-.splash .news li {
-	border-color: #78777d;
+/* help buttons get weird in the sidebar so this is a shrink ray */
+.help.symbol.question.modal.modal-attached {
+	font-size: .75em;
+}
+
+/* search tooltip adjustments */
+.search [role="tooltip"] {
+	background: #1c1b22;
+	border: 1px solid #78777d;
+	border-radius: .25em;
+	color: #eee;
+	margin: .643em auto;
+	padding: .25em .375em;
 }
 
 .splash .favorite li:nth-of-type(odd) a:hover,
@@ -1048,8 +1068,7 @@ form dd.required {
 }
 
 /* nix dash button lines */
-#dashboard ul,
-.filters .group dt.bookmarker {
+#dashboard ul {
 	border: 0;
 	/* display: inline-block; */
 	/* padding: 1.25em .5em; */	/* ao3 CSS restrictions are why we can't have nice things */
@@ -1263,21 +1282,57 @@ dl.index dd {
 
 /* ---+ 14. SORT & FILTER SIDEBAR +--- */
 
-/* slight bit of space between sidebar heading groups */
+/* S&F margin adjustment */
+#bookmark-filters fieldset dl,
+#work-filters fieldset dl {
+	margin: .65em 0;
+}
+
+/* shortens S&F input boxes because otherwise the right end runs off the page */
+#bookmark_search_excluded_bookmark_tag_names_autocomplete,
+#bookmark_search_excluded_tag_names_autocomplete,
+#bookmark_search_other_bookmark_tag_names_autocomplete,
+#bookmark_search_other_tag_names_autocomplete,
+#bookmark_search_bookmark_query,
+#bookmark_search_bookmarkable_query,
+#work_search_excluded_tag_names_autocomplete,
+#work_search_other_tag_names_autocomplete,
+#work_search_query {
+	padding: 1px 0 1px 0;
+	width: 99%;
+}
+
+/* slight space between S&F labels and their input */
+.filters .group dt.bookmarker,
+.filters .group dt.language,
+.filters .group dt.search,
+.filters .group dt.options {
+	margin: .2em 0 0 0;
+	padding: .25em 0;
+}
+
+/* adjust margins on dds containing input */
+.filters .group dd.language,
+.filters .group dd.search,
+.filters .group dd.options,
+.filters .more dd.search,
+dd.options ul li /* bookmark types li */ {
+	margin: .2em 0;
+}
+
+/* slight space between S&F headings */
 dt.include.heading,
 dt.exclude.heading,
 dt.more.heading {
-	margin-bottom: .35em;
+	margin-bottom: .15em;
 }
 
-/* broken, need to fix; shortens S&F input boxes because otherwise the right end would run off the page */
-.autocomplete ul, 
-.filters .more dd.search {
-	width: 97%;
-}
-
-.autocomplete.search {
-	margin-top: .15em;
+/* adjust S&F dl containers because the margins obscure input boxes */
+dd.include.tags.group dl,
+dd.exclude.tags.group dl,
+dd.more.group dl,
+dt.search dd {
+	margin: 0;
 }
 
 /* ao3 blue accent on autocomplete hover */
@@ -1313,21 +1368,6 @@ dt.more.heading {
 	padding-left: .75em;
 }
 
-/* help buttons get weird in the sidebar so this is a shrink ray */
-.help.symbol.question.modal.modal-attached {
-	font-size: .75em;
-}
-
-/* search tooltip adjustments */
-.search [role="tooltip"] {
-	background: #1c1b22;
-	border: 1px solid #78777d;
-	border-radius: .25em;
-	color: #eee;
-	margin: .643em auto;
-	padding: .25em .375em;
-}
-
 /* gets rid of extra lines in S&F sidebar */
 form dl dt, .filters dt {
 	border-bottom: 0;
@@ -1341,7 +1381,8 @@ form.search input[type="text"] {
 
 fieldset,
 form.verbose legend,
-.verbose form legend {
+.verbose form legend,
+.filters .group dt.bookmarker {
 	border: 0;
 }
 
@@ -1357,18 +1398,6 @@ form dl dt,
 form.single fieldset {
 	border-color: #78777d;
 }
-
-/* shrinks search bar */
-/*@media screen and (max-width: 415px) {	GODDAMN IT AO3 LET ME DO RESPONSIVE WEB DESIGN ARARGH
-	li.search {
-		max-width: 35%;
-	}
-	#site_search {
-		width: 39%;
-	}
-}*/
-
-
 
 
 /* ---+ 15. MISC +--- */
