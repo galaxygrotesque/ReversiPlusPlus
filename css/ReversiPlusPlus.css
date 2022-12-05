@@ -1297,10 +1297,35 @@ dl.index dd {
 #bookmark_search_bookmarkable_query,
 #work_search_excluded_tag_names_autocomplete,
 #work_search_other_tag_names_autocomplete,
-#work_search_query {
+#work_search_query,
+#work_search_words_from,
+#work_search_words_to,
+#work_search_date_from,
+#work_search_date_to {
 	padding: 1px 0 1px 0;
 	width: 99%;
 }
+
+/* slightly smaller text for collapsed filter criteria */
+#include_rating_tags,
+#exclude_rating_tags,
+#include_archive_warning_tags,
+#exclude_archive_warning_tags,
+#include_category_tags,
+#exclude_category_tags,
+#include_fandom_tags,
+#exclude_fandom_tags,
+#include_character_tags,
+#exclude_character_tags,
+#include_relationship_tags,
+#exclude_relationship_tags,
+#include_freeform_tags,
+#exclude_freeform_tags,
+#include_tag_tags,
+#exclude_tag_tags {
+	font-size: .9em;
+}
+
 
 /* slight space between S&F labels and their input */
 .filters .group dt.bookmarker,
@@ -1364,6 +1389,8 @@ dt.search dd {
 }
 
 /* opposite with the kiddos */
+#work_crossover li,
+#work_complete li,
 .filters .tags li {
 	padding-left: .75em;
 }
