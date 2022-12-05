@@ -30,16 +30,16 @@
   ++ SECTIONS ++
   00. colour guide
   01. base
-  02. fonts
-  03. work reading adjustments (reading fonts here!)
-  04. comments
-  05. tags
-  06. work blurb cleanup
-  07. messages & tooltips
-  08. buttons
-  09. dashboard
-  10. header
-  11. footer
+  02. body fonts
+  03. buttons
+  04. header
+  05. footer  
+  06. work reading adjustments (reading fonts here!)
+  07. comments
+  08. tags
+  09. work blurb cleanup
+  10. messages & tooltips
+  11. dashboard
   12. stats page
   13. other pages
   14. sort & filter sidebar
@@ -59,16 +59,17 @@
 /*
 :root {
 	--ao3-accent-color: #5998d6;
+	--ao3-accent-color-light: #9ecfff;
 	--background-color: #1c1b22;
 	--background-color-dark: #151319;
+	--box-background-color: #16151b;
 	--box-border-color: #78777d;
 	--box-border-color-alt: #c2d2df;
-	--container-color: #16151b;
+	--box-border-color-subtle: #454547;
 	--light-grey-color: #5b5b66;
-	--subtle-box-border-color: #454547;
 	--text-color: #eee;
-	--textbox-color: #23222b;
-	--visited-color: #999;
+	--text-link-visited-color: #999;
+	--textbox-background-color: #23222b;
 }
 */
 
@@ -244,22 +245,40 @@ div.dynamic,
 	border: 0;
 }
 
+/* small blue pop for expandables — e.g., download on works */
+ul.expandable.secondary {
+	border: 0;
+	background: #5998d6;
+}
 
-/* ---+ 02. FONTS +--- */
+/* nix border on toggle forms like bookmarks */
+.toggled form {
+	background: #1c1b22;
+	border: 0;
+}
+
+
+
+/* ---+ 02. BODY FONTS +--- */
 
 /* less boring sans-serif fonts (that hopefully won't fuck up other shit)
    grab whichever strikes your fancy and slap it down after font-family!
    fonts:	"IBM Plex Sans", "Noto Sans", "Source Sans 3", "Proxima Nova", "Helvetica Neue",
    defaults:	"Lucida Grande", "Lucida Sans Unicode", "GNU Unifont", Verdana, Helvetica, sans-serif;
 */
-body,
+
+body {		/* font choices go here ↓ */
+	font-family: "IBM Plex Sans", "Proxima Nova", "Helvetica Neue", "Lucida Grande", "Lucida Sans Unicode", "GNU Unifont", Verdana, Helvetica, sans-serif;;
+}
+
 input,
 textarea,
 blockquote,
 blockquote.userstuff,
 .blurb blockquote,
 .dropdown,
-.expander {	/* font choices go here ↓ */
+.expander,
+.toggled form {	/* font choices go here ↓ */
 	font-family: "IBM Plex Sans", "Proxima Nova", "Helvetica Neue", "Lucida Grande", "Lucida Sans Unicode", "GNU Unifont", Verdana, Helvetica, sans-serif;
 }
 
@@ -292,7 +311,217 @@ samp {		/* font choices go here ↓ */
 
 
 
-/* ---+ 03. WORK READING ADJUSTMENTS +--- */
+/* ---+ 03. BUTTONS +--- */
+
+/* buttons please behave on hover */
+input:hover[type="submit"],
+label.action:hover,
+input.button:hover,
+.actions a:focus,
+.actions a:hover,
+.actions a:link:hover,
+.actions input:hover,
+.actions input:focus {
+	background: #151319;
+	border-color: transparent;
+	color: #fff;
+}
+
+/* action buttons and some nav buttons */
+button,
+input[type="submit"],
+.action,
+.action:link,
+.actions a,
+.actions a:link,
+.actions input,
+.actions label,
+.current {
+	background: #2b2a33;
+	border-color: transparent;	/* nix lines while keeping white space */
+	color: #eee;
+}
+
+/* colors for active action buttons */
+a.current,
+.actions a:active,
+.current,
+.current a:visited {
+	background: #555;
+	border-color: #fff;
+	color: #fff;
+}
+
+/* active button behaviours (mostly) */
+#outer .current,
+input:active[type="submit"],
+a.current,
+label.action:active,
+span.unread,
+span.claimed,
+.actions a:active,
+.current a:visited,
+.replied,
+.own,
+.draft,
+.draft .unread,
+.child,
+.unwrangled,
+.unreviewed,
+.ui-sortable li:hover {
+	background: #000;
+	border-color: transparent;
+	color: #fff;
+}
+
+dl.meta {
+	border: 0;
+}
+
+
+
+
+/* ---+ 04. HEADER +--- */
+
+/* gives user greeting some breathing room */
+#greeting {
+	padding: .5em 0;
+}
+
+#header #greeting img,
+#header fieldset,
+#header form,
+#header p,
+#header .heading a,
+#header .heading a:visited,
+#tos_prompt .heading {
+	color: #5998d6;
+}
+
+/* searchbar colours behave now */
+#header #search .text:active,
+#header #search .text:focus,
+#header #search .text:hover {
+	background: #23222b;
+}
+
+#header #search input:focus {
+	background: #000;
+	border-color: transparent;
+	color: #fff;
+}
+
+#header a,
+#header a:visited,
+#header .primary .open a,
+#header .primary .dropdown:hover a,
+#header .primary .dropdown a:focus,
+#header .user a:focus,
+#header .user .open a:focus,
+.filters dt a:hover {
+	color: #fff;
+}
+
+#header .actions a {
+	background: transparent;
+	border-color: #2b2a33;
+	color: #eee;
+}
+
+#header .actions a:hover {
+	background: #23222b;
+	color: #eee;
+}
+
+#header .actions a:focus,
+#header .dropdown:hover a,
+#header .open a,
+#header .menu,
+#small_login,
+th,
+.secondary,
+.thread .even,
+.system .tweet_list li,
+.ui-datepicker tr:hover {
+	background: #23222b;
+}
+
+/* top nav with black bg */
+#header .dropdown .menu a:focus,
+#header .dropdown .menu a:hover {
+	background: #151319;
+}
+
+/* nix lines in header nav */
+#header .menu li {
+	border: 0;
+}
+
+#inner .module .heading {
+	border-color: #78777d;
+}
+
+#header .user a:hover {
+	background: #151319;
+	border-color: transparent;
+	color: #fff;
+}
+
+/* why are we still using weird noise jpgs as banners please stop */
+#header ul.primary {
+	background: #5998d6;
+}
+
+/* stay square, nav buttons */
+#header ul.primary {
+	border-radius: 0 !important;
+}
+
+#outer .group .heading,
+fieldset.listbox .heading,
+.userstuff .heading,
+.heading,
+.userstuff h2 {
+	background: none;
+	color: #fff;
+}
+
+
+
+
+/* ---+ 05. FOOTER +--- */
+
+/* no more noise.jpg */
+#outer #footer {
+	background: #5998d6;
+}
+
+#outer .region,
+#footer .group {
+	background: none;
+}
+
+/* nix the top border in the footer */
+#footer {
+	border: 0;
+}
+
+/* ao3 blue accent on hover */
+#footer a:hover,
+#footer a:focus {
+	background: transparent;
+	color: #5998d6;
+}
+
+/* give the footer nav text a readable pillow */
+#footer ul.actions {
+	background-color: #1c1b22;
+}
+
+
+
+
+/* ---+ 06. WORK READING ADJUSTMENTS +--- */
 
 /* WARNING:
    select default values in this section are NOT kind to mobile or small screens!
@@ -370,7 +599,7 @@ div.preface .byline a {
 
 
 
-/* ---+ 04. COMMENTS +--- */
+/* ---+ 07. COMMENTS +--- */
 
 /* nix border outside the add comment box */
 #add_comnent,
@@ -413,7 +642,7 @@ li.comment {
 
 
 
-/* ---+ 05. TAGS +--- */
+/* ---+ 08. TAGS +--- */
 
 /* tag-specific link attributes — makes tag bubbles! */
 a.tag {
@@ -550,7 +779,7 @@ li.warnings a:visited:hover {
 
 
 
-/* ---+ 06. WORK BLURB CLEANUP +--- */
+/* ---+ 09. WORK BLURB CLEANUP +--- */
 
 /* turn down the lights on work blurb bgs */
 #main li.blurb {
@@ -711,7 +940,7 @@ ul.commas
 
 
 
-/* ---+ 07. MESSAGES & TOOLTIPS +--- */
+/* ---+ 10. MESSAGES & TOOLTIPS +--- */
 
 #greeting .icon,
 .error,
@@ -796,77 +1025,7 @@ form dd.required {
 
 
 
-/* ---+ 08. BUTTONS +--- */
-
-/* buttons please behave on hover */
-input:hover[type="submit"],
-label.action:hover,
-input.button:hover,
-.actions a:focus,
-.actions a:hover,
-.actions a:link:hover,
-.actions input:hover,
-.actions input:focus {
-	background: #151319;
-	border-color: transparent;
-	color: #fff;
-}
-
-/* action buttons and some nav buttons */
-button,
-input[type="submit"],
-.action,
-.action:link,
-.actions a,
-.actions a:link,
-.actions input,
-.actions label,
-.current {
-	background: #2b2a33;
-	border-color: transparent;	/* nix lines while keeping white space */
-	color: #eee;
-}
-
-/* colors for active action buttons */
-a.current,
-.actions a:active,
-.current,
-.current a:visited {
-	background: #555;
-	border-color: #fff;
-	color: #fff;
-}
-
-/* active button behaviours (mostly) */
-#outer .current,
-input:active[type="submit"],
-a.current,
-label.action:active,
-span.unread,
-span.claimed,
-.actions a:active,
-.current a:visited,
-.replied,
-.own,
-.draft,
-.draft .unread,
-.child,
-.unwrangled,
-.unreviewed,
-.ui-sortable li:hover {
-	background: #000;
-	border-color: transparent;
-	color: #fff;
-}
-
-dl.meta {
-	border: 0;
-}
-
-
-
-
-/* ---+ 09. DASHBOARD +--- */
+/* ---+ 11. DASHBOARD +--- */
 
 #dashboard,
 #dashboard.own {
@@ -910,150 +1069,11 @@ dl.meta {
 	color: #fff;
 }
 
-#dashboard .secondary,
+/* investigate this, wasn't specific and messed with multiple works page */
+/*#dashboard .secondary,
 .dashboard fieldset fieldset.listbox .index {
 	background: #23222b;
-}
-
-
-
-
-/* ---+ 10. HEADER +--- */
-
-/* gives user greeting some breathing room */
-#greeting {
-	padding: .5em 0;
-}
-
-#header #greeting img,
-#header fieldset,
-#header form,
-#header p,
-#header .heading a,
-#header .heading a:visited,
-#tos_prompt .heading {
-	color: #5998d6;
-}
-
-/* searchbar colours behave now */
-#header #search .text:active,
-#header #search .text:focus,
-#header #search .text:hover {
-	background: #23222b;
-}
-
-#header #search input:focus {
-	background: #000;
-	border-color: transparent;
-	color: #fff;
-}
-
-#header a,
-#header a:visited,
-#header .primary .open a,
-#header .primary .dropdown:hover a,
-#header .primary .dropdown a:focus,
-#header .user a:focus,
-#header .user .open a:focus,
-.filters dt a:hover {
-	color: #fff;
-}
-
-#header .actions a {
-	background: transparent;
-	border-color: #2b2a33;
-	color: #eee;
-}
-
-#header .actions a:hover {
-	background: #23222b;
-	color: #eee;
-}
-
-#header .actions a:focus,
-#header .dropdown:hover a,
-#header .open a,
-#header .menu,
-#small_login,
-th,
-.secondary,
-.thread .even,
-.system .tweet_list li,
-.ui-datepicker tr:hover {
-	background: #23222b;
-}
-
-/* top nav with black bg */
-#header .dropdown .menu a:focus,
-#header .dropdown .menu a:hover {
-	background: #151319;
-}
-
-/* nix lines in header nav */
-#header .menu li {
-	border: 0;
-}
-
-#inner .module .heading {
-	border-color: #78777d;
-}
-
-#header .user a:hover {
-	background: #151319;
-	border-color: transparent;
-	color: #fff;
-}
-
-/* why are we still using weird noise jpgs as banners please stop */
-#header ul.primary {
-	background: #5998d6;
-}
-
-/* stay square, nav buttons */
-#header ul.primary {
-	border-radius: 0 !important;
-}
-
-#outer .group .heading,
-fieldset.listbox .heading,
-.userstuff .heading,
-.heading,
-.userstuff h2 {
-	background: none;
-	color: #fff;
-}
-
-
-
-
-/* ---+ 11. FOOTER +--- */
-
-/* no more noise.jpg */
-#outer #footer {
-	background: #5998d6;
-}
-
-#outer .region,
-#footer .group {
-	background: none;
-}
-
-/* nix the top border in the footer */
-#footer {
-	border: 0;
-}
-
-/* ao3 blue accent on hover */
-#footer a:hover,
-#footer a:focus {
-	background: transparent;
-	color: #5998d6;
-}
-
-/* give the footer nav text a readable pillow */
-#footer ul.actions {
-	background-color: #1c1b22;
-}
+}*/
 
 
 
@@ -1089,7 +1109,7 @@ fieldset.listbox .heading,
 .statistics .index li {
 	border-radius: inherit;
 	margin: .5em 0;
-	padding: .65em;
+	padding: .5em;
 }
 
 /* even entries get a cool different colour :D */
@@ -1102,6 +1122,29 @@ fieldset.listbox .heading,
 
 /* ---+ 13. OTHER PAGES +--- */
 
+/* edit multiple works page: now all/none buttons should align with h5 */
+#edit-multiple-works a.check_all,
+#edit-multiple-works a.check_none {
+	margin: -2px .15em 0 .15em;
+}
+
+/* edit multiple works page: nix borders and backgrounds */
+#edit-multiple-works .fandom.listbox {
+	border-color: transparent;
+	border-radius: .25em;
+	background: transparent;
+}
+
+/* edit multiple works page: tweak all/none button ul margins */
+#edit-multiple-works .fandom.listbox ul.actions {
+	margin: 0 0 .5em 0;
+}
+
+/* edit multiple works page: nix all/none button li margins */
+#edit-multiple-works .fandom.listbox ul.actions li {
+	margin: 0;
+}
+
 /* banish noisy lines and background for: user fandoms, works, series, bookmarks */
 #user-fandoms,
 #user-fandoms ol,
@@ -1113,57 +1156,6 @@ fieldset.listbox .heading,
 #user-bookmarks ol {
 	background: transparent;
 	border-color: transparent;
-}
-
-/* changed bookmark box colours; might tweak more */
-.bookmark div.user,
-.bookmark div.recent {
-	background-color: #151319;
-	border: 0;
-}
-
-.bookmark.listbox.group,
-.work.listbox.group {
-	background: transparent;
-	border: 0;
-}
-
-/* ao3 blue accent on hover */
-.listbox .heading a.tag:visited:hover {
-	background: transparent;
-	color: #5998d6;
-}
-
-/* ALL the listbox bgs transparent?? i guess */
-.listbox .index {
-	background: transparent !important;
-}
-
-/* nix line on user dashboard/profile */
-.home .header h2 {
-	border: 0;
-}
-
-/* for mobile: now the nav buttons on user screen no longer clip into user icon ✨ */
-.home .header ul.actions {
-	max-width: 70%;
-	text-align: right;
-}
-
-/* cleans up tag category pages */
-.parent.listbox.group {
-	background: transparent;
-	border: 0;
-
-}
-
-/* icon was misbehaving in header on dashboard/profile, now NO ONE floats */
-.profile .primary, .home .primary {
-	float: none;
-}
-
-.tags.commas.index.group {
-	background: transparent;
 }
 
 /* de-bubble search heading */
@@ -1207,15 +1199,85 @@ dl.index dd {
 	margin: .25em .25em 1.25em 0;
 }
 
+/* edit multiple works: kill background behind checkboxes */
+.concise label.action {
+	background: transparent;
+}
+
+/* edit multiple works: darker bg */
+.listbox ul.index.concise {
+	background: #151319;
+	border-radius: inherit;
+}
+
+/* changed bookmark box colours; might tweak more */
+.bookmark div.user,
+.bookmark div.recent {
+	background-color: #151319;
+	border: 0;
+}
+
+/* additional tags category, cleans up tag category pages */
+.bookmark.listbox.group,
+.bookmark.listbox.group ul.index.group,
+.parent.listbox.group,
+.work.listbox.group,
+.work.listbox.group ul.index.group {
+	background: transparent;
+	border: 0;
+}
+
+/* ao3 blue accent on hover */
+.listbox .heading a.tag:visited:hover {
+	background: transparent;
+	color: #5998d6;
+}
+
+/* ALL the listbox bgs transparent?? i guess */
+.listbox .index {
+	background: transparent;
+}
+
+/* nix line on user dashboard/profile */
+.home .header h2 {
+	border: 0;
+}
+
+/* for mobile: now the nav buttons on user screen no longer clip into user icon ✨ */
+.home .header ul.actions {
+	max-width: 70%;
+	text-align: right;
+}
+
+/* icon was misbehaving in header on dashboard/profile, now NO ONE floats */
+.profile .primary, .home .primary {
+	float: none;
+}
+
+.tags.commas.index.group {
+	background: transparent;
+}
+
 
 
 
 /* ---+ 14. SORT & FILTER SIDEBAR +--- */
 
+/* slight bit of space between sidebar heading groups */
+dt.include.heading,
+dt.exclude.heading,
+dt.more.heading {
+	margin-bottom: .35em;
+}
+
 /* broken, need to fix; shortens S&F input boxes because otherwise the right end would run off the page */
 .autocomplete ul, 
 .filters .more dd.search {
 	width: 97%;
+}
+
+.autocomplete.search {
+	margin-top: .15em;
 }
 
 /* ao3 blue accent on autocomplete hover */
@@ -1266,14 +1328,9 @@ dl.index dd {
 	padding: .25em .375em;
 }
 
-/* nix noise.jpg */
-.toggled form {
-	background: #5998d6;
-}
-
 /* gets rid of extra lines in S&F sidebar */
 form dl dt, .filters dt {
-	border-bottom: none;
+	border-bottom: 0;
 }
 
 /* fix search bars in work search because they're. A Lot */
@@ -1296,7 +1353,6 @@ fieldset fieldset.listbox {
 
 .group.listbox,
 fieldset fieldset.listbox,
-.toggled form,
 form dl dt,
 form.single fieldset {
 	border-color: #78777d;
