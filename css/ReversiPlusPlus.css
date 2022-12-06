@@ -66,6 +66,7 @@
 	--box-border-color: #78777d;
 	--box-border-color-alt: #c2d2df;
 	--box-border-color-subtle: #454547;
+	--button-background-color: #2b2a33;
 	--button-highlight-color: #4e4e5e;
 	--light-grey-color: #5b5b66;
 	--text-color: #eee;
@@ -1103,7 +1104,7 @@ form dd.required {
 }
 
 #dashboard a:hover {
-	background: #2b2a33;
+	background: #4e4e5e;
 	color: #fff;
 }
 
