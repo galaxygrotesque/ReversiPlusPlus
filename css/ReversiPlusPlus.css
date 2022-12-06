@@ -66,6 +66,7 @@
 	--box-border-color: #78777d;
 	--box-border-color-alt: #c2d2df;
 	--box-border-color-subtle: #454547;
+	--button-highlight-color: #4e4e5e;
 	--light-grey-color: #5b5b66;
 	--text-color: #eee;
 	--text-link-visited-color: #999;
@@ -150,6 +151,10 @@ hr {
 	margin: 1.5em auto;
 }
 
+fieldset.listbox {
+	
+}
+
 /* rounds and pretties text boxes */
 input,
 textarea {
@@ -201,6 +206,11 @@ span.requested,
 	color: #5998d6;
 }
 
+/* some labels are misbehaving (namely edit skin: parent skins) so trying this */
+#main .verbose legend {
+	background: transparent;
+}
+
 /* sets base colours for oodles of elements */
 .group,
 .group .group,
@@ -209,7 +219,7 @@ span.requested,
 fieldset,
 fieldset fieldset ul,
 form dl,
-#main .verbose legend,
+/*#main .verbose legend,*/
 .verbose fieldset,
 .notice,
 ul.notes,
@@ -316,6 +326,7 @@ samp {		/* font choices go here ↓ */
 /* ---+ 03. BUTTONS +--- */
 
 /* buttons please behave on hover */
+legend .action:link:hover,
 input:hover[type="submit"],
 label.action:hover,
 input.button:hover,
@@ -323,8 +334,10 @@ input.button:hover,
 .actions a:hover,
 .actions a:link:hover,
 .actions input:hover,
-.actions input:focus {
-	background: #151319;
+.actions input:focus,
+.work.index.group .actions li a:hover,
+.work.index.group .actions li a:visited:hover {
+	background: #4e4e5e;
 	border-color: transparent;
 	color: #fff;
 }
@@ -356,6 +369,7 @@ a.current,
 
 /* active button behaviours (mostly) */
 #outer .current,
+legend .action:link:active,
 input:active[type="submit"],
 a.current,
 label.action:active,
@@ -371,7 +385,7 @@ span.claimed,
 .unwrangled,
 .unreviewed,
 .ui-sortable li:hover {
-	background: #000;
+	background: #111;
 	border-color: transparent;
 	color: #fff;
 }
@@ -388,6 +402,11 @@ dl.meta {
 /* gives user greeting some breathing room */
 #greeting {
 	padding: .5em 0;
+}
+
+/* dropdowns are hover colour */
+#greeting .dropdown .menu a {
+	border-color: #4e4e5e;
 }
 
 #header #greeting img,
@@ -408,9 +427,14 @@ dl.meta {
 }
 
 #header #search input:focus {
-	background: #000;
+	background: #111;
 	border-color: transparent;
 	color: #fff;
+}
+
+/* user/post/logout drowndown border rounding is consistent */
+#header .user .dropdown-toggle {
+	border-radius: .25em .25em 0 0 !important;
 }
 
 #header a,
@@ -425,20 +449,18 @@ dl.meta {
 }
 
 #header .actions a {
-	background: transparent;
-	border-color: #2b2a33;
+	background: #5998d6;
+	border-color: #5998d6 /*#2b2a33*/;
 	color: #eee;
 }
 
-#header .actions a:hover {
-	background: #23222b;
+#header .actions a:hover,
+#header .menu {
+	background: #4e4e5e;
 	color: #eee;
 }
 
-#header .actions a:focus,
-#header .dropdown:hover a,
 #header .open a,
-#header .menu,
 #small_login,
 th,
 .secondary,
@@ -446,6 +468,30 @@ th,
 .system .tweet_list li,
 .ui-datepicker tr:hover {
 	background: #23222b;
+}
+
+/* user / post / login */
+#header .user a,
+#header .user .open a,
+#header .actions a:focus {
+	background: #1c1b22;
+	border: #1c1b22;
+}
+
+/* fandoms / browse / search / about */
+#header .primary a {
+	background: #5998d6;
+}
+
+#header .dropdown .menu a {
+	/*background: ;*/
+	color: #eee;
+}
+#header .dropdown:hover a,
+#header .dropdown .menu a:hover {
+	background: #4e4e5e;
+	color: #fff;
+	/* header dropdown menus */
 }
 
 /* top nav with black bg */
@@ -456,18 +502,18 @@ th,
 
 /* nix lines in header nav */
 #header .menu li {
-	border: 0;
+	border-color: transparent;
 }
 
 #inner .module .heading {
 	border-color: #78777d;
 }
 
-#header .user a:hover {
+/*#header .user a:hover {
 	background: #151319;
 	border-color: transparent;
 	color: #fff;
-}
+}*/
 
 /* why are we still using weird noise jpgs as banners please stop */
 #header ul.primary {
@@ -862,12 +908,6 @@ dd.category a:visited {
 /* trims padding off the last child (sorry kiddo) */
 .commas li.last {
 	padding: 0;
-}
-
-/* forces work blurb buttons to not immediately enact camouflage upon approach */
-.work.index.group .actions li a:hover,
-.work.index.group .actions li a:visited:hover {
-	background: #111;
 }
 
 /*
@@ -1413,14 +1453,20 @@ form.verbose legend,
 	border: 0;
 }
 
-.group.listbox,
-.group.listbox .index,
-fieldset fieldset.listbox {
-	background: #23222b;
+fieldset fieldset.listbox,
+.group.listbox /*.group.listbox .index,*/ {
+	background: #4e4e5e;
+	border-color: transparent;
+	border-radius: .25em;
 }
 
-.group.listbox,
-fieldset fieldset.listbox,
+/* trying to make some boxes behave */
+.group.listbox .index {
+	background: #151319;
+}
+
+/*.group.listbox,
+fieldset fieldset.listbox,*/
 form dl dt,
 form.single fieldset {
 	border-color: #78777d;
