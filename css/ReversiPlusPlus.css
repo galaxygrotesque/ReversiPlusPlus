@@ -400,14 +400,8 @@ dl.meta {
 
 /* ---+ 04. HEADER +--- */
 
-/* gives user greeting some breathing room */
-#greeting {
-	padding: .5em 0;
-}
-
-/* dropdowns are hover colour */
-#greeting .dropdown .menu a {
-	border-color: #4e4e5e;
+#header {
+	background: #151319 !important;
 }
 
 #header #greeting img,
@@ -433,6 +427,20 @@ dl.meta {
 	color: #fff;
 }
 
+/* gives user greeting some breathing room */
+#greeting {
+	padding: .5em 0;
+}
+
+/* dropdowns are hover colour */
+#greeting .dropdown .menu a,
+#header .dropdown .menu a {
+	border-color: #4e4e5e;
+	border-radius: .25em;
+	color: #eee;
+}
+
+
 /* user/post/logout drowndown border rounding is consistent */
 #header .user .dropdown-toggle {
 	border-radius: .25em .25em 0 0 !important;
@@ -455,10 +463,22 @@ dl.meta {
 	color: #eee;
 }
 
-#header .actions a:hover,
+/* dropdowns have round */
 #header .menu {
 	background: #4e4e5e;
-	color: #eee;
+	border-radius: 0 0 .25em .25em;
+	color: #fff;
+}
+
+/* extra round edge for user dropdown menu */
+#header .user .menu {
+	border-radius: .25em 0 .25em .25em;
+}
+
+/* log out button not round */
+#header .actions a:hover {
+	background: #4e4e5e;
+	color: #fff;
 }
 
 #header .open a,
@@ -475,8 +495,8 @@ th,
 #header .user a,
 #header .user .open a,
 #header .actions a:focus {
-	background: #1c1b22;
-	border: #1c1b22;
+	background: transparent;
+	border: transparent;
 }
 
 /* fandoms / browse / search / about */
@@ -484,10 +504,6 @@ th,
 	background: #5998d6;
 }
 
-#header .dropdown .menu a {
-	/*background: ;*/
-	color: #eee;
-}
 #header .dropdown:hover a,
 #header .dropdown .menu a:hover {
 	background: #4e4e5e;
@@ -509,12 +525,6 @@ th,
 #inner .module .heading {
 	border-color: #78777d;
 }
-
-/*#header .user a:hover {
-	background: #151319;
-	border-color: transparent;
-	color: #fff;
-}*/
 
 /* why are we still using weird noise jpgs as banners please stop */
 #header ul.primary {
