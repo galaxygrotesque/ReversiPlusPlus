@@ -68,8 +68,9 @@
 	--box-border-color-subtle: #454547;
 	--button-background-color: #2b2a33;
 	--button-highlight-color: #4e4e5e;
-	--light-grey-color: #5b5b66;
+	--tag-bubble-color-visited-hover: #5b5b66;
 	--text-color: #eee;
+	--text-link-color: #fff;
 	--text-link-visited-color: #999;
 	--textbox-background-color: #23222b;
 }
@@ -163,13 +164,13 @@ textarea {
 	background: #23222b;
 	border-color: #78777d;
 	border-radius: .25em;
-	color: #eee; /* textarea didnt have this initially */
+	color: #eee;
 }
 
 /* blue border now appears when you're focused a text box */
-form blockquote.userstuff,
 input:focus,
-textarea:focus {
+textarea:focus,
+form blockquote.userstuff {
 	background: #23222b;
 	border-color: #6ab5ff;
 }
@@ -178,6 +179,14 @@ textarea:focus {
 input:hover {
 	background: #23222b;
 	border-color: #fff;
+}
+
+th,
+.secondary,
+.thread .even,
+.system .tweet_list li,
+.ui-datepicker tr:hover {
+	background: #23222b;
 }
 
 .heading,
@@ -192,19 +201,16 @@ input:hover {
 }
 
 /* makes lots of things the ao3 blue accent */
-span.delete,
-span.unread,
-.replied,
 span.claimed,
+span.delete,
+span.requested,
+span.unread,
 .draggable,
 .droppable,
-span.requested,
-.blurb h4 img,
-.splash .module h3,
+.replied,
 .required,
-.error,
-.comment_error,
-.kudos_error {
+.blurb h4 img,
+.splash .module h3 {
 	color: #5998d6;
 }
 
@@ -217,26 +223,19 @@ span.requested,
 .group,
 .group .group,
 .region,
-.flash,
 fieldset,
 fieldset fieldset ul,
 form dl,
-/*#main .verbose legend,*/
 .verbose fieldset,
-.notice,
 ul.notes,
 table,
 th,
 td:hover,
 tr:hover,
 .symbol .question:hover,
-#modal,
 .ui-sortable li,
 .required .autocomplete,
 .autocomplete .notice,
-.system .intro,
-.comment_error,
-.kudos_error,
 div.dynamic,
 .dynamic form,
 #ui-datepicker-div,
@@ -326,6 +325,10 @@ samp {		/* font choices go here ↓ */
 
 
 /* ---+ 03. BUTTONS +--- */
+
+legend .action:link {
+	margin: 0 .5em;
+}
 
 /* buttons please behave on hover */
 legend .action:link:hover,
@@ -457,7 +460,7 @@ dl.meta {
 #header .actions a {
 	background: #5998d6;
 	border-color: #5998d6;
-	color: #eee;
+	color: #fff;
 }
 
 #header .actions a:focus,
@@ -487,13 +490,7 @@ dl.meta {
 	color: #fff;
 }
 
-/* "archiveofourown beta" text */
-#header .heading a,
-#header .heading a:visited {
-	color: #eee;
-}
-
-/* pop on hover */
+/* "archiveofourown beta" text pop on hover */
 #header .heading a:hover {
 	color: #5998d6;
 }
@@ -511,12 +508,7 @@ dl.meta {
 }
 
 #header .open a,
-#small_login,
-th,
-.secondary,
-.thread .even,
-.system .tweet_list li,
-.ui-datepicker tr:hover {
+#small_login {
 	background: #23222b;
 }
 
@@ -875,10 +867,10 @@ ul.required-tags,
 }
 
 /* de-bubble fandom labels in work blurbs/work page */
-.blurb .fandoms a,
 dd.fandom a,
 dd.rating a,
-dd.category a {
+dd.category a,
+.blurb .fandoms a {
 	background: transparent !important;
 	border: 0;
 	border-bottom: 1px dotted #eee !important;
@@ -889,23 +881,23 @@ dd.category a {
 }
 
 /* de-bubble fandom labels in work blurbs/work page */
-.blurb .fandoms a:hover,
-.blurb .fandoms a:hover:visited,
 dd.fandom a:hover,
 dd.fandom a:hover:visited,
 dd.rating a:hover,
 dd.rating a:hover:visited,
 dd.category a:hover,
-dd.category a:hover:visited {
+dd.category a:hover:visited,
+.blurb .fandoms a:hover,
+.blurb .fandoms a:hover:visited {
 	border-bottom: 1px dotted #9ecfff !important;
 	color: #9ecfff !important;
 }
 
 /* de-bubble fandom labels in work blurbs/work page */
-.blurb .fandoms a:visited,
 dd.fandom a:visited,
 dd.rating a:visited,
-dd.category a:visited {
+dd.category a:visited,
+.blurb .fandoms a:visited {
 	border-bottom: 1px dotted #999 !important;
 	border-radius: 0 !important;
 	color: #999;
@@ -1003,18 +995,38 @@ ul.tags.commas li.characters:first-child {
 
 /* ---+ 10. MESSAGES & TOOLTIPS +--- */
 
-#greeting .icon,
+#modal {
+	background: #1c1b22;
+	border: 0;
+	border-radius: .25em;
+	color: #eee;
+}
+
+#modal .content {
+	border: 0;
+}
+
 .error,
 .comment_error,
 .kudos_error,
 .LV_invalid,
-.LV_invalid_field,
+.LV_invalid_field
 input.LV_invalid_field:hover,
 input.LV_invalid_field:active,
 textarea.LV_invalid_field:hover,
 textarea.LV_invalid_field:active,
-.qtip-content {
+.qtip-content,
+.system .intro {
+	background: #1c1b22;
 	border-color: #5998d6;
+	color: #fff;
+}
+
+.flash,
+.notice {
+	background: #1c1b22;
+	border-color: #eee;
+	color: #eee;
 }
 
 #outer,
@@ -1024,7 +1036,9 @@ textarea.LV_invalid_field:active,
 	background: #1c1b22;
 }
 
-form dd.required {
+form dd.required,
+.event.announcement .userstuff a,
+.filters .expander {
 	color: #eee;
 }
 
@@ -1051,11 +1065,6 @@ form dd.required {
 /* nix white in tooltip dropdown bg */
 .dropdown {
 	background: none;
-}
-
-.event.announcement .userstuff a,
-.filters .expander {
-	color: #eee;
 }
 
 .mce-container input:focus {
@@ -1189,7 +1198,7 @@ form dd.required {
 
 /* even entries get a cool different colour :D */
 .statistics .index li:nth-of-type(even) {
-	background: #1c1b22;
+	background: #2b2a33;
 }
 
 
@@ -1451,7 +1460,8 @@ dt.search dd {
 }
 
 /* gets rid of extra lines in S&F sidebar */
-form dl dt, .filters dt {
+form dl dt,
+.filters dt {
 	border-bottom: 0;
 }
 
@@ -1469,8 +1479,8 @@ form.verbose legend,
 }
 
 fieldset fieldset.listbox,
-.group.listbox /*.group.listbox .index,*/ {
-	background: #4e4e5e;
+.group.listbox {
+	background: transparent;
 	border-color: transparent;
 	border-radius: .25em;
 }
@@ -1480,8 +1490,6 @@ fieldset fieldset.listbox,
 	background: #151319;
 }
 
-/*.group.listbox,
-fieldset fieldset.listbox,*/
 form dl dt,
 form.single fieldset {
 	border-color: #78777d;
