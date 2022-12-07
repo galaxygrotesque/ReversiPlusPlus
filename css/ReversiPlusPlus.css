@@ -152,9 +152,10 @@ hr {
 	margin: 1.5em auto;
 }
 
+/* what the hell was i doing here??? god i hate adhd
 fieldset.listbox {
 	
-}
+}*/
 
 /* rounds and pretties text boxes */
 input,
@@ -400,6 +401,12 @@ dl.meta {
 
 /* ---+ 04. HEADER +--- */
 
+/* gives user greeting some breathing room */
+#greeting {
+	padding: .5em 0;
+}
+
+/* dark header bg at the top */
 #header {
 	background: #151319 !important;
 }
@@ -425,24 +432,6 @@ dl.meta {
 	color: #fff;
 }
 
-/* gives user greeting some breathing room */
-#greeting {
-	padding: .5em 0;
-}
-
-/* dropdowns are hover colour */
-#greeting .dropdown .menu a,
-#header .dropdown .menu a {
-	border-color: #4e4e5e;
-	border-radius: .25em;
-	color: #eee;
-}
-
-/* user/post/logout drowndown border rounding is consistent */
-#header .user .dropdown-toggle {
-	border-radius: .25em .25em 0 0 !important;
-}
-
 #header a,
 #header a:visited,
 #header .primary .open a,
@@ -454,33 +443,71 @@ dl.meta {
 	color: #fff;
 }
 
+/* why are we still using weird noise jpgs as banners please stop */
+#header ul.primary {
+	background: #5998d6;
+}
+
+/* stay square, nav buttons */
+#header ul.primary {
+	border-radius: 0 !important;
+}
+
+/* header nav buttons as blue: fandoms/browse/search/about */
 #header .actions a {
 	background: #5998d6;
 	border-color: #5998d6;
 	color: #eee;
 }
 
+#header .actions a:focus,
+#header .actions a:hover {
+	background: #4e4e5e;
+	color: #fff;
+}
+
+/* header dropdown menu bgs */
+#header .dropdown:hover a {
+	background: #4e4e5e;
+	color: #fff;
+}
+
+/* dropdowns are hover colour */
+#header .dropdown .menu a,
+#greeting .dropdown .menu a {
+	border-color: #4e4e5e;
+	border-radius: .25em;
+	color: #eee;
+}
+
+/* dropdown menu links with dark hover */
+#header .dropdown .menu a:focus,
+#header .dropdown .menu a:hover {
+	background: #151319;
+	color: #fff;
+}
+
+/* "archiveofourown beta" text */
 #header .heading a,
 #header .heading a:visited {
 	color: #eee;
 }
 
-/* dropdowns have round */
+/* pop on hover */
+#header .heading a:hover {
+	color: #5998d6;
+}
+
+/* header dropdowns have round */
 #header .menu {
 	background: #4e4e5e;
 	border-radius: 0 0 .25em .25em;
 	color: #fff;
 }
 
-/* extra round edge for user dropdown menu */
-#header .user .menu {
-	border-radius: .25em 0 .25em .25em;
-}
-
-/* log out button not round */
-#header .actions a:hover {
-	background: #4e4e5e;
-	color: #fff;
+/* nix lines in header nav */
+#header .menu li {
+	border-color: transparent;
 }
 
 #header .open a,
@@ -493,49 +520,25 @@ th,
 	background: #23222b;
 }
 
-/* user / post / login */
+/* user/post/login not blue */
 #header .user a,
-#header .user .open a,
-#header .actions a:focus {
+#header .user .open a {
 	background: transparent;
 	border: transparent;
 }
 
-/* fandoms / browse / search / about */
-#header .primary a {
-	background: #5998d6;
+/* user/post/logout drowndown border rounding is consistent */
+#header .user .dropdown-toggle {
+	border-radius: .25em .25em 0 0 !important;
 }
 
-#header .dropdown:hover a,
-#header .dropdown .menu a:hover {
-	background: #4e4e5e;
-	color: #fff;
-	/* header dropdown menus */
-}
-
-/* top nav with black bg */
-#header .dropdown .menu a:focus,
-#header .dropdown .menu a:hover {
-	background: #151319;
-}
-
-/* nix lines in header nav */
-#header .menu li {
-	border-color: transparent;
+/* extra round edge for user dropdown menu */
+#header .user .menu {
+	border-radius: .25em 0 .25em .25em;
 }
 
 #inner .module .heading {
 	border-color: #78777d;
-}
-
-/* why are we still using weird noise jpgs as banners please stop */
-#header ul.primary {
-	background: #5998d6;
-}
-
-/* stay square, nav buttons */
-#header ul.primary {
-	border-radius: 0 !important;
 }
 
 #outer .group .heading,
@@ -1378,7 +1381,6 @@ dl.index dd {
 #exclude_tag_tags {
 	font-size: .9em;
 }
-
 
 /* slight space between S&F labels and their input */
 .filters .group dt.bookmarker,
