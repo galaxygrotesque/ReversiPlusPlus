@@ -6,14 +6,19 @@ Reversi—but better. An Archive of Our Own “dark mode” reskin with a focus 
 ## Table of contents
 {{TOC}}
 
++++
+
 ## Screenshots
 [To add]
+
++++
 
 ## Features
 [More to add]
 
-### Fonts
++++
 
+### Fonts
 **Good news:** ReversiPlusPlus uses some common web-safe font alternatives in addition to Ao3’s default fonts!
 
 **Bad news:** Due to how Ao3 handles user skins and limits CSS, they can’t be automatically packaged with the skin. (I went through a grieving process here. Trust me, I really wish they could.)
@@ -23,24 +28,26 @@ This means **if you want alternative fonts** to appear, you’ll have to **insta
 For your convenience, here is a handy table containing (most) of the fonts and where to find them.
 
 | Font                                                                                 |      |
-| :----------------------------------------------------------------------------------- | :--: |
+| :----------------------------------------------------------------------------------- | :--- |
 | [Charter](https://fontesk.com/charter-typeface/)                                     | \* @ |
-| [Fira Code](https://fonts.google.com/specimen/Fira+Code)                             |  \*  |
+| [Fira Code](https://fonts.google.com/specimen/Fira+Code)                             | \*   |
 | [Helvetica Neue](https://www.myfonts.com/collections/neue-helvetica-font-linotype)   | @ $  |
-| [IBM Plex Sans](https://fonts.google.com/specimen/IBM+Plex+Sans)                     |  \*  |
-| [IBM Plex Serif](https://fonts.google.com/specimen/IBM+Plex+Serif)                   |  \*  |
-| [Literata](https://fonts.google.com/specimen/Literata)                               |  \*  |
+| [IBM Plex Sans](https://fonts.google.com/specimen/IBM+Plex+Sans)                     | \*   |
+| [IBM Plex Serif](https://fonts.google.com/specimen/IBM+Plex+Serif)                   | \*   |
+| [Literata](https://fonts.google.com/specimen/Literata)                               | \*   |
 | [Menlo](https://github.com/hbin/top-programming-fonts/blob/master/Menlo-Regular.ttf) | \* @ |
-| [Noto sans](https://fonts.google.com/specimen/Noto+Sans)                             |  \*  |
+| [Noto sans](https://fonts.google.com/specimen/Noto+Sans)                             | \*   |
 | [Palatino](https://www.myfonts.com/collections/palatino-font-linotype)               | @ $  |
 | [Proxima Nova](https://fonts.adobe.com/fonts/proxima-nova)                           | @ $  |
-| [Source Code Pro](https://fonts.google.com/specimen/Source+Code+Pro)                 |  \*  |
-| [Source Sans 3](https://fonts.google.com/specimen/Source+Sans+3)                     |  \*  |
-| [Source Serif 4](https://fonts.google.com/specimen/Source+Serif+4)                   |  \*  |
+| [Source Code Pro](https://fonts.google.com/specimen/Source+Code+Pro)                 | \*   |
+| [Source Sans 3](https://fonts.google.com/specimen/Source+Sans+3)                     | \*   |
+| [Source Serif 4](https://fonts.google.com/specimen/Source+Serif+4)                   | \*   |
 
-\*	web font (or free!)  
-@	i(Pad)OS system font  
-$	paid (not free ... unless system font)
+\* : web font (or free!)  
+@ : i(Pad)OS system font  
+$ : paid (not free ... unless system font)
+
++++
 
 ## Installation
 ReversiPlusPlus builds right off of Ao3’s existing stylesheet, so no extra add-ons or browser extensions are required!
@@ -102,5 +109,7 @@ To create a new site skin:
 
 And voilà! Skin installed. 
 
++++
+
 ## Mobile
-In the works! There will be a separate CSS file for mobile skins.
+In the works! There will be a separate CSS file for a mobile skin soon.
