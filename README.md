@@ -27,7 +27,7 @@ For your convenience, here is a handy table containing (most) of the fonts and w
 
 | Font                                                                                 | Availability |
 | :----------------------------------------------------------------------------------- | :----------: |
-| [Charter](https://fontesk.com/charter-typeface/)                                     |      \*      |
+| [Charter](https://fontesk.com/charter-typeface/)                                     |     \* @     |
 | [Fira Code](https://fonts.google.com/specimen/Fira+Code)                             |      \*      |
 | [Helvetica Neue](https://www.myfonts.com/collections/neue-helvetica-font-linotype)   |     @ $      |
 | [IBM Plex Sans](https://fonts.google.com/specimen/IBM+Plex+Sans)                     |      \*      |
@@ -57,7 +57,7 @@ Installing is as simple as **creating a new site skin** for your user. All user 
 
 To create a new site skin:
 
-1. Navigate to [ArchiveOfOurOwn](https://archiveofourown.org/).
+1. Navigate to [Archive Of Our Own](https://archiveofourown.org/).
 
 2. While logged in, go to your dashboard.
 
@@ -69,7 +69,7 @@ To create a new site skin:
 
 4. The Skins page will have multiple buttons. In the top right-hand corner, select ”**Create Site Skin**”.
 
-	![Step4Image](img/install-steps-03.png)
+	![](img/install-steps-03.png)
 
 5. Welcome to the Create New Site Skin page!
 	
@@ -85,7 +85,7 @@ To create a new site skin:
 	
 	Need a couple extra things first—namely, the options hidden under this fun little “**Show ↓**” button guy under the giant CSS field.
 	
-	![Step5Image02](img/install-steps-05.png)
+	![](img/install-steps-05.png)
 	
 	You’ll get a section that looks like this:
 	
