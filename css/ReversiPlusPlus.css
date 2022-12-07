@@ -281,7 +281,7 @@ ul.expandable.secondary {
 */
 
 body {		/* font choices go here ↓ */
-	font-family: "IBM Plex Sans", "Proxima Nova", "Helvetica Neue", "Lucida Grande", "Lucida Sans Unicode", "GNU Unifont", Verdana, Helvetica, sans-serif;;
+	font-family: "IBM Plex Sans", "Proxima Nova", "Helvetica Neue", "Lucida Grande", "Lucida Sans Unicode", "GNU Unifont", Verdana, Helvetica, sans-serif;
 }
 
 input,
@@ -490,7 +490,13 @@ dl.meta {
 	color: #fff;
 }
 
+/* "archiveofourown beta" lighter text pop on active */
+#header .heading a:active {
+	color: #9ecfff;
+}
+
 /* "archiveofourown beta" text pop on hover */
+#header .heading a:focus,
 #header .heading a:hover {
 	color: #5998d6;
 }
@@ -519,7 +525,7 @@ dl.meta {
 	border: transparent;
 }
 
-/* user/post/logout drowndown border rounding is consistent */
+/* user/post/login drowndown border rounding is consistent */
 #header .user .dropdown-toggle {
 	border-radius: .25em .25em 0 0 !important;
 }
@@ -585,8 +591,8 @@ fieldset.listbox .heading,
 */
 
 /* give me serif NOW (but only when in an actual work) */
-#chapters .userstuff p,
 #chapters .userstuff a,
+#chapters .userstuff p,
 #chapters .userstuff ol,
 #chapters .userstuff ul {	/* font choices go here ↓ */
 	font-family: "Charter", "IBM Plex Serif", "Palatino Linotype", "Palatino", "Literata", "Georgia", serif;
@@ -610,7 +616,7 @@ fieldset.listbox .heading,
 	margin-right: 1em;	/* mobile: .5em */
 }
 
-/* scrunches code in-work a little*/
+/* scrunches code in-work a little */
 #chapters .userstuff code {
 	font-size: .85em;
 }
@@ -677,6 +683,7 @@ li.comment {
 	border-radius: .25em;
 	padding: 1em;
 }
+
 /* something was misbehaving so this had to happen now it's the next day and i don't remember what it actually does */
 .actions li label {
 	display: revert;
@@ -1334,7 +1341,8 @@ dl.index dd {
 }
 
 /* icon was misbehaving in header on dashboard/profile, now NO ONE floats */
-.profile .primary, .home .primary {
+.profile .primary,
+.home .primary {
 	float: none;
 }
 
@@ -1405,7 +1413,7 @@ dl.index dd {
 .filters .group dd.search,
 .filters .group dd.options,
 .filters .more dd.search,
-dd.options ul li /* bookmark types li */ {
+dd.options ul li {
 	margin: .2em 0;
 }
 
