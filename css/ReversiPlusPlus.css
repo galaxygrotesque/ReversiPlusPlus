@@ -408,8 +408,6 @@ dl.meta {
 #header fieldset,
 #header form,
 #header p,
-#header .heading a,
-#header .heading a:visited,
 #tos_prompt .heading {
 	color: #5998d6;
 }
@@ -440,7 +438,6 @@ dl.meta {
 	color: #eee;
 }
 
-
 /* user/post/logout drowndown border rounding is consistent */
 #header .user .dropdown-toggle {
 	border-radius: .25em .25em 0 0 !important;
@@ -459,7 +456,12 @@ dl.meta {
 
 #header .actions a {
 	background: #5998d6;
-	border-color: #5998d6 /*#2b2a33*/;
+	border-color: #5998d6;
+	color: #eee;
+}
+
+#header .heading a,
+#header .heading a:visited {
 	color: #eee;
 }
 
