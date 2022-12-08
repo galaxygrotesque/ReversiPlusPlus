@@ -1,5 +1,5 @@
 # ReversiPlusPlus
-Reversi—but better. An Archive of Our Own “dark mode” reskin with a focus on readability and less noise.
+[Reversi](https://archiveofourown.org/skins/929)—but better. An Archive of Our Own “dark mode” reskin with a focus on readability and less noise.
 
 **This project is a work-in-progress.** Please bear with me while I find my stylesheet legs.
 
@@ -9,41 +9,71 @@ Reversi—but better. An Archive of Our Own “dark mode” reskin with a focus 
 
 
 ## Features
-[More to add]
-
+**tl;dr:**
+- darker colours!
+- colourfully obvious tags trapped in a scroll box!
+- dope fonts (if you’re willing to install them)!
 
 ### Dark mode redux
-[Fun skin things]
+If you:
+- hate reading on a stark white background
+- hate reading on a *light* background
+- prefer OLED themes or find some dark mode themes too bright
+- have tired and/or light-sensitive eyes that suffer every time you step outside your carefully curated cave-corner of the internet
+
+Then ReversiPlusPlus might be your cup of tea!
+
+It uses a darker colour palette than Reversi.
 
 
-### Fonts
-**Good news:** ReversiPlusPlus uses some common web-safe font alternatives in addition to Ao3’s default fonts!
+### Colour-coded tags that ✨pop✨
+Tags are essential when trying to find stories you want to read, but they’re often lost in the noise.
 
-**Bad news:** Due to how Ao3 handles user skins and limits CSS, they can’t be automatically packaged with the skin. (I went through a grieving process here. Trust me, I really wish they could.)
+
+|        Vanilla Reversi Tags         |         ReversiPlusPlus Tags         |
+| :---------------------------------: | :----------------------------------: |
+| ![](img/comparison-reversi-vanilla) | ![](img/comparison-reversi-plusplus) |
+
+### Custom fonts
+- **Good news:** ReversiPlusPlus uses some common web-safe font alternatives in addition to Ao3’s default fonts!
+
+- **Bad news:** Due to how Ao3 handles user skins and limits CSS, they can’t be automatically packaged with the skin. (I went through a grieving process here. Trust me, I really wish they could.)
 
 This means **if you want alternative fonts** to appear, you’ll have to **install them on your device**—PC, phone, tablet, or whatever else.
+
+<!-- - [How do I install a font?]() -->
 
 For your convenience, here is a handy table containing (most) of the fonts and where to find them.
 
 | Font                                                                                 | Availability |
-| :----------------------------------------------------------------------------------- | :----------: |
-| [Charter](https://fontesk.com/charter-typeface/)                                     |     \* @     |
-| [Fira Code](https://fonts.google.com/specimen/Fira+Code)                             |      \*      |
-| [Helvetica Neue](https://www.myfonts.com/collections/neue-helvetica-font-linotype)   |     @ $      |
-| [IBM Plex Sans](https://fonts.google.com/specimen/IBM+Plex+Sans)                     |      \*      |
-| [IBM Plex Serif](https://fonts.google.com/specimen/IBM+Plex+Serif)                   |      \*      |
-| [Literata](https://fonts.google.com/specimen/Literata)                               |      \*      |
-| [Menlo](https://github.com/hbin/top-programming-fonts/blob/master/Menlo-Regular.ttf) |     \* @     |
-| [Noto Sans](https://fonts.google.com/specimen/Noto+Sans)                             |      \*      |
-| [Palatino](https://www.myfonts.com/collections/palatino-font-linotype)               |     @ $      |
-| [Proxima Nova](https://fonts.adobe.com/fonts/proxima-nova)                           |     @ $      |
-| [Source Code Pro](https://fonts.google.com/specimen/Source+Code+Pro)                 |      \*      |
-| [Source Sans 3](https://fonts.google.com/specimen/Source+Sans+3)                     |      \*      |
-| [Source Serif 4](https://fonts.google.com/specimen/Source+Serif+4)                   |      \*      |
+| :----------------------------------------------------------------------------------- | :----------- |
+| [Charter](https://fontesk.com/charter-typeface/)                                     | \* @         |
+| [Fira Code](https://fonts.google.com/specimen/Fira+Code)                             | \*           |
+| [Helvetica Neue](https://www.myfonts.com/collections/neue-helvetica-font-linotype)   | @ $          |
+| [IBM Plex Sans](https://fonts.google.com/specimen/IBM+Plex+Sans)                     | \*           |
+| [IBM Plex Serif](https://fonts.google.com/specimen/IBM+Plex+Serif)                   | \*           |
+| [Literata](https://fonts.google.com/specimen/Literata)                               | \*           |
+| [Menlo](https://github.com/hbin/top-programming-fonts/blob/master/Menlo-Regular.ttf) | \* @         |
+| [Noto Sans](https://fonts.google.com/specimen/Noto+Sans)                             | \*           |
+| [Palatino](https://www.myfonts.com/collections/palatino-font-linotype)               | @ $          |
+| [Proxima Nova](https://fonts.adobe.com/fonts/proxima-nova)                           | @ $          |
+| [Source Code Pro](https://fonts.google.com/specimen/Source+Code+Pro)                 | \*           |
+| [Source Sans 3](https://fonts.google.com/specimen/Source+Sans+3)                     | \*           |
+| [Source Serif 4](https://fonts.google.com/specimen/Source+Serif+4)                   | \*           |
 
 \* — web font (or free!)  
 @ — i(Pad)OS system font  
 $ — paid (not free ... unless system font)
+
+
+## Road map
+- [ ] Mobile-specific .CSS
+- [ ] More fonts
+	- [ ] web
+	- [ ] system (win)
+	- [ ] system (iOS)
+- [ ] Tidy code (and figure out what I’m doing)
+- [ ] Rewrite as fully-fledged stylesheet to replace rather than build off of Ao3’s core
 
 
 ## Screenshots
@@ -111,7 +141,3 @@ To create a new site skin:
 	Hit **Use**.
 
 And voilà! There you have it. Skin installed. 🌠
-
-
-## Mobile
-In the works! There will be a separate CSS file for a mobile skin soon.
