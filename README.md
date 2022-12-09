@@ -106,11 +106,11 @@ To create a new site skin:
 
 	![](img/install-steps-01.png)
 
-3. On the dashboard, select **```Skins```**.
+3. On the dashboard, select ```Skins```.
 
 	![](img/install-steps-02.png)
 
-4. The Skins page will have multiple buttons. In the top right-hand corner, select **```Create Site Skin```**.
+4. The Skins page will have multiple buttons. In the top right-hand corner, select ```Create Site Skin```.
 
 	![](img/install-steps-03.png)
 
@@ -120,13 +120,13 @@ To create a new site skin:
 
 	Now fill in the following fields:
 
-	1. The **```Type```** field must be set to **```Site Skin```**.
-	2. The **``Title``** field must have a value in it, and that value **must be unique** because Ao3 only distinguishes user site skins by name, not by user.
-	3. The **```CSS```** field must have CSS in it—i.e., the text in [```ReversiPlusPlus.css```](https://github.com/galaxygrotesque/ReversiPlusPlus/blob/main/css/ReversiPlusPlus.css). Copy + paste baybeeee ✨
+	1. The ```Type``` field must be set to ```Site Skin```.
+	2. The ``Title`` field must have a value in it, and that value **must be unique** because Ao3 only distinguishes user site skins by name, not by user.
+	3. The ```CSS``` field must have CSS in it—i.e., the text in [```ReversiPlusPlus.css```](https://github.com/galaxygrotesque/ReversiPlusPlus/blob/main/css/ReversiPlusPlus.css). Copy + paste baybeeee ✨
 
 	**Don’t submit just yet!**
 	
-	Need a couple extra things first—namely, the options hidden under this fun little **```Show ↓```** button guy under the giant CSS field.
+	Need a couple extra things first—namely, the options hidden under this fun little ```Show ↓``` button guy under the giant CSS field.
 	
 	![](img/install-steps-05.png)
 	
@@ -136,21 +136,21 @@ To create a new site skin:
 	
 	Here, fill in the following fields:
 	
-	4. The **```What it does```** field must be set to **```add on to archive skin```**.
-	5. In the **```Media```** section, the **```⬜ all```** option must be checked.
+	4. The ```What it does``` field must be set to ```add on to archive skin```.
+	5. In the ```Media``` section, the ```⬜ all``` option must be checked.
 
 	All done?
 
-6. Slap **```Submit```**!
+6. Slap ```Submit```!
 
 	![](img/install-steps-07.png)
 
-7. You’ll be taken to a new page with your site skin with a **```Skin was successfully created```** message.
+7. You’ll be taken to a new page with your site skin with a ```Skin was successfully created``` message.
 
 	Scroll aaaaall the way down to the bottom where you’ll see these four options:
 
 	![](img/install-steps-08.png)
 	
-	Hit **```Use```**.
+	Hit ```Use```.
 
 And voilà! There you have it. Skin installed. 🌠
