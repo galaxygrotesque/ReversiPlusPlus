@@ -40,7 +40,7 @@ With ReversiPlusPlus, tags are colour-coded by category!
 
 In the case of tag-heavy works, tags are also confined to a scroll box!
 - Tags are confined to ~4 lines per work blurb
-- If the number of tags exceeds ~4 lines in a particular blurb, the overflow will be trapped in a scroll box
+- If the number of tags exceeds ~4 lines in a particular blurb, the overflow will be trapped in scroll box jail
 
 |           Vanilla Reversi Tags           |           ReversiPlusPlus Tags            |
 | :--------------------------------------: | :---------------------------------------: |
@@ -59,24 +59,24 @@ This means **if you want alternative fonts** to appear, you’ll have to **insta
 For your convenience, here is a handy table containing (most) of the fonts and where to find them.
 
 | Font                                                                                 | Availability |
-| :----------------------------------------------------------------------------------- | :----------- |
-| [Charter](https://fontesk.com/charter-typeface/)                                     | \* @         |
-| [Fira Code](https://fonts.google.com/specimen/Fira+Code)                             | \*           |
-| [Helvetica Neue](https://www.myfonts.com/collections/neue-helvetica-font-linotype)   | @ $          |
-| [IBM Plex Sans](https://fonts.google.com/specimen/IBM+Plex+Sans)                     | \*           |
-| [IBM Plex Serif](https://fonts.google.com/specimen/IBM+Plex+Serif)                   | \*           |
-| [Literata](https://fonts.google.com/specimen/Literata)                               | \*           |
-| [Menlo](https://github.com/hbin/top-programming-fonts/blob/master/Menlo-Regular.ttf) | \* @         |
-| [Noto Sans](https://fonts.google.com/specimen/Noto+Sans)                             | \*           |
-| [Palatino](https://www.myfonts.com/collections/palatino-font-linotype)               | @ $          |
-| [Proxima Nova](https://fonts.adobe.com/fonts/proxima-nova)                           | @ $          |
-| [Source Code Pro](https://fonts.google.com/specimen/Source+Code+Pro)                 | \*           |
-| [Source Sans 3](https://fonts.google.com/specimen/Source+Sans+3)                     | \*           |
-| [Source Serif 4](https://fonts.google.com/specimen/Source+Serif+4)                   | \*           |
+| :----------------------------------------------------------------------------------- | :----------: |
+| [Charter](https://fontesk.com/charter-typeface/)                                     | ```* @  ```  |
+| [Fira Code](https://fonts.google.com/specimen/Fira+Code)                             | ```*    ```  |
+| [Helvetica Neue](https://www.myfonts.com/collections/neue-helvetica-font-linotype)   | ```  @ $```  |
+| [IBM Plex Sans](https://fonts.google.com/specimen/IBM+Plex+Sans)                     | ```*    ```  |
+| [IBM Plex Serif](https://fonts.google.com/specimen/IBM+Plex+Serif)                   | ```*    ```  |
+| [Literata](https://fonts.google.com/specimen/Literata)                               | ```*    ```  |
+| [Menlo](https://github.com/hbin/top-programming-fonts/blob/master/Menlo-Regular.ttf) | ```* @  ```  |
+| [Noto Sans](https://fonts.google.com/specimen/Noto+Sans)                             | ```*    ```  |
+| [Palatino](https://www.myfonts.com/collections/palatino-font-linotype)               | ```  @ $```  |
+| [Proxima Nova](https://fonts.adobe.com/fonts/proxima-nova)                           | ```  @ $```  |
+| [Source Code Pro](https://fonts.google.com/specimen/Source+Code+Pro)                 | ```*    ```  |
+| [Source Sans 3](https://fonts.google.com/specimen/Source+Sans+3)                     | ```*    ```  |
+| [Source Serif 4](https://fonts.google.com/specimen/Source+Serif+4)                   | ```*    ```  |
 
-\* — web font (or free!)  
-@ — i(Pad)OS system font  
-$ — paid (not free ... unless system font)
+```*``` — web font (or free!)  
+```@``` — i(Pad)OS system font  
+```$``` — paid (unless system font)
 
 
 ## Screenshots
@@ -106,11 +106,11 @@ To create a new site skin:
 
 	![](img/install-steps-01.png)
 
-3. On the dashboard, select “**Skins**”.
+3. On the dashboard, select **```Skins```**.
 
 	![](img/install-steps-02.png)
 
-4. The Skins page will have multiple buttons. In the top right-hand corner, select ”**Create Site Skin**”.
+4. The Skins page will have multiple buttons. In the top right-hand corner, select **```Create Site Skin```**.
 
 	![](img/install-steps-03.png)
 
@@ -118,15 +118,15 @@ To create a new site skin:
 	
 	![](img/install-steps-04.png)
 
-	Fill in the following fields:
+	Now fill in the following fields:
 
-	1. The **Type** field must be set to “**Site Skin**”.
-	2. The **Title** field must have a value in it, and that value must be unique because Ao3 only distinguishes user site skins by name, not by user.
-	3. The **CSS** field must have CSS in it—i.e., the text in [```ReversiPlusPlus.css```](https://github.com/galaxygrotesque/ReversiPlusPlus/blob/main/css/ReversiPlusPlus.css). Copy + paste baybeeee ✨
+	1. The **```Type```** field must be set to **```Site Skin```**.
+	2. The **``Title``** field must have a value in it, and that value **must be unique** because Ao3 only distinguishes user site skins by name, not by user.
+	3. The **```CSS```** field must have CSS in it—i.e., the text in [```ReversiPlusPlus.css```](https://github.com/galaxygrotesque/ReversiPlusPlus/blob/main/css/ReversiPlusPlus.css). Copy + paste baybeeee ✨
 
 	**Don’t submit just yet!**
 	
-	Need a couple extra things first—namely, the options hidden under this fun little “**Show ↓**” button guy under the giant CSS field.
+	Need a couple extra things first—namely, the options hidden under this fun little **```Show ↓```** button guy under the giant CSS field.
 	
 	![](img/install-steps-05.png)
 	
@@ -136,21 +136,21 @@ To create a new site skin:
 	
 	Here, fill in the following fields:
 	
-	4. The **What it does** field must be set to “**add on to archive skin**”.
-	5. In the **Media** section, the “⬜ **all**” option must be checked.
+	4. The **```What it does```** field must be set to **```add on to archive skin```**.
+	5. In the **```Media```** section, the **```⬜ all```** option must be checked.
 
 	All done?
 
-6. Slap **Submit**!
+6. Slap **```Submit```**!
 
 	![](img/install-steps-07.png)
 
-7. You’ll be taken to a new page with your site skin with a “**Skin was successfully created**” message.
+7. You’ll be taken to a new page with your site skin with a **```Skin was successfully created```** message.
 
 	Scroll aaaaall the way down to the bottom where you’ll see these four options:
 
 	![](img/install-steps-08.png)
 	
-	Hit **Use**.
+	Hit **```Use```**.
 
 And voilà! There you have it. Skin installed. 🌠
