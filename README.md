@@ -1,5 +1,5 @@
 # ReversiPlusPlus
-[Reversi](https://archiveofourown.org/skins/929)—but better. An Archive of Our Own “dark mode” reskin with a focus on readability and less noise.
+[Reversi](https://archiveofourown.org/skins/929)—but better. An Archive of Our Own “dark mode” reskin of Reversi with a focus on readability and less noise.
 
 **This project is a work-in-progress.** Please bear with me while I find my stylesheet legs.
 
@@ -24,9 +24,9 @@ Inspired by Mozilla Firefox’s dark colour scheme, ReversiPlusPlus:
 - Uses a darker colour palette that is easier on the eye
 - Reduces visual noise by relying on colour/element contrast rather than borders and lines
 
-|              Vanilla Reversi              |              ReversiPlusPlus               |
-| :---------------------------------------: | :----------------------------------------: |
-| ![](img/comparison-reversi-vanilla-theme) | ![](img/comparison-reversi-plusplus-theme) |
+|                Vanilla Ao3                |                  Reversi                   | ReversiPlusPlus |
+| :---------------------------------------: | :----------------------------------------: | :-------------- |
+| ![](img/comparison-reversi-vanilla-theme) | ![](img/comparison-reversi-plusplus-theme) |                 |
 
 
 ### Colour-coded tags that ✨pop✨
@@ -42,9 +42,9 @@ In the case of tag-heavy works, tags are also confined to a scroll box!
 - Tags are confined to ~4 lines per work blurb
 - If the number of tags exceeds ~4 lines in a particular blurb, the overflow will be trapped in scroll box jail
 
-|           Vanilla Reversi Tags           |           ReversiPlusPlus Tags            |
-| :--------------------------------------: | :---------------------------------------: |
-| ![](img/comparison-reversi-vanilla-tags) | ![](img/comparison-reversi-plusplus-tags) |
+|             Vanilla Ao3 Tags             |               Reversi Tags                | ReversiPlusPlus Tags |
+| :--------------------------------------: | :---------------------------------------: | :------------------- |
+| ![](img/comparison-reversi-vanilla-tags) | ![](img/comparison-reversi-plusplus-tags) |                      |
 
 
 ### Custom fonts
@@ -62,21 +62,21 @@ For your convenience, here is a handy table containing (most) of the fonts and w
 | :----------------------------------------------------------------------------------- | :----------: |
 | [Charter](https://fontesk.com/charter-typeface/)                                     | ```* @  ```  |
 | [Fira Code](https://fonts.google.com/specimen/Fira+Code)                             | ```*    ```  |
-| [Helvetica Neue](https://www.myfonts.com/collections/neue-helvetica-font-linotype)   | ```  @ $```  |
+| [Helvetica Neue](https://myfonts.com/collections/neue-helvetica-font-linotype)       | ```  @ $```  |
 | [IBM Plex Sans](https://fonts.google.com/specimen/IBM+Plex+Sans)                     | ```*    ```  |
 | [IBM Plex Serif](https://fonts.google.com/specimen/IBM+Plex+Serif)                   | ```*    ```  |
 | [Literata](https://fonts.google.com/specimen/Literata)                               | ```*    ```  |
 | [Menlo](https://github.com/hbin/top-programming-fonts/blob/master/Menlo-Regular.ttf) | ```* @  ```  |
 | [Noto Sans](https://fonts.google.com/specimen/Noto+Sans)                             | ```*    ```  |
-| [Palatino](https://www.myfonts.com/collections/palatino-font-linotype)               | ```  @ $```  |
+| [Palatino](https://myfonts.com/collections/palatino-font-linotype)                   | ```  @ $```  |
 | [Proxima Nova](https://fonts.adobe.com/fonts/proxima-nova)                           | ```  @ $```  |
 | [Source Code Pro](https://fonts.google.com/specimen/Source+Code+Pro)                 | ```*    ```  |
 | [Source Sans 3](https://fonts.google.com/specimen/Source+Sans+3)                     | ```*    ```  |
 | [Source Serif 4](https://fonts.google.com/specimen/Source+Serif+4)                   | ```*    ```  |
 
-```*``` — web font (or free!)  
-```@``` — i(Pad)OS system font  
-```$``` — paid (unless system font)
+```*``` − web font (or free!)  
+```@``` − i(Pad)OS system font  
+```$``` − paid (unless system font)
 
 
 ## Screenshots
@@ -126,7 +126,7 @@ To create a new site skin:
 
 	**Don’t submit just yet!**
 	
-	Need a couple extra things first—namely, the options hidden under this fun little ```Show ↓``` button guy under the giant CSS field.
+	Need a couple extra things first—namely, the options hidden under this fun little ```Show ↓``` button under the giant CSS field.
 	
 	![](img/install-steps-05.png)
 	
@@ -137,7 +137,7 @@ To create a new site skin:
 	Here, fill in the following fields:
 	
 	4. The ```What it does``` field must be set to ```add on to archive skin```.
-	5. In the ```Media``` section, the ```⬜ all``` option must be checked.
+	5. In the ```Media``` section under ```Choose @media```, the ```⬜ all``` option must be checked.
 
 	All done?
 
@@ -145,7 +145,7 @@ To create a new site skin:
 
 	![](img/install-steps-07.png)
 
-7. You’ll be taken to a new page with your site skin with a ```Skin was successfully created``` message.
+7. You’ll be taken to a new page with your site skin with a ```Skin was successfully created.``` message.
 
 	Scroll aaaaall the way down to the bottom where you’ll see these four options:
 
