@@ -48,35 +48,40 @@ In the case of tag-heavy works, tags are also confined to a scroll box!
 
 
 ### Custom fonts
-- **Good news:** ReversiPlusPlus uses some common web-safe font alternatives in addition to Ao3’s default fonts!
+- **Good news:** ReversiPlusPlus uses some common web-safe and system font alternatives in addition to Ao3’s default fonts!
 
-- **Bad news:** Due to how Ao3 handles user skins and limits CSS, they can’t be automatically packaged with the skin. (I went through a grieving process here. Trust me, I really wish they could.)
+- **Bad news:** Due to how Ao3 handles user skins and limits CSS, they can’t be automatically packaged with or built into the skin. (I went through a grieving process here. Trust me, I really wish they could.)
 
 This means **if you want alternative fonts** to appear, you’ll have to **install them on your device**—PC, phone, tablet, or whatever else.
 
-<!-- - [How do I install a font?]() -->
-
 For your convenience, here is a handy table containing (most) of the fonts and where to find them.
 
-| Font                                                                                 | Availability |
-| :----------------------------------------------------------------------------------- | :----------: |
-| [Charter](https://fontesk.com/charter-typeface/)                                     | ```* @  ```  |
-| [Fira Code](https://fonts.google.com/specimen/Fira+Code)                             | ```*    ```  |
-| [Helvetica Neue](https://myfonts.com/collections/neue-helvetica-font-linotype)       | ```  @ $```  |
-| [IBM Plex Sans](https://fonts.google.com/specimen/IBM+Plex+Sans)                     | ```*    ```  |
-| [IBM Plex Serif](https://fonts.google.com/specimen/IBM+Plex+Serif)                   | ```*    ```  |
-| [Literata](https://fonts.google.com/specimen/Literata)                               | ```*    ```  |
-| [Menlo](https://github.com/hbin/top-programming-fonts/blob/master/Menlo-Regular.ttf) | ```* @  ```  |
-| [Noto Sans](https://fonts.google.com/specimen/Noto+Sans)                             | ```*    ```  |
-| [Palatino](https://myfonts.com/collections/palatino-font-linotype)                   | ```  @ $```  |
-| [Proxima Nova](https://fonts.adobe.com/fonts/proxima-nova)                           | ```  @ $```  |
-| [Source Code Pro](https://fonts.google.com/specimen/Source+Code+Pro)                 | ```*    ```  |
-| [Source Sans 3](https://fonts.google.com/specimen/Source+Sans+3)                     | ```*    ```  |
-| [Source Serif 4](https://fonts.google.com/specimen/Source+Serif+4)                   | ```*    ```  |
+| Font Family                                                                                   | Category   | Availability  |
+| :-------------------------------------------------------------------------------------------- | :--------- | :-----------: |
+| [Charter](https://fontesk.com/charter-typeface/)                                              | Serif      | ```* @    ``` |
+| [Fira Code](https://fonts.google.com/specimen/Fira+Code)                                      | Monospaced | ```*      ``` |
+| [Helvetica Neue](https://myfonts.com/collections/neue-helvetica-font-linotype)                | Sans-serif | ```  @   $``` |
+| [IBM Plex Mono](https://fonts.google.com/specimen/IBM+Plex+Mono)                              | Monospaced | ```*      ``` |
+| [IBM Plex Sans](https://fonts.google.com/specimen/IBM+Plex+Sans)                              | Sans-serif | ```*      ``` |
+| [IBM Plex Serif](https://fonts.google.com/specimen/IBM+Plex+Serif)                            | Serif      | ```*      ``` |
+| [Lato](https://fonts.google.com/specimen/Lato)                                                | Sans-serif | ```*      ``` |
+| [Libre Baskerville](https://fonts.google.com/specimen/Libre+Baskerville)                      | Serif      | ```*      ``` |
+| [Literata](https://fonts.google.com/specimen/Literata)                                        | Serif      | ```*      ``` |
+| [Lora](https://fonts.google.com/specimen/Lora)                                                | Serif      | ```*      ``` |
+| [Menlo](https://github.com/hbin/top-programming-fonts/blob/master/Menlo-Regular.ttf)          | Monospaced | ```* @    ``` |
+| [Noto Sans](https://fonts.google.com/specimen/Noto+Sans)                                      | Sans-serif | ```*      ``` |
+| [Noto Serif](https://fonts.google.com/specimen/Noto+Serif)                                    | Serif      | ```*      ``` |
+| [Palatino](https://myfonts.com/collections/palatino-font-linotype)                            | Serif      | ```  @   $``` |
+| [Palatino Linotype](https://learn.microsoft.com/en-us/typography/font-list/palatino-linotype) | Serif      | ```    #  ``` |
+| [Proxima Nova](https://fonts.adobe.com/fonts/proxima-nova)                                    | Sans-serif | ```  @   $``` |
+| [Source Code Pro](https://fonts.google.com/specimen/Source+Code+Pro)                          | Monospaced | ```*      ``` |
+| [Source Sans 3](https://fonts.google.com/specimen/Source+Sans+3)                              | Sans-serif | ```*      ``` |
+| [Source Serif 4](https://fonts.google.com/specimen/Source+Serif+4)                            | Serif      | ```*      ``` |
 
-```*``` − web font (or free!)  
-```@``` − i(Pad)OS system font  
-```$``` − paid (unless system font)
+```*``` − Web font (i.e., free!)  
+```@``` − iOS/iPadOS system font  
+```#``` − Windows Office cloud font  
+```$``` − Paid
 
 
 ## Screenshots
@@ -85,11 +90,8 @@ For your convenience, here is a handy table containing (most) of the fonts and w
 
 ## Road map
 - [ ] Mobile-specific .CSS
-- [ ] More fonts
-	- [ ] web
-	- [ ] system (win)
-	- [ ] system (iOS)
-- [ ] Tidy code (and figure out what I’m doing)
+- [ ] Vet and add support for more fonts
+- [ ] Tidy code (read: figure out what I’m doing)
 - [ ] Rewrite as fully-fledged stylesheet to replace rather than build off of Ao3’s core
 
 
