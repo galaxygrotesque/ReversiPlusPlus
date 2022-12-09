@@ -4,35 +4,48 @@
 **This project is a work-in-progress.** Please bear with me while I find my stylesheet legs.
 
 
-## Table of contents
-{{TOC}}
-
-
 ## Features
-**tl;dr:**
-- darker colours!
-- colourfully obvious tags trapped in a scroll box!
-- dope fonts (if you’re willing to install them)!
+**TL;DR:**
+- [Darker colours!](https://github.com/galaxygrotesque/ReversiPlusPlus#dark-mode-redux)
+- [Colourfully obvious tags trapped in a scroll box!](https://github.com/galaxygrotesque/ReversiPlusPlus#colour-coded-tags-that-pop)
+- [Dope fonts (if you’re willing to install them)!](https://github.com/galaxygrotesque/ReversiPlusPlus#custom-fonts)
+
 
 ### Dark mode redux
 If you:
 - hate reading on a stark white background
 - hate reading on a *light* background
-- prefer OLED themes or find some dark mode themes too bright
-- have tired and/or light-sensitive eyes that suffer every time you step outside your carefully curated cave-corner of the internet
+- prefer OLED themes or find some dark themes too bright
+- have tired and/or light-sensitive eyes that suffer every time you step outside your carefully curated ~~cave~~ corner of the internet
 
 Then ReversiPlusPlus might be your cup of tea!
 
-It uses a darker colour palette than Reversi.
+Inspired by Mozilla Firefox’s dark colour scheme, ReversiPlusPlus:
+- Uses a darker colour palette that is easier on the eye
+- Reduces visual noise by relying on colour/element contrast rather than borders and lines
+
+|              Vanilla Reversi              |              ReversiPlusPlus               |
+| :---------------------------------------: | :----------------------------------------: |
+| ![](img/comparison-reversi-vanilla-theme) | ![](img/comparison-reversi-plusplus-theme) |
 
 
 ### Colour-coded tags that ✨pop✨
 Tags are essential when trying to find stories you want to read, but they’re often lost in the noise.
 
+With ReversiPlusPlus, tags are colour-coded by category!
+- **Red:** content warnings
+- **Blue:** relationships
+- **Green:** characters
+- **Grey:** freeform tags
 
-|        Vanilla Reversi Tags         |         ReversiPlusPlus Tags         |
-| :---------------------------------: | :----------------------------------: |
-| ![](img/comparison-reversi-vanilla) | ![](img/comparison-reversi-plusplus) |
+In the case of tag-heavy works, tags are also confined to a scroll box!
+- Tags are confined to ~4 lines per work blurb
+- If the number of tags exceeds ~4 lines in a particular blurb, the overflow will be trapped in a scroll box
+
+|           Vanilla Reversi Tags           |           ReversiPlusPlus Tags            |
+| :--------------------------------------: | :---------------------------------------: |
+| ![](img/comparison-reversi-vanilla-tags) | ![](img/comparison-reversi-plusplus-tags) |
+
 
 ### Custom fonts
 - **Good news:** ReversiPlusPlus uses some common web-safe font alternatives in addition to Ao3’s default fonts!
@@ -66,6 +79,10 @@ For your convenience, here is a handy table containing (most) of the fonts and w
 $ — paid (not free ... unless system font)
 
 
+## Screenshots
+[To add]
+
+
 ## Road map
 - [ ] Mobile-specific .CSS
 - [ ] More fonts
@@ -74,10 +91,6 @@ $ — paid (not free ... unless system font)
 	- [ ] system (iOS)
 - [ ] Tidy code (and figure out what I’m doing)
 - [ ] Rewrite as fully-fledged stylesheet to replace rather than build off of Ao3’s core
-
-
-## Screenshots
-[To add]
 
 
 ## Installation
@@ -109,7 +122,7 @@ To create a new site skin:
 
 	1. The **Type** field must be set to “**Site Skin**”.
 	2. The **Title** field must have a value in it, and that value must be unique because Ao3 only distinguishes user site skins by name, not by user.
-	3. The **CSS** field must have CSS in it—i.e., the text in [```ReversiPlusPlus.css```](https://github.com/galaxygrotesque/ReversiPlusPlus/blob/main/css/ReversiPlusPlus.css). Copy+paste baybeeee ✨
+	3. The **CSS** field must have CSS in it—i.e., the text in [```ReversiPlusPlus.css```](https://github.com/galaxygrotesque/ReversiPlusPlus/blob/main/css/ReversiPlusPlus.css). Copy + paste baybeeee ✨
 
 	**Don’t submit just yet!**
 	
