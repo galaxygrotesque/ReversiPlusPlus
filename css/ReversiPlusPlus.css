@@ -33,17 +33,18 @@
   02. body fonts
   03. buttons
   04. header
-  05. footer  
-  06. work reading adjustments (reading fonts here!)
-  07. comments
-  08. tags
-  09. work blurb cleanup
-  10. messages & tooltips
-  11. dashboard
-  12. stats page
-  13. other pages
-  14. sort & filter sidebar
-  15. misc
+  05. main
+  06. footer  
+  07. work reading adjustments (reading fonts here!)
+  08. comments
+  09. tags
+  10. work blurb cleanup
+  11. messages & tooltips
+  12. dashboard
+  13. stats page
+  14. other pages
+  15. sort & filter sidebar
+  16. misc
   
 */
 
@@ -209,8 +210,7 @@ span.unread,
 .droppable,
 .replied,
 .required,
-.blurb h4 img,
-.splash .module h3 {
+.blurb h4 img {
 	color: #5998d6;
 }
 
@@ -412,31 +412,45 @@ dl.meta {
 /* dark header bg at the top */
 #header {
 	background: #151319 !important;
+	color: #fff;
 }
 
+/* "archiveofourown beta" text pop on hover */
 #header #greeting img,
 #header fieldset,
 #header form,
 #header p,
+#header .heading a:focus,
+#header .heading a:hover,
+#header .heading a:hover:visited,
 #tos_prompt .heading {
 	color: #5998d6;
 }
 
-/* searchbar colours behave now */
-#header #search .text:active,
-#header #search .text:focus,
-#header #search .text:hover {
+/* header searchbar colours */
+#header #search .text,
+#header #search .text:active {
 	background: #23222b;
 }
 
-#header #search input:focus {
-	background: #111;
+/* header searchbar colours */
+#header #search input:focus,
+#header #search .text:focus,
+#header #search .text:hover {
+	background: #2b2a33;
 	border-color: transparent;
 	color: #fff;
 }
 
+/* header searchbar remain round */
+#header form.search input[type="text"] {
+	border-radius: 1em;
+}
+
 #header a,
 #header a:visited,
+#header .heading a,
+#header .heading a:visited,
 #header .primary .open a,
 #header .primary .dropdown:hover a,
 #header .primary .dropdown a:focus,
@@ -444,6 +458,11 @@ dl.meta {
 #header .user .open a:focus,
 .filters dt a:hover {
 	color: #fff;
+}
+
+/* "archiveofourown beta" lighter text pop on active */
+#header .heading a:active {
+	color: #9ecfff;
 }
 
 /* why are we still using weird noise jpgs as banners please stop */
@@ -490,16 +509,6 @@ dl.meta {
 	color: #fff;
 }
 
-/* "archiveofourown beta" lighter text pop on active */
-#header .heading a:active {
-	color: #9ecfff;
-}
-
-/* "archiveofourown beta" text pop on hover */
-#header .heading a:focus,
-#header .heading a:hover {
-	color: #5998d6;
-}
 
 /* header dropdowns have round */
 #header .menu {
@@ -549,8 +558,50 @@ fieldset.listbox .heading,
 
 
 
+/* ---+ 05. MAIN +--- */
 
-/* ---+ 05. FOOTER +--- */
+/* nix h3 and news underlines on main splash */
+.splash .module h3 {
+	border: 0;
+	color: #5998d6;
+}
+
+.splash .browse li a,
+.splash .favorite a {
+	border-radius: 0;
+}
+
+.splash .favorite li a {
+	background: #2b2a33;
+	border: 1px solid transparent;
+}
+
+.splash .favorite li a:hover {
+	background: #eee;
+	border-color: #eee;
+	color: #2b2a33;
+}
+
+.splash .favorite li a:visited {
+	color: #999;
+}
+
+.splash .favorite li:nth-of-type(odd) a:focus,
+.splash .favorite li:nth-of-type(odd) a:hover,
+.splash .favorite li:nth-of-type(odd) a:visited:hover {
+	background: #eee;
+	border-color: #eee;
+	color: #2b2a33;
+}
+
+/* nix news underlines on main splash */
+.splash .news li {
+	border: 0;
+}
+
+
+
+/* ---+ 06. FOOTER +--- */
 
 /* no more noise.jpg */
 #outer #footer {
@@ -582,7 +633,7 @@ fieldset.listbox .heading,
 
 
 
-/* ---+ 06. WORK READING ADJUSTMENTS +--- */
+/* ---+ 07. WORK READING ADJUSTMENTS +--- */
 
 /* WARNING:
    select default values in this section are NOT kind to mobile or small screens!
@@ -660,7 +711,7 @@ div.preface .byline a {
 
 
 
-/* ---+ 07. COMMENTS +--- */
+/* ---+ 08. COMMENTS +--- */
 
 /* nix border outside the add comment box */
 #add_comnent,
@@ -704,7 +755,7 @@ li.comment {
 
 
 
-/* ---+ 08. TAGS +--- */
+/* ---+ 09. TAGS +--- */
 
 /* tag-specific link attributes — makes tag bubbles! */
 a.tag {
@@ -841,7 +892,7 @@ li.warnings a:visited:hover {
 
 
 
-/* ---+ 09. WORK BLURB CLEANUP +--- */
+/* ---+ 10. WORK BLURB CLEANUP +--- */
 
 /* turn down the lights on work blurb bgs */
 #main li.blurb {
@@ -1000,7 +1051,7 @@ ul.tags.commas li.characters:first-child {
 
 
 
-/* ---+ 10. MESSAGES & TOOLTIPS +--- */
+/* ---+ 11. MESSAGES & TOOLTIPS +--- */
 
 #modal {
 	background: #1c1b22;
@@ -1031,9 +1082,10 @@ textarea.LV_invalid_field:active,
 
 .flash,
 .notice {
-	background: #1c1b22;
-	border-color: #eee;
+	background: transparent;
+	border-color: #5998d6;	
 	color: #eee;
+	padding: 0.5em .375em;
 }
 
 #outer,
@@ -1064,8 +1116,7 @@ form dd.required,
 	color: #5897d4;
 }
 
-.bookmark .status span,
-.splash .news li {
+.bookmark .status span {
 	border-color: #78777d;
 }
 
@@ -1093,12 +1144,6 @@ form dd.required,
 	padding: .25em .375em;
 }
 
-.splash .favorite li:nth-of-type(odd) a:hover,
-.splash .favorite li:nth-of-type(odd) a:focus {
-	background: #5998d6;
-	color: #151319;
-}
-
 /* from reversi */
 .splash .favorite li:nth-of-type(odd) a,
 .ui-datepicker td:hover,
@@ -1117,7 +1162,7 @@ form dd.required,
 
 
 
-/* ---+ 11. DASHBOARD +--- */
+/* ---+ 12. DASHBOARD +--- */
 
 #dashboard,
 #dashboard.own {
@@ -1169,7 +1214,7 @@ form dd.required,
 
 
 
-/* ---+ 12. STATS PAGE +--- */
+/* ---+ 13. STATS PAGE +--- */
 
 /* smooth stats page borders, dark bg */
 .fandom.listbox.group {
@@ -1211,7 +1256,7 @@ form dd.required,
 
 
 
-/* ---+ 13. OTHER PAGES +--- */
+/* ---+ 14. OTHER PAGES +--- */
 
 /* edit multiple works page: now all/none buttons should align with h5 */
 #edit-multiple-works a.check_all,
@@ -1353,7 +1398,7 @@ dl.index dd {
 
 
 
-/* ---+ 14. SORT & FILTER SIDEBAR +--- */
+/* ---+ 15. SORT & FILTER SIDEBAR +--- */
 
 /* S&F margin adjustment */
 #bookmark-filters fieldset dl,
@@ -1504,4 +1549,4 @@ form.single fieldset {
 }
 
 
-/* ---+ 15. MISC +--- */
+/* ---+ 16. MISC +--- */
