@@ -89,7 +89,7 @@ For your convenience, here is a handy table containing (most) of the fonts and w
 
 
 ## Road map
-- [ ] Mobile-specific .CSS
+- [ ] Mobile-specific ```.css```
 - [ ] Vet and add support for more fonts
 - [ ] Tidy code (read: figure out what I’m doing)
 - [ ] Rewrite as fully-fledged stylesheet to replace rather than build off of Ao3’s core
@@ -112,7 +112,7 @@ To create a new site skin:
 
 	![](img/install-steps-02.png)
 
-4. The Skins page will have multiple buttons. In the top right-hand corner, select ```Create Site Skin```.
+4. The Skins page will have multiple buttons. In the top right-hand corner, select ```Create Site Skin```.
 
 	![](img/install-steps-03.png)
 
@@ -122,8 +122,8 @@ To create a new site skin:
 
 	Now fill in the following fields:
 
-	1. The ```Type``` field must be set to ```Site Skin```.
-	2. The ``Title`` field must have a value in it, and that value **must be unique** because Ao3 only distinguishes user site skins by name, not by user.
+	1. The ```Type``` field must be set to ```Site Skin```.
+	2. The ```Title``` field must have a value in it, and that value **must be unique** because Ao3 only distinguishes user site skins by name, not by user.
 	3. The ```CSS``` field must have CSS in it—i.e., the text in [```ReversiPlusPlus.css```](https://github.com/galaxygrotesque/ReversiPlusPlus/blob/main/css/ReversiPlusPlus.css). Copy + paste baybeeee ✨
 
 	**Don’t submit just yet!**
@@ -138,8 +138,8 @@ To create a new site skin:
 	
 	Here, fill in the following fields:
 	
-	4. The ```What it does``` field must be set to ```add on to archive skin```.
-	5. In the ```Media``` section under ```Choose @media```, the ```⬜ all``` option must be checked.
+	4. The ```What it does``` field must be set to ```add on to archive skin```.
+	5. In the ```Media``` section under ```Choose @media```, the ```⬜ all``` option must be checked.
 
 	All done?
 
@@ -147,7 +147,7 @@ To create a new site skin:
 
 	![](img/install-steps-07.png)
 
-7. You’ll be taken to a new page with your site skin with a ```Skin was successfully created.``` message.
+7. You’ll be taken to a new page with your site skin with a ```Skin was successfully created.``` message.
 
 	Scroll aaaaall the way down to the bottom where you’ll see these four options:
 
