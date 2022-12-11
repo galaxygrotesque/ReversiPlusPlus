@@ -31,7 +31,7 @@
   00. colour guide
   01. base
   02. body fonts
-  03. buttons
+  03. actions
   04. header
   05. main
   06. footer  
@@ -110,7 +110,8 @@ div.preface .byline a:hover,
 div.preface .byline a:visited:hover,
 .blurb h4 a:hover,
 .blurb h4 a:link:hover,
-.blurb h4 a:visited:hover {
+.blurb h4 a:visited:hover,
+.listbox .heading a:visited:hover {
 	color: #9ecfff;
 }
 
@@ -118,16 +119,15 @@ div.preface .byline a:visited:hover,
 a:visited,
 div.preface .byline a:visited,
 span.series .divider,
-.actions a:visited,
-.action a:link,
-.action a:visited,
 .blurb h4 a:visited,
 .listbox .heading a:visited {
 	color: #999;
 }
 
 /* (most) user icons are sharp no more */
-a img {
+a img,
+.picture .icon img,
+.index .picture .icon {
 	border: 0;
 	border-radius: .25em;
 }
@@ -136,12 +136,17 @@ a img {
 a.cloud7,
 a.cloud8,
 a.work,
-.delete a,
 .blurb h4 a:link,
 .blurb h4 img,
+.delete a,
 .splash .browse li a:before {
 	color: #5998d6;
 }
+
+.delete a:hover {
+	color: #9ecfff;
+}
+
 
 /* give h3 its white space back */
 h3 {
@@ -149,7 +154,10 @@ h3 {
 	}
 
 /* makes HR dividers the same colour as text + extra margin space */
-hr {
+hr,
+.userstuff hr {
+	border: 0;
+	border-bottom: 2px solid;
 	color: #eee;
 	margin: 1.5em auto;
 }
@@ -171,13 +179,15 @@ textarea {
 /* blue border now appears when you're focused a text box */
 input:focus,
 textarea:focus,
-form blockquote.userstuff {
+form blockquote.userstuff,
+form.search input:focus[type="text"] {
 	background: #23222b;
 	border-color: #6ab5ff;
 }
 
 /* white border on text box hover */
-input:hover {
+input:hover,
+form.search input:hover[type="text"] {
 	background: #23222b;
 	border-color: #fff;
 }
@@ -324,27 +334,10 @@ samp {		/* font choices go here ↓ */
 
 
 
-/* ---+ 03. BUTTONS +--- */
+/* ---+ 03. ACTIONS +--- */
 
 legend .action:link {
 	margin: 0 .5em;
-}
-
-/* buttons please behave on hover */
-legend .action:link:hover,
-input:hover[type="submit"],
-label.action:hover,
-input.button:hover,
-.actions a:focus,
-.actions a:hover,
-.actions a:link:hover,
-.actions input:hover,
-.actions input:focus,
-.work.index.group .actions li a:hover,
-.work.index.group .actions li a:visited:hover {
-	background: #4e4e5e;
-	border-color: transparent;
-	color: #fff;
 }
 
 /* action buttons and some nav buttons */
@@ -356,20 +349,11 @@ input[type="submit"],
 .actions a:link,
 .actions input,
 .actions label,
-.current {
+.current,
+.flash.notice .action {
 	background: #2b2a33;
 	border-color: transparent;	/* nix lines while keeping white space */
 	color: #eee;
-}
-
-/* colors for active action buttons */
-a.current,
-.actions a:active,
-.current,
-.current a:visited {
-	background: #555;
-	border-color: #fff;
-	color: #fff;
 }
 
 /* active button behaviours (mostly) */
@@ -380,8 +364,12 @@ a.current,
 label.action:active,
 span.unread,
 span.claimed,
+.action a:active,
 .actions a:active,
+.actions a:active:visited,
 .current a:visited,
+.flash.notice .action:active,
+.flash.notice .action:active:visited,
 .replied,
 .own,
 .draft,
@@ -395,8 +383,46 @@ span.claimed,
 	color: #fff;
 }
 
+/* button/actions hover */
+legend .action:link:hover,
+input:hover[type="submit"],
+label.action:hover,
+input.button:hover,
+.action:hover,
+.action a:hover,
+.action a:link:hover,
+.actions a:focus,
+.actions a:hover,
+.actions a:link:hover,
+.actions a:visited:hover,
+.actions a:focus:visited,
+.actions input:hover,
+.actions input:focus,
+.flash.notice .action:hover,
+.flash.notice .action:visited:hover,
+.work.index.group .actions li a:hover,
+.work.index.group .actions li a:visited:hover {
+	background: #4e4e5e;
+	border-color: transparent;
+	color: #fff;
+}
+
+/* button/actions visited */
+.actions a:visited,
+.action a:link,
+.action a:visited,
+.blurb h4 a:visited,
+.listbox .heading a:visited {
+	color: #999;
+}
+
 dl.meta {
 	border: 0;
+}
+
+/* arrow to-the-top buttons on fandoms page */
+.action.top a:active {
+	background: transparent;
 }
 
 
@@ -544,10 +570,6 @@ dl.meta {
 	border-radius: .25em 0 .25em .25em;
 }
 
-#inner .module .heading {
-	border-color: #78777d;
-}
-
 #outer .group .heading,
 fieldset.listbox .heading,
 .userstuff .heading,
@@ -555,6 +577,7 @@ fieldset.listbox .heading,
 	background: none;
 	color: #fff;
 }
+
 
 
 
@@ -598,6 +621,7 @@ fieldset.listbox .heading,
 .splash .news li {
 	border: 0;
 }
+
 
 
 
@@ -688,6 +712,11 @@ fieldset.listbox .heading,
 	font-size: 1em;
 }
 
+/* technically nix border in work but this might affect shit elsewhere? we'll find out */
+#inner .module .heading {
+	border: 0;
+}
+
 /* author name being weird in-work, so slapping a link whether it likes it or not */
 div.preface .byline a {
 	border-bottom: 1px solid;
@@ -702,6 +731,14 @@ div.preface .byline a {
 .preface h3 {
 	i was going to do something here but i forgot what it was
 }*/
+
+/* in work, boxes summary + author notes */
+.notes.module blockquote.userstuff,
+.summary.module blockquote.userstuff {
+	background: #151319;
+	border-radius: .5em;
+	padding: 1em;
+}
 
 /* double underline is fucking stupid */
 .userstuff h3 {
@@ -757,11 +794,20 @@ li.comment {
 
 /* ---+ 09. TAGS +--- */
 
+/* STOP */
+a.tag:hover {
+	background: transparent;
+}
+
+
 /* tag-specific link attributes — makes tag bubbles! */
-a.tag {
+.bookmark.blurb .commas a.tag,
+.series.blurb .commas a.tag,
+.work.blurb .commas a.tag,
+.work.meta .commas a.tag {
 	background: #2b2a33;
 	border: 1px solid transparent;
-	border-radius: .25em;	/* round! :D */
+	border-radius: .75em;
 	color: #eee;
 	display: inline-block;
 	font-size: .9em;
@@ -772,121 +818,207 @@ a.tag {
 	text-overflow: ellipsis;
 }
 
+/* specific to edit work tags page */
+.work.meta .autocomplete li.added.tag {
+	background: #2b2a33;
+	border: 1px solid transparent;
+	border-radius: .75em;
+	color: #eee;
+	display: inline-block;
+	font-size: .9em;
+	margin: 1px 6px 1px 0;
+	overflow: hidden;
+	padding: 1px 2px 1px 9px;
+	text-decoration: none;
+	text-overflow: ellipsis;
+}
+
+
 /* tag bubble hover colours */
-a.tag:hover {
+.bookmark.blurb .commas a.tag:hover,
+.series.blurb .commas a.tag:hover,
+.work.blurb .commas a.tag:hover,
+.work.meta .commas a.tag:hover {
 	background: #eee;
 	border-color: #eee;
-	color: #2b2a33;
+	color: /*#2b2a33*/ #111;
 }
 
 /* tag bubble visited colours */
-a.tag:visited {
+.bookmark.blurb .commas a.tag:visited,
+.series.blurb .commas a.tag:visited,
+.work.blurb .commas a.tag:visited,
+.work.meta .commas a.tag:visited,
+.work.meta .autocomplete li.added.tag:visited {
 	background: #2b2a33;
 	border-color: #2b2a33;
 	color: #999;
 }
 
 /* tag bubble visited hover colours */
-a.tag:visited:hover {
+.bookmark.blurb .commas a.tag:visited:hover,
+.series.blurb .commas a.tag:visited:hover,
+.work.blurb .commas a.tag:visited:hover,
+.work.meta .commas a.tag:visited:hover {
 	background: #eee;
 	border-color: #eee;
-	color: #5b5b66;
+	color: #111;
 }
 
 /* characters tag colours */
-dd.character a,
-li.characters a {
+.bookmark.blurb .commas li.characters a,
+.series.blurb .commas li.characters a,
+.work.blurb .commas li.characters a,
+.work.meta .character.tags .commas li a,
+.work.meta .character li.added.tag {
 	background: #337e00;
 	border-color: #337e00;
 	color: #eee;
 }
 
 /* characters tag hover colours */
-dd.character a:hover,
-li.characters a:hover {
+.bookmark.blurb .commas li.characters a:hover,
+.series.blurb .commas li.characters a:hover,
+.work.blurb .commas li.characters a:hover,
+.work.meta .character.tags .commas li a:hover {
 	background: #eee;
 	border-color: #eee;
 	color: #337e00;
 }
 
 /* characters tag visited colours */
-dd.character a:visited,
-li.characters a:visited {
+.bookmark.blurb .commas li.characters a:visited,
+.series.blurb .commas li.characters a:visited,
+.work.blurb .commas li.characters a:visited,
+.work.meta .character.tags .commas li a:visited,
+.work.meta .character li.added.tag:visited {
 	background: #204d02;
 	border-color: #204d02;
 	color: #eee;
 }
 
 /* character tag visited hover colours */
-dd.character a:visited:hover,
-li.characters a:visited:hover {
+.bookmark.blurb .commas li.characters a:visited:hover,
+.series.blurb .commas li.characters a:visited:hover,
+.work.blurb .commas li.characters a:visited:hover,
+.work.meta .character.tags .commas li a:visited:hover {
 	background: #eee;
 	border-color: #eee;
 	color: #204d02;
 }
 
 /* relationships tag colours */
-dd.relationship a,
-li.relationships a {
+.bookmark.blurb .commas li.relationships a,
+.series.blurb .commas li.relationships a,
+.work.blurb .commas li.relationships a,
+.work.meta .relationship.tags .commas li a,
+.work.meta .relationship li.added.tag {
 	background: #0e60b0;
 	border-color: #0e60b0;
 	color: #eee;
 }
 
 /* relationships tag hover colours */
-dd.relationship a:hover,
-li.relationships a:hover {
+.bookmark.blurb .commas li.relationships a:hover,
+.series.blurb .commas li.relationships a:hover,
+.work.blurb .commas li.relationships a:hover,
+.work.meta .relationship.tags .commas li a:hover {
 	background: #eee;
 	border-color: #eee;
 	color: #0e60b0;
 }
 
 /* relationships tag visited colours */
-dd.relationship a:visited,
-li.relationships a:visited {
+.bookmark.blurb .commas li.relationships a:visited,
+.series.blurb .commas li.relationships a:visited,
+.work.blurb .commas li.relationships a:visited,
+.work.meta .relationship.tags .commas li a:visited,
+.work.meta .relationship li.added.tag:visited {
 	background: #124679;
 	border-color: #124679;
 	color: #eee;
 }
 
 /* relationship tag visited hover colours */
-dd.relationship a:visited:hover,
-li.relationships a:visited:hover {
+.bookmark.blurb .commas li.relationships a:visited:hover,
+.series.blurb .commas li.relationships a:visited:hover,
+.work.blurb .commas li.relationships a:visited:hover,
+.work.meta .relationship.tags .commas li a:visited:hover {
 	background: #eee;
 	border-color: #eee;
 	color: #124679;
 }
 
 /* warning tag colours */
-dd.warning a,
-li.warnings a {
+.bookmark.blurb .commas li.warnings a,
+.series.blurb .commas li.warnings a,
+.work.blurb .commas li.warnings a,
+.work.meta .warning.tags .commas li a {
 	background: #8d0203;
 	border-color: #8d0203;
 	color: #eee;
 }
 
 /* warning tag hover colours */
-dd.warning a:hover,
-li.warnings a:hover {
+.bookmark.blurb .commas li.warnings a:hover,
+.series.blurb .commas li.warnings a:hover,
+.work.blurb .commas li.warnings a:hover,
+.work.meta .warning.tags .commas li a:hover {
 	background: #eee;
 	border-color: #eee;
 	color: #8d0203;
 }
 
 /* warning tag visited colours */
-dd.warning a:visited,
-li.warnings a:visited {
+.bookmark.blurb .commas li.warnings a:visited,
+.series.blurb .commas li.warnings a:visited,
+.work.blurb .commas li.warnings a:visited,
+.work.meta .warning.tags .commas li a:visited {
 	background: #5f0102;
 	border-color: #5f0102;
 	color: #eee;
 }
 
 /* warning tag visited hover colours */
-dd.warning a:visited:hover,
-li.warnings a:visited:hover {
+.bookmark.blurb .commas li.warnings a:visited:hover,
+.series.blurb .commas li.warnings a:visited:hover,
+.work.blurb .commas li.warnings a:visited:hover,
+.work.meta .warning.tags .commas li a:visited:hover {
 	background: #eee;
 	border-color: #eee;
 	color: #5f0102;
+}
+
+/* de-bubble rating/cat/fandom */
+.work.meta .category.tags .commas a,
+.work.meta .fandom.tags .commas a,
+.work.meta .rating.tags .commas a {
+	background: transparent;
+	border: 0;
+	border-bottom: 1px dotted #eee;
+	border-radius: 0;
+	font-size: revert;
+	margin: revert;
+	padding: inherit;
+}
+
+.work.meta .category.tags .commas a:hover,
+.work.meta .category.tags .commas a:visited:hover,
+.work.meta .fandom.tags .commas a:hover,
+.work.meta .fandom.tags .commas a:visited:hover,
+.work.meta .rating.tags .commas a:hover,
+.work.meta .rating.tags .commas a:visited:hover {
+	border-bottom: 1px dotted #9ecfff;
+	color: #9ecfff;
+}
+
+/* de-bubble fandom labels in work blurbs/work page */
+.work.meta .category.tags .commas a:visited,
+.work.meta .fandom.tags .commas a:visited,
+.work.meta .rating.tags .commas a:visited {
+	border-bottom: 1px dotted #999;
+	border-radius: 0;
+	color: #999;
 }
 
 
@@ -900,7 +1032,7 @@ li.warnings a:visited:hover {
 	border-color: transparent;
 	border-radius: .25em;
 	padding: .5em 1em;
-	margin-top: 1em;
+	/* margin-top: 1em; */
 	margin-bottom: 1em;
 }
 
@@ -924,47 +1056,16 @@ ul.required-tags,
 	margin-bottom: .65em;
 }
 
-/* de-bubble fandom labels in work blurbs/work page */
-dd.fandom a,
-dd.rating a,
-dd.category a,
-.blurb .fandoms a {
-	background: transparent !important;
-	border: 0;
-	border-bottom: 1px dotted #eee !important;
-	border-radius: 0 !important;
-	font-size: revert;
-	margin: revert;
-	padding: inherit;
-}
-
-/* de-bubble fandom labels in work blurbs/work page */
-dd.fandom a:hover,
-dd.fandom a:hover:visited,
-dd.rating a:hover,
-dd.rating a:hover:visited,
-dd.category a:hover,
-dd.category a:hover:visited,
-.blurb .fandoms a:hover,
-.blurb .fandoms a:hover:visited {
-	border-bottom: 1px dotted #9ecfff !important;
-	color: #9ecfff !important;
-}
-
-/* de-bubble fandom labels in work blurbs/work page */
-dd.fandom a:visited,
-dd.rating a:visited,
-dd.category a:visited,
-.blurb .fandoms a:visited {
-	border-bottom: 1px dotted #999 !important;
-	border-radius: 0 !important;
-	color: #999;
-}
-
 /* gives work blurb some cushion between bottom buttons */
 .blurb blockquote {
 	margin: .5em auto 1em auto;
 }
+
+/* adjust padding near edit/tags blurb buttons */
+.blurb .actions li {
+	padding: 0 .25em 0 0;
+}
+
 
 /* gets rid of commas after tags because bubbles */
 .commas li::after {
@@ -1004,31 +1105,10 @@ ul.tags.commas li.characters:first-child {
 	padding-left: 0;
 }
 
-/* de-bubble bookmark tags */
-.meta.tags.commas a {
-	background: transparent !important;
-	border: 0;
-	border-bottom: 1px dotted #eee !important;
-	border-radius: 0 !important;
-	font-size: revert;
-	margin: revert;
-	overflow: revert;
-	padding: inherit;
-}
-
 /* de-bubble bookmark hover tags */
-.meta.tags.commas a:hover,
-.meta.tags.commas a:visited:hover {
-	border-bottom: 1px dotted #9ecfff !important;
-	color: #9ecfff !important;
-}
-
-/* de-bubble bookmark visited tags */
-.meta.tags.commas a:visited {
-	border: 0 !important;
-	border-bottom: 1px dotted #999 !important;
-	border-radius: 0 !important;
-	color: #999;
+.meta.tags.commas .tag:hover,
+.meta.tags.commas .tag:visited:hover {
+	background: transparent;
 }
 
 /* stops blockquotes in work blurbs from inheriting margins */
@@ -1046,6 +1126,7 @@ ul.tags.commas li.characters:first-child {
 .user.module.group {
 	background: transparent;
 	margin-top: .75em;
+	padding: .375em 0 0 0;
 }
 
 
@@ -1056,12 +1137,42 @@ ul.tags.commas li.characters:first-child {
 #modal {
 	background: #1c1b22;
 	border: 0;
-	border-radius: .25em;
+	border-radius: .5em;
 	color: #eee;
 }
 
 #modal .content {
 	border: 0;
+}
+
+#modal .footer {
+	bottom: 0;
+	height: 44px;
+	left: 0;
+	line-height: 44px;
+	padding: .5em 1em;
+	right: 0;
+	position: absolute;
+}
+
+#modal .footer .action.modal-closer {
+	bottom: 1em;
+	position: absolute;
+	right: 1em;
+}
+
+#modal .footer a.action.modal-closer:active {
+	background: #111;
+	border-color: transparent;
+	color: #fff;
+}
+
+#modal .footer a.action.modal-closer:hover,
+#modal .footer a.action.modal-closer:focus,
+#modal .footer a.action.modal-closer:visited:hover {
+	background: #4e4e5e;
+	border-color: transparent;
+	color: #fff;
 }
 
 .error,
@@ -1170,15 +1281,19 @@ form dd.required,
 }
 
 #dashboard a,
-#dashboard span,
-#dashboard .current {
+#dashboard span {
 	color: #fff;
 }
 
-#dashboard a:focus {
-	/* need to put something here, don't forget */
+
+#dashboard a:active,
+#dashboard .current {
+	background: #000;
+	border-color: transparent;
+	color: #fff;
 }
 
+#dashboard a:focus,
 #dashboard a:hover {
 	background: #4e4e5e;
 	color: #fff;
@@ -1196,13 +1311,7 @@ form dd.required,
 	background: #151319;
 	font-size: .9em;
 	margin-top: 1.15em;
-	padding: .5em;
-}
-
-#dashboard .current {
-	background: #000;
-	border-color: transparent;
-	color: #fff;
+	padding: .25em;
 }
 
 /* investigate this, wasn't specific and messed with multiple works page */
@@ -1217,14 +1326,14 @@ form dd.required,
 /* ---+ 13. STATS PAGE +--- */
 
 /* smooth stats page borders, dark bg */
-.fandom.listbox.group {
+.statistics .fandom.listbox.group {
 	background: transparent;
 	border: #151319;
 	border-radius: .25em;
 	margin: 1em 0;
 }
 
-.fandom ul.index.group {
+.statistics .fandom ul.index.group {
 	background: #151319 !important;
 	border-radius: inherit;
 	padding: .15em .65em;
@@ -1294,35 +1403,6 @@ form dd.required,
 	border-color: transparent;
 }
 
-/* de-bubble search heading */
-h2.heading a {
-	background: transparent !important;
-	border: 0;
-	border-bottom: 1px dotted #eee !important;
-	border-radius: 0 !important;
-	display: inline;
-	font-size: revert;
-	line-height: revert;
-	padding: inherit;
-}
-
-/* de-bubble search heading hover */
-h2.heading a:hover,
-h2.heading a:visited:hover {
-	border: 0 !important;
-	border-bottom: 1px dotted #9ecfff !important;
-	border-radius: 0 !important;
-	color: #9ecfff !important;
-}
-
-/* de-bubble search heading visited */
-h2.heading a:visited {
-	border: 0 !important;
-	border-bottom: 1px dotted #999 !important;
-	border-radius: 0 !important;
-	color: #999;
-}
-
 /* banishes giant black bar on subs/related works pages */
 dl.index dd,
 dl.index dt {
@@ -1363,10 +1443,15 @@ dl.index dd {
 	border: 0;
 }
 
+/* remove blurb header bg on collection entries */
+.collection .header.module.group {
+	background: transparent;
+}
+
 /* ao3 blue accent on hover */
 .listbox .heading a.tag:visited:hover {
 	background: transparent;
-	color: #5998d6;
+	color: #9ecfff;
 }
 
 /* ALL the listbox bgs transparent?? i guess */
@@ -1391,6 +1476,12 @@ dl.index dd {
 	float: none;
 }
 
+/* space bewteen h3 and listbox on fandoms page */
+.medium.listbox .index.group {
+	margin: .5em 0;
+}
+
+
 .tags.commas.index.group {
 	background: transparent;
 }
@@ -1407,6 +1498,8 @@ dl.index dd {
 }
 
 /* shortens S&F input boxes because otherwise the right end runs off the page */
+#collection_filters_title_autocomplete,
+#collection_filters_fandom_autocomplete,
 #bookmark_search_excluded_bookmark_tag_names_autocomplete,
 #bookmark_search_excluded_tag_names_autocomplete,
 #bookmark_search_other_bookmark_tag_names_autocomplete,
@@ -1441,6 +1534,7 @@ dl.index dd {
 #exclude_freeform_tags,
 #include_tag_tags,
 #exclude_tag_tags {
+	font-size: .9em;
 	font-size: .9em;
 }
 
@@ -1492,12 +1586,12 @@ dt.search dd {
 
 /* and replaced! hi, meet right unicode arrow */
 .filters .expander::before {
-	content: "\23F5 ";
+	content: "\23F5\00A0";
 }
 
 /* and left unicode arrow */
 .filters .expanded .expander::before {
-	content: " \23F7";
+	content: "\23F7\00A0";
 }
 
 /* parent expander buttons are too far in, so they're scooching over a skosh */
@@ -1541,6 +1635,7 @@ fieldset fieldset.listbox,
 /* trying to make some boxes behave */
 .group.listbox .index {
 	background: #151319;
+	border-radius: .25em;
 }
 
 form dl dt,
