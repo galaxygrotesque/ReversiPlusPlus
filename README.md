@@ -1,7 +1,7 @@
 # ReversiPlusPlus
 [Reversi](https://archiveofourown.org/skins/929)—but better. An Archive of Our Own “dark mode” reskin of Reversi with a focus on readability and less noise.
 
-**This project is a work-in-progress.** Please bear with me while I find my stylesheet legs.
+**This project is a work-in-progress.** Please bear with me while I find my style sheet legs.
 
 
 ## Features
@@ -108,9 +108,9 @@ To create a new site skin:
 
 	![](img/install-steps-01.png)
 
-3. On the dashboard, select ```Skins```.
 
 	![](img/install-steps-02.png)
+3. On the dashboard, select ```Skins```.
 
 4. The Skins page will have multiple buttons. In the top right-hand corner, select ```Create Site Skin```.
 
