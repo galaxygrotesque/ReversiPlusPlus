@@ -72,7 +72,7 @@
 	--tag-bubble-color-visited-hover: #5b5b66;
 	--text-color: #eee;
 	--text-link-color: #fff;
-	--text-link-visited-color: #999;
+	--text-link-visited-color: #999 #bfbfbf;
 	--textbox-background-color: #23222b;
 }
 */
@@ -121,13 +121,14 @@ div.preface .byline a:visited,
 span.series .divider,
 .blurb h4 a:visited,
 .listbox .heading a:visited {
-	color: #999;
+	color: #bfbfbf;
 }
 
 /* (most) user icons are sharp no more */
 a img,
+.index .picture .icon,
 .picture .icon img,
-.index .picture .icon {
+.primary .icon {
 	border: 0;
 	border-radius: .25em;
 }
@@ -413,7 +414,7 @@ input.button:hover,
 .action a:visited,
 .blurb h4 a:visited,
 .listbox .heading a:visited {
-	color: #999;
+	color: #bfbfbf;
 }
 
 dl.meta {
@@ -468,6 +469,11 @@ dl.meta {
 	color: #fff;
 }
 
+/* small margin fix in searchbar */
+#header #search .text {
+	margin: .3em .43em;
+}
+
 /* header searchbar remain round */
 #header form.search input[type="text"] {
 	border-radius: 1em;
@@ -493,7 +499,8 @@ dl.meta {
 
 /* why are we still using weird noise jpgs as banners please stop */
 #header ul.primary {
-	background: #5998d6;
+	/*background: linear-gradient(0deg, #5998d6 40%, #22568b);*/
+	background: #30679e;
 }
 
 /* stay square, nav buttons */
@@ -503,12 +510,18 @@ dl.meta {
 
 /* header nav buttons as blue: fandoms/browse/search/about */
 #header .actions a {
-	background: #5998d6;
-	border-color: #5998d6;
+	background: transparent;
+	border-color: transparent;
 	color: #fff;
 }
 
-#header .actions a:focus,
+
+#header .actions a:active,
+#header .actions a:focus {
+	background: transparent;
+	color: #fff;
+}
+
 #header .actions a:hover {
 	background: #4e4e5e;
 	color: #fff;
@@ -606,7 +619,7 @@ fieldset.listbox .heading,
 }
 
 .splash .favorite li a:visited {
-	color: #999;
+	color: #bfbfbf;
 }
 
 .splash .favorite li:nth-of-type(odd) a:focus,
@@ -629,7 +642,7 @@ fieldset.listbox .heading,
 
 /* no more noise.jpg */
 #outer #footer {
-	background: #5998d6;
+	background: #30679e;;
 }
 
 #outer .region,
@@ -721,6 +734,11 @@ fieldset.listbox .heading,
 div.preface .byline a {
 	border-bottom: 1px solid;
 }
+ 
+/* dump summary further below title */
+div.summary.module {
+	padding-top: 2em;
+}
 
 /* nix border at the top of work page */
 .chapter .preface {
@@ -779,8 +797,13 @@ li.comment {
 
 /* scoots comment user icon over + accommodates new comment padding */
 .comment div.icon {
-	margin: -1.5em .5em .5em 0;
+	margin: -1.5em .75em .5em 0;
 	border: 0;
+}
+
+.comment h4.byline {
+	margin: 0;
+	padding: 0 .25em .25em 110px;
 }
 
 /* new comment padding FINALLY */
@@ -852,7 +875,7 @@ a.tag:hover {
 .work.meta .autocomplete li.added.tag:visited {
 	background: #2b2a33;
 	border-color: #2b2a33;
-	color: #999;
+	color: #bfbfbf;
 }
 
 /* tag bubble visited hover colours */
@@ -1016,9 +1039,9 @@ a.tag:hover {
 .work.meta .category.tags .commas a:visited,
 .work.meta .fandom.tags .commas a:visited,
 .work.meta .rating.tags .commas a:visited {
-	border-bottom: 1px dotted #999;
+	border-bottom: 1px dotted #bfbfbf;
 	border-radius: 0;
-	color: #999;
+	color: #bfbfbf;
 }
 
 
@@ -1219,7 +1242,7 @@ form dd.required,
 }
 
 .announcement .userstuff a:visited {
-	color: #999;
+	color: #bfbfbf;
 }
 
 .announcement .userstuff a:hover,
