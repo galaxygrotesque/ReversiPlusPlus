@@ -68,11 +68,12 @@
 	--box-border-color-alt: #c2d2df;
 	--box-border-color-subtle: #454547;
 	--button-background-color: #2b2a33;
-	--button-highlight-color: #4e4e5e;
+	--button-current-color: #0b0b0b;
+	--button-highlight-color: #4e4e5e;	
 	--tag-bubble-color-visited-hover: #5b5b66;
 	--text-color: #eee;
 	--text-link-color: #fff;
-	--text-link-visited-color: #999 #bfbfbf;
+	--text-link-visited-color: #bfbfbf;
 	--textbox-background-color: #23222b;
 }
 */
@@ -379,7 +380,7 @@ span.claimed,
 .unwrangled,
 .unreviewed,
 .ui-sortable li:hover {
-	background: #111;
+	background: #0b0b0b;
 	border-color: transparent;
 	color: #fff;
 }
@@ -436,6 +437,11 @@ dl.meta {
 	padding: .5em 0;
 }
 
+#greeting .menu,
+#header .menu {
+	padding: 0;
+}
+
 /* dark header bg at the top */
 #header {
 	background: #151319 !important;
@@ -487,7 +493,7 @@ dl.meta {
 #header .primary .dropdown:hover a,
 #header .primary .dropdown a:focus,
 #header .user a:focus,
-#header .user .open a:focus,
+/*#header .user .open a:focus,*/
 .filters dt a:hover {
 	color: #fff;
 }
@@ -548,6 +554,11 @@ dl.meta {
 	color: #fff;
 }
 
+#header .dropdown .menu a:hover,
+#greeting .dropdown .menu a:hover {
+	border-radius: 0;
+}
+
 
 /* header dropdowns have round */
 #header .menu {
@@ -557,8 +568,10 @@ dl.meta {
 }
 
 /* nix lines in header nav */
-#header .menu li {
+#header .dropdown .menu li {
 	border-color: transparent;
+	border: 0;
+	margin: auto;
 }
 
 #header .open a,
@@ -567,8 +580,8 @@ dl.meta {
 }
 
 /* user/post/login not blue */
-#header .user a,
-#header .user .open a {
+#header .user a
+/*#header .user .open a*/ {
 	background: transparent;
 	border: transparent;
 }
@@ -864,7 +877,7 @@ a.tag:hover {
 .work.meta .commas a.tag:hover {
 	background: #eee;
 	border-color: #eee;
-	color: /*#2b2a33*/ #111;
+	color: /*#2b2a33*/ #0b0b0b;
 }
 
 /* tag bubble visited colours */
@@ -885,7 +898,7 @@ a.tag:hover {
 .work.meta .commas a.tag:visited:hover {
 	background: #eee;
 	border-color: #eee;
-	color: #111;
+	color: #0b0b0b;
 }
 
 /* characters tag colours */
@@ -1185,7 +1198,7 @@ ul.tags.commas li.characters:first-child {
 }
 
 #modal .footer a.action.modal-closer:active {
-	background: #111;
+	background: #0b0b0b;
 	border-color: transparent;
 	color: #fff;
 }
@@ -1311,7 +1324,7 @@ form dd.required,
 
 #dashboard a:active,
 #dashboard .current {
-	background: #000;
+	background: #0b0b0b;
 	border-color: transparent;
 	color: #fff;
 }
@@ -1331,7 +1344,8 @@ form dd.required,
 
 /* dark dashboard backdrop, smaller font size, more padding */
 #dashboard.own {
-	background: #151319;
+	background: transparent;
+	border: 0;
 	font-size: .9em;
 	margin-top: 1.15em;
 	padding: .25em;
@@ -1390,6 +1404,19 @@ form dd.required,
 
 /* ---+ 14. OTHER PAGES +--- */
 
+
+/* grabbed from ao3 core */
+.listbox, fieldset fieldset.listbox {
+	clear: right;
+	background: #16151b;
+	border: 1px solid transparent;
+	border-radius: .25em;
+	padding: 0;
+	margin: 0.75em auto;
+	overflow: hidden;
+}
+
+
 /* edit multiple works page: now all/none buttons should align with h5 */
 #edit-multiple-works a.check_all,
 #edit-multiple-works a.check_none {
@@ -1414,8 +1441,8 @@ form dd.required,
 }
 
 /* banish noisy lines and background for: user fandoms, works, series, bookmarks */
-#user-fandoms,
-#user-fandoms ol,
+/*#user-fandoms,
+#user-fandoms ol,*/
 #user-works,
 #user-works ul,
 #user-series,
@@ -1424,6 +1451,10 @@ form dd.required,
 #user-bookmarks ol {
 	background: transparent;
 	border-color: transparent;
+}
+
+#user-fandom .fandom.listbox.group {
+	
 }
 
 /* banishes giant black bar on subs/related works pages */
