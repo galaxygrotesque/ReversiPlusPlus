@@ -1,22 +1,22 @@
 # ReversiPlusPlus
-[Reversi](https://archiveofourown.org/skins/929)—but better. An Archive of Our Own “dark mode” reskin of Reversi with a focus on readability and less noise.
+[Reversi](https://archiveofourown.org/skins/929) — but better. An Archive of Our Own “dark mode” reskin of Reversi with a focus on readability and less noise.
 
 **This project is a work-in-progress.** Please bear with me while I find my style sheet legs.
 
 
-## Features
+## 1 Features
 **TL;DR:**
 - [Darker colours!](https://github.com/galaxygrotesque/ReversiPlusPlus#dark-mode-redux)
 - [Colourfully obvious tags trapped in a scroll box!](https://github.com/galaxygrotesque/ReversiPlusPlus#colour-coded-tags-that-pop)
 - [Dope fonts (if you’re willing to install them)!](https://github.com/galaxygrotesque/ReversiPlusPlus#custom-fonts)
 
 
-### Dark mode redux
+### 1.1 Dark mode redux
 If you:
 - hate reading on a stark white background
 - hate reading on a *light* background
 - prefer OLED themes or find some dark themes too bright
-- have tired and/or light-sensitive eyes that suffer every time you step outside your carefully curated ~~cave~~ corner of the internet
+- have tired and/or light-sensitive eyes that suffer every time you step outside your carefully curated internet ~~cave~~ corner
 
 Then ReversiPlusPlus might be your cup of tea!
 
@@ -29,7 +29,7 @@ Inspired by Mozilla Firefox’s dark colour scheme, ReversiPlusPlus:
 | ![](img/comparison-reversi-vanilla-theme) | ![](img/comparison-reversi-plusplus-theme) |                 |
 
 
-### Colour-coded tags that ✨pop✨
+### 1.2 Colour-coded tags that ✨pop✨
 Tags are essential when trying to find stories you want to read, but they’re often lost in the noise.
 
 With ReversiPlusPlus, tags are colour-coded by category!
@@ -47,12 +47,12 @@ In the case of tag-heavy works, tags are also confined to a scroll box!
 | ![](img/comparison-reversi-vanilla-tags) | ![](img/comparison-reversi-plusplus-tags) |                      |
 
 
-### Custom fonts
+### 1.3 Custom fonts
 - **Good news:** ReversiPlusPlus uses some common web-safe and system font alternatives in addition to Ao3’s default fonts!
 
 - **Bad news:** Due to how Ao3 handles user skins and limits CSS, they can’t be automatically packaged with or built into the skin. (I went through a grieving process here. Trust me, I really wish they could.)
 
-This means **if you want alternative fonts** to appear, you’ll have to **install them on your device**—PC, phone, tablet, or whatever else.
+This means **if you want alternative fonts** to appear, you’ll have to **install them on your device** — PC, phone, tablet, or whatever else.
 
 For your convenience, here is a handy table containing (most) of the fonts and where to find them.
 
@@ -84,21 +84,21 @@ For your convenience, here is a handy table containing (most) of the fonts and w
 ```$``` − Paid
 
 
-## Screenshots
+## 2 Screenshots
 [To add]
 
 
-## Road map
+## 3 Road map
 - [ ] Mobile-specific ```.css```
 - [ ] Vet and add support for more fonts
 - [ ] Tidy code (read: figure out what I’m doing)
 - [ ] Rewrite as fully-fledged stylesheet to replace rather than build off of Ao3’s core
 
 
-## Installation
+## 4 Installation
 ReversiPlusPlus builds right off of Ao3’s existing stylesheet, so no extra add-ons or browser extensions required!
 
-Installing is as simple as **creating a new site skin** for your user. All user site skins are private by default—no worries about accidentally making something public.
+Installing is as simple as **creating a new site skin** for your user. All user site skins are private by default — no worries about accidentally making something public.
 
 To create a new site skin:
 
@@ -124,11 +124,11 @@ To create a new site skin:
 
 	1. The ```Type``` field must be set to ```Site Skin```.
 	2. The ```Title``` field must have a value in it, and that value **must be unique** because Ao3 only distinguishes user site skins by name, not by user.
-	3. The ```CSS``` field must have CSS in it—i.e., the text in [```ReversiPlusPlus.css```](https://github.com/galaxygrotesque/ReversiPlusPlus/blob/main/css/ReversiPlusPlus.css). Copy + paste baybeeee ✨
+	3. The ```CSS``` field must have CSS in it — i.e., the text in [```ReversiPlusPlus.css```](https://github.com/galaxygrotesque/ReversiPlusPlus/blob/main/css/ReversiPlusPlus.css). Copy + paste baybeeee ✨
 
 	**Don’t submit just yet!**
 	
-	Need a couple extra things first—namely, the options hidden under this fun little ```Show ↓``` button under the giant CSS field.
+	Need a couple extra things first — namely, the options hidden under this fun little ```Show ↓``` button under the giant CSS field.
 	
 	![](img/install-steps-05.png)
 	
