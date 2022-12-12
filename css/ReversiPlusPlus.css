@@ -149,7 +149,6 @@ a.work,
 	color: #9ecfff;
 }
 
-
 /* give h3 its white space back */
 h3 {
 	line-height: inherit;
@@ -491,9 +490,7 @@ dl.meta {
 #header .heading a:visited,
 #header .primary .open a,
 #header .primary .dropdown:hover a,
-#header .primary .dropdown a:focus,
 #header .user a:focus,
-/*#header .user .open a:focus,*/
 .filters dt a:hover {
 	color: #fff;
 }
@@ -505,7 +502,6 @@ dl.meta {
 
 /* why are we still using weird noise jpgs as banners please stop */
 #header ul.primary {
-	/*background: linear-gradient(0deg, #5998d6 40%, #22568b);*/
 	background: #30679e;
 }
 
@@ -521,20 +517,17 @@ dl.meta {
 	color: #fff;
 }
 
-
 #header .actions a:active,
 #header .actions a:focus {
 	background: transparent;
 	color: #fff;
 }
 
-#header .actions a:hover {
-	background: #4e4e5e;
-	color: #fff;
-}
-
 /* header dropdown menu bgs */
-#header .dropdown:hover a {
+#header .dropdown:hover a,
+#header .user .open a:focus,
+#header .primary .dropdown a:focus,
+#header .actions a:hover {
 	background: #4e4e5e;
 	color: #fff;
 }
@@ -543,7 +536,7 @@ dl.meta {
 #header .dropdown .menu a,
 #greeting .dropdown .menu a {
 	border-color: #4e4e5e;
-	border-radius: .25em;
+	/*border-radius: .25em;*/
 	color: #eee;
 }
 
@@ -557,14 +550,6 @@ dl.meta {
 #header .dropdown .menu a:hover,
 #greeting .dropdown .menu a:hover {
 	border-radius: 0;
-}
-
-
-/* header dropdowns have round */
-#header .menu {
-	background: #4e4e5e;
-	border-radius: 0 0 .25em .25em;
-	color: #fff;
 }
 
 /* nix lines in header nav */
@@ -589,11 +574,6 @@ dl.meta {
 /* user/post/login drowndown border rounding is consistent */
 #header .user .dropdown-toggle {
 	border-radius: .25em .25em 0 0 !important;
-}
-
-/* extra round edge for user dropdown menu */
-#header .user .menu {
-	border-radius: .25em 0 .25em .25em;
 }
 
 #outer .group .heading,
@@ -719,7 +699,7 @@ fieldset.listbox .heading,
 
 /* scrunches code in-work a little */
 #chapters .userstuff code {
-	font-size: .85em;
+	font-size: .8em;
 }
 
 /* line height is not a bad thing give it back */
@@ -835,7 +815,6 @@ a.tag:hover {
 	background: transparent;
 }
 
-
 /* tag-specific link attributes — makes tag bubbles! */
 .bookmark.blurb .commas a.tag,
 .series.blurb .commas a.tag,
@@ -868,7 +847,6 @@ a.tag:hover {
 	text-decoration: none;
 	text-overflow: ellipsis;
 }
-
 
 /* tag bubble hover colours */
 .bookmark.blurb .commas a.tag:hover,
@@ -1067,8 +1045,7 @@ a.tag:hover {
 	background: #151319;
 	border-color: transparent;
 	border-radius: .25em;
-	padding: .5em 1em;
-	/* margin-top: 1em; */
+	padding: 1em;
 	margin-bottom: 1em;
 }
 
@@ -1088,7 +1065,7 @@ ul.required-tags,
 
 /* cushion work blurb stats */
 .blurb dl.stats {
-	margin-top: .65em;
+	margin-top: 1em;
 	margin-bottom: .65em;
 }
 
@@ -1101,7 +1078,6 @@ ul.required-tags,
 .blurb .actions li {
 	padding: 0 .25em 0 0;
 }
-
 
 /* gets rid of commas after tags because bubbles */
 .commas li::after {
@@ -1321,7 +1297,6 @@ form dd.required,
 	color: #fff;
 }
 
-
 #dashboard a:active,
 #dashboard .current {
 	background: #0b0b0b;
@@ -1345,9 +1320,10 @@ form dd.required,
 /* dark dashboard backdrop, smaller font size, more padding */
 #dashboard.own {
 	background: transparent;
-	border: 0;
-	font-size: .9em;
-	margin-top: 1.15em;
+	border-top: .75em solid #30679e;
+	border-bottom: .75em solid #30679e;
+	font-size: .85em;
+	margin-top: 1.75em;
 	padding: .25em;
 }
 
@@ -1416,7 +1392,6 @@ form dd.required,
 	overflow: hidden;
 }
 
-
 /* edit multiple works page: now all/none buttons should align with h5 */
 #edit-multiple-works a.check_all,
 #edit-multiple-works a.check_none {
@@ -1480,6 +1455,21 @@ dl.index dd {
 	border-radius: inherit;
 }
 
+/* bookmark buttons align with blurb padding */
+.bookmark .actions {
+	padding: 0;
+}
+
+/* adjust bookmark icons */
+.bookmark.blurb p.status {
+	margin: 0;
+	right: .5em;
+}
+
+#inner .module h4.heading {
+	margin: 0 5.25em 0 65px;
+}
+
 /* changed bookmark box colours; might tweak more */
 .bookmark div.user,
 .bookmark div.recent {
@@ -1534,7 +1524,6 @@ dl.index dd {
 .medium.listbox .index.group {
 	margin: .5em 0;
 }
-
 
 .tags.commas.index.group {
 	background: transparent;
