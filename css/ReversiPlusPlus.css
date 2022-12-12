@@ -125,11 +125,9 @@ span.series .divider,
 	color: #bfbfbf;
 }
 
-/* (most) user icons are sharp no more */
+/* icons are sharp no more */
 a img,
-.index .picture .icon,
-.picture .icon img,
-.primary .icon {
+.icon {
 	border: 0;
 	border-radius: .25em;
 }
@@ -598,6 +596,10 @@ fieldset.listbox .heading,
 .splash .browse li a,
 .splash .favorite a {
 	border-radius: 0;
+}
+
+.splash .comment .userstuff {
+	margin: inherit;
 }
 
 .splash .favorite li a {
@@ -1084,6 +1086,11 @@ ul.required-tags,
 	padding: 0 .25em 0 0;
 }
 
+/* adjusts blurb header with rest of blurb bg */
+.blurb .header .heading {
+	margin: 0 5.25em 0 65px;
+}
+
 /* gets rid of commas after tags because bubbles */
 .commas li::after {
 	content: none;
@@ -1470,11 +1477,6 @@ dl.index dd {
 	margin: 0;
 	right: .5em;
 }
-
-/*
-#inner .module h4.heading {
-	margin: 0 5.25em 0 65px;
-}*/
 
 /* changed bookmark box colours; might tweak more */
 .bookmark div.user,
