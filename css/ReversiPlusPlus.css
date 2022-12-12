@@ -628,6 +628,11 @@ fieldset.listbox .heading,
 	border: 0;
 }
 
+/* preserves unread comment padding on splash page */
+.abbreviated h4.byline {
+	padding-left: 83px !important;
+}
+
 
 
 
@@ -1466,9 +1471,10 @@ dl.index dd {
 	right: .5em;
 }
 
+/*
 #inner .module h4.heading {
 	margin: 0 5.25em 0 65px;
-}
+}*/
 
 /* changed bookmark box colours; might tweak more */
 .bookmark div.user,
