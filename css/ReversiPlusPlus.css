@@ -29,8 +29,8 @@
 
   ++ SECTIONS ++
   00. colour guide
-  01. base
-  02. body fonts
+  01. body fonts
+  02. base
   03. actions
   04. header
   05. main
@@ -80,8 +80,59 @@
 
 
 
+/* ---+ 01. BODY FONTS +--- */
 
-/* ---+ 01. BASE +--- */
+/* less boring sans-serif fonts (that hopefully won't fuck up other shit)
+   grab whichever strikes your fancy and slap it down after font-family!
+   fonts:	"IBM Plex Sans", "Noto Sans", "Source Sans 3", "Proxima Nova", "Helvetica Neue",
+   defaults:	"Lucida Grande", "Lucida Sans Unicode", "GNU Unifont", Verdana, Helvetica, sans-serif;
+*/
+
+body {		/* font choices go here ↓ */
+	font-family: "IBM Plex Sans", "Proxima Nova", "Helvetica Neue", "Lucida Grande", "Lucida Sans Unicode", "GNU Unifont", Verdana, Helvetica, sans-serif;
+}
+
+input,
+textarea,
+blockquote,
+blockquote.userstuff,
+.blurb blockquote,
+.dropdown,
+.expander,
+.toggled form {	/* font choices go here ↓ */
+	font-family: "IBM Plex Sans", "Proxima Nova", "Helvetica Neue", "Lucida Grande", "Lucida Sans Unicode", "GNU Unifont", Verdana, Helvetica, sans-serif;
+}
+
+/* small site-wide header change because georgia and "serif" are SO boring please have some taste
+   fonts:	"Charter", "IBM Plex Serif", "Source Serif 4", "Palatino Linotype", "Palatino", "Literata",
+   defaults:	"Georgia", serif;
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.heading,
+.bookmark .user .meta {	/* font choices go here ↓ */
+	font-family: "Charter", "IBM Plex Serif", "Palatino", "Georgia", serif;
+}
+
+/* better mono/code fonts pls */
+kbd,
+tt,
+code,
+var,
+pre,
+samp {		/* font choices go here ↓ */
+	font-family: "Fira Code", "Source Code Pro", "Menlo", "Monaco", "Consolas", Courier, monospace;
+	font-size: .9em;
+}
+
+
+
+
+/* ---+ 02. BASE +--- */
 
 /* banishes every box shadow, text shadow, and outline like the demons they are */
 * {
@@ -132,6 +183,54 @@ a img,
 	border-radius: .25em;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.heading {
+	border: 0;
+}
+
+h1 {
+	font-size: 2.5em;
+	line-height: 1;
+	margin: .5em 0;
+}
+
+h2 {
+	font-size: 2.145em;
+	line-height: 1;
+	margin: .5em 0;
+	display: inline;
+}
+
+h3 {
+	font-size: 1.29em;
+	line-height: 1.25;
+	margin: .5375em 0;
+}
+
+h4 {
+	font-size: 1.145em;
+	line-height: 1.25;
+	margin: .5em 0;
+}
+
+h5 {
+	font-size: 1em;
+	line-height: 1.285;
+	margin: .65em 0;
+}
+
+h6 {
+	font-size: .875em;
+	font-weight: 900;
+	line-height: 1.5;
+	margin: 1.5em 0;
+}
+
 /* makes lots of link things ao3 blue */
 a.cloud7,
 a.cloud8,
@@ -146,11 +245,6 @@ a.work,
 .delete a:hover {
 	color: #9ecfff;
 }
-
-/* give h3 its white space back */
-h3 {
-	line-height: inherit;
-	}
 
 /* makes HR dividers the same colour as text + extra margin space */
 hr,
@@ -203,11 +297,6 @@ th,
 .group .heading {
 	background: none;
 	color: #fff;
-}
-
-/* why was underline here, anyway? why are you applying double underlines?? */
-.preface a:hover {
-	text-decoration: none;
 }
 
 /* makes lots of things the ao3 blue accent */
@@ -279,55 +368,10 @@ ul.expandable.secondary {
 }
 
 
-
-
-/* ---+ 02. BODY FONTS +--- */
-
-/* less boring sans-serif fonts (that hopefully won't fuck up other shit)
-   grab whichever strikes your fancy and slap it down after font-family!
-   fonts:	"IBM Plex Sans", "Noto Sans", "Source Sans 3", "Proxima Nova", "Helvetica Neue",
-   defaults:	"Lucida Grande", "Lucida Sans Unicode", "GNU Unifont", Verdana, Helvetica, sans-serif;
-*/
-
-body {		/* font choices go here ↓ */
-	font-family: "IBM Plex Sans", "Proxima Nova", "Helvetica Neue", "Lucida Grande", "Lucida Sans Unicode", "GNU Unifont", Verdana, Helvetica, sans-serif;
-}
-
-input,
-textarea,
-blockquote,
-blockquote.userstuff,
-.blurb blockquote,
-.dropdown,
-.expander,
-.toggled form {	/* font choices go here ↓ */
-	font-family: "IBM Plex Sans", "Proxima Nova", "Helvetica Neue", "Lucida Grande", "Lucida Sans Unicode", "GNU Unifont", Verdana, Helvetica, sans-serif;
-}
-
-/* small site-wide header change because georgia and "serif" are SO boring please have some taste
-   fonts:	"Charter", "IBM Plex Serif", "Source Serif 4", "Palatino Linotype", "Palatino", "Literata",
-   defaults:	"Georgia", serif;
-*/
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.heading,
-.bookmark .user .meta {	/* font choices go here ↓ */
-	font-family: "Charter", "IBM Plex Serif", "Palatino", "Georgia", serif;
-}
-
-/* better mono/code fonts pls */
-kbd,
-tt,
-code,
-var,
-pre,
-samp {		/* font choices go here ↓ */
-	font-family: "Fira Code", "Source Code Pro", "Menlo", "Monaco", "Consolas", Courier, monospace;
-	font-size: .9em;
+li.blurb, fieldset, form dl {
+	border: 0;
+	padding: 1em;
+	overflow: hidden;
 }
 
 
@@ -725,31 +769,6 @@ fieldset.listbox .heading,
 	font-size: 1em;
 }
 
-/* technically nix border in work but this might affect shit elsewhere? we'll find out */
-#inner .module .heading {
-	border: 0;
-}
-
-/* author name being weird in-work, so slapping a link whether it likes it or not */
-div.preface .byline a {
-	border-bottom: 1px solid;
-}
- 
-/* dump summary further below title */
-div.summary.module {
-	padding-top: 2em;
-}
-
-/* nix border at the top of work page */
-.chapter .preface {
-	border: 0;
-}
-
-/*
-.preface h3 {
-	i was going to do something here but i forgot what it was
-}*/
-
 /* in work, boxes summary + author notes */
 .notes.module blockquote.userstuff,
 .summary.module blockquote.userstuff {
@@ -761,6 +780,91 @@ div.summary.module {
 /* double underline is fucking stupid */
 .userstuff h3 {
 	border-bottom: 1px solid #78777d;
+}
+
+div.preface {
+	margin: 1.5em 4em 3em 4em;
+	padding: .65em .65em 0;
+	float: none;
+}
+
+/* mobile: decreases summary+author’s note margins so you don’t get a ridiculously slim box running down the page */
+/* #chapters div.preface {
+	margin: 1.5em .5em 3em .5em;
+	padding: .65em;
+} */
+
+div.preface .module {
+	float: none;
+	margin: 0;
+	padding: 0 0 .643em;
+	width: auto;
+}
+
+/* nix border at the top of work page */
+.chapter .preface {
+	border-top: 1px solid;
+}
+
+.preface h3 {
+	background: transparent;
+	border-bottom: 0;
+}
+
+.preface h2.title {
+	display: block;
+	border-bottom: 0;
+	clear: right;
+}
+
+div.preface .title,
+div.preface .byline {
+	border: 0;
+	text-align: center;
+	text-decoration: none;
+}
+
+/* why was underline here, anyway? why are you applying double underlines?? */
+.preface a:hover {
+	text-decoration: none;
+}
+
+.preface blockquote {
+	border: 0;
+}
+
+div.preface .notes,
+div.preface .summary,
+div.preface .series,
+div.preface .children {
+	min-height: 5em;
+}
+
+div.preface .series ul,
+div.preface .children ul {
+	padding: 0 .65em;
+}
+
+div.preface .associations {
+	margin-bottom: 1.5em;
+}
+
+div.preface .jump {
+	margin-top: 1.5em;
+}
+ 
+/* dump summary further below title */
+div.summary.module {
+	margin-top: 2em;
+}
+
+div.afterword {
+	margin-bottom: 2.5em;
+}
+
+div.afterword .series h3,
+div.afterword .children h3 {
+	border-bottom: none;
 }
 
 
@@ -787,7 +891,8 @@ li.comment {
 	background: #151319 !important;
 	border: transparent;
 	border-radius: .25em;
-	padding: 1em;
+	margin: 1em 0;
+	padding: .5em 1em;
 }
 
 /* something was misbehaving so this had to happen now it's the next day and i don't remember what it actually does */
@@ -802,8 +907,8 @@ li.comment {
 }
 
 .comment h4.byline {
-	margin: 0;
-	padding: 0 .25em .25em 110px;
+	margin-top: .375em;
+	/* padding: 0 .25em .25em 110px; */
 }
 
 /* new comment padding FINALLY */
@@ -1052,9 +1157,16 @@ a.tag:hover {
 	background: #151319;
 	border-color: transparent;
 	border-radius: .25em;
-	padding: 1em;
-	margin-bottom: 1em;
+	padding: .5em 1em;
+	margin: 1em 0;
 }
+
+.blurb .datetime,
+.datetime {
+	font-size: small;
+	line-height: 1.25em;
+}
+
 
 /* makes tag scroll box for those 10000+ tag fics so you don't have to scroll for like ten minutes */
 li.blurb .tags {
@@ -1088,7 +1200,7 @@ ul.required-tags,
 
 /* adjusts blurb header with rest of blurb bg */
 .blurb .header .heading {
-	margin: 0 5.25em 0 65px;
+	margin: .375em 5.25em 0 65px;
 }
 
 /* gets rid of commas after tags because bubbles */
@@ -1392,12 +1504,11 @@ form dd.required,
 
 /* ---+ 14. OTHER PAGES +--- */
 
-
 /* grabbed from ao3 core */
 .listbox, fieldset fieldset.listbox {
 	clear: right;
 	background: #16151b;
-	border: 1px solid transparent;
+	border: 0;
 	border-radius: .25em;
 	padding: 0;
 	margin: 0.75em auto;
