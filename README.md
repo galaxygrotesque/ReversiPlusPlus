@@ -18,9 +18,9 @@ If you:
 - prefer OLED themes or find some dark themes too bright
 - have tired and/or light-sensitive eyes that suffer every time you step outside your carefully curated internet ~~cave~~ corner
 
-Then ReversiPlusPlus might be your cup of tea!
+Then ```ReversiPlusPlus``` might be your cup of tea!
 
-Inspired by Mozilla Firefox’s dark colour scheme, ReversiPlusPlus:
+Inspired by Mozilla Firefox’s dark colour scheme, ```ReversiPlusPlus```:
 - Uses a darker colour palette that is easier on the eye
 - Reduces visual noise by relying on colour/element contrast rather than borders and lines
 
@@ -32,7 +32,7 @@ Inspired by Mozilla Firefox’s dark colour scheme, ReversiPlusPlus:
 ### 1.2 Colour-coded tags that ✨pop✨
 Tags are essential when trying to find stories you want to read, but they’re often lost in the noise.
 
-With ReversiPlusPlus, tags are colour-coded by category!
+With ```ReversiPlusPlus```, tags are colour-coded by category!
 - **Red:** content warnings
 - **Blue:** relationships
 - **Green:** characters
@@ -48,7 +48,7 @@ In the case of tag-heavy works, tags are also confined to a scroll box!
 
 
 ### 1.3 Custom fonts
-- **Good news:** ReversiPlusPlus uses some common web-safe and system font alternatives in addition to Ao3’s default fonts!
+- **Good news:** ```ReversiPlusPlus``` uses some common web-safe and system font alternatives in addition to Ao3’s default fonts!
 
 - **Bad news:** Due to how Ao3 handles user skins and limits CSS, they can’t be automatically packaged with or built into the skin. (I went through a grieving process here. Trust me, I really wish they could.)
 
@@ -89,14 +89,23 @@ For your convenience, here is a handy table containing (most) of the fonts and w
 
 
 ## 3 Road map
-- [ ] Mobile-specific ```.css```
+- [x] Mobile-specific ```RPP.css```
+	- [ ] Refine mobile ```RPP.css```
 - [ ] Vet and add support for more fonts
 - [ ] Tidy code (read: figure out what I’m doing)
 - [ ] Rewrite as fully-fledged stylesheet to replace rather than build off of Ao3’s core
 
+### Short-term to-do list
+- [ ] adjust sort and filter sidebar to match work index group
+- [x] figure out how to lower buttons/stats on work blurbs
+- [ ] add more fonts into font lists 
+- [ ] get rid of borders everywhere except for explicit elements
+- [ ] different unicode arrow characters for mobile because apparently roboto doesn't like it
+- [x] start setting up mobile values so creation of mobile ```RPPM.css``` is easier
+
 
 ## 4 Installation
-ReversiPlusPlus builds right off of Ao3’s existing stylesheet, so no extra add-ons or browser extensions required!
+```ReversiPlusPlus``` builds right off of Ao3’s existing stylesheet, so no extra add-ons or browser extensions required!
 
 Installing is as simple as **creating a new site skin** for your user. All user site skins are private by default — no worries about accidentally making something public.
 
@@ -124,7 +133,7 @@ To create a new site skin:
 
 	1. The ```Type``` field must be set to ```Site Skin```.
 	2. The ```Title``` field must have a value in it, and that value **must be unique** because Ao3 only distinguishes user site skins by name, not by user.
-	3. The ```CSS``` field must have CSS in it — i.e., the text in [```ReversiPlusPlus.css```](https://github.com/galaxygrotesque/ReversiPlusPlus/blob/main/css/ReversiPlusPlus.css). Copy + paste baybeeee ✨
+	3. The ```CSS``` field must have CSS in it — i.e., the text in [```ReversiPlusPlus.css```](https://github.com/galaxygrotesque/ReversiPlusPlus/blob/main/css/ReversiPlusPlus.css) or [```ReversiPlusPlus-Mobile.css```](https://github.com/galaxygrotesque/ReversiPlusPlus/blob/main/css/ReversiPlusPlus-Mobile.css). Copy + paste baybeeee ✨
 
 	**Don’t submit just yet!**
 	
