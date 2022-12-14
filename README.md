@@ -4,13 +4,20 @@
 **This project is a work-in-progress.** Please bear with me while I find my style sheet legs.
 
 
-## 1 Features
-✅ **[Darker colours!](https://github.com/galaxygrotesque/ReversiPlusPlus#11-dark-mode-redux)**  
-✅ **[Colourfully obvious tags trapped in a scroll box!](https://github.com/galaxygrotesque/ReversiPlusPlus#12-colour-coded-tags-that-pop)**  
-✅ **[Dope fonts (if you’re willing to install them)!](https://github.com/galaxygrotesque/ReversiPlusPlus#13-custom-fonts)**
+## 1 Previews
+| Reversi++                        | Reversi++ M                             |
+| :------------------------------- | :-------------------------------------- |
+| ![](img/preview-reversiplusplus) | ![](img/preview-reversiplusplus-mobile) |
 
 
-### 1.1 Dark mode redux
+
+## 2 Features
+✅ **[Darker colours!](https://github.com/galaxygrotesque/ReversiPlusPlus#21-dark-mode-redux)**  
+✅ **[Colourfully obvious tags trapped in a scroll box!](https://github.com/galaxygrotesque/ReversiPlusPlus#22-colour-coded-tags-that-pop)**  
+✅ **[Dope fonts (if you’re willing to install them)!](https://github.com/galaxygrotesque/ReversiPlusPlus#23-custom-fonts)**
+
+
+### 2.1 Dark mode redux
 If you:
 - hate reading on a stark white background
 - hate reading on a *light* background
@@ -23,12 +30,12 @@ Inspired by Mozilla Firefox’s dark colour scheme, ```ReversiPlusPlus```:
 - Uses a darker colour palette that is easier on the eye
 - Reduces visual noise by relying on colour/element contrast rather than borders and lines
 
-|                Vanilla Ao3                |                  Reversi                   | ReversiPlusPlus |
-| :---------------------------------------: | :----------------------------------------: | :-------------- |
-| ![](img/comparison-reversi-vanilla-theme) | ![](img/comparison-reversi-plusplus-theme) |                 |
+|                    Ao3                    |                  Reversi                   | Reversi++ |
+| :---------------------------------------: | :----------------------------------------: | :-------- |
+| ![](img/comparison-reversi-vanilla-theme) | ![](img/comparison-reversi-plusplus-theme) |           |
 
 
-### 1.2 Colour-coded tags that ✨pop✨
+### 2.2 Colour-coded tags that ✨pop✨
 Tags are essential when trying to find stories you want to read, but they’re often lost in the noise.
 
 With ```ReversiPlusPlus```, tags are colour-coded by category!
@@ -41,12 +48,12 @@ In the case of tag-heavy works, tags are also confined to a scroll box!
 - Tags are confined to ~4 lines per work blurb
 - If the number of tags exceeds ~4 lines in a particular blurb, the overflow will be trapped in scroll box jail
 
-|             Vanilla Ao3 Tags             |               Reversi Tags                | ReversiPlusPlus Tags |
-| :--------------------------------------: | :---------------------------------------: | :------------------- |
-| ![](img/comparison-reversi-vanilla-tags) | ![](img/comparison-reversi-plusplus-tags) |                      |
+|             Ao3              |             Reversi              | Reversi++                                |
+| :--------------------------: | :------------------------------: | :--------------------------------------- |
+| ![](img/comparison-ao3-tags) | ![](img/comparison-reversi-tags) | ![](img/comparison-reversiplusplus-tags) |
 
 
-### 1.3 Custom fonts
+### 2.3 Custom fonts
 - **Good news:** ```ReversiPlusPlus``` uses some common web-safe and system font alternatives in addition to Ao3’s default fonts!
 
 - **Bad news:** Due to how Ao3 handles user skins and limits CSS, they can’t be automatically packaged with or built into the skin. (I went through a grieving process here. Trust me, I really wish they could.)
@@ -55,36 +62,22 @@ This means **if you want alternative fonts** to appear, you’ll have to **insta
 
 For your convenience, here is a handy table containing (most) of the fonts and where to find them.
 
-| Font Family                                                                                   | Category   | Availability  |
-| :-------------------------------------------------------------------------------------------- | :--------- | :-----------: |
-| [Charter](https://fontesk.com/charter-typeface/)                                              | Serif      | ```* @    ``` |
-| [Fira Code](https://fonts.google.com/specimen/Fira+Code)                                      | Monospaced | ```*      ``` |
-| [Helvetica Neue](https://myfonts.com/collections/neue-helvetica-font-linotype)                | Sans-serif | ```  @   $``` |
-| [IBM Plex Mono](https://fonts.google.com/specimen/IBM+Plex+Mono)                              | Monospaced | ```*      ``` |
-| [IBM Plex Sans](https://fonts.google.com/specimen/IBM+Plex+Sans)                              | Sans-serif | ```*      ``` |
-| [IBM Plex Serif](https://fonts.google.com/specimen/IBM+Plex+Serif)                            | Serif      | ```*      ``` |
-| [Lato](https://fonts.google.com/specimen/Lato)                                                | Sans-serif | ```*      ``` |
-| [Libre Baskerville](https://fonts.google.com/specimen/Libre+Baskerville)                      | Serif      | ```*      ``` |
-| [Literata](https://fonts.google.com/specimen/Literata)                                        | Serif      | ```*      ``` |
-| [Lora](https://fonts.google.com/specimen/Lora)                                                | Serif      | ```*      ``` |
-| [Menlo](https://github.com/hbin/top-programming-fonts/blob/master/Menlo-Regular.ttf)          | Monospaced | ```* @    ``` |
-| [Noto Sans](https://fonts.google.com/specimen/Noto+Sans)                                      | Sans-serif | ```*      ``` |
-| [Noto Serif](https://fonts.google.com/specimen/Noto+Serif)                                    | Serif      | ```*      ``` |
-| [Palatino](https://myfonts.com/collections/palatino-font-linotype)                            | Serif      | ```  @   $``` |
-| [Palatino Linotype](https://learn.microsoft.com/en-us/typography/font-list/palatino-linotype) | Serif      | ```    #  ``` |
-| [Proxima Nova](https://fonts.adobe.com/fonts/proxima-nova)                                    | Sans-serif | ```  @   $``` |
-| [Source Code Pro](https://fonts.google.com/specimen/Source+Code+Pro)                          | Monospaced | ```*      ``` |
-| [Source Sans 3](https://fonts.google.com/specimen/Source+Sans+3)                              | Sans-serif | ```*      ``` |
-| [Source Serif 4](https://fonts.google.com/specimen/Source+Serif+4)                            | Serif      | ```*      ``` |
+| Serif                                                                                         |               | Sans-Serif                                                                     |               | Monospaced                                                                           |               |
+| :-------------------------------------------------------------------------------------------- | :-----------: | :----------------------------------------------------------------------------- | :-----------: | :----------------------------------------------------------------------------------- | :-----------: |
+| [Charter](https://fontesk.com/charter-typeface/)                                              | ```* @    ``` | [Helvetica Neue](https://myfonts.com/collections/neue-helvetica-font-linotype) | ```  @   $``` | [Fira Code](https://fonts.google.com/specimen/Fira+Code)                             | ```*      ``` |
+| [IBM Plex Serif](https://fonts.google.com/specimen/IBM+Plex+Serif)                            | ```*      ``` | [IBM Plex Sans](https://fonts.google.com/specimen/IBM+Plex+Sans)               | ```*      ``` | [IBM Plex Mono](https://fonts.google.com/specimen/IBM+Plex+Mono)                     | ```*      ``` |
+| [Libre Baskerville](https://fonts.google.com/specimen/Libre+Baskerville)                      | ```*      ``` | [Lato](https://fonts.google.com/specimen/Lato)                                 | ```*      ``` | [Menlo](https://github.com/hbin/top-programming-fonts/blob/master/Menlo-Regular.ttf) | ```* @    ``` |
+| [Literata](https://fonts.google.com/specimen/Literata)                                        | ```*      ``` | [Noto Sans](https://fonts.google.com/specimen/Noto+Sans)                       | ```*      ``` | [Source Code Pro](https://fonts.google.com/specimen/Source+Code+Pro)                 | ```*      ``` |
+| [Lora](https://fonts.google.com/specimen/Lora)                                                | ```*      ``` | [Proxima Nova](https://fonts.adobe.com/fonts/proxima-nova)                     | ```  @   $``` |                                                                                      |               |
+| [Noto Serif](https://fonts.google.com/specimen/Noto+Serif)                                    | ```*      ``` | [Source Sans 3](https://fonts.google.com/specimen/Source+Sans+3)               | ```*      ``` |                                                                                      |               |
+| [Palatino](https://myfonts.com/collections/palatino-font-linotype)                            | ```  @   $``` |                                                                                |               |                                                                                      |               |
+| [Palatino Linotype](https://learn.microsoft.com/en-us/typography/font-list/palatino-linotype) | ```    #  ``` |                                                                                |               |                                                                                      |               |
+| [Source Serif 4](https://fonts.google.com/specimen/Source+Serif+4)                            | ```*      ``` |                                                                                |               |                                                                                      |               |
 
 ```*``` − Web font (i.e., free!)  
 ```@``` − iOS/iPadOS system font  
 ```#``` − Windows Office cloud font  
 ```$``` − Paid
-
-
-## 2 Screenshots
-[To add]
 
 
 ## 3 Road map
