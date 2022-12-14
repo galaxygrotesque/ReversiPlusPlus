@@ -903,14 +903,15 @@ fieldset.listbox .heading,
 
 div.preface {
 	margin: 1.5em 4em 3em 4em;
-	padding: .65em .65em 0;
+	padding: .65em .65em 0 .65em;
 	float: none;
 }
 
-/* mobile: decreases summary+author’s note margins so you don’t get a ridiculously slim box running down the page */
-/* #chapters div.preface {
+/* mobile replacement: decreases summary+author’s note margins so you don’t get a ridiculously slim box running down the page */
+/* div.preface {
 	margin: 1.5em .5em 3em .5em;
-	padding: .65em;
+	padding: .65em .65em 0 .65em;
+	float: none;
 } */
 
 div.preface .module {
@@ -1044,6 +1045,11 @@ li.comment {
 /* STOP */
 a.tag:hover {
 	background: transparent;
+}
+
+/* minimise mobile tag clump hell */
+.tags {
+	line-height: 1.75em;
 }
 
 /* tag-specific link attributes — makes tag bubbles! */
@@ -1289,7 +1295,7 @@ a.tag:hover {
 
 .blurb .datetime,
 .datetime {
-	font-size: small;
+	font-size: small;	/* mobile: x-small; */
 	line-height: 1.25em;
 }
 
