@@ -9,23 +9,23 @@
   - tag bubbles:		@nyxmidnight		(https://github.com/nyxmidnight) (https://github.com/nyxmidnight/ao3tagsfonts)
   - typography:			mb					(https://practicaltypography.com/index.html)
   - fonts:
-		*				charter			(https://fontesk.com/charter-typeface/)
-		*				fira code		(https://fonts.google.com/specimen/Fira+Code)
-			@ 		$	helvetica neue	(https://www.myfonts.com/collections/neue-helvetica-font-linotype)
-		*				ibm plex mono	(https://fonts.google.com/specimen/IBM+Plex+Mono)
-		*				ibm plex sans	(https://fonts.google.com/specimen/IBM+Plex+Sans)
-		*				ibm plex serif	(https://fonts.google.com/specimen/IBM+Plex+Serif)
-		*				lato			(https://fonts.google.com/specimen/Lato)
-		*				literata		(https://fonts.google.com/specimen/Literata)
-		*				libre bask.		(https://fonts.google.com/specimen/Libre+Baskerville)
-		*	@			menlo			(https://github.com/hbin/top-programming-fonts/blob/master/Menlo-Regular.ttf)
-		*				noto sans		(https://fonts.google.com/specimen/Noto+Sans)
-		*				noto serif		(https://fonts.google.com/specimen/Noto+Serif)
-			@ 		$	palatino		(https://www.myfonts.com/collections/palatino-font-linotype)
-			@		$	proxima nova	(https://fonts.adobe.com/fonts/proxima-nova)
-		*				source code pro	(https://fonts.google.com/specimen/Source+Code+Pro)
-		*				source sans 3	(https://fonts.google.com/specimen/Source+Sans+3)
-		*				source serif 4	(https://fonts.google.com/specimen/Source+Serif+4)
+		*				charter				(https://fontesk.com/charter-typeface/)
+		*				fira code			(https://fonts.google.com/specimen/Fira+Code)
+			@ 		$	helvetica neue		(https://www.myfonts.com/collections/neue-helvetica-font-linotype)
+		*				ibm plex mono		(https://fonts.google.com/specimen/IBM+Plex+Mono)
+		*				ibm plex sans		(https://fonts.google.com/specimen/IBM+Plex+Sans)
+		*				ibm plex serif		(https://fonts.google.com/specimen/IBM+Plex+Serif)
+		*				lato				(https://fonts.google.com/specimen/Lato)
+		*				literata			(https://fonts.google.com/specimen/Literata)
+		*				libre baskerville	(https://fonts.google.com/specimen/Libre+Baskerville)
+		*	@			menlo				(https://github.com/hbin/top-programming-fonts/blob/master/Menlo-Regular.ttf)
+		*				noto sans			(https://fonts.google.com/specimen/Noto+Sans)
+		*				noto serif			(https://fonts.google.com/specimen/Noto+Serif)
+			@ 		$	palatino			(https://www.myfonts.com/collections/palatino-font-linotype)
+			@		$	proxima nova		(https://fonts.adobe.com/fonts/proxima-nova)
+		*				source code pro		(https://fonts.google.com/specimen/Source+Code+Pro)
+		*				source sans 3		(https://fonts.google.com/specimen/Source+Sans+3)
+		*				source serif 4		(https://fonts.google.com/specimen/Source+Serif+4)
 
 	* web font (i.e., free!)
 	@ iOS/iPadOS system font
@@ -1068,7 +1068,7 @@ a.tag:hover {
 	border-radius: .75em;
 	color: #eee;
 	display: inline-block;
-	font-size: .9em;	/* mobile: .85em; */
+	font-size: .9em;
 	margin: 1px 0;
 	overflow: hidden;
 	padding: .5px 6px;
@@ -1083,7 +1083,7 @@ a.tag:hover {
 	border-radius: .75em;
 	color: #eee;
 	display: inline-block;
-	font-size: .9em;	/* mobile: .85em; */
+	font-size: .9em;
 	margin: 1px 6px 1px 0;
 	overflow: hidden;
 	padding: 1px 2px 1px 9px;
@@ -1098,7 +1098,7 @@ a.tag:hover {
 .work.meta .commas a.tag:hover {
 	background: #eee;
 	border-color: #eee;
-	color: /*#2b2a33*/ #0b0b0b;
+	color: #0b0b0b;
 }
 
 /* tag bubble visited colours */
@@ -1140,7 +1140,7 @@ a.tag:hover {
 .work.meta .character.tags .commas li a:hover {
 	background: #eee;
 	border-color: #eee;
-	color: #337e00;
+	color: #0b0b0b;
 }
 
 /* characters tag visited colours */
@@ -1161,7 +1161,7 @@ a.tag:hover {
 .work.meta .character.tags .commas li a:visited:hover {
 	background: #eee;
 	border-color: #eee;
-	color: #204d02;
+	color: #0b0b0b;
 }
 
 /* relationships tag colours */
@@ -1182,7 +1182,7 @@ a.tag:hover {
 .work.meta .relationship.tags .commas li a:hover {
 	background: #eee;
 	border-color: #eee;
-	color: #0e60b0;
+	color: #0b0b0b;
 }
 
 /* relationships tag visited colours */
@@ -1203,7 +1203,7 @@ a.tag:hover {
 .work.meta .relationship.tags .commas li a:visited:hover {
 	background: #eee;
 	border-color: #eee;
-	color: #124679;
+	color: #0b0b0b;
 }
 
 /* warning tag colours */
@@ -1223,7 +1223,7 @@ a.tag:hover {
 .work.meta .warning.tags .commas li a:hover {
 	background: #eee;
 	border-color: #eee;
-	color: #8d0203;
+	color: #0b0b0b;
 }
 
 /* warning tag visited colours */
@@ -1243,7 +1243,7 @@ a.tag:hover {
 .work.meta .warning.tags .commas li a:visited:hover {
 	background: #eee;
 	border-color: #eee;
-	color: #5f0102;
+	color: #0b0b0b;
 }
 
 /* de-bubble rating/cat/fandom */
@@ -1266,7 +1266,7 @@ a.tag:hover {
 .work.meta .rating.tags .commas a:hover,
 .work.meta .rating.tags .commas a:visited:hover {
 	border-bottom: 1px dotted #9ecfff;
-	color: #9ecfff;
+	color: #0b0b0b;
 }
 
 /* de-bubble fandom labels in work blurbs/work page */
