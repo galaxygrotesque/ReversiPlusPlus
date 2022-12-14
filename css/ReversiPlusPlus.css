@@ -473,62 +473,32 @@ dl.meta {
 
 /* ---+ 04. HEADER +--- */
 
-/* gives user greeting some breathing room */
-#greeting {
-	padding: .5em 0;
-}
-
-#greeting .menu,
-#header .menu {
-	padding: 0;
-}
-
 /* dark header bg at the top */
 #header {
 	background: #151319 !important;
 	color: #fff;
 }
 
-/* "archiveofourown beta" text pop on hover */
-#header #greeting img,
-#header fieldset,
-#header form,
-#header p,
-#header .heading a:focus,
-#header .heading a:hover,
-#header .heading a:hover:visited,
-#tos_prompt .heading {
-	color: #5998d6;
+#header .heading {
+	float: left;
+	padding: 0.375em;
 }
 
-/* header searchbar colours */
-#header #search .text,
-#header #search .text:active {
-	background: #23222b;
+#header {
+	font-size: 0.875em;
+	margin: 0 0 1em;
+	padding: 0;
+	position: relative;
 }
 
-/* header searchbar colours */
-#header #search input:focus,
-#header #search .text:focus,
-#header #search .text:hover {
-	background: #2b2a33;
-	border-color: transparent;
-	color: #fff;
-}
-
-/* small margin fix in searchbar */
-#header #search .text {
-	margin: .3em .43em;
-}
-
-/* header searchbar remain round */
-#header form.search input[type="text"] {
-	border-radius: 1em;
+#header li {
+	display: block;
+	float: left;
+	position: relative;
 }
 
 #header a,
 #header a:visited,
-#header .heading a,
 #header .heading a:visited,
 #header .primary .open a,
 #header .primary .dropdown:hover a,
@@ -537,19 +507,11 @@ dl.meta {
 	color: #fff;
 }
 
-/* "archiveofourown beta" lighter text pop on active */
-#header .heading a:active {
-	color: #9ecfff;
-}
-
-/* why are we still using weird noise jpgs as banners please stop */
-#header ul.primary {
-	background: #30679e;
-}
-
-/* stay square, nav buttons */
-#header ul.primary {
-	border-radius: 0 !important;
+#header .actions a:hover,
+#header .actions a:focus,
+#header .dropdown:hover a,
+#header .open a {
+  background: #ddd;
 }
 
 /* header nav buttons as blue: fandoms/browse/search/about */
@@ -566,10 +528,10 @@ dl.meta {
 }
 
 /* header dropdown menu bgs */
+#header .actions a:hover,
 #header .dropdown:hover a,
-#header .user .open a:focus,
-#header .primary .dropdown a:focus,
-#header .actions a:hover {
+#header /*.primary*/ .dropdown a:focus,
+#header .user .open a:focus {
 	background: #4e4e5e;
 	color: #fff;
 }
@@ -577,9 +539,11 @@ dl.meta {
 /* dropdowns are hover colour */
 #header .dropdown .menu a,
 #greeting .dropdown .menu a {
+	background: #4e4e5e;
 	border-color: #4e4e5e;
-	/*border-radius: .25em;*/
 	color: #eee;
+	display: block;
+	padding: 0.75em 0.5em 0.5em;	
 }
 
 /* dropdown menu links with dark hover */
@@ -601,14 +565,79 @@ dl.meta {
 	margin: auto;
 }
 
+#header .heading a {
+	color: #fff;
+	font-size: 1.714em;
+	line-height: 1.75em;
+}
+
+#header .heading sup {
+	font-size: 0.583em;
+	font-style: italic;
+}
+
+#header .logo {
+	float: left;
+	height: 42px;
+}
+
+/* "archiveofourown beta" lighter text pop on active */
+#header .heading a:active {
+	color: #9ecfff;
+}
+
+#header .landmark {
+	clear: none;
+	font-size: 0;
+	border: none;
+}
+
+/* why are we still using weird noise jpgs as banners please stop */
+#header .primary {
+	background: #30679e;
+	padding: 0 0;
+	width: 100%;
+}
+
+#header .menu,
+#greeting .menu {
+	padding: 0;
+}
+
+/* "archiveofourown beta" text pop on hover */
+#header #greeting img,
+#header fieldset,
+#header form,
+#header p,
+#header .heading a:focus,
+#header .heading a:hover,
+#header .heading a:hover:visited,
+#tos_prompt .heading {
+	color: #5998d6;
+}
+
+/* stay square, nav buttons */
+#header ul.primary {
+	border-radius: 0 !important;
+}
+
+#header .menu li {
+	border-bottom: 0;
+	margin: 0 .25em;
+	text-align: left;
+}
+
+#header .menu li:last-child {
+	border-bottom: 0;
+}
+
 #header .open a,
 #small_login {
 	background: #23222b;
 }
 
 /* user/post/login not blue */
-#header .user a
-/*#header .user .open a*/ {
+#header .user a {
 	background: transparent;
 	border: transparent;
 }
@@ -624,6 +653,96 @@ fieldset.listbox .heading,
 .userstuff h2 {
 	background: none;
 	color: #fff;
+}
+
+
+/** search section **/
+#header .search {
+	float: right;
+	color: #eee;
+	margin-right: 0.25em;
+}
+
+#header #search .text,
+#header #search .button {
+	border: none;
+}
+
+/* small margin fix in searchbar */
+#header #search .text {
+	margin: .3em .43em;
+}
+
+#header #search .button {
+	margin: 0;
+}
+
+/* header searchbar colours */
+#header #search .text,
+#header #search .text:active {
+	background: #23222b;
+}
+
+/* header searchbar colours */
+#header #search input:focus,
+#header #search .text:focus,
+#header #search .text:hover {
+	background: #2b2a33;
+	border-color: transparent;
+	color: #fff;
+}
+
+/* header searchbar remain round */
+#header form.search input[type="text"] {
+	border-radius: 1em;
+}
+
+/* gives user greeting some breathing room */
+#greeting {
+	padding: .5em 0;
+}
+
+#greeting .user > li {
+	margin: 0 0.125em;
+}
+
+#greeting .menu {
+	right: 0;
+}
+
+#header input,
+#header #search>*,
+#header #search .submit {
+	display: inline;
+	float: none;
+}
+
+/* check login and greeting; was a quick fix to remove bg */
+#header a,
+#header fieldset,
+#header form,
+#header p,
+#header li,
+#header h1,
+#small_login dl {
+	background: transparent;
+	font-size: 100%;
+	border: 0;
+	padding: 0;
+	margin: 0;
+	border-radius: 0;
+}
+
+/* collections header */
+#header h2 {
+	border-top: 0;
+	clear: both;
+	color: #fff;
+	display: block;
+	font-size: 1.714em;
+	line-height: 1.5;
+	margin: 0;
+	padding: 0 .375em;
 }
 
 
@@ -686,7 +805,7 @@ fieldset.listbox .heading,
 
 /* no more noise.jpg */
 #outer #footer {
-	background: #30679e;;
+	background: #30679e;
 }
 
 #outer .region,
@@ -1161,6 +1280,13 @@ a.tag:hover {
 	margin: 1em 0;
 }
 
+.bookmark .user {
+  border: 0;
+  margin-top: 0.643em;
+  padding: 0.429em 0.75em;
+  overflow: hidden;
+}
+
 .blurb .datetime,
 .datetime {
 	font-size: small;
@@ -1182,10 +1308,11 @@ ul.required-tags,
 	opacity: .9;
 }
 
-/* cushion work blurb stats */
+/* cushion work blurb stats, align with bottom of listbox */
 .blurb dl.stats {
 	margin-top: 1em;
-	margin-bottom: .65em;
+	margin-bottom: .55em;
+	line-height: 1.25em;
 }
 
 /* gives work blurb some cushion between bottom buttons */
@@ -1239,6 +1366,22 @@ ul.tags.commas li.characters:first-child {
 .meta dd ul li {
 	padding-right: .5em;
 	padding-left: 0;
+}
+
+/* de-bubble bookmarker tags */
+.bookmark.blurb .meta.tags.commas a.tag {
+	background: revert;
+	border: 0;
+	border-bottom: 1px dotted #fff;
+	border-radius: revert;
+	color: #fff;
+	display: inline;
+	padding: revert;
+}
+
+/* de-bubble bookmarker hover tags */
+.bookmark.blurb .meta.tags.commas a.tag:hover {
+	color: #9ecfff;
 }
 
 /* de-bubble bookmark hover tags */
@@ -1585,8 +1728,11 @@ dl.index dd {
 
 /* adjust bookmark icons */
 .bookmark.blurb p.status {
-	margin: 0;
 	right: .5em;
+}
+
+.bookmark .datetime {
+	top: 30px;
 }
 
 /* changed bookmark box colours; might tweak more */
