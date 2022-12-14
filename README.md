@@ -94,7 +94,7 @@ For your convenience, here is a handy table containing (most) of the fonts and w
 - [ ] Tidy code (read: figure out what I’m doing)
 - [ ] Rewrite as fully-fledged stylesheet to replace rather than build off of Ao3’s core
 
-### Short-term to-do list
+### 3.1 Short-term to-do list
 - [ ] adjust sort and filter sidebar to match work index group
 - [x] figure out how to lower buttons/stats on work blurbs
 - [ ] add more fonts into font lists 
