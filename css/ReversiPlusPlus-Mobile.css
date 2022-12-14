@@ -1,31 +1,35 @@
 /*
-  ---+ REVERSI PLUS PLUS +---
+  ---+ REVERSI PLUS PLUS MOBILE +---
   this is horrendously messy i am so sorry
   if it looks like i know what i'm doing, rest assured: i do not
 
   ++ CREDITS & ACKNOWLEDGEMENTS ++
-  - reversi base:	archiveofourown	(https://archiveofourown.org/skins/929)
-  - tag scroll box:	archiveofourown	(https://archiveofourown.org/skins/3756)
-  - tag bubbles:	@nyxmidnight	(https://github.com/nyxmidnight) (https://github.com/nyxmidnight/ao3tagsfonts)
-  - typography:		mb		(https://practicaltypography.com/index.html)
+  - reversi base:		archiveofourown		(https://archiveofourown.org/skins/929)
+  - tag scroll box:		archiveofourown		(https://archiveofourown.org/skins/3756)
+  - tag bubbles:		@nyxmidnight		(https://github.com/nyxmidnight) (https://github.com/nyxmidnight/ao3tagsfonts)
+  - typography:			mb					(https://practicaltypography.com/index.html)
   - fonts:
-		*	charter		(https://fontesk.com/charter-typeface/)
-		*	fira code	(https://fonts.google.com/specimen/Fira+Code)
-		@ $	helvetica neue	(https://www.myfonts.com/collections/neue-helvetica-font-linotype)
-		*	ibm plex sans	(https://fonts.google.com/specimen/IBM+Plex+Sans)
-		*	ibm plex serif	(https://fonts.google.com/specimen/IBM+Plex+Serif)
-		*	literata	(https://fonts.google.com/specimen/Literata)
-		* @ 	menlo		(https://github.com/hbin/top-programming-fonts/blob/master/Menlo-Regular.ttf)
-		*	noto sans	(https://fonts.google.com/specimen/Noto+Sans)
-		@ $	palatino	(https://www.myfonts.com/collections/palatino-font-linotype)
-		@ $	proxima nova	(https://fonts.adobe.com/fonts/proxima-nova)
-		*	source code pro	(https://fonts.google.com/specimen/Source+Code+Pro)
-		*	source sans 3	(https://fonts.google.com/specimen/Source+Sans+3)
-		*	source serif 4	(https://fonts.google.com/specimen/Source+Serif+4)
+	*			charter			(https://fontesk.com/charter-typeface/)
+	*			fira code		(https://fonts.google.com/specimen/Fira+Code)
+		@ 	$	helvetica neue	(https://www.myfonts.com/collections/neue-helvetica-font-linotype)
+	*			ibm plex mono	(https://fonts.google.com/specimen/IBM+Plex+Mono)
+	*			ibm plex sans	(https://fonts.google.com/specimen/IBM+Plex+Sans)
+	*			ibm plex serif	(https://fonts.google.com/specimen/IBM+Plex+Serif)
+	*			lato			(https://fonts.google.com/specimen/Lato)
+	*			literata		(https://fonts.google.com/specimen/Literata)
+	*			libre bask.		(https://fonts.google.com/specimen/Libre+Baskerville)
+	*	@		menlo			(https://github.com/hbin/top-programming-fonts/blob/master/Menlo-Regular.ttf)
+	*			noto sans		(https://fonts.google.com/specimen/Noto+Sans)
+	*			noto serif		(https://fonts.google.com/specimen/Noto+Serif)
+		@ 	$	palatino		(https://www.myfonts.com/collections/palatino-font-linotype)
+		@	$	proxima nova	(https://fonts.adobe.com/fonts/proxima-nova)
+	*			source code pro	(https://fonts.google.com/specimen/Source+Code+Pro)
+	*			source sans 3	(https://fonts.google.com/specimen/Source+Sans+3)
+	*			source serif 4	(https://fonts.google.com/specimen/Source+Serif+4)
 
-		* web font (or free!)
-		@ iOS system font
-		$ paid (not free ... unless system font)
+	* web font (i.e., free!)
+	@ iOS/iPadOS system font
+	$ paid
 
   ++ SECTIONS ++
   00. colour guide
@@ -501,6 +505,7 @@ dl.meta {
 #header a:visited,
 #header .heading a:visited,
 #header .primary .open a,
+#header .primary .open a:focus,
 #header .primary .dropdown:hover a,
 #header .user a:focus,
 .filters dt a:hover {
