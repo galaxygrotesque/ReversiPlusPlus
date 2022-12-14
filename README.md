@@ -5,10 +5,9 @@
 
 
 ## 1 Features
-**TL;DR:**
-- [Darker colours!](https://github.com/galaxygrotesque/ReversiPlusPlus#dark-mode-redux)
-- [Colourfully obvious tags trapped in a scroll box!](https://github.com/galaxygrotesque/ReversiPlusPlus#colour-coded-tags-that-pop)
-- [Dope fonts (if you’re willing to install them)!](https://github.com/galaxygrotesque/ReversiPlusPlus#custom-fonts)
+✅ **[Darker colours!](https://github.com/galaxygrotesque/ReversiPlusPlus#11-dark-mode-redux)**  
+✅ **[Colourfully obvious tags trapped in a scroll box!](https://github.com/galaxygrotesque/ReversiPlusPlus#12-colour-coded-tags-that-pop)**  
+✅ **[Dope fonts (if you’re willing to install them)!](https://github.com/galaxygrotesque/ReversiPlusPlus#13-custom-fonts)**
 
 
 ### 1.1 Dark mode redux
@@ -90,7 +89,7 @@ For your convenience, here is a handy table containing (most) of the fonts and w
 
 ## 3 Road map
 - [x] Mobile-specific ```RPP.css```
-	- [ ] Refine mobile ```RPP.css```
+	- [ ] Refine ```RPPM.css```
 - [ ] Vet and add support for more fonts
 - [ ] Tidy code (read: figure out what I’m doing)
 - [ ] Rewrite as fully-fledged stylesheet to replace rather than build off of Ao3’s core
