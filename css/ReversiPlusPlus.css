@@ -1047,10 +1047,10 @@ a.tag:hover {
 	background: transparent;
 }
 
-/* minimise mobile tag clump hell */
-.tags {
+/* mobile: minimise mobile tag clump hell */
+/*.work.meta.group .tags {
 	line-height: 1.75em;
-}
+}*/
 
 /* tag-specific link attributes — makes tag bubbles! */
 .bookmark.blurb .commas a.tag,
@@ -1062,7 +1062,7 @@ a.tag:hover {
 	border-radius: .75em;
 	color: #eee;
 	display: inline-block;
-	font-size: .9em;
+	font-size: .9em;	/* mobile: .85em; */
 	margin: 1px 0;
 	overflow: hidden;
 	padding: .5px 6px;
@@ -1077,7 +1077,7 @@ a.tag:hover {
 	border-radius: .75em;
 	color: #eee;
 	display: inline-block;
-	font-size: .9em;
+	font-size: .9em;	/* mobile: .85em; */
 	margin: 1px 6px 1px 0;
 	overflow: hidden;
 	padding: 1px 2px 1px 9px;
@@ -1299,10 +1299,9 @@ a.tag:hover {
 	line-height: 1.25em;
 }
 
-
 /* makes tag scroll box for those 10000+ tag fics so you don't have to scroll for like ten minutes */
 li.blurb .tags {
-	max-height: 8em;
+	max-height: 8em;	/* mobile: 10em; */
 	overflow-y: auto;
 }
 
@@ -1586,8 +1585,6 @@ form dd.required,
 /* nix dash button lines */
 #dashboard ul {
 	border: 0;
-	/* display: inline-block; */
-	/* padding: 1.25em .5em; */	/* ao3 CSS restrictions are why we can't have nice things */
 }
 
 /* dark dashboard backdrop, smaller font size, more padding */
