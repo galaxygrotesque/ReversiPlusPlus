@@ -1042,7 +1042,7 @@ a.tag:hover {
 }
 
 /* minimise mobile tag clump hell */
-.tags {
+.work.meta.group .tags {
 	line-height: 1.75em;
 }
 
@@ -1293,10 +1293,9 @@ a.tag:hover {
 	line-height: 1.25em;
 }
 
-
 /* makes tag scroll box for those 10000+ tag fics so you don't have to scroll for like ten minutes */
 li.blurb .tags {
-	max-height: 8em;
+	max-height: 10em;
 	overflow-y: auto;
 }
 
@@ -1339,28 +1338,6 @@ ul.required-tags,
 .commas li.last {
 	padding: 0;
 }
-
-/*
-padding problem between li classes i gotta fix
-(ref: dl.meta dd ul li:first-child) 
-
-li.warnings a:last-child,
-li.relationships a:last-child,
-li.characters a:last-child {
-}
-
-ul.commas
-
-.commas.warnings li:last-child {
-	padding-right: .5em;
-	
-}
-
-ul.tags.commas li.characters:first-child {
-	padding-left: .25em;
-}
- 
-*/
 
 /* knock tag bubbles on work page back into alignment */
 .meta dd ul li {
