@@ -885,8 +885,8 @@ fieldset.listbox .heading,
 
 /* embiggen fic margins! in this house we appreciate white space */
 #chapters .userstuff p {
-	margin-left: 2.5em;	/* mobile: 1.5em */
-	margin-right: 2.5em;	/* mobile: 1.5em */
+	margin-left: 2.5em;	/* mobile: 1em; */
+	margin-right: 2.5em;	/* mobile: 1em; */
 }
 
 /* slightly bigger pre because otherwise it looks like it's for ants */
@@ -908,14 +908,14 @@ fieldset.listbox .heading,
 }
 
 div.preface {
-	margin: 1.5em 4em 3em 4em;
+	margin: 1.5em 4em 5em 4em;
 	padding: .65em .65em 0 .65em;
 	float: none;
 }
 
 /* mobile replacement: decreases summary+author’s note margins so you don’t get a ridiculously slim box running down the page */
 /* div.preface {
-	margin: 1.5em .5em 3em .5em;
+	margin: 1.5em .5em 5em .5em;
 	padding: .65em .65em 0 .65em;
 	float: none;
 } */
@@ -957,6 +957,7 @@ div.preface .byline {
 
 .preface blockquote {
 	border: 0;
+	/* mobile: margin: .65em 0; */
 }
 
 div.preface .notes,
