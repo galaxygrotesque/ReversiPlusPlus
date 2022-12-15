@@ -11,7 +11,7 @@
   - fonts:
 		*				charter				(https://fontesk.com/charter-typeface/)
 		*				fira code			(https://fonts.google.com/specimen/Fira+Code)
-			@ 		$	helvetica neue		(https://www.myfonts.com/collections/neue-helvetica-font-linotype)
+			@		$	helvetica neue		(https://www.myfonts.com/collections/neue-helvetica-font-linotype)
 		*				ibm plex mono		(https://fonts.google.com/specimen/IBM+Plex+Mono)
 		*				ibm plex sans		(https://fonts.google.com/specimen/IBM+Plex+Sans)
 		*				ibm plex serif		(https://fonts.google.com/specimen/IBM+Plex+Serif)
@@ -21,7 +21,8 @@
 		*	@			menlo				(https://github.com/hbin/top-programming-fonts/blob/master/Menlo-Regular.ttf)
 		*				noto sans			(https://fonts.google.com/specimen/Noto+Sans)
 		*				noto serif			(https://fonts.google.com/specimen/Noto+Serif)
-			@ 		$	palatino			(https://www.myfonts.com/collections/palatino-font-linotype)
+			@		$	palatino			(https://www.myfonts.com/collections/palatino-font-linotype)
+				#		palatino linotype	(https://learn.microsoft.com/en-us/typography/font-list/palatino-linotype)
 			@		$	proxima nova		(https://fonts.adobe.com/fonts/proxima-nova)
 		*				source code pro		(https://fonts.google.com/specimen/Source+Code+Pro)
 		*				source sans 3		(https://fonts.google.com/specimen/Source+Sans+3)
@@ -39,7 +40,7 @@
   03. actions
   04. header
   05. main
-  06. footer  
+  06. footer
   07. work reading adjustments (reading fonts here!)
   08. comments
   09. tags
@@ -74,7 +75,7 @@
 	--box-border-color-subtle: #454547;
 	--button-background-color: #2b2a33;
 	--button-current-color: #0b0b0b;
-	--button-highlight-color: #4e4e5e;	
+	--button-highlight-color: #4e4e5e;
 	--tag-bubble-color-visited-hover: #5b5b66;
 	--text-color: #eee;
 	--text-link-color: #fff;
@@ -82,6 +83,7 @@
 	--textbox-background-color: #23222b;
 }
 */
+
 
 
 
@@ -482,19 +484,18 @@ dl.meta {
 #header {
 	background: #151319 !important;
 	color: #fff;
+	font-size: .875em;
+	margin: 0 0 1em 0;
+	padding: 0;
+	position: relative;
 }
 
 #header .heading {
 	float: left;
-	padding: 0.375em;
+	padding: .375em;
 }
 
-#header {
-	font-size: 0.875em;
-	margin: 0 0 1em;
-	padding: 0;
-	position: relative;
-}
+
 
 #header li {
 	display: block;
@@ -549,7 +550,7 @@ dl.meta {
 	border-color: #4e4e5e;
 	color: #eee;
 	display: block;
-	padding: 0.75em 0.5em 0.5em;	
+	padding: .75em .5em .5em;
 }
 
 /* dropdown menu links with dark hover */
@@ -574,11 +575,11 @@ dl.meta {
 #header .heading a {
 	color: #fff;
 	font-size: 1.714em;
-	line-height: 1.75em;
+	line-height: 1.75;
 }
 
 #header .heading sup {
-	font-size: 0.583em;
+	font-size: .583em;
 	font-style: italic;
 }
 
@@ -666,7 +667,7 @@ fieldset.listbox .heading,
 #header .search {
 	float: right;
 	color: #eee;
-	margin-right: 0.25em;
+	margin-right: .25em;
 }
 
 #header #search .text,
@@ -709,7 +710,7 @@ fieldset.listbox .heading,
 }
 
 #greeting .user > li {
-	margin: 0 0.125em;
+	margin: 0 .125em;
 }
 
 #greeting .menu {
@@ -858,7 +859,7 @@ fieldset.listbox .heading,
 
 /* links don't be big stop it */
 #chapters .userstuff a {
-	font-size: revert;	
+	font-size: revert;
 }
 
 /* unfortunately blockquotes get weird with more white space so gotta fix that */
@@ -917,7 +918,7 @@ div.preface {
 div.preface .module {
 	float: none;
 	margin: 0;
-	padding: 0 0 .643em;
+	padding: 0 0 .65em;
 	width: auto;
 }
 
@@ -1050,7 +1051,7 @@ a.tag:hover {
 
 /* minimise mobile tag clump hell */
 .work.meta.group .tags {
-	line-height: 1.75em;
+	line-height: 1.7;
 }
 
 /* tag-specific link attributes — makes tag bubbles! */
@@ -1289,15 +1290,15 @@ a.tag:hover {
 
 .bookmark .user {
   border: 0;
-  margin-top: 0.643em;
-  padding: 0.429em 0.75em;
+  margin-top: .65em;
+  padding: .429em .75em;
   overflow: hidden;
 }
 
 .blurb .datetime,
 .datetime {
 	font-size: x-small;
-	line-height: 1.25em;
+	line-height: 1.25;
 }
 
 /* makes tag scroll box for those 10000+ tag fics so you don't have to scroll for like ten minutes */
@@ -1318,7 +1319,7 @@ ul.required-tags,
 .blurb dl.stats {
 	margin-top: 1em;
 	margin-bottom: .55em;
-	line-height: 1.25em;
+	line-height: 1.25;
 }
 
 /* gives work blurb some cushion between bottom buttons */
@@ -1457,9 +1458,9 @@ textarea.LV_invalid_field:active,
 .flash,
 .notice {
 	background: transparent;
-	border-color: #5998d6;	
+	border-color: #5998d6;
 	color: #eee;
-	padding: 0.5em .375em;
+	padding: .5em .375em;
 }
 
 #outer,
@@ -1514,7 +1515,7 @@ form dd.required,
 	border: 1px solid #78777d;
 	border-radius: .25em;
 	color: #eee;
-	margin: .643em auto;
+	margin: .65em auto;
 	padding: .25em .375em;
 }
 
@@ -1638,7 +1639,7 @@ form dd.required,
 	border: 0;
 	border-radius: .25em;
 	padding: 0;
-	margin: 0.75em auto;
+	margin: .75em auto;
 	overflow: hidden;
 }
 
