@@ -75,7 +75,7 @@ For your convenience, here is a handy table containing (most) of the fonts and w
 
 ```*``` − Web font (i.e., free!)  
 ```@``` − iOS/iPadOS system font  
-```#``` − Windows Office cloud font  
+```#``` − Mircrosoft Office cloud/Windows system font  
 ```$``` − Paid
 
 
@@ -84,7 +84,7 @@ For your convenience, here is a handy table containing (most) of the fonts and w
 
 Installing is as simple as **creating a new site skin** for your user. All user site skins are private by default — no worries about accidentally making something public.
 
-To create a new site skin:
+**To create a new site skin:**
 
 1. Navigate to [Archive Of Our Own](https://archiveofourown.org/).
 
@@ -104,7 +104,7 @@ To create a new site skin:
 	
 	![](img/install-steps-04.png)
 
-	Now fill in the following fields:
+	Fill in the following fields:
 
 	1. The ```Type``` field must be set to ```Site Skin```.
 	2. The ```Title``` field must have a value in it, and that value **must be unique** because Ao3 only distinguishes user site skins by name, not by user.
@@ -150,10 +150,10 @@ And voilà! There you have it. Skin installed. 🌠
 - [ ] Rewrite as fully-fledged stylesheet to replace rather than build off of Ao3’s core
 
 ### 3.1  Short-term to-do list
-- [ ] adjust sort and filter sidebar to match work index group
-- [x] figure out how to lower buttons/stats on work blurbs
-- [ ] add more fonts into font lists 
-- [ ] get rid of borders everywhere except for explicit elements
-- [ ] different unicode arrow characters for mobile because apparently roboto doesn't like it
-- [x] start setting up mobile values so creation of mobile ```RPPM.css``` is easier
+- [ ] Adjust sort and filter sidebar to match work index group
+- [x] Figure out how to lower buttons/stats on work blurbs
+- [ ] Add more fonts into font lists
+- [ ] Get rid of borders everywhere except for explicit elements
+- [ ] Different unicode arrow characters for mobile because apparently Roboto doesn’t like it
+- [x] Start setting up mobile values so creation of ```RPPM.css``` is easier
 
