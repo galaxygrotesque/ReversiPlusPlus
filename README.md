@@ -1,4 +1,5 @@
 ![](img/reversiplusplus-banner.png)
+
 # ReversiPlusPlus
 [Reversi](https://archiveofourown.org/skins/929) — but better. An Archive of Our Own “dark mode” reskin of Reversi with a focus on readability and less noise.
 
