@@ -4,20 +4,20 @@
 **This project is a work-in-progress.** Please bear with me while I find my style sheet legs.
 
 
-## 1 Previews
+## 1  Previews
 | Reversi++                        | Reversi++ M                             |
 | :------------------------------- | :-------------------------------------- |
 | ![](img/preview-reversiplusplus) | ![](img/preview-reversiplusplus-mobile) |
 
 
 
-## 2 Features
+## 2  Features
 ✅ **[Darker colours!](https://github.com/galaxygrotesque/ReversiPlusPlus#21-dark-mode-redux)**  
 ✅ **[Colourfully obvious tags trapped in a scroll box!](https://github.com/galaxygrotesque/ReversiPlusPlus#22-colour-coded-tags-that-pop)**  
 ✅ **[Dope fonts (if you’re willing to install them)!](https://github.com/galaxygrotesque/ReversiPlusPlus#23-custom-fonts)**
 
 
-### 2.1 Dark mode redux
+### 2.1  Dark mode redux
 If you:
 - hate reading on a stark white background
 - hate reading on a *light* background
@@ -35,7 +35,7 @@ Inspired by Mozilla Firefox’s dark colour scheme, ```ReversiPlusPlus```:
 | ![](img/comparison-reversi-vanilla-theme) | ![](img/comparison-reversi-plusplus-theme) |           |
 
 
-### 2.2 Colour-coded tags that ✨pop✨
+### 2.2  Colour-coded tags that ✨pop✨
 Tags are essential when trying to find stories you want to read, but they’re often lost in the noise.
 
 With ```ReversiPlusPlus```, tags are colour-coded by category!
@@ -53,7 +53,7 @@ In the case of tag-heavy works, tags are also confined to a scroll box!
 | ![](img/comparison-ao3-tags) | ![](img/comparison-reversi-tags) | ![](img/comparison-reversiplusplus-tags) |
 
 
-### 2.3 Custom fonts
+### 2.3  Custom fonts
 - **Good news:** ```ReversiPlusPlus``` uses some common web-safe and system font alternatives in addition to Ao3’s default fonts!
 
 - **Bad news:** Due to how Ao3 handles user skins and limits CSS, they can’t be automatically packaged with or built into the skin. (I went through a grieving process here. Trust me, I really wish they could.)
@@ -80,14 +80,14 @@ For your convenience, here is a handy table containing (most) of the fonts and w
 ```$``` − Paid
 
 
-## 3 Road map
+## 3  Road map
 - [x] Mobile-specific ```RPP.css```
 	- [ ] Refine ```RPPM.css```
 - [ ] Vet and add support for more fonts
 - [ ] Tidy code (read: figure out what I’m doing)
 - [ ] Rewrite as fully-fledged stylesheet to replace rather than build off of Ao3’s core
 
-### 3.1 Short-term to-do list
+### 3.1  Short-term to-do list
 - [ ] adjust sort and filter sidebar to match work index group
 - [x] figure out how to lower buttons/stats on work blurbs
 - [ ] add more fonts into font lists 
@@ -96,7 +96,7 @@ For your convenience, here is a handy table containing (most) of the fonts and w
 - [x] start setting up mobile values so creation of mobile ```RPPM.css``` is easier
 
 
-## 4 Installation
+## 4  Installation
 ```ReversiPlusPlus``` builds right off of Ao3’s existing stylesheet, so no extra add-ons or browser extensions required!
 
 Installing is as simple as **creating a new site skin** for your user. All user site skins are private by default — no worries about accidentally making something public.
@@ -109,9 +109,9 @@ To create a new site skin:
 
 	![](img/install-steps-01.png)
 
+3. On the dashboard, select ```Skins```.
 
 	![](img/install-steps-02.png)
-3. On the dashboard, select ```Skins```.
 
 4. The Skins page will have multiple buttons. In the top right-hand corner, select ```Create Site Skin```.
 
