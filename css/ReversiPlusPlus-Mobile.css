@@ -201,13 +201,13 @@ h6,
 }
 
 h1 {
-	font-size: 2.5em;
+	font-size: 2.25em;
 	line-height: 1;
 	margin: .5em 0;
 }
 
 h2 {
-	font-size: 2.145em;
+	font-size: 1.75em;
 	line-height: 1;
 	margin: .5em 0;
 	display: inline;
@@ -374,7 +374,6 @@ ul.expandable.secondary {
 	border: 0;
 }
 
-
 li.blurb, fieldset, form dl {
 	border: 0;
 	padding: 1em;
@@ -470,6 +469,17 @@ dl.meta {
 	border: 0;
 }
 
+ul.actions,
+p.actions,
+li.actions,
+span.actions,
+fieldset.actions,
+dd.actions {
+	padding: .429em .25em .25em 0;
+	float: right;
+	text-align: center;
+}
+
 /* arrow to-the-top buttons on fandoms page */
 .action.top a:active {
 	background: transparent;
@@ -491,11 +501,10 @@ dl.meta {
 }
 
 #header .heading {
+	font-size: .75em;
 	float: left;
 	padding: .375em;
 }
-
-
 
 #header li {
 	display: block;
@@ -550,7 +559,7 @@ dl.meta {
 	border-color: #4e4e5e;
 	color: #eee;
 	display: block;
-	padding: .75em .5em .5em;
+	padding: .75em .5em .75em .5em;
 }
 
 /* dropdown menu links with dark hover */
@@ -567,7 +576,6 @@ dl.meta {
 
 /* nix lines in header nav */
 #header .dropdown .menu li {
-	border-color: transparent;
 	border: 0;
 	margin: auto;
 }
@@ -585,7 +593,7 @@ dl.meta {
 
 #header .logo {
 	float: left;
-	height: 42px;
+	height: 1.25em;
 }
 
 /* "archiveofourown beta" lighter text pop on active */
@@ -596,7 +604,7 @@ dl.meta {
 #header .landmark {
 	clear: none;
 	font-size: 0;
-	border: none;
+	border: 0;
 }
 
 /* why are we still using weird noise jpgs as banners please stop */
@@ -606,9 +614,20 @@ dl.meta {
 	width: 100%;
 }
 
-#header .menu,
+/*#header .menu,
 #greeting .menu {
-	padding: 0;
+	background: #4e4e5e;
+	padding: .35em;
+}*/
+
+#header .menu,
+#small_login {
+	background: #4e4e5e;
+	display: none;
+	padding: .35em;
+	position: absolute;
+	width: 20em;
+	z-index: 55;
 }
 
 /* "archiveofourown beta" text pop on hover */
@@ -663,25 +682,31 @@ fieldset.listbox .heading,
 }
 
 
-/** search section **/
+/** SEARCH SECTION **/
+
 #header .search {
-	float: right;
+	float: left;
+	clear: left;
 	color: #eee;
 	margin-right: .25em;
+	text-align: right;
 }
 
 #header #search .text,
 #header #search .button {
-	border: none;
+	border: 0;
 }
 
 /* small margin fix in searchbar */
 #header #search .text {
-	margin: .3em .43em;
+	margin: .2em .43em .5em .43em;
+	width: 17rem;
 }
 
 #header #search .button {
-	margin: 0;
+	border-radius: 1em;
+	margin: 0 0 .4em 0;
+	padding: .25em .75em;
 }
 
 /* header searchbar colours */
@@ -705,8 +730,12 @@ fieldset.listbox .heading,
 }
 
 /* gives user greeting some breathing room */
-#greeting {
-	padding: .5em 0;
+#greeting, 
+#login {
+	clear: left;
+	float: left;
+	margin-left: .375em;
+	padding: 0 0 .5em 0;
 }
 
 #greeting .user > li {
@@ -715,6 +744,7 @@ fieldset.listbox .heading,
 
 #greeting .menu {
 	right: 0;
+	left: 0;
 }
 
 #header input,
@@ -738,6 +768,11 @@ fieldset.listbox .heading,
 	padding: 0;
 	margin: 0;
 	border-radius: 0;
+}
+
+/* mobile */
+#header .primary > li:first-of-type {
+	margin: 0;	/* technically doesn't show up on small res, but removes for desktop */
 }
 
 /* collections header */
@@ -843,8 +878,6 @@ fieldset.listbox .heading,
 /* ---+ 07. WORK READING ADJUSTMENTS +--- */
 
 /* WARNING:
-   select default values in this section are NOT kind to mobile or small screens!
-   see values suggested in comments for <1000px res!
    note: this change likely can (and will) royally screw up writers' work skins until i figure out a better workaround
 */
 
@@ -854,7 +887,7 @@ fieldset.listbox .heading,
 #chapters .userstuff ol,
 #chapters .userstuff ul {	/* font choices go here ↓ */
 	font-family: "Charter", "IBM Plex Serif", "Palatino Linotype", "Palatino", "Literata", "Georgia", serif;
-	font-size: 1.1em;
+	font-size: 1.18em;
 }
 
 /* links don't be big stop it */
@@ -864,8 +897,9 @@ fieldset.listbox .heading,
 
 /* unfortunately blockquotes get weird with more white space so gotta fix that */
 #chapters .userstuff blockquote {
-	margin-left: 2em;
-	margin-right: 2em;
+	margin: 1.75em .5em 1.75em 0;
+	margin-inline-start: 1.25em;
+	padding: 0 .5em;
 }
 
 /* wrangle p margins within blockquotes */
@@ -886,8 +920,8 @@ fieldset.listbox .heading,
 
 /* embiggen fic margins! in this house we appreciate white space */
 #chapters .userstuff p {
-	margin-left: 1em;
-	margin-right: 1em;
+	margin-left: .25em;
+	margin-right: .25em;
 }
 
 /* slightly bigger pre because otherwise it looks like it's for ants */
@@ -907,6 +941,12 @@ fieldset.listbox .heading,
 .userstuff h3 {
 	border-bottom: 1px solid #78777d;
 }
+
+/*div.preface {
+	margin: 1.5em 4em 5em 4em;
+	padding: .65em .65em 0 .65em;
+	float: none;
+}*/
 
 /* mobile replacement: decreases summary+author’s note margins so you don’t get a ridiculously slim box running down the page */
 div.preface {
@@ -1030,7 +1070,6 @@ li.comment {
 
 .comment h4.byline {
 	margin-top: .375em;
-	/* padding: 0 .25em .25em 110px; */
 }
 
 /* new comment padding FINALLY */
@@ -1065,9 +1104,10 @@ a.tag:hover {
 	color: #eee;
 	display: inline-block;
 	font-size: .9em;
+	line-height: 1.25;
 	margin: 1px 0;
 	overflow: hidden;
-	padding: .5px 6px;
+	padding: 1px 5px;
 	text-decoration: none;
 	text-overflow: ellipsis;
 }
@@ -1303,8 +1343,48 @@ a.tag:hover {
 
 /* makes tag scroll box for those 10000+ tag fics so you don't have to scroll for like ten minutes */
 li.blurb .tags {
-	max-height: 10em;
+	max-height: 9em;
 	overflow-y: auto;
+}
+
+/* shrink blurb titles slightly */ 
+.blurb h4.heading {
+	font-size: 1.08em;
+	line-height: 1.15;
+}
+
+.blurb h4.heading a {
+	border-bottom: 0;
+}
+
+.blurb h5.heading {
+	font-size: .9em;
+}
+
+.bookmark p.status {
+  position: absolute;
+  right: 0.25em;
+  width: 46px;
+  margin-top: 0.429em;
+  z-index: 1;
+}
+
+.bookmark .status span,
+.bookmark .status a {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.bookmark span.count {
+  line-height: 1.5em;
+  position: absolute;
+  top: 0;
+  left: 24px;
+  text-align: center;
 }
 
 /* pretty sure these are the blurb key symbol blocks */
@@ -1319,7 +1399,8 @@ ul.required-tags,
 .blurb dl.stats {
 	margin-top: 1em;
 	margin-bottom: .55em;
-	line-height: 1.25;
+	line-height: 1.5;
+	text-align: left;
 }
 
 /* gives work blurb some cushion between bottom buttons */
@@ -1332,9 +1413,15 @@ ul.required-tags,
 	padding: 0 .25em 0 0;
 }
 
+/* mobile: smaller min header */
+.blurb .header {
+	min-height: 45px;
+	margin-bottom: .375em;
+}
+
 /* adjusts blurb header with rest of blurb bg */
 .blurb .header .heading {
-	margin: .375em 5.25em 0 65px;
+	margin: .375em 5.25em 0 55px;
 }
 
 /* gets rid of commas after tags because bubbles */
@@ -1373,6 +1460,164 @@ ul.required-tags,
 .meta.tags.commas .tag:hover,
 .meta.tags.commas .tag:visited:hover {
 	background: transparent;
+}
+
+/* adjustment for smaller icons */
+.blurb ul.required-tags {
+	position: absolute;
+	top: 0;
+	width: 47px;
+	margin: 0;
+}
+
+.blurb ul.required-tags li,
+.blurb ul.required-tags li a,
+.blurb ul.required-tags li span {
+	display: block;
+	width: 20px;
+	height: 20px;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+}
+
+.blurb ul.required-tags li {
+	margin-bottom: 3px;
+}
+
+.blurb ul.required-tags li+li+li,
+.blurb ul.required-tags li+li+li+li {
+	position: absolute;
+	left: 24px;
+}
+
+.blurb ul.required-tags li+li+li {
+	top: 0;
+}
+
+.blurb ul.required-tags li+li+li+li {
+	top: 24px;
+}
+
+/* keeps the outline to the proper size in Firefox and Opera */
+.blurb ul.required-tags li a:focus {
+	overflow: hidden;
+}
+
+.blurb span.text {
+	height: 20;
+	width: 20;
+	font-size: .001em;
+	color: transparent;
+}
+
+.blurb ul.required-tags li span {
+  background-repeat: no-repeat;
+}
+
+
+/** blurb icon adjustments **/
+
+.required-tags .rating-general-audience {
+	background: url("/images/imageset.png") -42px -22px;
+	background-size: 835%;
+}
+
+.required-tags .rating-explicit {
+	background: url("/images/imageset.png") -21px -21px;
+	background-size: 835%;
+}
+
+.required-tags .rating-mature {
+	background: url("/images/imageset.png") -63px -21px;
+	background-size: 835%;
+}
+
+.required-tags .rating-notrated,
+.required-tags .category-none,
+.required-tags .warning-no,
+.status .count {
+	background: url("/images/imageset.png") -125px 0px;
+	background-size: 835%;
+}
+
+.required-tags .rating-teen {
+	background: url("/images/imageset.png") 0px -21px;
+	background-size: 835%;
+}
+
+.required-tags .category-femslash {
+	background: url("/images/imageset.png") -21px 0px;
+	background-size: 835%;
+}
+
+.required-tags .category-gen {
+	background: url("/images/imageset.png") -42px -1px;
+	background-size: 835%;
+}
+
+.required-tags .category-slash {
+	background: url("/images/imageset.png") 0px 0px;
+	background-size: 835%;
+}
+
+.required-tags .category-het {
+	background: url("/images/imageset.png") -63px 0px;
+	background-size: 835%;
+}
+
+.required-tags .category-multi {
+	background: url("/images/imageset.png") -84px -1px;
+	background-size: 835%;
+}
+
+.required-tags .category-other {
+	background: url("/images/imageset.png") -105px 0px;
+}
+
+.required-tags .complete-no {
+	background: url("/images/imageset.png") -84px -21px;
+	background-size: 835%;
+}
+
+.required-tags .complete-yes {
+	background: url("/images/imageset.png") -146px -21px;
+	background-size: 835%;
+}
+
+.required-tags .warning-yes {
+	background: url("/images/imageset.png") -126px -21px;
+	background-size: 835%;
+}
+
+.required-tags .warning-choosenotto {
+	background: url("/images/imageset.png") -125px -21px;
+	background-size: 835%;
+}
+
+.required-tags .external-work {
+	background: url("/images/imageset.png") -75px -50px;
+	background-size: 835%;
+}
+
+.status .private .text {
+	background: url("/images/imageset.png") -147px -42px;
+	background-size: 835%;
+}
+
+.status .public {
+	background: url("/images/imageset.png") -105px -42px;
+	background-size: 835%;
+}
+
+.status .hidden {
+	background: url("/images/imageset.png") -150px -50px;
+	background-size: 835%;
+}
+
+.status .rec {
+	background: url("/images/imageset.png") -84px -42px;
+	background-size: 835%;
 }
 
 /* stops blockquotes in work blurbs from inheriting margins */
@@ -1565,25 +1810,18 @@ form dd.required,
 /* nix dash button lines */
 #dashboard ul {
 	border: 0;
-	/* display: inline-block; */
-	/* padding: 1.25em .5em; */	/* ao3 CSS restrictions are why we can't have nice things */
 }
 
 /* dark dashboard backdrop, smaller font size, more padding */
 #dashboard.own {
 	background: transparent;
-	border-top: .75em solid #30679e;
-	border-bottom: .75em solid #30679e;
+	border-top: .65em solid #30679e;
+	border-bottom: .65em solid #30679e;
 	font-size: .85em;
-	margin-top: 1.75em;
 	padding: .25em;
+	max-height: 5em;	/* dashboard jail for the billion options until i figure out something better */
+	overflow-y: auto;
 }
-
-/* investigate this, wasn't specific and messed with multiple works page */
-/*#dashboard .secondary,
-.dashboard fieldset fieldset.listbox .index {
-	background: #23222b;
-}*/
 
 
 
@@ -1633,8 +1871,9 @@ form dd.required,
 /* ---+ 14. OTHER PAGES +--- */
 
 /* grabbed from ao3 core */
-.listbox, fieldset fieldset.listbox {
-	clear: right;
+.listbox,
+fieldset fieldset.listbox {
+	clear: both;
 	background: #16151b;
 	border: 0;
 	border-radius: .25em;
@@ -1708,16 +1947,17 @@ dl.index dd {
 
 /* bookmark buttons align with blurb padding */
 .bookmark .actions {
-	padding: 0;
+	/*padding: 0;*/
+	float: left;
 }
 
 /* adjust bookmark icons */
 .bookmark.blurb p.status {
-	right: .5em;
+	right: .85em;
 }
 
 .bookmark .datetime {
-	top: 30px;
+	top: 25px;
 }
 
 /* changed bookmark box colours; might tweak more */
@@ -1756,23 +1996,37 @@ dl.index dd {
 /* nix line on user dashboard/profile */
 .home .header h2 {
 	border: 0;
+	float: right;
+	margin: 0 0 0 100px;
 }
 
-/* for mobile: now the nav buttons on user screen no longer clip into user icon ✨ */
+/* mobile: finally fixed this correctly, floats and all*/
 .home .header ul.actions {
-	max-width: 70%;
+	clear: left;
+	float: left;
+	margin: .643em 0;
+	padding: .5em 0;
 	text-align: right;
 }
 
-/* icon was misbehaving in header on dashboard/profile, now NO ONE floats */
-.profile .primary,
-.home .primary {
-	float: none;
+.home .header .actions li {
+	padding: 0 .25em 0 0;
+}
+
+.primary .icon {
+	clear: none;
+	float: left;
+	position: relative;
 }
 
 /* space bewteen h3 and listbox on fandoms page */
 .medium.listbox .index.group {
 	margin: .5em 0;
+}
+
+/* mobile: space between nav bar in works page and work index*/
+.navigation.actions.module {
+	margin-top: 1em;
 }
 
 .tags.commas.index.group {
