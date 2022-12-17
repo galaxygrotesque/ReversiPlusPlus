@@ -374,7 +374,6 @@ ul.expandable.secondary {
 	border: 0;
 }
 
-
 li.blurb, fieldset, form dl {
 	border: 0;
 	padding: 1em;
@@ -470,6 +469,17 @@ dl.meta {
 	border: 0;
 }
 
+ul.actions,
+p.actions,
+li.actions,
+span.actions,
+fieldset.actions,
+dd.actions {
+	padding: .429em .25em .25em 0;
+	float: right;
+	text-align: center;
+}
+
 /* arrow to-the-top buttons on fandoms page */
 .action.top a:active {
 	background: transparent;
@@ -548,7 +558,7 @@ dl.meta {
 	border-color: #4e4e5e;
 	color: #eee;
 	display: block;
-	padding: .75em .5em .5em;
+	padding: .75em .5em .75em .5em;
 }
 
 /* dropdown menu links with dark hover */
@@ -565,7 +575,6 @@ dl.meta {
 
 /* nix lines in header nav */
 #header .dropdown .menu li {
-	border-color: transparent;
 	border: 0;
 	margin: auto;
 }
@@ -594,7 +603,7 @@ dl.meta {
 #header .landmark {
 	clear: none;
 	font-size: 0;
-	border: none;
+	border: 0;
 }
 
 /* why are we still using weird noise jpgs as banners please stop */
@@ -661,7 +670,8 @@ fieldset.listbox .heading,
 }
 
 
-/** search section **/
+/** SEARCH SECTION **/
+
 #header .search {
 	float: right;
 	color: #eee;
@@ -670,7 +680,7 @@ fieldset.listbox .heading,
 
 #header #search .text,
 #header #search .button {
-	border: none;
+	border: 0;
 }
 
 /* small margin fix in searchbar */
@@ -679,6 +689,7 @@ fieldset.listbox .heading,
 }
 
 #header #search .button {
+	border-radius: 1em;
 	margin: 0;
 }
 
@@ -852,7 +863,7 @@ fieldset.listbox .heading,
 #chapters .userstuff ol,
 #chapters .userstuff ul {	/* font choices go here ↓ */
 	font-family: "Charter", "IBM Plex Serif", "Palatino Linotype", "Palatino", "Literata", "Georgia", serif;
-	font-size: 1.25em;	/* mobile: 1.1em */
+	font-size: 1.25em;	/* mobile: 1.18em */
 }
 
 /* links don't be big stop it */
@@ -862,8 +873,8 @@ fieldset.listbox .heading,
 
 /* unfortunately blockquotes get weird with more white space so gotta fix that */
 #chapters .userstuff blockquote {
-	margin-left: 5em;	/* mobile: 2em */
-	margin-right: 5em;	/* mobile: 2em */
+	margin-left: 5em;	/* mobile: margin: 1.75em .5em 1.75em 0; */
+	margin-right: 5em;	
 }
 
 /* wrangle p margins within blockquotes */
@@ -884,8 +895,8 @@ fieldset.listbox .heading,
 
 /* embiggen fic margins! in this house we appreciate white space */
 #chapters .userstuff p {
-	margin-left: 2.5em;		/* mobile: 1em; */
-	margin-right: 2.5em;	/* mobile: 1em; */
+	margin-left: 2.5em;		/* mobile: .25em; */
+	margin-right: 2.5em;	/* mobile: .25em; */
 }
 
 /* slightly bigger pre because otherwise it looks like it's for ants */
@@ -1071,7 +1082,7 @@ a.tag:hover {
 	font-size: .9em;
 	margin: 1px 0;
 	overflow: hidden;
-	padding: .5px 6px;
+	padding: .5px 6px;	/* mobile: 0px 5px; */
 	text-decoration: none;
 	text-overflow: ellipsis;
 }
@@ -1307,7 +1318,7 @@ a.tag:hover {
 
 /* makes tag scroll box for those 10000+ tag fics so you don't have to scroll for like ten minutes */
 li.blurb .tags {
-	max-height: 8em;	/* mobile: 10em; */
+	max-height: 8em;	/* mobile: 9em; */
 	overflow-y: auto;
 }
 
@@ -1323,7 +1334,7 @@ ul.required-tags,
 .blurb dl.stats {
 	margin-top: 1em;
 	margin-bottom: .55em;
-	line-height: 1.25;
+	line-height: 1.25;	/* mobile: 1.5;*/
 }
 
 /* gives work blurb some cushion between bottom buttons */
@@ -1338,7 +1349,7 @@ ul.required-tags,
 
 /* adjusts blurb header with rest of blurb bg */
 .blurb .header .heading {
-	margin: .375em 5.25em 0 65px;
+	margin: .375em 5.25em 0 65px;	/* mobile: .375em 5.25em 0 55px */
 }
 
 /* gets rid of commas after tags because bubbles */
@@ -1603,12 +1614,6 @@ form dd.required,
 	padding: .25em;
 }
 
-/* investigate this, wasn't specific and messed with multiple works page */
-/*#dashboard .secondary,
-.dashboard fieldset fieldset.listbox .index {
-	background: #23222b;
-}*/
-
 
 
 
@@ -1798,6 +1803,11 @@ dl.index dd {
 .medium.listbox .index.group {
 	margin: .5em 0;
 }
+
+/* mobile: space between nav bar in works page and work index*/
+/*.navigation.actions.module {
+	margin-top: 1em;
+}*/
 
 .tags.commas.index.group {
 	background: transparent;
