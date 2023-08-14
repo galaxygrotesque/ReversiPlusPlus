@@ -10,11 +10,10 @@
 | ![](img/preview-reversi-plusplus.png) | ![](img/preview-reversi-plusplus-mobile.png) |
 
 
-
 ## 1  Features
-✅ **[Darker colours!](https://github.com/galaxygrotesque/ReversiPlusPlus#11-dark-mode-redux)**  
-✅ **[Colourfully obvious tags trapped in a scroll box!](https://github.com/galaxygrotesque/ReversiPlusPlus#12-colour-coded-tags-that-pop)**  
-✅ **[Cool fonts (if you’re willing to install them)!](https://github.com/galaxygrotesque/ReversiPlusPlus#13-custom-fonts)**
+✅ [Darker colours!](https://github.com/galaxygrotesque/ReversiPlusPlus#11-dark-mode-redux)  
+✅ [Colourfully obvious tags trapped in a scroll box!](https://github.com/galaxygrotesque/ReversiPlusPlus#12-colour-coded-tags-that-pop)  
+✅ [Cool fonts (if you’re willing to install them)!](https://github.com/galaxygrotesque/ReversiPlusPlus#13-custom-fonts)
 
 
 ### 1.1  Dark mode redux
@@ -58,7 +57,7 @@ In the case of tag-heavy works, tags are also confined to a scroll box!
 
 - **Bad news:** Due to how Ao3 handles user skins and limits CSS, they can’t be automatically packaged with or built into the skin. (I went through a grieving process here. Trust me, I really wish they could.)
 
-This means **if you want alternative fonts** to appear, you’ll have to **install them on your device** — PC, phone, tablet, or whatever else.
+This means if you want alternative fonts to appear, you’ll have to **install them on your device** — PC, phone, tablet, or whatever else.
 
 For your convenience, here is a handy table containing (most) of the fonts and where to find them.
 
@@ -80,10 +79,12 @@ For your convenience, here is a handy table containing (most) of the fonts and w
 ```$``` − Paid
 
 
-## 2  Install
+## 2  Installation
+
+### 2.1 Create a site skin
 ```ReversiPlusPlus``` builds right off of Ao3’s existing stylesheet, so no extra add-ons or browser extensions required!
 
-Installing is as simple as **creating a new site skin** for your user. All user site skins are private by default — no worries about accidentally making something public.
+Installing is as simple as creating a new site skin for your user. All user site skins are private by default — no worries about accidentally making something public.
 
 **To create a new site skin:**
 
@@ -141,6 +142,51 @@ Installing is as simple as **creating a new site skin** for your user. All user 
 	Hit ```Use```.
 
 And voilà! There you have it. Skin installed. 🌠
+
+### 2.2 Changing fonts
+
+To change fonts, edit [```ReversiPlusPlus.css```](https://github.com/galaxygrotesque/ReversiPlusPlus/blob/main/css/ReversiPlusPlus.css) or [```ReversiPlusPlus-Mobile.css```](https://github.com/galaxygrotesque/ReversiPlusPlus/blob/main/css/ReversiPlusPlus-Mobile.css) to include the fonts listed above (or others you’ve installed on your machine).
+
+**Body fonts**
+
+    body {		/* font choices go here ↓ */
+	font-family: "IBM Plex Sans", "Proxima Nova", "Helvetica Neue", "Lucida Grande", "Lucida Sans Unicode", "GNU Unifont", Verdana, Helvetica, sans-serif;
+	}
+
+**Header fonts**
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .heading,
+    .bookmark .user .meta {	/* font choices go here ↓ */
+	font-family: "Charter", "IBM Plex Serif", "Palatino", "Georgia", serif;
+    }
+
+**Mono fonts**
+
+    kbd,
+    tt,
+    code,
+    var,
+    pre,
+    samp {		/* font choices go here ↓ */
+	font-family: "Fira Code", "Source Code Pro", "Menlo", "Monaco", "Consolas", Courier, monospace;
+	font-size: .9em;
+    }
+
+**Work fonts**
+
+    #chapters .userstuff a,
+    #chapters .userstuff p,
+    #chapters .userstuff ol,
+    #chapters .userstuff ul {	/* font choices go here ↓ */
+	font-family: "Charter", "IBM Plex Serif", "Palatino Linotype", "Palatino", "Literata", "Georgia", serif;
+	font-size: 1.25em;	/* mobile: 1.18em */
+    }
 
 
 ## 3  Road map
