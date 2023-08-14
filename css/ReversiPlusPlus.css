@@ -1,7 +1,5 @@
 /*
   ---+ REVERSI PLUS PLUS +---
-  this is horrendously messy i am so sorry
-  if it looks like i know what i'm doing, rest assured: i do not
 
   ++ CREDITS & ACKNOWLEDGEMENTS ++
   - reversi base:		archiveofourown		(https://archiveofourown.org/skins/929)
@@ -59,11 +57,8 @@
 
 /* ---+ 00. COLOUR GUIDE +--- */
 
-/* variables GO
-   or not because ao3 doesn't allow them for some reason what the hell???
-   whatever, using this as a colour guide anyway
-*/
-/*
+/* using this as a colour guide as ao3 does not allow variables
+
 :root {
 	--ao3-accent-color: #5998d6;
 	--ao3-accent-color-light: #9ecfff;
@@ -89,10 +84,10 @@
 
 /* ---+ 01. BODY FONTS +--- */
 
-/* less boring sans-serif fonts (that hopefully won't fuck up other shit)
-   grab whichever strikes your fancy and slap it down after font-family!
+/* body fonts
+   grab whichever strikes your fancy insert it after font-family!
    fonts:	"IBM Plex Sans", "Noto Sans", "Source Sans 3", "Proxima Nova", "Helvetica Neue",
-   defaults:	"Lucida Grande", "Lucida Sans Unicode", "GNU Unifont", Verdana, Helvetica, sans-serif;
+   ao3 defaults:	"Lucida Grande", "Lucida Sans Unicode", "GNU Unifont", Verdana, Helvetica, sans-serif;
 */
 
 body {		/* font choices go here ↓ */
@@ -110,9 +105,9 @@ blockquote.userstuff,
 	font-family: "IBM Plex Sans", "Proxima Nova", "Helvetica Neue", "Lucida Grande", "Lucida Sans Unicode", "GNU Unifont", Verdana, Helvetica, sans-serif;
 }
 
-/* small site-wide header change because georgia and "serif" are SO boring please have some taste
+/* header fonts
    fonts:	"Charter", "IBM Plex Serif", "Source Serif 4", "Palatino Linotype", "Palatino", "Literata",
-   defaults:	"Georgia", serif;
+   ao3 defaults:	"Georgia", serif;
 */
 h1,
 h2,
@@ -125,7 +120,7 @@ h6,
 	font-family: "Charter", "IBM Plex Serif", "Palatino", "Georgia", serif;
 }
 
-/* better mono/code fonts pls */
+/* mono/code fonts */
 kbd,
 tt,
 code,
@@ -262,7 +257,7 @@ hr,
 	margin: 1.5em auto;
 }
 
-/* what the hell was i doing here??? god i hate adhd
+/* 
 fieldset.listbox {
 	
 }*/
@@ -374,7 +369,9 @@ ul.expandable.secondary {
 	border: 0;
 }
 
-li.blurb, fieldset, form dl {
+li.blurb,
+fieldset,
+form dl {
 	border: 0;
 	padding: 1em;
 	overflow: hidden;
@@ -669,7 +666,6 @@ fieldset.listbox .heading,
 	color: #fff;
 }
 
-
 /** SEARCH SECTION **/
 
 #header .search {
@@ -852,18 +848,16 @@ fieldset.listbox .heading,
 /* ---+ 07. WORK READING ADJUSTMENTS +--- */
 
 /* WARNING:
-   select default values in this section are NOT kind to mobile or small screens!
-   see values suggested in comments for <1000px res!
-   note: this change likely can (and will) royally screw up writers' work skins until i figure out a better workaround
+   note: this change likely can (and will) royally screw up writers' work skins
 */
 
-/* give me serif NOW (but only when in an actual work) */
+/* work serif fonts */
 #chapters .userstuff a,
 #chapters .userstuff p,
 #chapters .userstuff ol,
 #chapters .userstuff ul {	/* font choices go here ↓ */
 	font-family: "Charter", "IBM Plex Serif", "Palatino Linotype", "Palatino", "Literata", "Georgia", serif;
-	font-size: 1.25em;	/* mobile: 1.18em */
+	font-size: 1.25em;
 }
 
 /* links don't be big stop it */
@@ -873,14 +867,14 @@ fieldset.listbox .heading,
 
 /* unfortunately blockquotes get weird with more white space so gotta fix that */
 #chapters .userstuff blockquote {
-	margin-left: 5em;	/* mobile: margin: 1.75em .5em 1.75em 0; */
+	margin-left: 5em;
 	margin-right: 5em;	
 }
 
 /* wrangle p margins within blockquotes */
 #chapters .userstuff blockquote p {
-	margin-left: 1em;	/* mobile: .5em */
-	margin-right: 1em;	/* mobile: .5em */
+	margin-left: 1em;
+	margin-right: 1em;
 }
 
 /* scrunches code in-work a little */
@@ -895,8 +889,8 @@ fieldset.listbox .heading,
 
 /* embiggen fic margins! in this house we appreciate white space */
 #chapters .userstuff p {
-	margin-left: 2.5em;		/* mobile: .25em; */
-	margin-right: 2.5em;	/* mobile: .25em; */
+	margin-left: 2.5em;
+	margin-right: 2.5em;
 }
 
 /* slightly bigger pre because otherwise it looks like it's for ants */
@@ -912,7 +906,6 @@ fieldset.listbox .heading,
 	padding: 1em;
 }
 
-/* double underline is fucking stupid */
 .userstuff h3 {
 	border-bottom: 1px solid #78777d;
 }
@@ -922,13 +915,6 @@ div.preface {
 	padding: .65em .65em 0 .65em;
 	float: none;
 }
-
-/* mobile replacement: decreases summary+author’s note margins so you don’t get a ridiculously slim box running down the page */
-/* div.preface {
-	margin: 1.5em .5em 5em .5em;
-	padding: .65em .65em 0 .65em;
-	float: none;
-} */
 
 div.preface .module {
 	float: none;
@@ -960,14 +946,12 @@ div.preface .byline {
 	text-decoration: none;
 }
 
-/* why was underline here, anyway? why are you applying double underlines?? */
 .preface a:hover {
 	text-decoration: none;
 }
 
 .preface blockquote {
 	border: 0;
-	/* mobile: margin: .65em 0; */
 }
 
 div.preface .notes,
@@ -1059,15 +1043,9 @@ li.comment {
 
 /* ---+ 09. TAGS +--- */
 
-/* STOP */
 a.tag:hover {
 	background: transparent;
 }
-
-/* mobile: minimise mobile tag clump hell */
-/*.work.meta.group .tags {
-	line-height: 1.7;
-}*/
 
 /* tag-specific link attributes — makes tag bubbles! */
 .bookmark.blurb .commas a.tag,
@@ -1082,7 +1060,7 @@ a.tag:hover {
 	font-size: .9em;
 	margin: 1px 0;
 	overflow: hidden;
-	padding: .5px 6px;	/* mobile: 0px 5px; */
+	padding: .5px 6px;
 	text-decoration: none;
 	text-overflow: ellipsis;
 }
@@ -1312,13 +1290,13 @@ a.tag:hover {
 
 .blurb .datetime,
 .datetime {
-	font-size: small;	/* mobile: x-small; */
+	font-size: small;
 	line-height: 1.25;
 }
 
 /* makes tag scroll box for those 10000+ tag fics so you don't have to scroll for like ten minutes */
 li.blurb .tags {
-	max-height: 8em;	/* mobile: 9em; */
+	max-height: 8em;
 	overflow-y: auto;
 }
 
@@ -1334,7 +1312,7 @@ ul.required-tags,
 .blurb dl.stats {
 	margin-top: 1em;
 	margin-bottom: .55em;
-	line-height: 1.25;	/* mobile: 1.5;*/
+	line-height: 1.25;
 }
 
 /* gives work blurb some cushion between bottom buttons */
@@ -1349,7 +1327,7 @@ ul.required-tags,
 
 /* adjusts blurb header with rest of blurb bg */
 .blurb .header .heading {
-	margin: .375em 5.25em 0 65px;	/* mobile: .375em 5.25em 0 55px */
+	margin: .375em 5.25em 0 65px;
 }
 
 /* gets rid of commas after tags because bubbles */
@@ -1651,7 +1629,7 @@ form dd.required,
 	padding: .5em;
 }
 
-/* even entries get a cool different colour :D */
+/* even entries get a cool different colour */
 .statistics .index li:nth-of-type(even) {
 	background: #2b2a33;
 }
@@ -1662,7 +1640,8 @@ form dd.required,
 /* ---+ 14. OTHER PAGES +--- */
 
 /* grabbed from ao3 core */
-.listbox, fieldset fieldset.listbox {
+.listbox,
+fieldset fieldset.listbox {
 	clear: right;
 	background: #16151b;
 	border: 0;
@@ -1787,7 +1766,7 @@ dl.index dd {
 	border: 0;
 }
 
-/* for mobile: now the nav buttons on user screen no longer clip into user icon ✨ */
+/* for mobile: now the nav buttons on user screen no longer clip into user icon */
 .home .header ul.actions {
 	max-width: 70%;
 	text-align: right;
@@ -1804,11 +1783,6 @@ dl.index dd {
 	margin: .5em 0;
 }
 
-/* mobile: space between nav bar in works page and work index*/
-/*.navigation.actions.module {
-	margin-top: 1em;
-}*/
-
 .tags.commas.index.group {
 	background: transparent;
 }
@@ -1817,6 +1791,13 @@ dl.index dd {
 
 
 /* ---+ 15. SORT & FILTER SIDEBAR +--- */
+
+/* S&F margin adjustment */
+#bookmark-filters fieldset,
+#work-filters fieldset {
+	margin: 0 .65em;
+	padding: 0 .65em;
+}
 
 /* S&F margin adjustment */
 #bookmark-filters fieldset dl,

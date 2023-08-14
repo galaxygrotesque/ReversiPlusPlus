@@ -1,7 +1,5 @@
 /*
   ---+ REVERSI PLUS PLUS MOBILE +---
-  this is horrendously messy i am so sorry
-  if it looks like i know what i'm doing, rest assured: i do not
 
   ++ CREDITS & ACKNOWLEDGEMENTS ++
   - reversi base:		archiveofourown		(https://archiveofourown.org/skins/929)
@@ -59,11 +57,8 @@
 
 /* ---+ 00. COLOUR GUIDE +--- */
 
-/* variables GO
-   or not because ao3 doesn't allow them for some reason what the hell???
-   whatever, using this as a colour guide anyway
-*/
-/*
+/* using this as a colour guide as ao3 does not allow variables
+
 :root {
 	--ao3-accent-color: #5998d6;
 	--ao3-accent-color-light: #9ecfff;
@@ -89,10 +84,10 @@
 
 /* ---+ 01. BODY FONTS +--- */
 
-/* less boring sans-serif fonts (that hopefully won't fuck up other shit)
-   grab whichever strikes your fancy and slap it down after font-family!
+/* body fonts
+   grab whichever strikes your fancy insert it after font-family!
    fonts:	"IBM Plex Sans", "Noto Sans", "Source Sans 3", "Proxima Nova", "Helvetica Neue",
-   defaults:	"Lucida Grande", "Lucida Sans Unicode", "GNU Unifont", Verdana, Helvetica, sans-serif;
+   ao3 defaults:	"Lucida Grande", "Lucida Sans Unicode", "GNU Unifont", Verdana, Helvetica, sans-serif;
 */
 
 body {		/* font choices go here ↓ */
@@ -110,9 +105,9 @@ blockquote.userstuff,
 	font-family: "IBM Plex Sans", "Proxima Nova", "Helvetica Neue", "Lucida Grande", "Lucida Sans Unicode", "GNU Unifont", Verdana, Helvetica, sans-serif;
 }
 
-/* small site-wide header change because georgia and "serif" are SO boring please have some taste
+/* header fonts
    fonts:	"Charter", "IBM Plex Serif", "Source Serif 4", "Palatino Linotype", "Palatino", "Literata",
-   defaults:	"Georgia", serif;
+   ao3 defaults:	"Georgia", serif;
 */
 h1,
 h2,
@@ -125,7 +120,7 @@ h6,
 	font-family: "Charter", "IBM Plex Serif", "Palatino", "Georgia", serif;
 }
 
-/* better mono/code fonts pls */
+/* mono/code fonts */
 kbd,
 tt,
 code,
@@ -262,7 +257,7 @@ hr,
 	margin: 1.5em auto;
 }
 
-/* what the hell was i doing here??? god i hate adhd
+/* 
 fieldset.listbox {
 	
 }*/
@@ -878,10 +873,10 @@ fieldset.listbox .heading,
 /* ---+ 07. WORK READING ADJUSTMENTS +--- */
 
 /* WARNING:
-   note: this change likely can (and will) royally screw up writers' work skins until i figure out a better workaround
+   note: this change likely can (and will) royally screw up writers' work skins
 */
 
-/* give me serif NOW (but only when in an actual work) */
+/* work serif fonts */
 #chapters .userstuff a,
 #chapters .userstuff p,
 #chapters .userstuff ol,
@@ -937,7 +932,6 @@ fieldset.listbox .heading,
 	padding: 1em;
 }
 
-/* double underline is fucking stupid */
 .userstuff h3 {
 	border-bottom: 1px solid #78777d;
 }
@@ -985,7 +979,6 @@ div.preface .byline {
 	text-decoration: none;
 }
 
-/* why was underline here, anyway? why are you applying double underlines?? */
 .preface a:hover {
 	text-decoration: none;
 }
@@ -1083,12 +1076,11 @@ li.comment {
 
 /* ---+ 09. TAGS +--- */
 
-/* STOP */
 a.tag:hover {
 	background: transparent;
 }
 
-/* minimise mobile tag clump hell */
+/* minimise mobile tag clump */
 .work.meta.group .tags {
 	line-height: 1.7;
 }
@@ -1499,7 +1491,7 @@ ul.required-tags,
 	top: 24px;
 }
 
-/* keeps the outline to the proper size in Firefox and Opera */
+/* keeps the outline to the proper size in firefox and opera */
 .blurb ul.required-tags li a:focus {
 	overflow: hidden;
 }
@@ -1819,7 +1811,7 @@ form dd.required,
 	border-bottom: .65em solid #30679e;
 	font-size: .85em;
 	padding: .25em;
-	max-height: 5em;	/* dashboard jail for the billion options until i figure out something better */
+	max-height: 7.5em;	/* dashboard jail for the billion options until i figure out something better */
 	overflow-y: auto;
 }
 
@@ -1860,7 +1852,7 @@ form dd.required,
 	padding: .5em;
 }
 
-/* even entries get a cool different colour :D */
+/* even entries get a cool different colour */
 .statistics .index li:nth-of-type(even) {
 	background: #2b2a33;
 }
