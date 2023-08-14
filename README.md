@@ -5,8 +5,8 @@
 
 **This project is a work-in-progress.** Please bear with me while I find my style sheet legs.
 
-| Reversi++                        | Reversi++ M                             |
-| :------------------------------- | :-------------------------------------- |
+|            Reversi++             |               Reversi++ M               |
+| :------------------------------: | :-------------------------------------: |
 | ![](img/preview-reversiplusplus) | ![](img/preview-reversiplusplus-mobile) |
 
 
@@ -30,8 +30,8 @@ Inspired by Mozilla Firefox’s dark colour scheme, ```ReversiPlusPlus```:
 - Uses a darker colour palette that is easier on the eye
 - Reduces visual noise by relying on colour/element contrast rather than borders and lines
 
-|                  Ao3                  |                Reversi                | Reversi++                                      |
-| :-----------------------------------: | :-----------------------------------: | :--------------------------------------------- |
+|                  Ao3                  |                Reversi                |                   Reversi++                    |
+| :-----------------------------------: | :-----------------------------------: | :--------------------------------------------: |
 | ![](img/comparison-vanilla-theme.png) | ![](img/comparison-reversi-theme.png) | ![](img/comparison-reversi-plusplus-theme.png) |
 
 
@@ -48,8 +48,8 @@ In the case of tag-heavy works, tags are also confined to a scroll box!
 - Tags are confined to ~4 lines per work blurb
 - If the number of tags exceeds ~4 lines in a particular blurb, the overflow will be trapped in scroll box jail
 
-|                 Ao3                  |               Reversi                | Reversi++                                     |
-| :----------------------------------: | :----------------------------------: | :-------------------------------------------- |
+|                 Ao3                  |               Reversi                |                   Reversi++                   |
+| :----------------------------------: | :----------------------------------: | :-------------------------------------------: |
 | ![](img/comparison-vanilla-tags.png) | ![](img/comparison-reversi-tags.png) | ![](img/comparison-reversi-plusplus-tags.png) |
 
 
