@@ -14,7 +14,7 @@
 ## 1  Features
 ✅ **[Darker colours!](https://github.com/galaxygrotesque/ReversiPlusPlus#11-dark-mode-redux)**  
 ✅ **[Colourfully obvious tags trapped in a scroll box!](https://github.com/galaxygrotesque/ReversiPlusPlus#12-colour-coded-tags-that-pop)**  
-✅ **[Dope fonts (if you’re willing to install them)!](https://github.com/galaxygrotesque/ReversiPlusPlus#13-custom-fonts)**
+✅ **[Cool fonts (if you’re willing to install them)!](https://github.com/galaxygrotesque/ReversiPlusPlus#13-custom-fonts)**
 
 
 ### 1.1  Dark mode redux
@@ -30,9 +30,9 @@ Inspired by Mozilla Firefox’s dark colour scheme, ```ReversiPlusPlus```:
 - Uses a darker colour palette that is easier on the eye
 - Reduces visual noise by relying on colour/element contrast rather than borders and lines
 
-|                    Ao3                    |                  Reversi                   | Reversi++ |
-| :---------------------------------------: | :----------------------------------------: | :-------- |
-| ![](img/comparison-reversi-vanilla-theme) | ![](img/comparison-reversi-plusplus-theme) |           |
+|                Ao3                |              Reversi              | Reversi++                                  |
+| :-------------------------------: | :-------------------------------: | :----------------------------------------- |
+| ![](img/comparison-vanilla-theme) | ![](img/comparison-reversi-theme) | ![](img/comparison-reversi-plusplus-theme) |
 
 
 ### 1.2  Colour-coded tags that ✨pop✨
