@@ -30,9 +30,9 @@ Inspired by Mozilla Firefox’s dark colour scheme, ```ReversiPlusPlus```:
 - Uses a darker colour palette that is easier on the eye
 - Reduces visual noise by relying on colour/element contrast rather than borders and lines
 
-|                Ao3                |              Reversi              | Reversi++                                  |
-| :-------------------------------: | :-------------------------------: | :----------------------------------------- |
-| ![](img/comparison-vanilla-theme) | ![](img/comparison-reversi-theme) | ![](img/comparison-reversi-plusplus-theme) |
+|                  Ao3                  |                Reversi                | Reversi++                                      |
+| :-----------------------------------: | :-----------------------------------: | :--------------------------------------------- |
+| ![](img/comparison-vanilla-theme.png) | ![](img/comparison-reversi-theme.png) | ![](img/comparison-reversi-plusplus-theme.png) |
 
 
 ### 1.2  Colour-coded tags that ✨pop✨
