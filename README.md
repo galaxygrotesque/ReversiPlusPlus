@@ -5,15 +5,15 @@
 
 **This project is a work-in-progress.** Please bear with me while I find my style sheet legs.
 
-|               Reversi++               |                 Reversi++ M                  |
-| :-----------------------------------: | :------------------------------------------: |
-| ![](img/preview-reversi-plusplus.png) | ![](img/preview-reversi-plusplus-mobile.png) |
+|              Reversi++               |              Reversi++ Mobile               |
+| :----------------------------------: | :-----------------------------------------: |
+| ![](img/preview-reversiplusplus.png) | ![](img/preview-reversiplusplus-mobile.png) |
 
 
 ## 1  Features
-✅ [Darker colours!](https://github.com/galaxygrotesque/ReversiPlusPlus#11-dark-mode-redux)  
-✅ [Colourfully obvious tags trapped in a scroll box!](https://github.com/galaxygrotesque/ReversiPlusPlus#12-colour-coded-tags-that-pop)  
-✅ [Cool fonts (if you’re willing to install them)!](https://github.com/galaxygrotesque/ReversiPlusPlus#13-custom-fonts)
+✅ [Darker colours!](https://github.com/galaxygrotesque/ReversiPlusPlus#11dark-mode-redux)  
+✅ [Colourfully obvious tags trapped in a scroll box!](https://github.com/galaxygrotesque/ReversiPlusPlus#12colour-coded-tags-that-pop)  
+✅ [Cool fonts (if you’re willing to install them)!](https://github.com/galaxygrotesque/ReversiPlusPlus#13custom-fonts)
 
 
 ### 1.1  Dark mode redux
@@ -23,21 +23,21 @@ If you:
 - prefer OLED themes or find some dark themes too bright
 - have tired and/or light-sensitive eyes that suffer every time you step outside your carefully curated internet ~~cave~~ corner
 
-Then ```ReversiPlusPlus``` might be your cup of tea!
+Then ReversiPlusPlus might be your cup of tea!
 
-Inspired by Mozilla Firefox’s dark colour scheme, ```ReversiPlusPlus```:
+Inspired by Mozilla Firefox’s dark colour scheme, ReversiPlusPlus:
 - Uses a darker colour palette that is easier on the eye
 - Reduces visual noise by relying on colour/element contrast rather than borders and lines
 
-|                  Ao3                  |                Reversi                |                   Reversi++                    |
-| :-----------------------------------: | :-----------------------------------: | :--------------------------------------------: |
-| ![](img/comparison-vanilla-theme.png) | ![](img/comparison-reversi-theme.png) | ![](img/comparison-reversi-plusplus-theme.png) |
+|                  Ao3                  |                Reversi                |                   Reversi++                   |
+| :-----------------------------------: | :-----------------------------------: | :-------------------------------------------: |
+| ![](img/comparison-vanilla-theme.png) | ![](img/comparison-reversi-theme.png) | ![](img/comparison-reversiplusplus-theme.png) |
 
 
 ### 1.2  Colour-coded tags that ✨pop✨
 Tags are essential when trying to find stories you want to read, but they’re often lost in the noise.
 
-With ```ReversiPlusPlus```, tags are colour-coded by category!
+With ReversiPlusPlus, tags are colour-coded by category!
 - **Red:** content warnings
 - **Blue:** relationships
 - **Green:** characters
@@ -47,13 +47,13 @@ In the case of tag-heavy works, tags are also confined to a scroll box!
 - Tags are confined to ~4 lines per work blurb
 - If the number of tags exceeds ~4 lines in a particular blurb, the overflow will be trapped in scroll box jail
 
-|                 Ao3                  |               Reversi                |                   Reversi++                   |
-| :----------------------------------: | :----------------------------------: | :-------------------------------------------: |
-| ![](img/comparison-vanilla-tags.png) | ![](img/comparison-reversi-tags.png) | ![](img/comparison-reversi-plusplus-tags.png) |
+|                 Ao3                  |               Reversi                |                  Reversi++                   |
+| :----------------------------------: | :----------------------------------: | :------------------------------------------: |
+| ![](img/comparison-vanilla-tags.png) | ![](img/comparison-reversi-tags.png) | ![](img/comparison-reversiplusplus-tags.png) |
 
 
 ### 1.3  Custom fonts
-- **Good news:** ```ReversiPlusPlus``` uses some common web-safe and system font alternatives in addition to Ao3’s default fonts!
+- **Good news:** ReversiPlusPlus uses some common web-safe and system font alternatives in addition to Ao3’s default fonts!
 
 - **Bad news:** Due to how Ao3 handles user skins and limits CSS, they can’t be automatically packaged with or built into the skin. (I went through a grieving process here. Trust me, I really wish they could.)
 
@@ -82,7 +82,7 @@ For your convenience, here is a handy table containing (most) of the fonts and w
 ## 2  Installation
 
 ### 2.1 Create a site skin
-```ReversiPlusPlus``` builds right off of Ao3’s existing stylesheet, so no extra add-ons or browser extensions required!
+ReversiPlusPlus builds right off of Ao3’s existing stylesheet, so no extra add-ons or browser extensions required!
 
 Installing is as simple as creating a new site skin for your user. All user site skins are private by default — no worries about accidentally making something public.
 
@@ -110,7 +110,7 @@ Installing is as simple as creating a new site skin for your user. All user site
 
 	1. The ```Type``` field must be set to ```Site Skin```.
 	2. The ```Title``` field must have a value in it, and that value **must be unique** because Ao3 only distinguishes user site skins by name, not by user.
-	3. The ```CSS``` field must have CSS in it — i.e., the text in [```ReversiPlusPlus.css```](https://github.com/galaxygrotesque/ReversiPlusPlus/blob/main/css/ReversiPlusPlus.css) or [```ReversiPlusPlus-Mobile.css```](https://github.com/galaxygrotesque/ReversiPlusPlus/blob/main/css/ReversiPlusPlus-Mobile.css). Copy + paste baybeeee ✨
+	3. The ```CSS``` field must have CSS in it — i.e., the text in [```ReversiPlusPlus.css```](https://github.com/galaxygrotesque/ReversiPlusPlus/blob/main/css/ReversiPlusPlus.css) or [```ReversiPlusPlus-Mobile.css```](https://github.com/galaxygrotesque/ReversiPlusPlus/blob/main/css/ReversiPlusPlus-Mobile.css).
 
 	**Don’t submit just yet!**
 	
@@ -144,54 +144,74 @@ Installing is as simple as creating a new site skin for your user. All user site
 And voilà! There you have it. Skin installed. 🌠
 
 ### 2.2 Changing fonts
+ReversiPlusPlus offers different default fonts than Ao3. Should you want to change them, you will need to edit [```ReversiPlusPlus.css```](https://github.com/galaxygrotesque/ReversiPlusPlus/blob/main/css/ReversiPlusPlus.css) or [```ReversiPlusPlus-Mobile.css```](https://github.com/galaxygrotesque/ReversiPlusPlus/blob/main/css/ReversiPlusPlus-Mobile.css) to include more or less of the fonts listed above (or others you may have installed on your machine).
 
-To change fonts, edit [```ReversiPlusPlus.css```](https://github.com/galaxygrotesque/ReversiPlusPlus/blob/main/css/ReversiPlusPlus.css) or [```ReversiPlusPlus-Mobile.css```](https://github.com/galaxygrotesque/ReversiPlusPlus/blob/main/css/ReversiPlusPlus-Mobile.css) to include the fonts listed above (or others you’ve installed on your machine).
+There are four separate places to define fonts, each marked by ```/* font choices go here ↓ */``` for easy searching.
 
-**Body fonts**
+1. Body fonts
 
-    body {		/* font choices go here ↓ */
-	font-family: "IBM Plex Sans", "Proxima Nova", "Helvetica Neue", "Lucida Grande", "Lucida Sans Unicode", "GNU Unifont", Verdana, Helvetica, sans-serif;
-	}
+       body {		/* font choices go here ↓ */
+	     font-family: "IBM Plex Sans", "Proxima Nova", "Helvetica Neue", "Lucida Grande", "Lucida Sans Unicode", "GNU Unifont", Verdana, Helvetica, sans-serif;
+	   }
+	   
+	   …
+	   
+	   input,
+       textarea,
+       blockquote,
+       blockquote.userstuff,
+       .blurb blockquote,
+       .dropdown,
+       .expander,
+       .toggled form {	/* font choices go here ↓ */
+	     font-family: "IBM Plex Sans", "Proxima Nova", "Helvetica Neue", "Lucida Grande", "Lucida Sans Unicode", "GNU Unifont", Verdana, Helvetica, sans-serif;
+       }
 
-**Header fonts**
+2. Header fonts
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    .heading,
-    .bookmark .user .meta {	/* font choices go here ↓ */
-	font-family: "Charter", "IBM Plex Serif", "Palatino", "Georgia", serif;
-    }
+       h1,
+       h2,
+       h3,
+       h4,
+       h5,
+       h6,
+       .heading,
+       .bookmark .user .meta {	/* font choices go here ↓ */
+         font-family: "Charter", "IBM Plex Serif", "Palatino", "Georgia", serif;
+       }
 
-**Mono fonts**
+3. Mono fonts
 
-    kbd,
-    tt,
-    code,
-    var,
-    pre,
-    samp {		/* font choices go here ↓ */
-	font-family: "Fira Code", "Source Code Pro", "Menlo", "Monaco", "Consolas", Courier, monospace;
-	font-size: .9em;
-    }
+       kbd,
+       tt,
+       code,
+       var,
+       pre,
+       samp {		/* font choices go here ↓ */
+	     font-family: "Fira Code", "Source Code Pro", "Menlo", "Monaco", "Consolas", Courier, monospace;
+	     …
+       }
 
-**Work fonts**
+3. Work fonts
 
-    #chapters .userstuff a,
-    #chapters .userstuff p,
-    #chapters .userstuff ol,
-    #chapters .userstuff ul {	/* font choices go here ↓ */
-	font-family: "Charter", "IBM Plex Serif", "Palatino Linotype", "Palatino", "Literata", "Georgia", serif;
-	font-size: 1.25em;	/* mobile: 1.18em */
-    }
+       #chapters .userstuff a,
+       #chapters .userstuff p,
+       #chapters .userstuff ol,
+       #chapters .userstuff ul {	/* font choices go here ↓ */
+   	     font-family: "Charter", "IBM Plex Serif", "Palatino Linotype", "Palatino", "Literata", "Georgia", serif;
+	     …
+       }
+
+The ```font-family``` value determines what font displays on a device. If the first font choice in the ```font-family``` list isn’t available, the next choice will be used, eventually falling back to the device’s default font (designated ```sans-serif```, ```serif```, or ```monospace```). This means if you have multiple devices with different fonts, you can include them in the list and the appropriate one will display.
+
+When editing the font list, make sure the chosen font name is spelled correctly, enclosed in straight quotes (```""```), and followed by a comma (```,```) if another value follows it.
+
+    font-family: "Font Choice 1", "Font Choice 2", "Font Choice 3", serif;
 
 
 ## 3  Road map
-- [x] Mobile-specific ```RPP.css```
-	- [ ] Refine ```RPPM.css```
+- [x] Mobile-specific ```ReversiPlusPlus.css```
+	- [ ] Refine ```ReversiPlusPlus.css```
 - [ ] Vet and add support for more fonts
 - [ ] Tidy code (read: figure out what I’m doing)
 - [ ] Rewrite as fully-fledged stylesheet to replace rather than build off of Ao3’s core
@@ -202,5 +222,5 @@ To change fonts, edit [```ReversiPlusPlus.css```](https://github.com/galaxygrote
 - [x] Add more fonts into font lists
 - [ ] Get rid of borders everywhere except for explicit elements
 - [ ] Different unicode arrow characters for mobile because apparently Roboto doesn’t like it
-- [x] Start setting up mobile values so creation of ```RPPM.css``` is easier
+- [x] Start setting up mobile values so creation of ```ReversiPlusPlus.css``` is easier
 
