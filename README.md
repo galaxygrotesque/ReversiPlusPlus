@@ -48,9 +48,9 @@ In the case of tag-heavy works, tags are also confined to a scroll box!
 - Tags are confined to ~4 lines per work blurb
 - If the number of tags exceeds ~4 lines in a particular blurb, the overflow will be trapped in scroll box jail
 
-|             Ao3              |             Reversi              | Reversi++                                |
-| :--------------------------: | :------------------------------: | :--------------------------------------- |
-| ![](img/comparison-ao3-tags) | ![](img/comparison-reversi-tags) | ![](img/comparison-reversiplusplus-tags) |
+|                 Ao3                  |               Reversi                | Reversi++                                     |
+| :----------------------------------: | :----------------------------------: | :-------------------------------------------- |
+| ![](img/comparison-vanilla-tags.png) | ![](img/comparison-reversi-tags.png) | ![](img/comparison-reversi-plusplus-tags.png) |
 
 
 ### 1.3  Custom fonts
@@ -100,12 +100,12 @@ Installing is as simple as **creating a new site skin** for your user. All user 
 4. The Skins page will have multiple buttons. In the top right-hand corner, select ```Create Site Skin```.
 
 	![](img/install-steps-03.png)
-
-5. Welcome to the Create New Site Skin page!
+	
+	Welcome to the Create New Site Skin page!
 	
 	![](img/install-steps-04.png)
 
-	Fill in the following fields:
+5. Fill in the following fields:
 
 	1. The ```Type``` field must be set to ```Site Skin```.
 	2. The ```Title``` field must have a value in it, and that value **must be unique** because Ao3 only distinguishes user site skins by name, not by user.
@@ -121,18 +121,18 @@ Installing is as simple as **creating a new site skin** for your user. All user 
 	
 	![](img/install-steps-06.png)
 	
-	Here, fill in the following fields:
+6. Here, fill in the following fields:
 	
-	4. The ```What it does``` field must be set to ```add on to archive skin```.
-	5. In the ```Media``` section under ```Choose @media```, the ```⬜ all``` option must be checked.
+	1. The ```What it does``` field must be set to ```add on to archive skin```.
+	2. In the ```Media``` section under ```Choose @media```, the ```⬜ all``` option must be checked.
 
 	All done?
 
-6. Slap ```Submit```!
+7. Slap ```Submit```!
 
 	![](img/install-steps-07.png)
 
-7. You’ll be taken to a new page with your site skin with a ```Skin was successfully created.``` message.
+8. You’ll be taken to a new page with your site skin with a ```Skin was successfully created.``` message.
 
 	Scroll aaaaall the way down to the bottom where you’ll see these four options:
 
@@ -153,7 +153,7 @@ And voilà! There you have it. Skin installed. 🌠
 ### 3.1  Short-term to-do list
 - [ ] Adjust sort and filter sidebar to match work index group
 - [x] Figure out how to lower buttons/stats on work blurbs
-- [ ] Add more fonts into font lists
+- [x] Add more fonts into font lists
 - [ ] Get rid of borders everywhere except for explicit elements
 - [ ] Different unicode arrow characters for mobile because apparently Roboto doesn’t like it
 - [x] Start setting up mobile values so creation of ```RPPM.css``` is easier
