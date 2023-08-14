@@ -5,9 +5,9 @@
 
 **This project is a work-in-progress.** Please bear with me while I find my style sheet legs.
 
-|            Reversi++             |               Reversi++ M               |
-| :------------------------------: | :-------------------------------------: |
-| ![](img/preview-reversiplusplus) | ![](img/preview-reversiplusplus-mobile) |
+|               Reversi++               |                 Reversi++ M                  |
+| :-----------------------------------: | :------------------------------------------: |
+| ![](img/preview-reversi-plusplus.png) | ![](img/preview-reversi-plusplus-mobile.png) |
 
 
 
