@@ -603,7 +603,6 @@ dd.actions {
 	border: 0;
 }
 
-/* why are we still using weird noise jpgs as banners please stop */
 #header .primary {
 	background: #30679e;
 	padding: 0 0;
@@ -815,7 +814,6 @@ fieldset.listbox .heading,
 
 /* ---+ 06. FOOTER +--- */
 
-/* no more noise.jpg */
 #outer #footer {
 	background: #30679e;
 }
@@ -1842,8 +1840,7 @@ dl.index dd {
 #exclude_freeform_tags,
 #include_tag_tags,
 #exclude_tag_tags {
-	font-size: .9em;
-	font-size: .9em;
+	font-size: .9em;	
 }
 
 /* slight space between S&F labels and their input */
