@@ -462,6 +462,7 @@ input.button:hover,
 
 dl.meta {
 	border: 0;
+	clear: left;
 }
 
 ul.actions,
@@ -478,6 +479,31 @@ dd.actions {
 /* arrow to-the-top buttons on fandoms page */
 .action.top a:active {
 	background: transparent;
+}
+
+/*  */
+.user.home.profile ul.navigation.actions {
+	clear: left;
+	float: left;
+	text-align: left;
+}
+
+/* navigation buttons on various pages */
+.home .header ul.actions {
+	clear: left;
+	float: left;
+	margin: .643em 0;
+	padding: .5em 0;
+	text-align: right;
+}
+
+/* specifically user page nav */
+.user.home.profile dl.meta {
+	clear: left;
+}
+
+.home .header .actions li {
+	padding: 0 .25em 0 0;
 }
 
 
@@ -602,7 +628,6 @@ dd.actions {
 	border: 0;
 }
 
-/* why are we still using weird noise jpgs as banners please stop */
 #header .primary {
 	background: #30679e;
 	padding: 0 0;
@@ -692,10 +717,10 @@ fieldset.listbox .heading,
 	border: 0;
 }
 
-/* small margin fix in searchbar */
+/* small margin fix in searchbar and make searchbar scalable to viewport */
 #header #search .text {
 	margin: .2em .43em .5em .43em;
-	width: 17rem;
+	width: 75vw;
 }
 
 #header #search .button {
@@ -840,7 +865,6 @@ fieldset.listbox .heading,
 
 /* ---+ 06. FOOTER +--- */
 
-/* no more noise.jpg */
 #outer #footer {
 	background: #30679e;
 }
@@ -1474,7 +1498,7 @@ ul.required-tags,
 }
 
 .blurb ul.required-tags li {
-	margin-bottom: 3px;
+	margin-bottom: 4px;
 }
 
 .blurb ul.required-tags li+li+li,
@@ -1529,17 +1553,17 @@ ul.required-tags,
 .required-tags .category-none,
 .required-tags .warning-no,
 .status .count {
-	background: url("/images/imageset.png") -125px 0px;
+	background: url("/images/imageset.png") -125px 0;
 	background-size: 835%;
 }
 
 .required-tags .rating-teen {
-	background: url("/images/imageset.png") 0px -21px;
+	background: url("/images/imageset.png") 0 -21px;
 	background-size: 835%;
 }
 
 .required-tags .category-femslash {
-	background: url("/images/imageset.png") -21px 0px;
+	background: url("/images/imageset.png") -21px 0;
 	background-size: 835%;
 }
 
@@ -1549,22 +1573,22 @@ ul.required-tags,
 }
 
 .required-tags .category-slash {
-	background: url("/images/imageset.png") 0px 0px;
+	background: url("/images/imageset.png") 0 0;
 	background-size: 835%;
 }
 
 .required-tags .category-het {
-	background: url("/images/imageset.png") -63px 0px;
+	background: url("/images/imageset.png") -63px 0;
 	background-size: 835%;
 }
 
 .required-tags .category-multi {
-	background: url("/images/imageset.png") -84px -1px;
+	background: url("/images/imageset.png") -84px 0;
 	background-size: 835%;
 }
 
 .required-tags .category-other {
-	background: url("/images/imageset.png") -105px 0px;
+	background: url("/images/imageset.png") -105px 0;
 }
 
 .required-tags .complete-no {
@@ -1805,7 +1829,8 @@ form dd.required,
 }
 
 /* dark dashboard backdrop, smaller font size, more padding */
-#dashboard.own {
+#dashboard.own,
+#dashboard.region {
 	background: transparent;
 	border-top: .65em solid #30679e;
 	border-bottom: .65em solid #30679e;
@@ -1926,6 +1951,18 @@ dl.index dd {
 	margin: .25em .25em 1.25em 0;
 }
 
+/* adjusts blurbs on skin & muted/blocked user pages */
+li.skins.own.picture.blurb.group .heading,
+li.user.pseud.picture.blurb.group .heading {
+	margin: .375em 5.25em 0 65px;
+}
+
+/* adjusts blurb summary on skin & muted/blocked user pages */
+li.skins.own.picture.blurb.group blockquote,
+li.user.pseud.picture.blurb.group blockquote {
+	 margin: 1.5em auto 1em auto;
+}
+
 /* edit multiple works: kill background behind checkboxes */
 .concise label.action {
 	background: transparent;
@@ -1990,19 +2027,6 @@ dl.index dd {
 	border: 0;
 	float: right;
 	margin: 0 0 0 100px;
-}
-
-/* mobile: finally fixed this correctly, floats and all*/
-.home .header ul.actions {
-	clear: left;
-	float: left;
-	margin: .643em 0;
-	padding: .5em 0;
-	text-align: right;
-}
-
-.home .header .actions li {
-	padding: 0 .25em 0 0;
 }
 
 .primary .icon {
@@ -2073,7 +2097,6 @@ dl.index dd {
 #exclude_freeform_tags,
 #include_tag_tags,
 #exclude_tag_tags {
-	font-size: .9em;
 	font-size: .9em;
 }
 
