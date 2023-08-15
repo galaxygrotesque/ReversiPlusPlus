@@ -211,7 +211,7 @@ When editing the font list, make sure the chosen font name is spelled correctly,
 
 ## 3  Road map
 - [x] Mobile-specific ```ReversiPlusPlus.css```
-	- [ ] Refine ```ReversiPlusPlus.css```
+	- [ ] Refine ```ReversiPlusPlus-Mobile.css```
 - [ ] Vet and add support for more fonts
 - [ ] Tidy code (read: figure out what I’m doing)
 - [ ] Rewrite as fully-fledged stylesheet to replace rather than build off of Ao3’s core
@@ -222,5 +222,5 @@ When editing the font list, make sure the chosen font name is spelled correctly,
 - [x] Add more fonts into font lists
 - [ ] Get rid of borders everywhere except for explicit elements
 - [ ] Different unicode arrow characters for mobile because apparently Roboto doesn’t like it
-- [x] Start setting up mobile values so creation of ```ReversiPlusPlus.css``` is easier
+- [x] Start setting up mobile values so creation of ```ReversiPlusPlus-Mobile.css``` is easier
 
