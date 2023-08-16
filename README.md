@@ -55,7 +55,7 @@ In the case of tag-heavy works, tags are also confined to a scroll box!
 ### 1.3  Custom fonts
 - **Good news:** ReversiPlusPlus uses some common web-safe and system font alternatives in addition to Ao3’s default fonts!
 
-- **Bad news:** Due to how Ao3 handles user skins and limits CSS, they can’t be automatically packaged with or built into the skin. (I went through a grieving process here. Trust me, I really wish they could.)
+- **Bad news:** Due to how Ao3 handles user skins and limits CSS, they can’t be automatically packaged with or built into the skin.
 
 This means if you want alternative fonts to appear, you’ll have to **install them on your device** — PC, phone, tablet, or whatever else.
 
@@ -86,7 +86,7 @@ ReversiPlusPlus builds right off of Ao3’s existing stylesheet, so no extra add
 
 Installing is as simple as creating a new site skin for your user. All user site skins are private by default — no worries about accidentally making something public.
 
-**To create a new site skin:**
+To create a new site skin:
 
 1. Navigate to [Archive Of Our Own](https://archiveofourown.org/).
 
@@ -129,7 +129,7 @@ Installing is as simple as creating a new site skin for your user. All user site
 
 	All done?
 
-7. Slap ```Submit```!
+7. Hit ```Submit```!
 
 	![](img/install-steps-07.png)
 
@@ -204,7 +204,8 @@ There are four separate places to define fonts, each marked by ```/* font choice
 
 The ```font-family``` value determines what font displays on a device. If the first font choice in the ```font-family``` list isn’t available, the next choice will be used, eventually falling back to the device’s default font (designated ```sans-serif```, ```serif```, or ```monospace```). This means if you have multiple devices with different fonts, you can include them in the list and the appropriate one will display.
 
-When editing the font list, make sure the chosen font name is spelled correctly, enclosed in straight quotes (```""```), and followed by a comma (```,```) if another value follows it.
+> [!NOTE]  
+> When editing the font list, make sure the chosen font name is spelled correctly, enclosed in straight quotes (```""```), and followed by a comma (```,```) if another value follows it like the example below.
 
     font-family: "Font Choice 1", "Font Choice 2", "Font Choice 3", serif;
 
