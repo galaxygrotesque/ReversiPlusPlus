@@ -110,7 +110,7 @@ To create a new site skin:
 
 	1. The ```Type``` field must be set to ```Site Skin```.
 	2. The ```Title``` field must have a value in it, and that value **must be unique** because Ao3 only distinguishes user site skins by name, not by user.
-	3. The ```CSS``` field must have CSS in it — i.e., the text in [```ReversiPlusPlus.css```](https://github.com/galaxygrotesque/ReversiPlusPlus/blob/main/css/ReversiPlusPlus.css) or [```ReversiPlusPlus-Mobile.css```](https://github.com/galaxygrotesque/ReversiPlusPlus/blob/main/css/ReversiPlusPlus-Mobile.css).
+	3. The ```CSS``` field must have CSS in it — i.e., the text in [```reversiplusplus.css```](https://github.com/galaxygrotesque/ReversiPlusPlus/blob/main/css/ReversiPlusPlus.css) or [```reversiplusplus_mobile.css```](https://github.com/galaxygrotesque/ReversiPlusPlus/blob/main/css/ReversiPlusPlus-Mobile.css).
 
 	**Don’t submit just yet!**
 	
@@ -144,7 +144,7 @@ To create a new site skin:
 And voilà! There you have it. Skin installed. 🌠
 
 ### 2.2 Changing fonts
-ReversiPlusPlus offers different default fonts than Ao3. Should you want to change them, you will need to edit [```ReversiPlusPlus.css```](https://github.com/galaxygrotesque/ReversiPlusPlus/blob/main/css/ReversiPlusPlus.css) or [```ReversiPlusPlus-Mobile.css```](https://github.com/galaxygrotesque/ReversiPlusPlus/blob/main/css/ReversiPlusPlus-Mobile.css) to include more or less of the fonts listed above (or others you may have installed on your machine).
+ReversiPlusPlus offers different default fonts than Ao3. Should you want to change them, you will need to edit [```reversiplusplus.css```](https://github.com/galaxygrotesque/ReversiPlusPlus/blob/main/css/ReversiPlusPlus.css) or [```reversiplusplus_mobile.css```](https://github.com/galaxygrotesque/ReversiPlusPlus/blob/main/css/ReversiPlusPlus-Mobile.css) to include more or less of the fonts listed above (or others you may have installed on your machine).
 
 There are four separate places to define fonts, each marked by ```/* font choices go here ↓ */``` for easy searching.
 
@@ -211,8 +211,8 @@ The ```font-family``` value determines what font displays on a device. If the fi
 
 
 ## 3  Road map
-- [x] Mobile-specific ```ReversiPlusPlus.css```
-	- [ ] Refine ```ReversiPlusPlus-Mobile.css```
+- [x] Mobile-specific ```reversiplusplus.css```
+	- [ ] Refine ```reversiplusplus_mobile.css```
 - [ ] Vet and add support for more fonts
 - [ ] Tidy code (read: figure out what I’m doing)
 - [ ] Rewrite as fully-fledged stylesheet to replace rather than build off of Ao3’s core
@@ -223,5 +223,10 @@ The ```font-family``` value determines what font displays on a device. If the fi
 - [x] Add more fonts into font lists
 - [ ] Get rid of borders everywhere except for explicit elements
 - [ ] Different unicode arrow characters for mobile because apparently Roboto doesn’t like it
-- [x] Start setting up mobile values so creation of ```ReversiPlusPlus-Mobile.css``` is easier
+- [x] Start setting up mobile values so creation of ```reversiplusplus_mobile.css``` is easier
 
+## 4 Credits & acknowledgements
+- Reversi base: [archiveofourown](https://archiveofourown.org/skins/929)  
+- Tag scroll box:	[archiveofourown](https://archiveofourown.org/skins/3756)  
+- Tag bubbles: [@nyxmidnight](https://github.com/nyxmidnight)’s [ao3tagsfonts](https://github.com/nyxmidnight/ao3tagsfonts)  
+- Typography: [mb](https://practicaltypography.com/index.html)
