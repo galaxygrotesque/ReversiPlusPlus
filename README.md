@@ -12,8 +12,8 @@
 
 ## 1  Features
 
-✅ [Darker colours!](https://github.com/galaxygrotesque/ReversiPlusPlus#11dark-mode-redux)
-✅ [Colourfully obvious tags trapped in a scroll box!](https://github.com/galaxygrotesque/ReversiPlusPlus#12colour-coded-tags-that-pop)
+✅ [Darker colours!](https://github.com/galaxygrotesque/ReversiPlusPlus#11dark-mode-redux)  
+✅ [Colourfully obvious tags trapped in a scroll box!](https://github.com/galaxygrotesque/ReversiPlusPlus#12colour-coded-tags-that-pop)  
 ✅ [Cool fonts (if you’re willing to install them)!](https://github.com/galaxygrotesque/ReversiPlusPlus#13custom-fonts)
 
 ### 1.1  Dark mode redux
@@ -216,8 +216,8 @@ The `font-family` value determines what font displays on a device. If the first 
 
 ## 3 Road map
 
-- [x] Mobile-specific `reversiplusplus.css`
-      - [ ] Refine `reversiplusplus_mobile.css`
+- [x] Mobile-specific `rpp.css`
+  - [ ] Refine `rppm.css`
 - [ ] Vet and add support for more fonts
 - [ ] Tidy code (read: figure out what I’m doing)
 - [ ] Rewrite as fully-fledged stylesheet to replace rather than build off of Ao3’s core
