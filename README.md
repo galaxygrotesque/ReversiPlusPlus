@@ -4,17 +4,15 @@
 
 [Reversi](https://archiveofourown.org/skins/929) — but better. An Archive of Our Own “dark mode” reskin of Reversi with a focus on readability and less noise.
 
-**This project is a work-in-progress.** Please bear with me while I find my style sheet legs.
-
-|                           Reversi++                              |                        Reversi++ Mobile                          |
-| :--------------------------------------------------------------: | :--------------------------------------------------------------: |
-| ![A preview of ReversiPlusPlus on desktop.](img/preview-rpp.png) | ![A preview of ReversiPlusPlus on mobile.](img/preview-rppm.png) |
-
 ## 1  Features
 
 ✅ [Darker colours!](https://github.com/galaxygrotesque/ReversiPlusPlus#11dark-mode-redux)  
 ✅ [Colourfully obvious tags trapped in a scroll box!](https://github.com/galaxygrotesque/ReversiPlusPlus#12colour-coded-tags-that-pop)  
 ✅ [Cool fonts (if you’re willing to install them)!](https://github.com/galaxygrotesque/ReversiPlusPlus#13custom-fonts)
+
+|                           Reversi++                              |                        Reversi++ Mobile                          |
+| :--------------------------------------------------------------: | :--------------------------------------------------------------: |
+| ![A preview of ReversiPlusPlus on desktop.](img/preview-rpp.png) | ![A preview of ReversiPlusPlus on mobile.](img/preview-rppm.png) |
 
 ### 1.1  Dark mode redux
 
@@ -30,7 +28,7 @@ Then ReversiPlusPlus might be your cup of tea!
 Inspired by Mozilla Firefox’s dark colour scheme, ReversiPlusPlus:
 
 - Uses a darker colour palette that is easier on the eye
-- Reduces visual noise by relying on colour/element contrast rather than borders and lines
+- Reduces visual noise by relying on colour and element contrast rather than harsh borders and lines
 
 |                              Ao3                               |                             Reversi                            |                           Reversi++                          |
 | :------------------------------------------------------------: | :------------------------------------------------------------: | :----------------------------------------------------------: |
@@ -58,10 +56,10 @@ In the case of tag-heavy works, tags are also confined to a scroll box!
 
 ### 1.3  Custom fonts
 
-- **Good news:** ReversiPlusPlus uses some common web-safe and system font alternatives in addition to Ao3’s default fonts!
+- **Good news:** ReversiPlusPlus uses some common web-safe and system font alternatives in addition to Ao3’s default fonts.
 - **Bad news:** Due to how Ao3 handles user skins and limits CSS, they can’t be automatically packaged with or built into the skin.
 
-This means if you want alternative fonts to appear, you’ll have to **install them on your device** — PC, phone, tablet, or whatever else.
+This means if you want alternative fonts to appear, you must **install them on your device** — whether you’re using a PC, phone, or tablet.
 
 For your convenience, here is a handy table containing (most) of the fonts and where to find them.
 
@@ -139,7 +137,7 @@ To create a new site skin:
 
 8. You’ll be taken to a new page with your site skin with a `Skin was successfully created.` message.
 
-    Scroll aaaaall the way down to the bottom where you’ll see these four options:
+    Scroll down to the bottom where you’ll see these four options:
 
     ![The Skins page, now showing a new skin to select, and a light blue arrow pointing to the skin’s “Use” button.](img/install-08.png)
 
