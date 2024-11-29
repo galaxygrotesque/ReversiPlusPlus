@@ -1,12 +1,15 @@
 /*
-  ---+ REVERSI PLUS PLUS +---
+============================================================
+REVERSI PLUS PLUS MOBILE
+============================================================
 
-  ++ CREDITS & ACKNOWLEDGEMENTS ++
-  - reversi base:		archiveofourown		(https://archiveofourown.org/skins/929)
-  - tag scroll box:		archiveofourown		(https://archiveofourown.org/skins/3756)
-  - tag bubbles:		@nyxmidnight		(https://github.com/nyxmidnight) (https://github.com/nyxmidnight/ao3tagsfonts)
-  - typography:			mb					(https://practicaltypography.com/index.html)
-  - fonts:
+++ CREDITS & ACKNOWLEDGEMENTS ++
+
+- reversi base:		archiveofourown		(https://archiveofourown.org/skins/929)
+- tag scroll box:		archiveofourown		(https://archiveofourown.org/skins/3756)
+- tag bubbles:		@nyxmidnight		(https://github.com/nyxmidnight) (https://github.com/nyxmidnight/ao3tagsfonts)
+- typography:			mb					(https://practicaltypography.com/index.html)
+- fonts:
 		*				charter				(https://fontesk.com/charter-typeface/)
 		*				fira code			(https://fonts.google.com/specimen/Fira+Code)
 			@		$	helvetica neue		(https://www.myfonts.com/collections/neue-helvetica-font-linotype)
@@ -31,34 +34,38 @@
 	# microsoft office cloud
 	$ paid
 
-  ++ SECTIONS ++
-  00. colour guide
-  01. body fonts
-  02. base
-  03. actions
-  04. header
-  05. main
-  06. footer
-  07. work reading adjustments (reading fonts here!)
-  08. comments
-  09. tags
-  10. work blurb cleanup
-  11. messages & tooltips
-  12. dashboard
-  13. stats page
-  14. other pages
-  15. sort & filter sidebar
-  16. misc
-  
+
+++ SECTIONS ++
+
+00. colour guide
+01. body fonts
+02. base
+03. actions
+04. header
+05. main
+06. footer
+07. work reading adjustments (reading fonts here!)
+08. comments
+09. tags
+10. work blurb cleanup
+11. messages & tooltips
+12. dashboard
+13. stats page
+14. other pages
+15. sort & filter sidebar
+16. misc
 */
 
 
 
 
-/* ---+ 00. COLOUR GUIDE +--- */
+/*
+============================================================
+00. COLOUR GUIDE
+============================================================
+*/
 
 /* using this as a colour guide as ao3 does not allow variables
-
 :root {
 	--ao3-accent-color: #5998d6;
 	--ao3-accent-color-light: #9ecfff;
@@ -71,7 +78,13 @@
 	--button-background-color: #2b2a33;
 	--button-current-color: #0b0b0b;
 	--button-highlight-color: #4e4e5e;
-	--tag-bubble-color-visited-hover: #5b5b66;
+	--tag-bubble-color: #2b2a33;
+	--tag-bubble-color-char: #337e00;
+	--tag-bubble-color-char-visited: #204d02;
+	--tag-bubble-color-ship: #0e60b0;
+	--tag-bubble-color-ship-visited: #124679;
+	--tag-bubble-color-warning: #8d0203;
+	--tag-bubble-color-warning-visited: #5f0102;
 	--text-color: #eee;
 	--text-link-color: #fff;
 	--text-link-visited-color: #bfbfbf;
@@ -82,7 +95,11 @@
 
 
 
-/* ---+ 01. BODY FONTS +--- */
+/*
+============================================================
+01. BODY FONTS
+============================================================
+*/
 
 /* body fonts
    grab whichever strikes your fancy insert it after font-family!
@@ -134,7 +151,11 @@ samp {		/* font choices go here ↓ */
 
 
 
-/* ---+ 02. BASE +--- */
+/*
+============================================================
+02. BASE
+============================================================
+*/
 
 /* banishes every box shadow, text shadow, and outline like the demons they are */
 * {
@@ -196,16 +217,16 @@ h6,
 }
 
 h1 {
-	font-size: 2.5em;
+	font-size: 2.25em;
 	line-height: 1;
 	margin: .5em 0;
 }
 
 h2 {
-	font-size: 2.145em;
+	display: inline;
+	font-size: 1.75em;
 	line-height: 1;
 	margin: .5em 0;
-	display: inline;
 }
 
 h3 {
@@ -257,7 +278,7 @@ hr,
 	margin: 1.5em auto;
 }
 
-/* 
+/*
 fieldset.listbox {
 	
 }*/
@@ -369,9 +390,7 @@ ul.expandable.secondary {
 	border: 0;
 }
 
-li.blurb,
-fieldset,
-form dl {
+li.blurb, fieldset, form dl {
 	border: 0;
 	padding: 1em;
 	overflow: hidden;
@@ -380,7 +399,11 @@ form dl {
 
 
 
-/* ---+ 03. ACTIONS +--- */
+/*
+============================================================
+03. ACTIONS
+============================================================
+*/
 
 legend .action:link {
 	margin: 0 .5em;
@@ -464,6 +487,7 @@ input.button:hover,
 
 dl.meta {
 	border: 0;
+	clear: left;
 }
 
 ul.actions,
@@ -472,8 +496,8 @@ li.actions,
 span.actions,
 fieldset.actions,
 dd.actions {
-	padding: .429em .25em .25em 0;
 	float: right;
+	padding: .429em .25em .25em 0;
 	text-align: center;
 }
 
@@ -482,10 +506,39 @@ dd.actions {
 	background: transparent;
 }
 
+/*  */
+.user.home.profile ul.navigation.actions {
+	clear: left;
+	float: left;
+	text-align: left;
+}
+
+/* navigation buttons on various pages */
+.home .header ul.actions {
+	clear: left;
+	float: left;
+	margin: .643em 0;
+	padding: .5em 0;
+	text-align: right;
+}
+
+/* specifically user page nav */
+.user.home.profile dl.meta {
+	clear: left;
+}
+
+.home .header .actions li {
+	padding: 0 .25em 0 0;
+}
 
 
 
-/* ---+ 04. HEADER +--- */
+
+/*
+============================================================
+04. HEADER
+============================================================
+*/
 
 /* dark header bg at the top */
 #header {
@@ -499,6 +552,7 @@ dd.actions {
 
 #header .heading {
 	float: left;
+	font-size: .75em;
 	padding: .375em;
 }
 
@@ -523,7 +577,7 @@ dd.actions {
 #header .actions a:focus,
 #header .dropdown:hover a,
 #header .open a {
-  background: #ddd;
+	background: #ddd;
 }
 
 /* header nav buttons as blue: fandoms/browse/search/about */
@@ -589,7 +643,7 @@ dd.actions {
 
 #header .logo {
 	float: left;
-	height: 42px;
+	height: 1.25em;
 }
 
 /* "archiveofourown beta" lighter text pop on active */
@@ -609,9 +663,20 @@ dd.actions {
 	width: 100%;
 }
 
-#header .menu,
+/*#header .menu,
 #greeting .menu {
-	padding: 0;
+	background: #4e4e5e;
+	padding: .35em;
+}*/
+
+#header .menu,
+#small_login {
+	background: #4e4e5e;
+	display: none;
+	padding: .35em;
+	position: absolute;
+	width: 20em;
+	z-index: 55;
 }
 
 /* "archiveofourown beta" text pop on hover */
@@ -665,12 +730,15 @@ fieldset.listbox .heading,
 	color: #fff;
 }
 
+
 /** SEARCH SECTION **/
 
 #header .search {
-	float: right;
+	float: left;
+	clear: left;
 	color: #eee;
 	margin-right: .25em;
+	text-align: right;
 }
 
 #header #search .text,
@@ -678,14 +746,16 @@ fieldset.listbox .heading,
 	border: 0;
 }
 
-/* small margin fix in searchbar */
+/* small margin fix in searchbar and make searchbar scalable to viewport */
 #header #search .text {
-	margin: .3em .43em;
+	margin: .2em .43em .5em .43em;
+	width: 75vw;
 }
 
 #header #search .button {
 	border-radius: 1em;
-	margin: 0;
+	margin: 0 0 .4em 0;
+	padding: .25em .75em;
 }
 
 /* header searchbar colours */
@@ -709,8 +779,12 @@ fieldset.listbox .heading,
 }
 
 /* gives user greeting some breathing room */
-#greeting {
-	padding: .5em 0;
+#greeting,
+#login {
+	clear: left;
+	float: left;
+	margin-left: .375em;
+	padding: 0 0 .5em 0;
 }
 
 #greeting .user > li {
@@ -718,6 +792,7 @@ fieldset.listbox .heading,
 }
 
 #greeting .menu {
+	left: 0;
 	right: 0;
 }
 
@@ -737,11 +812,16 @@ fieldset.listbox .heading,
 #header h1,
 #small_login dl {
 	background: transparent;
-	font-size: 100%;
 	border: 0;
+	border-radius: 0;
+	font-size: 100%;
 	padding: 0;
 	margin: 0;
-	border-radius: 0;
+}
+
+/* mobile */
+#header .primary > li:first-of-type {
+	margin: 0;	/* technically doesn't show up on small res, but removes for desktop */
 }
 
 /* collections header */
@@ -759,7 +839,11 @@ fieldset.listbox .heading,
 
 
 
-/* ---+ 05. MAIN +--- */
+/*
+============================================================
+05. MAIN
+============================================================
+*/
 
 /* nix h3 and news underlines on main splash */
 .splash .module h3 {
@@ -812,7 +896,11 @@ fieldset.listbox .heading,
 
 
 
-/* ---+ 06. FOOTER +--- */
+/*
+============================================================
+06. FOOTER
+============================================================
+*/
 
 #outer #footer {
 	background: #30679e;
@@ -843,11 +931,13 @@ fieldset.listbox .heading,
 
 
 
-/* ---+ 07. WORK READING ADJUSTMENTS +--- */
-
-/* WARNING:
-   note: this change likely can (and will) royally screw up writers' work skins
+/*
+============================================================
+07. WORK READING ADJUSTMENTS
+============================================================
 */
+
+/* WARNING: this change likely can (and will) royally screw up writers' work skins */
 
 /* work serif fonts */
 #chapters .userstuff a,
@@ -855,7 +945,7 @@ fieldset.listbox .heading,
 #chapters .userstuff ol,
 #chapters .userstuff ul {	/* font choices go here ↓ */
 	font-family: "Charter", "IBM Plex Serif", "Palatino Linotype", "Palatino", "Literata", "Georgia", serif;
-	font-size: 1.25em;
+	font-size: 1.18em;
 }
 
 /* links don't be big stop it */
@@ -865,14 +955,20 @@ fieldset.listbox .heading,
 
 /* unfortunately blockquotes get weird with more white space so gotta fix that */
 #chapters .userstuff blockquote {
-	margin-left: 5em;
-	margin-right: 5em;	
+	margin: 1.75em .5em 1.75em 0;
+	margin-inline-start: 1.25em;
+	padding: 0 .5em;
 }
 
 /* wrangle p margins within blockquotes */
 #chapters .userstuff blockquote p {
-	margin-left: 1em;
-	margin-right: 1em;
+	margin-left: .5em;
+	margin-right: .5em;
+}
+
+/* except for in-chapter story summaries */
+#chapters #summary .userstuff p {
+	margin: 0;
 }
 
 /* scrunches code in-work a little */
@@ -887,8 +983,8 @@ fieldset.listbox .heading,
 
 /* embiggen fic margins! in this house we appreciate white space */
 #chapters .userstuff p {
-	margin-left: 2.5em;
-	margin-right: 2.5em;
+	margin-left: .25em;
+	margin-right: .25em;
 }
 
 /* slightly bigger pre because otherwise it looks like it's for ants */
@@ -908,10 +1004,17 @@ fieldset.listbox .heading,
 	border-bottom: 1px solid #78777d;
 }
 
-div.preface {
+/*div.preface {
 	margin: 1.5em 4em 5em 4em;
 	padding: .65em .65em 0 .65em;
 	float: none;
+}*/
+
+/* mobile replacement: decreases summary+author’s note margins so you don’t get a ridiculously slim box running down the page */
+div.preface {
+	float: none;
+	margin: 1.5em .5em 5em .5em;
+	padding: .65em .65em 0 .65em;
 }
 
 div.preface .module {
@@ -932,8 +1035,8 @@ div.preface .module {
 }
 
 .preface h2.title {
-	display: block;
 	border-bottom: 0;
+	display: block;
 	clear: right;
 }
 
@@ -950,6 +1053,7 @@ div.preface .byline {
 
 .preface blockquote {
 	border: 0;
+	margin: .65em 0;
 }
 
 div.preface .notes,
@@ -971,7 +1075,7 @@ div.preface .associations {
 div.preface .jump {
 	margin-top: 1.5em;
 }
- 
+
 /* dump summary further below title */
 div.summary.module {
 	margin-top: 2em;
@@ -989,7 +1093,11 @@ div.afterword .children h3 {
 
 
 
-/* ---+ 08. COMMENTS +--- */
+/*
+============================================================
+08. COMMENTS
+============================================================
+*/
 
 /* nix border outside the add comment box */
 #add_comnent,
@@ -1021,13 +1129,12 @@ li.comment {
 
 /* scoots comment user icon over + accommodates new comment padding */
 .comment div.icon {
-	margin: -1.5em .75em .5em 0;
 	border: 0;
+	margin: -1.5em .75em .5em 0;
 }
 
 .comment h4.byline {
 	margin-top: .375em;
-	/* padding: 0 .25em .25em 110px; */
 }
 
 /* new comment padding FINALLY */
@@ -1039,10 +1146,19 @@ li.comment {
 
 
 
-/* ---+ 09. TAGS +--- */
+/*
+============================================================
+09. TAGS
+============================================================
+*/
 
 a.tag:hover {
 	background: transparent;
+}
+
+/* minimise mobile tag clump */
+.work.meta.group .tags {
+	line-height: 1.7;
 }
 
 /* tag-specific link attributes — makes tag bubbles! */
@@ -1056,9 +1172,10 @@ a.tag:hover {
 	color: #eee;
 	display: inline-block;
 	font-size: .9em;
+	line-height: 1.25;
 	margin: 1px 0;
 	overflow: hidden;
-	padding: .5px 6px;
+	padding: 1px 5px;
 	text-decoration: none;
 	text-overflow: ellipsis;
 }
@@ -1268,7 +1385,11 @@ a.tag:hover {
 
 
 
-/* ---+ 10. WORK BLURB CLEANUP +--- */
+/*
+============================================================
+10. WORK BLURB CLEANUP
+============================================================
+*/
 
 /* turn down the lights on work blurb bgs */
 #main li.blurb {
@@ -1280,22 +1401,62 @@ a.tag:hover {
 }
 
 .bookmark .user {
-  border: 0;
-  margin-top: .65em;
-  padding: .429em .75em;
-  overflow: hidden;
+	border: 0;
+	margin-top: .65em;
+	padding: .429em .75em;
+	overflow: hidden;
 }
 
 .blurb .datetime,
 .datetime {
-	font-size: small;
+	font-size: x-small;
 	line-height: 1.25;
 }
 
 /* makes tag scroll box for those 10000+ tag fics so you don't have to scroll for like ten minutes */
 li.blurb .tags {
-	max-height: 8em;
+	max-height: 9em;
 	overflow-y: auto;
+}
+
+/* shrink blurb titles slightly */ 
+.blurb h4.heading {
+	font-size: 1.08em;
+	line-height: 1.15;
+}
+
+.blurb h4.heading a {
+	border-bottom: 0;
+}
+
+.blurb h5.heading {
+	font-size: .9em;
+}
+
+.bookmark p.status {
+	margin-top: 0.429em;
+	position: absolute;
+	right: 0.25em;
+	width: 46px;
+	z-index: 1;
+}
+
+.bookmark .status span,
+.bookmark .status a {
+	display: block;
+	height: 20px;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding-left: 0;
+	width: 20px;
+}
+
+.bookmark span.count {
+	line-height: 1.5em;
+	position: absolute;
+	top: 0;
+	left: 24px;
+	text-align: center;
 }
 
 /* pretty sure these are the blurb key symbol blocks */
@@ -1308,9 +1469,10 @@ ul.required-tags,
 
 /* cushion work blurb stats, align with bottom of listbox */
 .blurb dl.stats {
-	margin-top: 1em;
+	line-height: 1.5;
 	margin-bottom: .55em;
-	line-height: 1.25;
+	margin-top: 1em;
+	text-align: left;
 }
 
 /* gives work blurb some cushion between bottom buttons */
@@ -1323,9 +1485,15 @@ ul.required-tags,
 	padding: 0 .25em 0 0;
 }
 
+/* mobile: smaller min header */
+.blurb .header {
+	margin-bottom: .375em;
+	min-height: 45px;
+}
+
 /* adjusts blurb header with rest of blurb bg */
 .blurb .header .heading {
-	margin: .375em 5.25em 0 65px;
+	margin: .375em 5.25em 0 55px;
 }
 
 /* gets rid of commas after tags because bubbles */
@@ -1338,32 +1506,10 @@ ul.required-tags,
 	padding: 0;
 }
 
-/*
-padding problem between li classes i gotta fix
-(ref: dl.meta dd ul li:first-child) 
-
-li.warnings a:last-child,
-li.relationships a:last-child,
-li.characters a:last-child {
-}
-
-ul.commas
-
-.commas.warnings li:last-child {
-	padding-right: .5em;
-	
-}
-
-ul.tags.commas li.characters:first-child {
-	padding-left: .25em;
-}
- 
-*/
-
 /* knock tag bubbles on work page back into alignment */
 .meta dd ul li {
-	padding-right: .5em;
 	padding-left: 0;
+	padding-right: .5em;
 }
 
 /* de-bubble bookmarker tags */
@@ -1388,6 +1534,164 @@ ul.tags.commas li.characters:first-child {
 	background: transparent;
 }
 
+/* adjustment for smaller icons */
+.blurb ul.required-tags {
+	margin: 0;
+	position: absolute;
+	top: 0;
+	width: 47px;
+}
+
+.blurb ul.required-tags li,
+.blurb ul.required-tags li a,
+.blurb ul.required-tags li span {
+	display: block;
+	height: 20px;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding-left: 0;
+	width: 20px;
+}
+
+.blurb ul.required-tags li {
+	margin-bottom: 4px;
+}
+
+.blurb ul.required-tags li+li+li,
+.blurb ul.required-tags li+li+li+li {
+	left: 24px;
+	position: absolute;
+}
+
+.blurb ul.required-tags li+li+li {
+	top: 0;
+}
+
+.blurb ul.required-tags li+li+li+li {
+	top: 24px;
+}
+
+/* keeps the outline to the proper size in firefox and opera */
+.blurb ul.required-tags li a:focus {
+	overflow: hidden;
+}
+
+.blurb span.text {
+	font-size: .001em;
+	color: transparent;
+	height: 20;
+	width: 20;
+}
+
+.blurb ul.required-tags li span {
+	background-repeat: no-repeat;
+}
+
+
+/** blurb icon adjustments **/
+
+.required-tags .rating-general-audience {
+	background: url("/images/imageset.png") -42px -22px;
+	background-size: 835%;
+}
+
+.required-tags .rating-explicit {
+	background: url("/images/imageset.png") -21px -21px;
+	background-size: 835%;
+}
+
+.required-tags .rating-mature {
+	background: url("/images/imageset.png") -63px -21px;
+	background-size: 835%;
+}
+
+.required-tags .rating-notrated,
+.required-tags .category-none,
+.required-tags .warning-no,
+.status .count {
+	background: url("/images/imageset.png") -125px 0;
+	background-size: 835%;
+}
+
+.required-tags .rating-teen {
+	background: url("/images/imageset.png") 0 -21px;
+	background-size: 835%;
+}
+
+.required-tags .category-femslash {
+	background: url("/images/imageset.png") -21px 0;
+	background-size: 835%;
+}
+
+.required-tags .category-gen {
+	background: url("/images/imageset.png") -42px -1px;
+	background-size: 835%;
+}
+
+.required-tags .category-slash {
+	background: url("/images/imageset.png") 0 0;
+	background-size: 835%;
+}
+
+.required-tags .category-het {
+	background: url("/images/imageset.png") -63px 0;
+	background-size: 835%;
+}
+
+.required-tags .category-multi {
+	background: url("/images/imageset.png") -84px 0;
+	background-size: 835%;
+}
+
+.required-tags .category-other {
+	background: url("/images/imageset.png") -128px -2px;
+}
+
+.required-tags .complete-no {
+	background: url("/images/imageset.png") -84px -21px;
+	background-size: 835%;
+}
+
+.required-tags .complete-yes {
+	background: url("/images/imageset.png") -146px -21px;
+	background-size: 835%;
+}
+
+.required-tags .warning-yes {
+	background: url("/images/imageset.png") -126px -21px;
+	background-size: 835%;
+}
+
+.required-tags .warning-choosenotto {
+	background: url("/images/imageset.png") -125px -21px;
+	background-size: 835%;
+}
+
+.required-tags .external-work {
+	background: url("/images/imageset.png") -75px -50px;
+	background-size: 835%;
+}
+
+.status .private .text {
+	background: url("/images/imageset.png") -147px -42px;
+	background-size: 835%;
+}
+
+.status .public {
+	background: url("/images/imageset.png") -105px -42px;
+	background-size: 835%;
+}
+
+.status .hidden {
+	background: url("/images/imageset.png") -150px -50px;
+	background-size: 835%;
+}
+
+.status .rec {
+	background: url("/images/imageset.png") -84px -42px;
+	background-size: 835%;
+}
+
 /* stops blockquotes in work blurbs from inheriting margins */
 .summary.userstuff blockquote {
 	margin: 0 1.5em !important;
@@ -1409,7 +1713,11 @@ ul.tags.commas li.characters:first-child {
 
 
 
-/* ---+ 11. MESSAGES & TOOLTIPS +--- */
+/*
+============================================================
+11. MESSAGES & TOOLTIPS
+============================================================
+*/
 
 #modal {
 	background: #1c1b22;
@@ -1428,8 +1736,8 @@ ul.tags.commas li.characters:first-child {
 	left: 0;
 	line-height: 44px;
 	padding: .5em 1em;
-	right: 0;
 	position: absolute;
+	right: 0;
 }
 
 #modal .footer .action.modal-closer {
@@ -1514,7 +1822,7 @@ form dd.required,
 }
 
 .mce-container input:focus {
-	background: #F3EFEC;
+	background: #f3efec;
 }
 
 /* help buttons get weird in the sidebar so this is a shrink ray */
@@ -1550,7 +1858,11 @@ form dd.required,
 
 
 
-/* ---+ 12. DASHBOARD +--- */
+/*
+============================================================
+12. DASHBOARD
+============================================================
+*/
 
 #dashboard,
 #dashboard.own {
@@ -1581,19 +1893,25 @@ form dd.required,
 }
 
 /* dark dashboard backdrop, smaller font size, more padding */
-#dashboard.own {
+#dashboard.own,
+#dashboard.region {
 	background: transparent;
-	border-top: .75em solid #30679e;
-	border-bottom: .75em solid #30679e;
+	border-top: .65em solid #30679e;
+	border-bottom: .65em solid #30679e;
 	font-size: .85em;
-	margin-top: 1.75em;
+	max-height: 7.5em;	/* dashboard jail for the billion options until i figure out something better */
 	padding: .25em;
+	overflow-y: auto;
 }
 
 
 
 
-/* ---+ 13. STATS PAGE +--- */
+/*
+============================================================
+13. STATS PAGE
+============================================================
+*/
 
 /* smooth stats page borders, dark bg */
 .statistics .fandom.listbox.group {
@@ -1635,18 +1953,22 @@ form dd.required,
 
 
 
-/* ---+ 14. OTHER PAGES +--- */
+/*
+============================================================
+14. OTHER PAGES
+============================================================
+*/
 
 /* grabbed from ao3 core */
 .listbox,
 fieldset fieldset.listbox {
-	clear: right;
+	clear: both;
 	background: #16151b;
 	border: 0;
 	border-radius: .25em;
-	padding: 0;
 	margin: .75em auto;
 	overflow: hidden;
+	padding: 0;
 }
 
 /* edit multiple works page: now all/none buttons should align with h5 */
@@ -1657,9 +1979,9 @@ fieldset fieldset.listbox {
 
 /* edit multiple works page: nix borders and backgrounds */
 #edit-multiple-works .fandom.listbox {
+	background: transparent;
 	border-color: transparent;
 	border-radius: .25em;
-	background: transparent;
 }
 
 /* edit multiple works page: tweak all/none button ul margins */
@@ -1685,9 +2007,11 @@ fieldset fieldset.listbox {
 	border-color: transparent;
 }
 
+/*
 #user-fandom .fandom.listbox.group {
 	
 }
+*/
 
 /* banishes giant black bar on subs/related works pages */
 dl.index dd,
@@ -1699,6 +2023,18 @@ dl.index dt {
 /* wrangles buttons/details directly below titles on subs/related works pages */
 dl.index dd {
 	margin: .25em .25em 1.25em 0;
+}
+
+/* adjusts blurbs on skin & muted/blocked user pages */
+li.skins.own.picture.blurb.group .heading,
+li.user.pseud.picture.blurb.group .heading {
+	margin: .375em 5.25em 0 65px;
+}
+
+/* adjusts blurb summary on skin & muted/blocked user pages */
+li.skins.own.picture.blurb.group blockquote,
+li.user.pseud.picture.blurb.group blockquote {
+	margin: 1.5em auto 1em auto;
 }
 
 /* edit multiple works: kill background behind checkboxes */
@@ -1714,16 +2050,17 @@ dl.index dd {
 
 /* bookmark buttons align with blurb padding */
 .bookmark .actions {
-	padding: 0;
+	/*padding: 0;*/
+	float: left;
 }
 
 /* adjust bookmark icons */
 .bookmark.blurb p.status {
-	right: .5em;
+	right: .85em;
 }
 
 .bookmark .datetime {
-	top: 30px;
+	top: 25px;
 }
 
 /* changed bookmark box colours; might tweak more */
@@ -1762,23 +2099,24 @@ dl.index dd {
 /* nix line on user dashboard/profile */
 .home .header h2 {
 	border: 0;
+	float: right;
+	margin: 0 0 0 100px;
 }
 
-/* for mobile: now the nav buttons on user screen no longer clip into user icon */
-.home .header ul.actions {
-	max-width: 70%;
-	text-align: right;
-}
-
-/* icon was misbehaving in header on dashboard/profile, now NO ONE floats */
-.profile .primary,
-.home .primary {
-	float: none;
+.primary .icon {
+	clear: none;
+	float: left;
+	position: relative;
 }
 
 /* space bewteen h3 and listbox on fandoms page */
 .medium.listbox .index.group {
 	margin: .5em 0;
+}
+
+/* mobile: space between nav bar in works page and work index*/
+.navigation.actions.module {
+	margin-top: 1em;
 }
 
 .tags.commas.index.group {
@@ -1788,14 +2126,11 @@ dl.index dd {
 
 
 
-/* ---+ 15. SORT & FILTER SIDEBAR +--- */
-
-/* S&F margin adjustment */
-#bookmark-filters fieldset,
-#work-filters fieldset {
-	margin: 0 .65em;
-	padding: 0 .65em;
-}
+/*
+============================================================
+15. SORT & FILTER SIDEBAR
+============================================================
+*/
 
 /* S&F margin adjustment */
 #bookmark-filters fieldset dl,
@@ -1840,7 +2175,7 @@ dl.index dd {
 #exclude_freeform_tags,
 #include_tag_tags,
 #exclude_tag_tags {
-	font-size: .9em;	
+	font-size: .9em;
 }
 
 /* slight space between S&F labels and their input */
@@ -1949,4 +2284,8 @@ form.single fieldset {
 }
 
 
-/* ---+ 16. MISC +--- */
+/*
+============================================================
+16. MISC
+============================================================
+*/
