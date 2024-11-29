@@ -257,11 +257,6 @@ hr,
 	margin: 1.5em auto;
 }
 
-/* 
-fieldset.listbox {
-	
-}*/
-
 /* rounds and pretties text boxes */
 input,
 textarea {
@@ -587,10 +582,10 @@ dd.actions {
 	font-style: italic;
 }
 
-#header .logo {
+/*#header .logo {
 	float: left;
 	height: 42px;
-}
+}*/
 
 /* "archiveofourown beta" lighter text pop on active */
 #header .heading a:active {
@@ -1685,9 +1680,9 @@ fieldset fieldset.listbox {
 	border-color: transparent;
 }
 
-#user-fandom .fandom.listbox.group {
+/*#user-fandom .fandom.listbox.group {
 	
-}
+}*/
 
 /* banishes giant black bar on subs/related works pages */
 dl.index dd,
@@ -1765,10 +1760,10 @@ dl.index dd {
 }
 
 /* for mobile: now the nav buttons on user screen no longer clip into user icon */
-.home .header ul.actions {
+/*.home .header ul.actions {
 	max-width: 70%;
 	text-align: right;
-}
+}*/
 
 /* icon was misbehaving in header on dashboard/profile, now NO ONE floats */
 .profile .primary,

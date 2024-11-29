@@ -77,7 +77,7 @@ For your convenience, here is a handy table containing (most) of the fonts and w
 
 `*` − Web font (i.e., free!)  
 `@` − iOS/iPadOS system font  
-`#` − Mircrosoft Office cloud/Windows system font  
+`#` − Microsoft Office cloud/Windows system font  
 `$` − Paid
 
 ## 2  Installation
@@ -214,20 +214,20 @@ The `font-family` value determines what font displays on a device. If the first 
 
 ## 3 Road map
 
-- [x] Mobile-specific `rpp.css`
-  - [ ] Refine `rppm.css`
-- [ ] Vet and add support for more fonts
+- [x] Mobile-specific
+- [x] Vet and add support for more fonts
+- [ ] Mobile integration
 - [ ] Tidy code (read: figure out what I’m doing)
 - [ ] Rewrite as fully-fledged stylesheet to replace rather than build off of Ao3’s core
 
 ### 3.1 Short-term to-do list
 
+- [x] Start setting up mobile values
 - [ ] Adjust sort and filter sidebar to match work index group
 - [x] Figure out how to lower buttons/stats on work blurbs
 - [x] Add more fonts into font lists
 - [ ] Get rid of borders everywhere except for explicit elements
 - [ ] Different unicode arrow characters for mobile because apparently Roboto doesn’t like it
-- [x] Start setting up mobile values so creation of `reversiplusplus_mobile.css` is easier
 
 ## 4 Credits & acknowledgements
 

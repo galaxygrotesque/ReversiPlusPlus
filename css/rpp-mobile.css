@@ -1,55 +1,3 @@
-/*
-  ---+ REVERSI PLUS PLUS MOBILE +---
-
-  ++ SECTIONS ++
-  00. colour guide
-  01. body fonts
-  02. base
-  03. actions
-  04. header
-  05. main
-  06. footer
-  07. work reading adjustments (reading fonts here!)
-  08. comments
-  09. tags
-  10. work blurb cleanup
-  11. messages & tooltips
-  12. dashboard
-  13. stats page
-  14. other pages
-  15. sort & filter sidebar
-  16. misc
-  
-*/
-
-
-
-
-/* ---+ 00. COLOUR GUIDE +--- */
-
-/* using this as a colour guide as ao3 does not allow variables
-
-:root {
-	--ao3-accent-color: #5998d6;
-	--ao3-accent-color-light: #9ecfff;
-	--background-color: #1c1b22;
-	--background-color-dark: #151319;
-	--box-background-color: #16151b;
-	--box-border-color: #78777d;
-	--box-border-color-alt: #c2d2df;
-	--box-border-color-subtle: #454547;
-	--button-background-color: #2b2a33;
-	--button-current-color: #0b0b0b;
-	--button-highlight-color: #4e4e5e;
-	--tag-bubble-color-visited-hover: #5b5b66;
-	--text-color: #eee;
-	--text-link-color: #fff;
-	--text-link-visited-color: #bfbfbf;
-	--textbox-background-color: #23222b;
-}
-*/
-
-
 /* ---+ 02. BASE +--- */
 
 
@@ -286,29 +234,29 @@ li.blurb .tags {
 }
 
 .bookmark p.status {
-  position: absolute;
-  right: 0.25em;
-  width: 46px;
-  margin-top: 0.429em;
-  z-index: 1;
+	position: absolute;
+	right: 0.25em;
+	width: 46px;
+	margin-top: 0.429em;
+	z-index: 1;
 }
 
 .bookmark .status span,
 .bookmark .status a {
-  display: block;
-  width: 20px;
-  height: 20px;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
+	display: block;
+	width: 20px;
+	height: 20px;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
 }
 
 .bookmark span.count {
-  line-height: 1.5em;
-  position: absolute;
-  top: 0;
-  left: 24px;
-  text-align: center;
+	line-height: 1.5em;
+	position: absolute;
+	top: 0;
+	left: 24px;
+	text-align: center;
 }
 
 /* pretty sure these are the blurb key symbol blocks */
