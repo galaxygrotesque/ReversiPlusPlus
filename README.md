@@ -1,14 +1,14 @@
-![](img/reversiplusplus-banner.png)
-
 # ReversiPlusPlus
+
+![ReversiPlusPlus banner](img/reversiplusplus-banner.png)
 
 [Reversi](https://archiveofourown.org/skins/929) — but better. An Archive of Our Own “dark mode” reskin of Reversi with a focus on readability and less noise.
 
 **This project is a work-in-progress.** Please bear with me while I find my style sheet legs.
 
-|              Reversi++               |              Reversi++ Mobile               |
-| :----------------------------------: | :-----------------------------------------: |
-| ![](img/preview-reversiplusplus.png) | ![](img/preview-reversiplusplus-mobile.png) |
+|                          Reversi++                          |                              Reversi++ Mobile                             |
+| :---------------------------------------------------------: | :-----------------------------------------------------------------------: |
+| ![ReversiPlusPlus preview](img/preview-reversiplusplus.png) | ![ReversiPlusPlus mobile preview](img/preview-reversiplusplus-mobile.png) |
 
 ## 1  Features
 
@@ -32,9 +32,9 @@ Inspired by Mozilla Firefox’s dark colour scheme, ReversiPlusPlus:
 - Uses a darker colour palette that is easier on the eye
 - Reduces visual noise by relying on colour/element contrast rather than borders and lines
 
-|                  Ao3                  |                Reversi                |                   Reversi++                   |
-| :-----------------------------------: | :-----------------------------------: | :-------------------------------------------: |
-| ![](img/comparison-vanilla-theme.png) | ![](img/comparison-reversi-theme.png) | ![](img/comparison-reversiplusplus-theme.png) |
+|                                   Ao3                                    |                                Reversi                                  |                           Reversi++                          |
+| :----------------------------------------------------------------------: | :---------------------------------------------------------------------: | :----------------------------------------------------------: |
+| ![Archive of Our Own’s original theme](img/comparison-vanilla-theme.png) | ![Archive of Our Own’s Reversi theme](img/comparison-reversi-theme.png) | ![ReversiPlusPlus](img/comparison-reversiplusplus-theme.png) |
 
 ### 1.2  Colour-coded tags that ✨pop✨
 
@@ -52,9 +52,9 @@ In the case of tag-heavy works, tags are also confined to a scroll box!
 - Tags are confined to ~4 lines per work blurb
 - If the number of tags exceeds ~4 lines in a particular blurb, the overflow will be trapped in scroll box jail
 
-|                 Ao3                  |               Reversi                |                  Reversi++                   |
-| :----------------------------------: | :----------------------------------: | :------------------------------------------: |
-| ![](img/comparison-vanilla-tags.png) | ![](img/comparison-reversi-tags.png) | ![](img/comparison-reversiplusplus-tags.png) |
+|                                       Ao3                                       |                                     Reversi                                     |                                  Reversi++                                 |
+| :-----------------------------------------------------------------------------: | :-----------------------------------------------------------------------------: | :------------------------------------------------------------------------: |
+| ![Archive of Our Own’s default tag appearance](img/comparison-vanilla-tags.png) | ![Archive of Our Own’s Reversi tag appearance](img/comparison-reversi-tags.png) | ![ReversiPlusPlus tag appearance](img/comparison-reversiplusplus-tags.png) |
 
 ### 1.3  Custom fonts
 
@@ -96,19 +96,19 @@ To create a new site skin:
 
 2. While logged in, go to your dashboard.
 
-    ![](img/install-steps-01.png)
+    ![Install step 2: Go to the dashboard](img/install-steps-01.png)
 
 3. On the dashboard, select ```Skins```.
 
-    ![](img/install-steps-02.png)
+    ![Install step 3: Select the Skins option](img/install-steps-02.png)
 
 4. The Skins page will have multiple buttons. In the top right-hand corner, select ```Create Site Skin```.
 
-    ![](img/install-steps-03.png)
+    ![Install step 4: Select the Create Site Skin option](img/install-steps-03.png)
 
     Welcome to the Create New Site Skin page!
 
-    ![](img/install-steps-04.png)
+    ![A screenshot of the Create New Site Skin page](img/install-steps-04.png)
 
 5. Fill in the following fields:
 
@@ -120,11 +120,11 @@ To create a new site skin:
 
     Need a couple extra things first — namely, the options hidden under this fun little ```Show ↓``` button under the giant CSS field.
 
-    ![](img/install-steps-05.png)
+    ![Install step 5: Click the Show button](img/install-steps-05.png)
 
     You’ll get a section that looks like this:
 
-    ![](img/install-steps-06.png)
+    ![A screenshot of the Advanced section hidden by the Show button](img/install-steps-06.png)
 
 6. Here, fill in the following fields:
 
@@ -135,13 +135,13 @@ To create a new site skin:
 
 7. Hit ```Submit```!
 
-    ![](img/install-steps-07.png)
+    ![Install step 7: Select Submit](img/install-steps-07.png)
 
 8. You’ll be taken to a new page with your site skin with a ```Skin was successfully created.``` message.
 
     Scroll aaaaall the way down to the bottom where you’ll see these four options:
 
-    ![](img/install-steps-08.png)
+    ![Install step 8: Out of the four options, select Use](img/install-steps-08.png)
 
     Hit ```Use```.
 
@@ -157,11 +157,11 @@ There are four separate places to define fonts, each marked by ```/* font choice
 
        body {        /* font choices go here ↓ */
             font-family: "IBM Plex Sans", "Proxima Nova", "Helvetica Neue", "Lucida Grande", "Lucida Sans Unicode", "GNU Unifont", Verdana, Helvetica, sans-serif;
-          }
-          
-          …
-          
-          input,
+       }
+        
+       …
+        
+       input,
        textarea,
        blockquote,
        blockquote.userstuff,
@@ -182,7 +182,7 @@ There are four separate places to define fonts, each marked by ```/* font choice
        h6,
        .heading,
        .bookmark .user .meta {     /* font choices go here ↓ */
-         font-family: "Charter", "IBM Plex Serif", "Palatino", "Georgia", serif;
+            font-family: "Charter", "IBM Plex Serif", "Palatino", "Georgia", serif;
        }
 
 3. Mono fonts
