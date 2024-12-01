@@ -5,29 +5,29 @@ REVERSI PLUS PLUS MOBILE
 
 ++ CREDITS & ACKNOWLEDGEMENTS ++
 
-- reversi base:		archiveofourown		(https://archiveofourown.org/skins/929)
-- tag scroll box:		archiveofourown		(https://archiveofourown.org/skins/3756)
-- tag bubbles:		@nyxmidnight		(https://github.com/nyxmidnight) (https://github.com/nyxmidnight/ao3tagsfonts)
-- typography:			mb					(https://practicaltypography.com/index.html)
+- reversi base:         archiveofourown     (https://archiveofourown.org/skins/929)
+- tag scroll box:       archiveofourown     (https://archiveofourown.org/skins/3756)
+- tag bubbles:          @nyxmidnight        (https://github.com/nyxmidnight) (https://github.com/nyxmidnight/ao3tagsfonts)
+- typography:           mb                  (https://practicaltypography.com/index.html)
 - fonts:
-		*				charter				(https://fontesk.com/charter-typeface/)
-		*				fira code			(https://fonts.google.com/specimen/Fira+Code)
-			@		$	helvetica neue		(https://www.myfonts.com/collections/neue-helvetica-font-linotype)
-		*				ibm plex mono		(https://fonts.google.com/specimen/IBM+Plex+Mono)
-		*				ibm plex sans		(https://fonts.google.com/specimen/IBM+Plex+Sans)
-		*				ibm plex serif		(https://fonts.google.com/specimen/IBM+Plex+Serif)
-		*				lato				(https://fonts.google.com/specimen/Lato)
-		*				literata			(https://fonts.google.com/specimen/Literata)
-		*				libre baskerville	(https://fonts.google.com/specimen/Libre+Baskerville)
-		*	@			menlo				(https://github.com/hbin/top-programming-fonts/blob/master/Menlo-Regular.ttf)
-		*				noto sans			(https://fonts.google.com/specimen/Noto+Sans)
-		*				noto serif			(https://fonts.google.com/specimen/Noto+Serif)
-			@		$	palatino			(https://www.myfonts.com/collections/palatino-font-linotype)
-				#		palatino linotype	(https://learn.microsoft.com/en-us/typography/font-list/palatino-linotype)
-			@		$	proxima nova		(https://fonts.adobe.com/fonts/proxima-nova)
-		*				source code pro		(https://fonts.google.com/specimen/Source+Code+Pro)
-		*				source sans 3		(https://fonts.google.com/specimen/Source+Sans+3)
-		*				source serif 4		(https://fonts.google.com/specimen/Source+Serif+4)
+		*				charter             (https://fontesk.com/charter-typeface/)
+		*				fira code           (https://fonts.google.com/specimen/Fira+Code)
+			@		$	helvetica neue      (https://www.myfonts.com/collections/neue-helvetica-font-linotype)
+		*				ibm plex mono       (https://fonts.google.com/specimen/IBM+Plex+Mono)
+		*				ibm plex sans       (https://fonts.google.com/specimen/IBM+Plex+Sans)
+		*				ibm plex serif      (https://fonts.google.com/specimen/IBM+Plex+Serif)
+		*				lato                (https://fonts.google.com/specimen/Lato)
+		*				literata            (https://fonts.google.com/specimen/Literata)
+		*				libre baskerville   (https://fonts.google.com/specimen/Libre+Baskerville)
+		*	@			menlo               (https://github.com/hbin/top-programming-fonts/blob/master/Menlo-Regular.ttf)
+		*				noto sans           (https://fonts.google.com/specimen/Noto+Sans)
+		*				noto serif          (https://fonts.google.com/specimen/Noto+Serif)
+			@		$	palatino            (https://www.myfonts.com/collections/palatino-font-linotype)
+				#		palatino linotype   (https://learn.microsoft.com/en-us/typography/font-list/palatino-linotype)
+			@		$	proxima nova        (https://fonts.adobe.com/fonts/proxima-nova)
+		*				source code pro     (https://fonts.google.com/specimen/Source+Code+Pro)
+		*				source sans 3       (https://fonts.google.com/specimen/Source+Sans+3)
+		*				source serif 4      (https://fonts.google.com/specimen/Source+Serif+4)
 
 	* web font (i.e., free!)
 	@ iOS/iPadOS system font
@@ -65,7 +65,9 @@ REVERSI PLUS PLUS MOBILE
 ============================================================
 */
 
-/* using this as a colour guide as ao3 does not allow variables
+/* using this as a colour guide as ao3 does not allow variables */
+
+/*
 :root {
 	--ao3-accent-color: #5998d6;
 	--ao3-accent-color-light: #9ecfff;
@@ -102,10 +104,10 @@ REVERSI PLUS PLUS MOBILE
 */
 
 /* body fonts
-   grab whichever strikes your fancy insert it after font-family!
-   fonts:	"IBM Plex Sans", "Noto Sans", "Source Sans 3", "Proxima Nova", "Helvetica Neue",
-   ao3 defaults:	"Lucida Grande", "Lucida Sans Unicode", "GNU Unifont", Verdana, Helvetica, sans-serif;
-*/
+ * grab whichever strikes your fancy insert it after font-family!
+ * fonts:	"IBM Plex Sans", "Noto Sans", "Source Sans 3", "Proxima Nova", "Helvetica Neue",
+ * ao3 defaults:	"Lucida Grande", "Lucida Sans Unicode", "GNU Unifont", Verdana, Helvetica, sans-serif;
+ */
 
 body {		/* font choices go here ↓ */
 	font-family: "IBM Plex Sans", "Proxima Nova", "Helvetica Neue", "Lucida Grande", "Lucida Sans Unicode", "GNU Unifont", Verdana, Helvetica, sans-serif;
@@ -123,9 +125,9 @@ blockquote.userstuff,
 }
 
 /* header fonts
-   fonts:	"Charter", "IBM Plex Serif", "Source Serif 4", "Palatino Linotype", "Palatino", "Literata",
-   ao3 defaults:	"Georgia", serif;
-*/
+ * fonts:	"Charter", "IBM Plex Serif", "Source Serif 4", "Palatino Linotype", "Palatino", "Literata",
+ * ao3 defaults:	"Georgia", serif;
+ */
 h1,
 h2,
 h3,
@@ -405,6 +407,13 @@ li.blurb, fieldset, form dl {
 ============================================================
 */
 
+/* grabbed from ao3 core */
+.blurb li, .actions>*, .stats>*, .meta ul li {
+	list-style: none;
+	display: inline;
+	padding-left: 0.25em;
+}
+
 legend .action:link {
 	margin: 0 .5em;
 }
@@ -528,6 +537,19 @@ dd.actions {
 }
 
 .home .header .actions li {
+	padding: 0 .25em 0 0;
+}
+
+/* left-aligning in-work actions */
+#feedback ul.actions,
+ul.work.navigation.actions {
+	float: left;
+	text-align: left;
+}
+
+/* cosmetic padding change for in-work actions */
+#feedback ul.actions li,
+ul.work.navigation.actions li {
 	padding: 0 .25em 0 0;
 }
 
@@ -730,8 +752,11 @@ fieldset.listbox .heading,
 	color: #fff;
 }
 
-
-/** SEARCH SECTION **/
+/*
+------------------------------------------------------------
+BEGIN search mini-section
+------------------------------------------------------------
+*/
 
 #header .search {
 	float: left;
@@ -777,6 +802,12 @@ fieldset.listbox .heading,
 #header form.search input[type="text"] {
 	border-radius: 1em;
 }
+
+/*
+------------------------------------------------------------
+END search mini-section
+------------------------------------------------------------
+*/
 
 /* gives user greeting some breathing room */
 #greeting,
@@ -968,6 +999,7 @@ fieldset.listbox .heading,
 
 /* except for in-chapter story summaries */
 #chapters #summary .userstuff p {
+	font-size: revert;
 	margin: 0;
 }
 
@@ -1137,6 +1169,10 @@ li.comment {
 	margin-top: .375em;
 }
 
+.comment h4.heading.byline {
+	font-size: .95em;
+}
+
 /* new comment padding FINALLY */
 .comment .userstuff {
 	margin: 1em 0;
@@ -1160,6 +1196,12 @@ a.tag:hover {
 .work.meta.group .tags {
 	line-height: 1.7;
 }
+
+/*
+------------------------------------------------------------
+BEGIN tag bubble mini-section
+------------------------------------------------------------
+*/
 
 /* tag-specific link attributes — makes tag bubbles! */
 .bookmark.blurb .commas a.tag,
@@ -1350,6 +1392,12 @@ a.tag:hover {
 	color: #0b0b0b;
 }
 
+/*
+------------------------------------------------------------
+BEGIN tag bubble mini-section
+------------------------------------------------------------
+*/
+
 /* de-bubble rating/cat/fandom */
 .work.meta .category.tags .commas a,
 .work.meta .fandom.tags .commas a,
@@ -1360,7 +1408,7 @@ a.tag:hover {
 	border-radius: 0;
 	font-size: revert;
 	margin: revert;
-	padding: inherit;
+	padding: 0;
 }
 
 .work.meta .category.tags .commas a:hover,
@@ -1587,8 +1635,11 @@ ul.required-tags,
 	background-repeat: no-repeat;
 }
 
-
-/** blurb icon adjustments **/
+/*
+------------------------------------------------------------
+BEGIN blurb icon adjustments mini-section
+------------------------------------------------------------
+*/
 
 .required-tags .rating-general-audience {
 	background: url("/images/imageset.png") -42px -22px;
@@ -1691,6 +1742,12 @@ ul.required-tags,
 	background: url("/images/imageset.png") -84px -42px;
 	background-size: 835%;
 }
+
+/*
+------------------------------------------------------------
+END blurb icon adjustments mini-section
+------------------------------------------------------------
+*/
 
 /* stops blockquotes in work blurbs from inheriting margins */
 .summary.userstuff blockquote {
