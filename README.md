@@ -139,7 +139,7 @@ To create a new site skin:
 
 8. You’ll be taken to a new page with your site skin with a ```Skin was successfully created.``` message.
 
-    Scroll aaaaall the way down to the bottom where you’ll see these four options:
+    Scroll down to the bottom where you’ll see these four options:
 
     ![Install step 8: Out of the four options, select Use](img/install-steps-08.png)
 
@@ -217,7 +217,7 @@ The ```font-family``` value determines what font displays on a device. If the fi
 ## 3  Road map
 
 - [x] Mobile-specific ```rpp.css```
-  - [ ] Refine ```rpp-mobile.css```
+  - [x] Refine ```rpp-mobile.css```
 - [x] Vet and add support for more fonts
 - [x] Tidy code (read: figure out what I’m doing)
 - [ ] Rewrite as fully-fledged stylesheet to replace rather than build off of Ao3’s core
@@ -230,3 +230,12 @@ The ```font-family``` value determines what font displays on a device. If the fi
 - [x] Get rid of borders everywhere except for explicit elements
 - [ ] Different unicode arrow characters for mobile because apparently Roboto doesn’t like it
 - [x] Start setting up mobile values so creation of ```rpp-mobile.css``` is easier
+
+## 4 Credits & acknowledgements
+
+ReversiPlusPlus incorporates the work of those listed below. Without their dedication, time, and effort, this pet project would not be possible.
+
+- Reversi base: [Archive of Our Own](https://archiveofourown.org/)’s [skin](https://archiveofourown.org/skins/929)
+- Tag scroll box: [Archive of Our Own](https://archiveofourown.org/)’s [skin](https://archiveofourown.org/skins/3756)
+- Tag bubbles: [@nyxmidnight](https://github.com/nyxmidnight)’s [ao3tagsfonts](https://github.com/nyxmidnight/ao3tagsfonts)
+- Typography: [Matthew Butterick](https://mbtype.com/bio.html)’s [Practical Typography](https://practicaltypography.com/index.html)
