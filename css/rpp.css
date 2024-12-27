@@ -105,12 +105,12 @@ REVERSI PLUS PLUS
 
 /* body fonts
  * grab whichever strikes your fancy insert it after font-family!
- * fonts:	"IBM Plex Sans", "Noto Sans", "Source Sans 3", "Proxima Nova", "Helvetica Neue",
- * ao3 defaults:	"Lucida Grande", "Lucida Sans Unicode", "GNU Unifont", Verdana, Helvetica, sans-serif;
+ * fonts:        "IBM Plex Sans", "Noto Sans", "Source Sans 3", "Proxima Nova", "Helvetica Neue",
+ * ao3 defaults: "Lucida Grande", "Lucida Sans Unicode", "GNU Unifont", Verdana, Helvetica, sans-serif;
  */
 
-body {		/* font choices go here ↓ */
-	font-family: "IBM Plex Sans", "Proxima Nova", "Helvetica Neue", "Lucida Grande", "Lucida Sans Unicode", "GNU Unifont", Verdana, Helvetica, sans-serif;
+body {           /* font choices go here ↓ */
+	font-family: "IBM Plex Sans", "Noto Sans", "Proxima Nova", "Helvetica Neue", "Lucida Grande", "Lucida Sans Unicode", "GNU Unifont", Verdana, Helvetica, sans-serif;
 }
 
 input,
@@ -120,13 +120,13 @@ blockquote.userstuff,
 .blurb blockquote,
 .dropdown,
 .expander,
-.toggled form {	/* font choices go here ↓ */
-	font-family: "IBM Plex Sans", "Proxima Nova", "Helvetica Neue", "Lucida Grande", "Lucida Sans Unicode", "GNU Unifont", Verdana, Helvetica, sans-serif;
+.toggled form {  /* font choices go here ↓ */
+	font-family: "IBM Plex Sans", "Noto Sans", "Proxima Nova", "Helvetica Neue", "Lucida Grande", "Lucida Sans Unicode", "GNU Unifont", Verdana, Helvetica, sans-serif;
 }
 
 /* header fonts
- * fonts:	"Charter", "IBM Plex Serif", "Source Serif 4", "Palatino Linotype", "Palatino", "Literata",
- * ao3 defaults:	"Georgia", serif;
+ * fonts:        "Charter", "IBM Plex Serif", "Source Serif 4", "Palatino Linotype", "Palatino", "Literata",
+ * ao3 defaults: "Georgia", serif;
  */
 h1,
 h2,
@@ -135,7 +135,7 @@ h4,
 h5,
 h6,
 .heading,
-.bookmark .user .meta {	/* font choices go here ↓ */
+.bookmark .user .meta { /* font choices go here ↓ */
 	font-family: "Charter", "IBM Plex Serif", "Palatino", "Georgia", serif;
 }
 
@@ -145,7 +145,7 @@ tt,
 code,
 var,
 pre,
-samp {		/* font choices go here ↓ */
+samp {           /* font choices go here ↓ */
 	font-family: "Fira Code", "Source Code Pro", "Menlo", "Monaco", "Consolas", Courier, monospace;
 	font-size: .9em;
 }
@@ -1052,7 +1052,7 @@ div.afterword .children h3 {
 */
 
 /* nix border outside the add comment box */
-#add_comnent,
+#add_comment,
 #add_comment div.comment,
 div.comment {
 	border: 0;
@@ -1420,7 +1420,7 @@ ul.required-tags,
 
 /*
 padding problem between li classes i gotta fix
-(ref: dl.meta dd ul li:first-child) 
+(ref: dl.meta dd ul li:first-child)
 
 li.warnings a:last-child,
 li.relationships a:last-child,
@@ -2049,6 +2049,8 @@ form dl dt,
 form.single fieldset {
 	border-color: #78777d;
 }
+
+
 
 
 /*
