@@ -117,9 +117,11 @@ input,
 textarea,
 blockquote,
 blockquote.userstuff,
+button,
 .blurb blockquote,
 .dropdown,
 .expander,
+.secondary,
 .toggled form {  /* font choices go here ↓ */
 	font-family: "IBM Plex Sans", "Noto Sans", "Proxima Nova", "Helvetica Neue", "Lucida Grande", "Lucida Sans Unicode", "GNU Unifont", Verdana, Helvetica, sans-serif;
 }
@@ -381,8 +383,9 @@ div.dynamic,
 }
 
 /* small blue pop for expandables — e.g., download on works */
-ul.expandable.secondary {
-	background: #5998d6;
+ul.expandable.secondary,
+.javascript .work.navigation .download .secondary {
+	background: #30679e;
 	border: 0;
 }
 
@@ -420,6 +423,7 @@ input[type="submit"],
 .action:link,
 .actions a,
 .actions a:link,
+.actions button,
 .actions input,
 .actions label,
 .current,
@@ -469,6 +473,8 @@ input.button:hover,
 .actions a:link:hover,
 .actions a:visited:hover,
 .actions a:focus:visited,
+.actions button:hover,
+.actions button:focus,
 .actions input:hover,
 .actions input:focus,
 .flash.notice .action:hover,
